@@ -81,13 +81,13 @@ Todas as páginas foram consultadas em **11 de setembro de 2026**.
 
 ## 3. Fotografias — origem, crédito e condição de uso
 
-Todas as nove fotografias vêm do **Wikimedia Commons**, todas com licença livre que permite uso, adaptação e uso
-comercial. Nenhuma imagem se repete. Todas foram **redimensionadas** e a maioria é **recortada** pelo
+As nove fotografias preservadas no projeto vêm do **Wikimedia Commons**, todas com licença livre que permite uso, adaptação e uso
+comercial. A capa atual usa a ilustração em pixel art registrada na seção 6; `capa.jpg` fica disponível como alternativa. Nenhuma fotografia se repete nos slides. Todas foram **redimensionadas** e a maioria é **recortada** pelo
 enquadramento CSS (`object-fit: cover`), o que constitui adaptação para efeito de licença.
 
 | Slide | Arquivo | Assunto, local e data | Autoria | Licença | Condição prática de uso |
 | --- | --- | --- | --- | --- | --- |
-| 1 | `assets/capa.jpg` | Vista aérea do rio Poti, Teresina (PI) — 9 ago. 2018 | Alexandro Dias | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; obra derivada da foto deve ficar sob a mesma licença |
+| Capa anterior | `assets/capa.jpg` | Vista aérea do rio Poti, Teresina (PI) — 9 ago. 2018 | Alexandro Dias | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; obra derivada da foto deve ficar sob a mesma licença |
 | 2 | `assets/faixa-natureza.jpg` | Rio Preto visto do Salto I, Parque Nacional da Chapada dos Veadeiros (GO) — 28 maio 2016 | Elci Guerra Junior | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; compartilhamento pela mesma licença |
 | 2 | `assets/faixa-residuos.jpg` | Coleta de material reciclável do Carnaval, Olinda (PE) — 7 mar. 2019 | Alice Mafra / Prefeitura de Olinda | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar autor e licença |
 | 2 | `assets/faixa-comunidade.jpg` | 7ª Conferência Municipal de Meio Ambiente, Porto Alegre (RS) — 24 jan. 2025 | Sérgio Louruz / SMAMUS / Prefeitura de Porto Alegre | Licença livre de atribuição ([Template:Attribution](https://commons.wikimedia.org/wiki/Template:Attribution)) | Creditar integralmente autor e órgão; permite uso comercial e derivados. **Não há deed de CC**: cite o template e o link do arquivo |
@@ -115,10 +115,9 @@ enquadramento CSS (`object-fit: cover`), o que constitui adaptação para efeito
 
 Para efeito das licenças **CC BY-SA** (`capa`, `faixa-natureza`, `sintese`), registre-se que houve adaptação:
 
-- **todas**: redimensionamento a partir do original do Commons e recorte pelo enquadramento (`object-fit: cover`);
-- **`capa.jpg`**: sobreposição de um véu escuro em gradiente, para legibilidade do título;
-- **`conservacionista.jpg`**: clareamento leve (`brightness 1.08`), para não fechar em projeção;
-- **`pragmatica.jpg`**: aproximação (`scale 1.5`) sobre o maquinário, para a coluna estreita.
+- **todas**: redimensionamento a partir do original do Commons e recorte pelo enquadramento (`object-fit: cover`), sem filtros de cor;
+- **`capa.jpg`**, na versão anterior: escurecimento uniforme (cor de fundo `#101A15` sob a foto com 50% de opacidade, no reveal.js), para legibilidade do título; o arquivo local foi preservado e não é usado pela capa atual;
+- **`conservacionista.jpg`** e **`pragmatica.jpg`**: apenas recorte (4:3 e 3:4); o clareamento leve e a aproximação da versão anterior foram retirados na migração para o reveal.js.
 
 Se a apresentação for **redistribuída** com essas imagens alteradas, as três sob CC BY-SA 4.0 devem seguir sob a
 mesma licença, com indicação da alteração. O conjunto do deck (texto, gráficos e diagramação) não fica
@@ -128,7 +127,24 @@ contaminado pela BY-SA: apenas as imagens derivadas.
 
 ## 4. O que foi deliberadamente deixado de fora
 
-- **Nenhuma imagem de banco comercial**, nenhuma captura de tela de terceiros e nenhuma ilustração gerada.
+- **Nenhuma imagem de banco comercial** e nenhuma captura de tela de terceiros. A ilustração decorativa do tema está registrada na seção 6.
 - **Nenhuma fotografia com pessoa identificável em situação degradante.** Na foto da Estrutural, todas as
   pessoas estão de costas, de perfil ou com o rosto coberto, em contraluz e em atividade de trabalho.
 - **Nenhum dado sem fonte, unidade e ano**, e nenhum cálculo derivado além da subtração declarada no slide 7.
+
+---
+
+## 5. Software
+
+| Componente | Versão | Licença | Onde está |
+| --- | --- | --- | --- |
+| [reveal.js](https://revealjs.com) (motor, plugins de notas e zoom; tema `serif` preservado como alternativa) | 6.0.2 | MIT, © Hakim El Hattab | `comum/reveal/` (texto da licença em `comum/reveal/LICENSE`) |
+| [Pixelify Sans](https://github.com/google/fonts/tree/main/ofl/pixelifysans) (fonte dos títulos) | Fonte variável, pesos 400–700 | SIL Open Font License 1.1 | `comum/fontes/pixelify-sans.ttf`; licença em `comum/fontes/OFL.txt` |
+
+Nada é carregado da internet durante a apresentação: nem bibliotecas, nem fontes, nem imagens. O tema autoral **Aventura ambiental** usa Pixelify Sans local nos títulos e Trebuchet MS / Segoe UI do sistema no corpo.
+
+## 6. Ilustração e ícones do tema Aventura ambiental
+
+- **`assets/aventura-floresta.png`:** ilustração original gerada por IA com a ferramenta ImageGen em 2 de outubro de 2026, a pedido do grupo para uma estética de aventura 2D em pixel art. Aparece na capa e como fundo discreto no debate. É um cenário fictício de floresta, montanhas, água e solo; não representa um local real nem constitui evidência de dados ambientais.
+- **`comum/icones/folha.svg`, `engrenagem.svg` e `coletivo.svg`:** ícones decorativos desenhados para o projeto em SVG. Identificam visualmente as três lentes no slide 4, sem indicar uma progressão ou hierarquia entre elas.
+- As fotografias documentais, os gráficos, seus valores e as referências acadêmicas foram preservados. Molduras e chão pixelado são desenhados por CSS em `comum/tema.css`.

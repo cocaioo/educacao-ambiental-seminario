@@ -1,61 +1,40 @@
-﻿# Vertentes Contemporâneas em Educação Ambiental
+# Vertentes Contemporâneas em Educação Ambiental
 
-Este repositório reúne os materiais de pesquisa, referências bibliográficas e documentos de síntese para o seminário acadêmico sobre as vertentes contemporâneas da Educação Ambiental (EA) brasileira.
+Apresentação colaborativa do seminário, feita com o [reveal.js](https://revealjs.com) e o tema autoral **Aventura ambiental**, inspirado na exploração de mundos 2D em pixel art. As partes editáveis seguem a sequência **Caio → Diogo → Edson**.
 
----
+O tema fica em `slides/comum/tema.css`: títulos usam a fonte **Pixelify Sans**, incluída em `slides/comum/fontes/`, e o corpo mantém uma fonte legível para textos, fotos e gráficos. A paisagem ilustrada da capa foi gerada por IA e serve como cenário visual da apresentação.
 
-## 📁 Estrutura do Diretório
+## Como editar sua parte
 
-```plaintext
-educacao-ambiental-seminario/
-├── bibliografia/              # Artigos acadêmicos originais em PDF
-├── pesquisa/                  # Dossiê consolidado, roteiro e fichamentos
-│   ├── dossie_pesquisa_educacao_ambiental.md
-│   ├── prompt.md
-│   └── fichamentos/           # Levantamentos e fichamentos setoriais
-│       ├── pesquisa_critica_popular.md
-│       ├── pesquisa_fundamentos_historico.md
-│       └── pesquisa_macrotendencias.md
-├── resumo/                    # Resumo de estudo diagramado (LaTeX e PDF)
-│   ├── resumo_vertentes_educacao_ambiental.pdf
-│   ├── resumo_vertentes_educacao_ambiental.tex
-│   └── [arquivos auxiliares de compilação]
-└── README.md                  # Este guia de navegação
-```
+Cada integrante trabalha em uma cópia **completa** do projeto e edita os arquivos de `conteudo/` da própria pasta:
 
----
+| Integrante | Pasta de trabalho | Prévia individual |
+| --- | --- | --- |
+| Caio | [slides/Caio/](slides/Caio/) | [Caio/index.html](slides/Caio/index.html) |
+| Diogo | [slides/Diogo/](slides/Diogo/) | [Diogo/index.html](slides/Diogo/index.html) |
+| Edson | [slides/Edson/](slides/Edson/) | [Edson/index.html](slides/Edson/index.html) |
 
-## 📚 Conteúdo por Subpasta
+Use `ordem.json` para escolher quais slides entram e em que ordem. Guarde novas imagens em `assets/` da sua pasta e registre referências em `fontes.md`. A quantidade e o conteúdo dos slides podem mudar.
 
-### 1. [`bibliografia/`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/bibliografia)
-Contém os artigos e capítulos de livros originais em PDF utilizados como fontes primárias:
-* **Pelicioni & Philippi Jr. (2014):** *Bases Conceituais da EA*
-* **Layrargues & Lima (2011):** *Mapeando as macro-tendências da EA*
-* **Layrargues & Lima (2014):** *As macrotendências político-pedagógicas da EA brasileira*
-* **Santos & Toschi (2015):** *Vertentes da Educação Ambiental*
-* **Souza (2018):** *A educação ambiental popular: contribuições em práticas sociais*
+**Salvar as alterações não atualiza os `index.html` automaticamente.** Depois de editar, dê duplo clique em [slides/atualizar.cmd](slides/atualizar.cmd). Ele regenera a apresentação completa e as três prévias individuais.
 
-### 2. [`pesquisa/`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/pesquisa)
-Contém os artefatos de pesquisa conceitual em Markdown:
-* **[`dossie_pesquisa_educacao_ambiental.md`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/pesquisa/dossie_pesquisa_educacao_ambiental.md):** Dossiê completo e integrado com as 23 seções analíticas (questão orientadora, tipos ideais, matriz comparativa, glossário, controvérsias, etc.).
-* **[`prompt.md`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/pesquisa/prompt.md):** Especificação metodológica e diretrizes do trabalho.
-* **[`fichamentos/`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/pesquisa/fichamentos):**
-  * [`pesquisa_macrotendencias.md`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/pesquisa/fichamentos/pesquisa_macrotendencias.md): Análise das macrotendências conservacionista, pragmática e crítica.
-  * [`pesquisa_critica_popular.md`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/pesquisa/fichamentos/pesquisa_critica_popular.md): Fichamentos focados em Carvalho (2004), Guimarães (2004) e Souza (2018).
-  * [`pesquisa_fundamentos_historico.md`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/pesquisa/fichamentos/pesquisa_fundamentos_historico.md): Marcos internacionais (Estocolmo, Tbilisi, Rio-92) e nacionais (PNMA, PNEA).
+Os `index.html` são arquivos gerados; alterações diretas neles serão sobrescritas na próxima atualização.
 
-### 3. [`resumo/`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/resumo)
-Contém o texto-base diagramado para estudo e leitura contínua:
-* **[`resumo_vertentes_educacao_ambiental.pdf`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/resumo/resumo_vertentes_educacao_ambiental.pdf):** Documento final compilado em PDF.
-* **[`resumo_vertentes_educacao_ambiental.tex`](file:///C:/Users/Caio/Desktop/educacao-ambiental-seminario/resumo/resumo_vertentes_educacao_ambiental.tex):** Código-fonte em LaTeX.
+## Como integrar as alterações do grupo
 
----
+1. Cada integrante envia sua pasta **completa** (`Caio`, `Diogo` ou `Edson`) ao responsável pela integração.
+2. O responsável atualiza a pasta correspondente dentro de `slides/` no projeto principal, mantendo as outras partes.
+3. Depois de reunir as versões recebidas, executa `slides/atualizar.cmd`.
+4. Abre [slides/index.html](slides/index.html) e confere a apresentação completa, incluindo as transições entre os integrantes.
 
-## ⚙️ Compilação do Resumo TeX
+A atualização usa somente as pastas presentes nessa cópia do projeto. Ao trabalhar em cópias separadas, é necessário reunir as pastas antes de gerar a versão final. As prévias recebidas são regeneradas a partir dos arquivos editáveis.
 
-Para recompilar o documento LaTeX a partir do terminal PowerShell:
+Combine com o grupo alterações no tema e nos recursos compartilhados de `slides/comum/` e `slides/assets/`.
 
-```powershell
-Set-Location resumo
-pdflatex resumo_vertentes_educacao_ambiental.tex
-```
+## Apresentar e consultar
+
+- Abra `slides/index.html` no Chrome ou no Edge; a apresentação funciona offline (o reveal.js vem junto, em `slides/comum/reveal/`), mantendo as imagens junto com o projeto.
+- Setas ou espaço avançam, revelando um item por vez. **S** abre a visão do apresentador com as notas, **F** coloca em tela cheia, **O** mostra a visão geral e **?** lista todos os atalhos.
+- Para exportar um PDF atualizado, pressione **I** na apresentação e escolha **Salvar como PDF**, com margens **Nenhuma** e gráficos de plano de fundo ligados. `atualizar.cmd` atualiza somente os HTMLs.
+- Consulte o [guia de edição](slides/README.md) para exemplos de novos slides (há modelos prontos em [slides/comum/modelos/](slides/comum/modelos/)), imagens, notas do orador e estilos.
+- Materiais de estudo: [bibliografia](bibliografia/), [pesquisa](pesquisa/) e [resumo](resumo/).

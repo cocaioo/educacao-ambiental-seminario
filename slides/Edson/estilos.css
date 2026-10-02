@@ -1,0 +1,7 @@
+/*
+  Ajustes exclusivos da parte de Edson. Cada seletor deve começar com:
+  .slide[data-autor="Edson"]
+  Exemplo: .slide[data-autor="Edson"] .minha-classe { font-weight: 700; }
+  Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
+  Caminhos de imagens são relativos à pasta Edson, como assets/minha-foto.jpg.
+*/

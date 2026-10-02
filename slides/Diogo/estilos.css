@@ -1,0 +1,7 @@
+/*
+  Ajustes exclusivos da parte de Diogo. Cada seletor deve começar com:
+  .slide[data-autor="Diogo"]
+  Exemplo: .slide[data-autor="Diogo"] .minha-classe { font-weight: 700; }
+  Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
+  Caminhos de imagens são relativos à pasta Diogo, como assets/minha-foto.jpg.
+*/

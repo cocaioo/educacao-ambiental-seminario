@@ -1,0 +1,271 @@
+/* Tema autoral de aventura ambiental para reveal.js, palco 1280 × 720.
+   O painel e a faixa de terreno são CSS: os dados continuam em HTML e SVG.
+   Seletores descendentes também atendem ao modo ?print-pdf do reveal.js. */
+
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("fontes/pixelify-sans.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:root {
+  --r-background-color: #243c2b;
+  --r-main-font: "Trebuchet MS", "Segoe UI", sans-serif;
+  --r-main-font-size: 27px;
+  --r-main-color: #303b2b;
+  --r-block-margin: 14px;
+  --r-heading-font: "Pixelify Sans", "Trebuchet MS", sans-serif;
+  --r-heading-color: #2f422c;
+  --r-heading-font-weight: 500;
+  --r-heading-line-height: 1.14;
+  --r-heading-letter-spacing: .2px;
+  --r-heading-text-transform: none;
+  --r-heading-text-shadow: none;
+  --r-heading-margin: 0 0 18px;
+  --r-heading1-size: 76px;
+  --r-heading2-size: 44px;
+  --r-heading3-size: 31px;
+  --r-heading4-size: 27px;
+  --r-link-color: #355b43;
+  --r-link-color-hover: #537b4b;
+  --r-selection-background-color: #8aa55b;
+  --r-selection-color: #172c20;
+  --r-code-font: "Cascadia Code", Consolas, monospace;
+  --r-overlay-element-bg-color: 31, 51, 36;
+  --r-overlay-element-fg-color: 247, 239, 211;
+
+  /* Luminâncias próximas dão o mesmo peso às três vertentes. */
+  --cons: #376049;
+  --cons-fill: #5b8561;
+  --prag: #795c25;
+  --prag-fill: #b18c44;
+  --crit: #8b4d3c;
+  --crit-fill: #b76f59;
+  --discreto: #626653;
+  --papel: #f6edcf;
+  --madeira: #6a472b;
+  --margem: 64px;
+  --canto: polygon(0 16px, 8px 16px, 8px 8px, 16px 8px, 16px 0,
+    calc(100% - 16px) 0, calc(100% - 16px) 8px, calc(100% - 8px) 8px,
+    calc(100% - 8px) 16px, 100% 16px, 100% calc(100% - 16px),
+    calc(100% - 8px) calc(100% - 16px), calc(100% - 8px) calc(100% - 8px),
+    calc(100% - 16px) calc(100% - 8px), calc(100% - 16px) 100%,
+    16px 100%, 16px calc(100% - 8px), 8px calc(100% - 8px),
+    8px calc(100% - 16px), 0 calc(100% - 16px));
+}
+
+/* Base completa: este arquivo dispensa um segundo tema do reveal.js. */
+.reveal-viewport { background: var(--r-background-color); }
+.reveal { font: 400 var(--r-main-font-size) / 1.32 var(--r-main-font); color: var(--r-main-color); }
+.reveal ::selection { color: var(--r-selection-color); background: var(--r-selection-background-color); text-shadow: none; }
+.reveal .slides section { line-height: 1.32; font-weight: inherit; }
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  margin: var(--r-heading-margin);
+  color: var(--r-heading-color);
+  font-family: var(--r-heading-font);
+  font-weight: var(--r-heading-font-weight);
+  line-height: var(--r-heading-line-height);
+  letter-spacing: var(--r-heading-letter-spacing);
+  text-transform: none;
+  text-shadow: none;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.reveal h1 { font-size: var(--r-heading1-size); }
+.reveal h2 { font-size: var(--r-heading2-size); }
+.reveal h3 { font-size: var(--r-heading3-size); }
+.reveal h4 { font-size: var(--r-heading4-size); }
+.reveal p { margin: var(--r-block-margin) 0; }
+.reveal strong, .reveal b { font-weight: 700; }
+.reveal em, .reveal i { font-style: italic; }
+.reveal a { color: var(--r-link-color); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.reveal a:hover { color: var(--r-link-color-hover); }
+.reveal small { display: inline-block; vertical-align: top; font-size: .6em; line-height: 1.3; }
+.reveal sup { font-size: smaller; vertical-align: super; }
+.reveal sub { font-size: smaller; vertical-align: sub; }
+.reveal code { font-family: var(--r-code-font); }
+.reveal pre { white-space: pre-wrap; font-size: .65em; }
+.reveal ul, .reveal ol { display: block; margin: 0 0 0 1em; padding: 0; text-align: left; }
+.reveal ul { list-style-type: square; }
+.reveal ol { list-style-type: decimal; }
+.reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul { margin-left: 1.3em; }
+.reveal dl { margin: 0; display: block; }
+.reveal dt { margin-top: 12px; font-weight: 700; }
+.reveal dt:first-child { margin-top: 0; }
+.reveal dd { margin-left: 0; }
+.reveal blockquote { width: auto; margin: 18px 0 0; padding: 0 0 0 17px; border-left: 4px solid #afbd82; font-size: 1.02em; font-style: normal; background: none; box-shadow: none; }
+
+/* Uma só superfície de leitura; madeira nas bordas, papel claro no interior. */
+.reveal section.slide { height: 100%; text-align: left; isolation: isolate; }
+.reveal section.slide > * { position: relative; z-index: 1; margin-left: var(--margem); margin-right: var(--margem); }
+.reveal section.slide > :first-child { margin-top: 50px; }
+.reveal section.slide::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 18px 20px 52px;
+  border: 10px solid transparent;
+  background: linear-gradient(110deg, #fbf4de, #f4e8c5) padding-box,
+    repeating-linear-gradient(0deg, #6a472b 0 6px, #805632 6px 12px, #5a3c26 12px 16px) border-box;
+  box-shadow: inset 0 0 0 3px #bd935b, inset 0 0 0 5px #e5cfa2;
+  clip-path: var(--canto);
+  pointer-events: none;
+}
+.reveal section.slide::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 44px;
+  background: linear-gradient(90deg, transparent 0 16px, #d0ba7830 16px 24px, transparent 24px 48px) 0 21px / 48px 8px repeat-x,
+    linear-gradient(90deg, #a2b353 0 16px, #728d40 16px 32px, #8ca549 32px 48px) 0 0 / 48px 8px repeat-x,
+    linear-gradient(to bottom, #68823c 0 8px, #496333 8px 14px, #775334 14px 34px, #5b402c 34px);
+  clip-path: polygon(0 8px, 5% 8px, 5% 0, 12% 0, 12% 8px, 20% 8px,
+    20% 0, 28% 0, 28% 8px, 40% 8px, 40% 0, 54% 0, 54% 8px,
+    63% 8px, 63% 0, 73% 0, 73% 8px, 83% 8px, 83% 0, 94% 0, 94% 8px,
+    100% 8px, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+.reveal section.slide > h2 { max-width: 1080px; }
+.reveal section.slide .so-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.reveal .cons { color: var(--cons); }
+.reveal .prag { color: var(--prag); }
+.reveal .crit { color: var(--crit); }
+
+/* Fotografias mantêm sua resolução e os créditos completos. */
+.reveal figure { margin: 0; }
+.reveal figure img { display: block; width: 100%; max-width: none; max-height: none; margin: 0; object-fit: cover; box-sizing: border-box; border: 4px solid #806449; box-shadow: 4px 4px 0 #d9c69c; }
+.reveal figcaption, .reveal .credito, .reveal .fonte { font-size: 14px; line-height: 1.3; color: var(--discreto); text-align: left; }
+.reveal figcaption { margin-top: 8px; }
+.reveal section.slide > .fonte { position: absolute; left: var(--margem); right: 108px; bottom: 75px; margin: 0; }
+
+/* Grades e utilitários dos slides existentes. */
+.reveal .colunas { display: grid; grid-template-columns: var(--cols, repeat(2, 1fr)); column-gap: 36px; align-items: start; }
+.reveal .colunas > * { min-width: 0; }
+.reveal .colunas.tres { --cols: repeat(3, 1fr); }
+.reveal .colunas.quatro { --cols: repeat(4, 1fr); column-gap: 26px; }
+.reveal .colunas.foto-texto { --cols: 5fr 6fr; }
+.reveal .colunas.texto-foto { --cols: 6fr 5fr; }
+.reveal .colunas.analise { --cols: 30fr 48fr 22fr; column-gap: 30px; }
+.reveal .colunas.grafico-texto { --cols: 46fr 54fr; align-items: center; }
+.reveal .colunas ul, .reveal .colunas ol, .reveal .colunas dl { font-size: .88em; }
+.reveal .colunas.analise dl { font-size: 21px; }
+.reveal .colunas.analise blockquote { font-size: 24px; }
+.reveal .colunas.analise p { font-size: 23px; margin: 0; }
+.reveal .colunas li { margin-bottom: .42em; }
+.reveal .colunas.tres figcaption { margin-top: 13px; font-size: 21px; line-height: 1.25; color: var(--r-main-color); }
+.reveal .colunas.tres figcaption b { display: block; font-family: var(--r-heading-font); font-size: 34px; font-weight: 500; line-height: 1.15; margin-bottom: 3px; }
+.reveal ol.marcos { list-style: none; padding: 0; margin-top: 6px; margin-bottom: 17px; }
+.reveal ol.marcos li { margin: 0; padding-left: 12px; border-left: 3px solid #b3be89; }
+.reveal ol.marcos h3 { margin-bottom: 5px; font-size: 33px; }
+.reveal ol.marcos p { margin: 0; font-size: 20px; }
+.reveal .colunas.grafico-texto p { font-size: 22px; margin: 0; }
+.reveal .lentes { margin-top: 30px; margin-bottom: 28px; }
+.reveal .lentes h3 { font-size: 37px; margin-bottom: 10px; }
+.reveal .lentes p { margin: 0; font-size: 25px; }
+.reveal .lentes .icone-lente { display: block; width: 64px; height: 64px; margin: 0 0 8px; image-rendering: pixelated; }
+
+/* Quadro comparativo: linhas abertas, sem transformar cada célula em cartão. */
+.reveal table { border-collapse: collapse; border-spacing: 0; width: calc(100% - 2 * var(--margem)); margin: auto; font-size: 24px; }
+.reveal table th, .reveal table td { text-align: left; vertical-align: top; padding: .55em .65em .55em 0; border-bottom: 1px solid #c7bc94; }
+.reveal table th { font-weight: 700; }
+.reveal table thead th { font-family: var(--r-heading-font); font-size: 29px; font-weight: 500; border-bottom: 3px solid #a7ad7b; }
+.reveal table th:first-child { width: 18%; }
+.reveal table tbody tr:last-child th, .reveal table tbody tr:last-child td { border-bottom: none; }
+.reveal table [align="center"] { text-align: center; }
+.reveal table [align="right"] { text-align: right; }
+
+/* Abertura: um cenário de aventura, com a floresta fornecida por data-background-image. */
+.reveal section.capa { color: #fff5d7; text-shadow: 2px 3px 0 #203728; }
+.reveal section.capa::before { inset: 0; border: 0; background: linear-gradient(90deg, #142e29b8 0, #17342b96 46%, #132f242e 78%, transparent); box-shadow: none; clip-path: none; }
+.reveal section.capa::after { display: none; }
+.reveal section.capa > :first-child { margin-top: 62px; }
+.reveal section.capa h1 { max-width: 800px; font-size: 76px; line-height: 1.10; margin-top: 0; margin-bottom: 18px; color: #fff2bd; text-shadow: 2px 2px 0 #183728; }
+.reveal section.capa .sobrelinha { font-family: var(--r-heading-font); font-size: 21px; font-weight: 500; color: #e4ecad; letter-spacing: 2px; margin-bottom: 24px; text-transform: uppercase; }
+.reveal section.capa .subtitulo, .reveal section.capa h3 { max-width: 740px; font: 400 28px / 1.25 var(--r-main-font); color: #eff3d5; margin-bottom: 25px; }
+.reveal section.capa .ficha { max-width: 770px; font-size: 20px; line-height: 1.4; color: #e2e8ce; margin-top: 20px; }
+.reveal section.capa .ficha strong { color: #fff1c2; }
+.reveal section.capa .pergunta, .reveal section.capa blockquote {
+  max-width: 730px;
+  margin-top: 30px;
+  padding: 17px 23px;
+  border: 4px solid #b8b677;
+  background: #183526e6;
+  box-shadow: 5px 5px 0 #15271da3, inset 0 0 0 2px #2f5a36;
+  font-size: 25px;
+  color: #fff2cc;
+  text-shadow: none;
+  clip-path: var(--canto);
+}
+.reveal section.capa .assinatura { position: absolute; left: var(--margem); bottom: 54px; margin: 0; font-family: var(--r-heading-font); font-size: 19px; color: #e7edc3; }
+.reveal section.capa > .credito { position: absolute; right: var(--margem); bottom: 19px; margin: 0; max-width: 470px; color: #e1e7d1; font-size: 13px; text-align: right; text-shadow: 1px 1px 2px #12251c; }
+.reveal section.capa > .assinatura.credito { left: var(--margem); right: auto; bottom: 54px; max-width: 760px; font-size: 19px; color: #e7edc3; text-align: left; }
+
+/* Debate: caixa de diálogo noturna sobre a mesma paisagem de jogo. */
+.reveal section.debate { --r-main-color: #f0eed4; --r-heading-color: #f6efc5; color: var(--r-main-color); }
+.reveal section.debate::before { inset: 45px 34px 79px; border: 9px solid #78905e; background: #213c2f; box-shadow: inset 0 0 0 3px #adc58a, inset 0 0 0 6px #3e5a3e; }
+.reveal section.debate > :first-child { margin-top: 83px; }
+.reveal section.debate > * { margin-left: 82px; margin-right: 82px; }
+.reveal h2.grande { font-size: 52px; line-height: 1.14; max-width: 1070px; }
+.reveal ol.guias { margin-top: 32px; font-size: 30px; list-style-position: inside; }
+.reveal ol.guias li { margin-bottom: .38em; }
+.reveal ol.guias li::marker { font-family: var(--r-heading-font); color: #c8dba0; }
+.reveal section.debate p { margin-top: 25px; color: #d1dfc3; font-size: 23px; max-width: 43em; }
+
+/* Referências permanecem compactas e legíveis, com uma faixa exclusiva para créditos. */
+.reveal ul.refs { list-style: none; columns: 2; column-gap: 45px; padding: 0; margin-top: 12px; font-size: 15px; line-height: 1.28; }
+.reveal ul.refs li { break-inside: avoid; margin-bottom: 9px; padding-left: 1em; text-indent: -1em; }
+.reveal .url { display: block; text-indent: 0; color: var(--discreto); font-size: .92em; overflow-wrap: anywhere; }
+
+/* Os gráficos preservam escalas e codificações; só mudam a paleta e a tipografia. */
+.reveal svg.grafico { display: block; width: 100%; height: auto; overflow: visible; }
+.reveal svg.grafico text { font-family: var(--r-main-font); fill: var(--r-main-color); font-size: 15px; }
+.reveal svg.grafico .titulo { font-weight: 700; }
+.reveal svg.grafico .valor { font-size: 20px; font-weight: 700; }
+.reveal svg.grafico .dado { font-size: 15px; font-weight: 700; }
+.reveal svg.grafico .rotulo { font-size: 16px; }
+.reveal svg.grafico .nota { font-size: 14px; fill: var(--discreto); }
+.reveal svg.grafico .eixo { stroke: #8c9277; stroke-width: 1; }
+.reveal svg.grafico .grade { stroke: #ccc9ad; stroke-width: 1; stroke-dasharray: 2 4; }
+.reveal svg.grafico .antes { fill: var(--papel); stroke-width: 2; }
+.reveal svg.grafico .depois { stroke: none; }
+.reveal svg.grafico.cons .antes { stroke: var(--cons); }
+.reveal svg.grafico.cons .depois { fill: var(--cons-fill); }
+.reveal svg.grafico.prag .antes { stroke: var(--prag); }
+.reveal svg.grafico.prag .depois { fill: var(--prag-fill); }
+.reveal svg.grafico.crit .antes { stroke: var(--crit); }
+.reveal svg.grafico.crit .depois { fill: var(--crit-fill); }
+.reveal svg.grafico.neutro .antes { stroke: #53624b; }
+.reveal svg.grafico.neutro .depois { fill: #788368; }
+.reveal svg.grafico .destaque { stroke: var(--crit); fill: none; stroke-width: 1.5; }
+
+/* Controles discretos e numeração que não invade títulos ou fontes. */
+.reveal .controls { color: #c8d896; }
+.reveal .controls .controls-arrow::before, .reveal .controls .controls-arrow::after { border-radius: 0; }
+.reveal .progress { height: 4px; color: #c6d88d; background: #12291d; }
+.reveal .slide-number { top: 6px; bottom: auto; right: 30px; color: #e5edbc; background: #243c2b; padding: 4px 10px; font-family: var(--r-heading-font); font-size: 17px; }
+.reveal .slide-number a { color: inherit; text-decoration: none; }
+.reveal.has-dark-background .slide-number { color: #e5edbc; }
+.reveal .slide-number-pdf { color: var(--discreto); font-family: var(--r-heading-font); }
+
+@media (prefers-reduced-motion: reduce) { .reveal .fragment { transition: none; } }
+@media print {
+  .reveal section.slide::before, .reveal section.slide::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .reveal .slide-number-pdf { top: 28px !important; bottom: auto !important; right: 43px !important; font-size: 16px !important; }
+  .reveal section.capa .slide-number-pdf, .reveal section.debate .slide-number-pdf { color: #e5edbc; }
+}
