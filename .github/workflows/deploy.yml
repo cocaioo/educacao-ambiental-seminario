@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - dev
   workflow_dispatch:
 
 # Permissões necessárias para publicação no GitHub Pages via Actions
