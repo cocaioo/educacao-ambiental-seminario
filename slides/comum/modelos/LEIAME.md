@@ -22,4 +22,4 @@ Para usar um modelo:
 
 Os modelos usam elementos comuns do HTML e os recursos do reveal.js (`class="fragment"`, `<aside class="notes">`, `data-background-*`). O visual vem do tema autoral **Aventura ambiental**, em `../tema.css`, com títulos em **Pixelify Sans** (fonte local em `../fontes/`) e corpo em fonte de leitura. Use os utilitários compartilhados para manter textos, fotos e gráficos legíveis.
 
-A paisagem `../assets/aventura-floresta.png`, cujo caminho parte da pasta do integrante, é uma ilustração gerada por IA. Ao usá-la, descreva o cenário ilustrado e mantenha esse crédito. Para fotografias, informe o local e a autoria correspondentes à imagem escolhida.
+A paisagem `../assets/aventura-floresta.png`, cujo caminho parte da pasta do integrante, é uma ilustração original em pixel art. Ao usá-la, descreva o cenário ilustrado e mantenha esse crédito. Para fotografias, informe o local e a autoria correspondentes à imagem escolhida.

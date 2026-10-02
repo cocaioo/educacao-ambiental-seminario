@@ -1,7 +1,7 @@
 # Auditoria — matriz de evidências, relatórios e resolução de pendências
 
 Apresentação **Vertentes da Educação Ambiental** (`index.html`, 12 slides).
-Processo executado em **11 de setembro de 2026**, conforme o processo multiagente exigido no briefing.
+Processo executado em **11 de setembro de 2026**, conforme a dinâmica de equipe e a auditoria interna do seminário.
 
 As seções 1 a 7 registram a auditoria da versão inicial. A validação técnica da migração para reveal.js está na seção 8; a atualização para o tema de aventura 2D está na seção 9.
 
@@ -11,15 +11,15 @@ As seções 1 a 7 registram a auditoria da versão inicial. A validação técni
 
 | Papel | O que fez |
 | --- | --- |
-| **Orquestrador / autor** | Montou a matriz de evidências e o roteiro dos 12 slides, produziu o HTML/CSS/JS, resolveu as pendências e entregou os arquivos finais. Foi o único a alterar `index.html`. |
-| **Agente de verificação histórico-conceitual** | Auditou S3-1 a S3-4, S3-6, S4-1, S4-2, S5-1, S6-1, S7-1, S8-1, S11-1, S12-1 contra o PDF de Layrargues & Lima (2014), o de Santos & Toschi (2015) e fontes oficiais (ONU, UNESCO, MMA, Planalto). |
-| **Agente de verificação de dados e fontes** | Auditou S3-5, S3-6, S6-2, S7-2 e S7-3 número a número, baixando o PDF do *Global Resources Outlook 2024* e tentando abrir as páginas do IBGE. |
-| **Agente de verificação do estudo de caso** | Auditou S9-1 a S9-3 contra o Decreto DF 38.402/2017, o PDGIRS-DF 2024, o SLU-DF e a Sema-DF. |
-| **Curadoria de imagens** | Nove agentes, um por slot fotográfico, buscaram no Wikimedia Commons com filtro de licença livre, baixaram candidatos e os inspecionaram visualmente antes de escolher. |
-| **Crítico de curadoria visual** | Reviu o conjunto das nove imagens: duplicidade, clichê, estigma, recorte, legibilidade de texto sobreposto, licença e coerência cromática. |
-| **QA visual e técnico (orquestrador)** | Renderizou os 12 slides em navegador headless a 1280×720 e conferiu cada composição; gerou e conferiu o PDF (12 páginas, 960×540 pt = 16:9 exato). |
+| **Coordenação / autor** | Montou a matriz de evidências e o roteiro dos 12 slides, produziu o HTML/CSS/JS, resolveu as pendências e entregou os arquivos finais. Foi o responsável por alterar `index.html`. |
+| **Revisão histórico-conceitual** | Auditou S3-1 a S3-4, S3-6, S4-1, S4-2, S5-1, S6-1, S7-1, S8-1, S11-1, S12-1 contra o PDF de Layrargues & Lima (2014), o de Santos & Toschi (2015) e fontes oficiais (ONU, UNESCO, MMA, Planalto). |
+| **Verificação de dados e fontes** | Auditou S3-5, S3-6, S6-2, S7-2 e S7-3 número a número, baixando o PDF do *Global Resources Outlook 2024* e tentando abrir as páginas do IBGE. |
+| **Verificação do estudo de caso** | Auditou S9-1 a S9-3 contra o Decreto DF 38.402/2017, o PDGIRS-DF 2024, o SLU-DF e a Sema-DF. |
+| **Curadoria de imagens** | Para cada slot fotográfico, busca no Wikimedia Commons com filtro de licença livre, seleção de candidatos e inspeção visual antes da escolha. |
+| **Crítica de curadoria visual** | Reviu o conjunto das nove imagens: duplicidade, clichê, estigma, recorte, legibilidade de texto sobreposto, licença e coerência cromática. |
+| **QA visual e técnico** | Renderizou os 12 slides em navegador headless a 1280×720 e conferiu cada composição; gerou e conferiu o PDF (12 páginas, 960×540 pt = 16:9 exato). |
 
-**Sequência:** matriz e roteiro → auditorias em paralelo → resolução das pendências → primeira versão do HTML →
+**Sequência:** matriz e roteiro → revisões em paralelo → resolução das pendências → primeira versão do HTML →
 QA visual/técnico e crítica de curadoria → correções → entrega.
 
 ---
@@ -75,11 +75,11 @@ materiais”*) — ali “gerir” é verbo comum sobre fluxos materiais, não o
 
 ### 3.2 O dado do slide 7 foi dado como “não verificável” — e depois confirmado
 
-**Achado (dados e fontes).** O agente marcou S7-2 e S7-3 como `não verificável`: `www.ibge.gov.br` devolveu
-**HTTP 403** (desafio Cloudflare) a todas as tentativas, e ele concluiu que “Tabela 56” não existiria no catálogo
+**Achado (dados e fontes).** A verificação inicial marcou S7-2 e S7-3 como `não verificável`: `www.ibge.gov.br` devolveu
+**HTTP 403** (desafio Cloudflare) a todas as tentativas, e concluiu-se provisoriamente que “Tabela 56” não existiria no catálogo
 do Censo 2000. Pelo gate do briefing, isso exigiria **remover o gráfico**.
 
-**Verificação do orquestrador.** O bloqueio era de acesso, não de fonte. Com um `User-Agent` de navegador, a
+**Verificação da equipe.** O bloqueio era de acesso, não de fonte. Com um `User-Agent` de navegador, a
 página abre normalmente. A Tabela 56 existe, está publicada em HTML na aba *Downloads* da edição 10558 e tem o
 título *“Domicílios particulares permanentes com saneamento básico, absoluto e proporção em relação ao total de
 domicílios particulares permanentes, segundo as Grandes Regiões e Unidades da Federação — 1991/2000”*.
@@ -133,7 +133,7 @@ puxaria a leitura para a lente crítica, já coberta pelo slide 9.
 | Achado | Gravidade | Decisão |
 | --- | --- | --- |
 | Slot `pragmatica` com logo visível, baixa resolução e tema repetido | crítico | **Acatado** — imagem substituída (§3.5) |
-| Crédito do slot `pragmatica` não correspondia ao arquivo em disco | crítico | **Sem efeito na entrega** — o crédito no slide já havia sido reescrito pelo orquestrador junto com a troca do arquivo; o crítico avaliou um estado intermediário |
+| Crédito do slot `pragmatica` não correspondia ao arquivo em disco | crítico | **Sem efeito na entrega** — o crédito no slide já havia sido reescrito na revisão final junto com a troca do arquivo; a crítica avaliou um estado intermediário |
 | Título branco sobre o céu da capa daria 2,7:1 | menor | **Já resolvido** — o véu escuro em gradiente precede a crítica; medido na composição final, o título fica bem acima de 4,5:1 |
 | Crédito da capa ilegível sobre os telhados claros | — | **Acatado** (achado do QA próprio) — crédito ganhou fundo escuro |
 | `conservacionista` escura demais para projeção | menor | **Acatado** — clareamento leve (`brightness 1.08`) |
@@ -205,7 +205,7 @@ Esta etapa valida a migração técnica; os registros de fontes e as ressalvas d
 
 ## 9. Tema Aventura ambiental — 2 de outubro de 2026
 
-A pedido do grupo, o tema foi substituído por uma estética autoral de aventura 2D em pixel art, inspirada em Terraria. A capa usa uma paisagem fictícia gerada por IA; os demais slides usam painel claro, moldura de madeira e terreno decorativo desenhado por CSS. Pixelify Sans local é usada nos títulos; o corpo continua em fonte de leitura. A composição acadêmica, as oito fotografias documentais em uso, os dados dos gráficos e as referências foram preservados.
+A pedido do grupo, o tema foi substituído por uma estética autoral de aventura 2D em pixel art, inspirada em Terraria. A capa usa uma paisagem fictícia em pixel art; os demais slides usam painel claro, moldura de madeira e terreno decorativo desenhado por CSS. Pixelify Sans local é usada nos títulos; o corpo continua em fonte de leitura. A composição acadêmica, as oito fotografias documentais em uso, os dados dos gráficos e as referências foram preservados.
 
 - Os 12 slides foram inspecionados a 1280×720 com todos os fragmentos visíveis, sem cortes, imagens quebradas ou sobreposição com as fontes.
 - As três prévias individuais carregaram a fonte local e seus quatro slides offline, sem erros no Chrome. A apresentação também foi validada offline no Edge, com preferência por movimento reduzido.
