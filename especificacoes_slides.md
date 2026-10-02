@@ -1,4 +1,4 @@
-# Prompt — apresentação HTML: Vertentes da Educação Ambiental
+# Especificações e Diretrizes da Apresentação: Vertentes da Educação Ambiental
 
 ## Missão
 
@@ -16,41 +16,42 @@ Não defenda uma macrotendência como a única correta. Mostre contribuições, 
 
 ---
 
-## Processo multiagente obrigatório
+## Processo Metodológico e Divisão de Funções na Equipe
 
-Trabalhe como uma equipe coordenada. O **agente-orquestrador** conserva a decisão editorial final e é o único que altera os arquivos finais. Os agentes de auditoria produzem relatórios objetivos; não devem reescrever o conteúdo de modo autônomo.
+O planejamento e a execução da apresentação seguem um processo colaborativo estruturado em papéis e etapas de validação contínua entre os integrantes da equipe:
 
-### Papéis
+### Funções da Equipe
 
-1. **Agente-orquestrador / autor**
-   - Converte este briefing em roteiro, produz o HTML/CSS/JS, incorpora correções e entrega os arquivos finais.
-   - Mantém uma matriz de evidências: `slide | afirmação/dado | fonte | uso visual | limite de interpretação`.
+1. **Responsável pela Composição e Integração Editorial**
+   - Converte o plano temático em roteiro estruturado e código HTML/CSS/JS modular.
+   - Centraliza e integra os blocos de conteúdo desenvolvidos pelos integrantes.
+   - Mantém a matriz de evidências da equipe: `slide | afirmação/dado | fonte | uso visual | limite de interpretação`.
 
-2. **Agente de verificação histórico-conceitual**
-   - Audita fidelidade à formulação de Layrargues e Lima.
-   - Verifica enunciados sobre Estocolmo, Tbilisi, Rio-92, PNEA e o caso da Estrutural.
-   - Confere que as macrotendências não sejam apresentadas como etapas cronológicas, rótulos rígidos ou hierarquia moral.
-   - Para cada problema, informa: afirmação, fonte confiável, correção sugerida e status (`aprovado`, `corrigir` ou `não verificável`).
+2. **Revisão Histórico-Conceitual**
+   - Audita a fidelidade à formulação teórica de Layrargues e Lima (2014) e demais referências bibliográficas.
+   - Verifica enunciados sobre os marcos históricos (Estocolmo, Tbilisi, Rio-92, PNEA) e o estudo de caso do Lixão da Estrutural.
+   - Assegura que as macrotendências não sejam apresentadas como etapas cronológicas, rótulos rígidos ou hierarquia moral.
+   - Para cada ponto observado, registra: afirmação, fonte confiável, ajuste necessário e status de validação (`aprovado`, `corrigir` ou `não verificável`).
 
-3. **Agente de verificação de dados e fontes**
-   - Confere número, unidade, ano, definição e link de cada dado.
-   - Confere se a fonte sustenta exatamente a afirmação exibida e identifica qualquer causalidade indevida.
-   - Valida origem, crédito e condição de uso de todas as imagens.
-   - Emite `aprovado`, `corrigir` ou `não verificável` para cada item da matriz de evidências.
+3. **Verificação de Dados, Indicadores e Fontes**
+   - Confere número, unidade, ano, definição e endereço de acesso de cada dado público citado.
+   - Confere se a fonte primária sustenta exatamente a afirmação exibida no slide e previne causalidades indevidas.
+   - Valida origem, crédito e condição de uso de todas as imagens e gráficos.
+   - Emite parecer (`aprovado`, `corrigir` ou `não verificável`) para cada item da matriz de evidências.
 
-4. **Agente de QA visual e técnico**
-   - Audita legibilidade, contraste, consistência, texto alternativo, navegação, responsividade e impressão.
+4. **Controle de Qualidade Visual e Acessibilidade Técnica**
+   - Audita legibilidade, contraste de cores, consistência do layout, texto alternativo em mídias, navegação e responsividade.
    - Confere que o modo PDF revele todos os elementos essenciais, inclusive os que aparecem progressivamente no HTML.
-   - Procura problemas como excesso de texto, gráficos ruins, imagens clichês, itens cortados, dependências de internet ao vivo e animações decorativas.
+   - Elimina excesso de texto em tela, gráficos inadequados, clichês visuais, dependências de conexão externa ao vivo e animações puramente decorativas.
 
-### Sequência de trabalho
+### Sequência de Trabalho da Equipe
 
-1. O agente-orquestrador monta a matriz de evidências e o roteiro dos 12 slides.
-2. Os agentes histórico-conceitual e de dados/fontes auditam a matriz em paralelo.
-3. O orquestrador resolve pendências: corrige itens marcados como `corrigir` e remove itens `não verificáveis`.
-4. Só então produz a primeira versão do HTML.
-5. O agente de QA visual e técnico valida a apresentação navegável e a versão de impressão/PDF.
-6. O orquestrador corrige todos os achados críticos, atualiza os registros e entrega o resultado.
+1. Estruturação da matriz de evidências e do roteiro temático dos 12 slides.
+2. Auditoria paralela de consistência histórico-conceitual e de dados/fontes primárias.
+3. Resolução editorial das pendências identificadas pelo grupo.
+4. Produção e composição modular dos slides no ambiente web (reveal.js).
+5. Validação técnica da apresentação interativa no navegador e do arquivo exportado para PDF.
+6. Correção de pendências residuais, atualização dos registros de fontes e entrega da versão consolidada.
 
 ### Gates de aprovação
 
@@ -235,7 +236,7 @@ Não avance de fase se houver:
 - `index.html` — apresentação navegável localmente;
 - `assets/` — imagens e demais recursos usados;
 - `fontes.md` — referências, URLs, data de acesso, créditos e condição de uso das imagens;
-- `auditoria.md` — matriz de evidências, relatórios dos agentes e resolução das pendências;
+- `auditoria.md` — matriz de evidências, relatórios de verificação da equipe e resolução das pendências;
 - versão exportável em PDF, com 12 páginas/slides e todos os elementos essenciais visíveis.
 
 ## Exclusões obrigatórias

@@ -1,16 +1,16 @@
-Você atuará como um **sistema multiagente de pesquisa acadêmica, síntese conceitual e preparação de conteúdo para seminário**.
+# Roteiro Metodológico de Pesquisa: Vertentes Contemporâneas em Educação Ambiental
 
-O objetivo é produzir uma base de alta qualidade para um seminário universitário intitulado:
+Este documento define o plano metodológico de investigação bibliográfica, síntese conceitual e preparação dos materiais da equipe para o seminário acadêmico intitulado:
 
 # **Vertentes contemporâneas em Educação Ambiental**
 
-Neste momento, **não crie ainda a apresentação final nem os slides em PowerPoint**. Sua tarefa é pesquisar, analisar e gerar **artefatos intermediários bem estruturados**, que posteriormente servirão como matéria-prima para construir um conjunto de slides rigoroso, visualmente organizado e fácil de apresentar oralmente.
+Nesta etapa preparatória, o trabalho consiste em pesquisar, analisar criticamente e estruturar os **materiais e fichamentos intermediários**, que servem como fundamentação teórica sólida para a posterior elaboração da apresentação de slides e do resumo acadêmico.
 
 ---
 
 # 1. FONTES BIBLIOGRÁFICAS CENTRAIS
 
-A pesquisa deve partir prioritariamente das seguintes referências.
+A pesquisa deve partir prioritariamente das seguintes referências indicadas para a disciplina.
 
 ## Literatura geral
 
@@ -52,7 +52,7 @@ Sempre que possível:
 * priorizar PDFs institucionais, periódicos acadêmicos, SciELO, repositórios universitários, editoras, Google Scholar ou outras fontes acadêmicas confiáveis;
 * conferir título, autoria, ano, volume, número e páginas;
 * evitar depender de resumos de terceiros quando o texto original estiver disponível;
-* distinguir claramente aquilo que foi escrito pelos autores daquilo que é interpretação dos agentes;
+* distinguir claramente aquilo que foi escrito pelos autores daquilo que é interpretação dos integrantes;
 * registrar páginas sempre que uma ideia específica puder ser associada a uma página;
 * não inventar citações, páginas ou conceitos.
 
@@ -60,13 +60,11 @@ Fontes complementares poderão ser utilizadas para contextualizar os debates, ma
 
 ---
 
-# 3. ARQUITETURA MULTIAGENTE
+# 3. DIVISÃO TEMÁTICA E FRENTES DE INVESTIGAÇÃO
 
-Utilize diversos agentes trabalhando em paralelo.
+A investigação foi distribuída em frentes de trabalho coordenadas entre os integrantes da equipe:
 
-Crie, no mínimo, os seguintes agentes.
-
-## AGENTE 1 — Layrargues & Lima
+## FRENTE 1 — Layrargues & Lima
 
 Investigue profundamente:
 
@@ -91,7 +89,7 @@ Entregue uma ficha analítica própria.
 
 ---
 
-## AGENTE 2 — Bases filosóficas, políticas e ideológicas
+## FRENTE 2 — Bases filosóficas, políticas e ideológicas
 
 Analise:
 
@@ -121,7 +119,7 @@ Produza uma síntese que possa funcionar como **fundamentação teórica inicial
 
 ---
 
-## AGENTE 3 — Mapeamento das vertentes
+## FRENTE 3 — Mapeamento das vertentes
 
 Analise:
 
@@ -139,7 +137,7 @@ Produza uma **tabela comparativa detalhada**.
 
 ---
 
-## AGENTE 4 — Educação Ambiental Crítica segundo Carvalho
+## FRENTE 4 — Educação Ambiental Crítica segundo Carvalho
 
 Analise:
 
@@ -162,7 +160,7 @@ Objetivos:
 
 ---
 
-## AGENTE 5 — Educação Ambiental Crítica segundo Guimarães
+## FRENTE 5 — Educação Ambiental Crítica segundo Guimarães
 
 Analise:
 
@@ -186,7 +184,7 @@ Objetivos:
 
 ---
 
-## AGENTE 6 — Educação Ambiental Popular
+## FRENTE 6 — Educação Ambiental Popular
 
 Analise:
 
@@ -211,7 +209,7 @@ Objetivos:
 
 ---
 
-## AGENTE 7 — Contextualização histórica
+## FRENTE 7 — Contextualização histórica
 
 Produza uma linha histórica sintética da Educação Ambiental.
 
@@ -234,9 +232,9 @@ Seu objetivo é oferecer **contexto histórico suficiente para explicar o surgim
 
 ---
 
-## AGENTE 8 — Comparador conceitual
+## FRENTE 8 — Comparação conceitual e matriz integradora
 
-Após receber os trabalhos dos demais agentes, construa uma matriz comparativa envolvendo, quando aplicável:
+Após consolidar os levantamentos das frentes temáticas, construir uma matriz comparativa envolvendo, quando aplicável:
 
 * conservacionista;
 * pragmática;
@@ -267,11 +265,11 @@ A tabela deverá ser suficientemente clara para ser posteriormente convertida em
 
 ---
 
-## AGENTE 9 — Revisor acadêmico e verificador de fontes
+## FRENTE 9 — Revisão acadêmica e verificação de fontes
 
-Este agente não deverá produzir novas interpretações inicialmente.
+Esta frente tem foco estrito de auditoria documental.
 
-Sua função é revisar o material dos demais agentes.
+Sua função é revisar o material produzido pelas frentes temáticas.
 
 Verifique:
 
@@ -294,9 +292,9 @@ Classifique eventuais afirmações duvidosas como:
 
 ---
 
-## AGENTE 10 — Designer de narrativa acadêmica
+## FRENTE 10 — Estruturação da narrativa acadêmica
 
-Somente depois dos demais agentes terem concluído a pesquisa, construa a lógica do seminário.
+Após o término das pesquisas temáticas e sua validação, estruturar a lógica expositiva do seminário.
 
 Não faça ainda o PowerPoint.
 
@@ -317,7 +315,7 @@ O seminário deve apresentar as vertentes como **diferentes projetos políticos,
 
 # 4. SÍNTESE CRUZADA OBRIGATÓRIA
 
-Após as pesquisas individuais, faça uma rodada de síntese em que os agentes comparem seus resultados.
+Após as pesquisas individuais de cada frente temática, realizar uma rodada de síntese em que o grupo compare e integre seus resultados.
 
 Investigue especialmente:
 
@@ -535,7 +533,7 @@ Considere uma estrutura aproximada como:
 15. Síntese
 16. Referências
 
-Essa sequência é apenas uma hipótese inicial. O agente de narrativa poderá propor uma organização melhor caso a literatura indique outra estrutura.
+Essa sequência é uma hipótese preliminar de trabalho. A estrutura final pode ser ajustada conforme a articulação dos blocos temáticos e a dinâmica da exposição oral.
 
 ---
 
@@ -577,7 +575,7 @@ Para cada pergunta, prepare uma resposta curta e uma resposta aprofundada.
 
 # 9. REGRAS DE QUALIDADE
 
-Todos os agentes devem obedecer às seguintes regras:
+Todos os integrantes e frentes temáticas devem seguir as seguintes diretrizes de qualidade acadêmica:
 
 1. Não inventar conceitos ou citações.
 2. Não atribuir ideias a um autor sem evidência.
@@ -595,27 +593,27 @@ Todos os agentes devem obedecer às seguintes regras:
 
 ---
 
-# 10. CONTROLE DE DUPLICAÇÃO ENTRE AGENTES
+# 10. INTEGRAÇÃO E COERÊNCIA ENTRE AS FRENTES DE PESQUISA
 
-Os agentes especialistas devem trabalhar primeiro de maneira independente.
+Cada frente de pesquisa trabalha inicialmente com foco em suas referências centrais.
 
-Depois:
+Em seguida, o grupo deve:
 
-1. compartilharem os resultados;
-2. apontarem contradições;
-3. resolverem inconsistências consultando novamente as fontes;
-4. consolidarem conceitos repetidos;
-5. preservarem diferenças reais entre os autores.
+1. compartilhar e debater os resultados;
+2. apontar contradições e divergências conceituais;
+3. resolver inconsistências consultando diretamente os textos-fonte;
+4. consolidar conceitos correlatos sem perda da especificidade terminológica;
+5. preservar diferenças teóricas reais entre os autores.
 
-Não quero seis resumos isolados. Quero uma **interpretação integrada da bibliografia**.
+O objetivo metodológico não é produzir resumos isolados, mas construir uma **interpretação integrada da bibliografia**.
 
 ---
 
-# 11. RODADA DE CRÍTICA
+# 11. RODADA DE REVISÃO E CONTROLE DE QUALIDADE
 
-Depois de produzir os artefatos, crie três agentes revisores adicionais.
+Após a elaboração inicial dos materiais de pesquisa, aplicar três perspectivas de revisão crítica pelo grupo:
 
-### Revisor A — Professor crítico
+### Perspectiva A — Rigor acadêmico e conceitual
 
 Questione:
 
@@ -624,7 +622,7 @@ Questione:
 * O argumento realmente responde ao tema “Vertentes contemporâneas em Educação Ambiental”?
 * A bibliografia indicada está sendo usada de forma substancial?
 
-### Revisor B — Aluno leigo
+### Perspectiva B — Didática e clareza para a turma
 
 Questione:
 
@@ -633,7 +631,7 @@ Questione:
 * Quais comparações ajudariam a compreensão?
 * Que exemplos concretos estão faltando?
 
-### Revisor C — Especialista em apresentações
+### Perspectiva C — Viabilidade para apresentação oral e síntese visual
 
 Questione:
 
@@ -642,7 +640,7 @@ Questione:
 * Quais conceitos poderiam ser representados visualmente?
 * Quais conteúdos deveriam ficar apenas na fala?
 
-Após as três revisões, produza uma versão consolidada dos artefatos.
+Após a revisão cruzada sob essas três perspectivas, produzir uma versão consolidada dos materiais.
 
 ---
 

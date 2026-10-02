@@ -1,5 +1,9 @@
 # Guia dos slides colaborativos
 
+- **Disciplina:** Educação Ambiental
+- **Docente:** Prof. Davi Lima Pantoja Leite
+- **Integrantes:** Caio Victor Ferreira do Nascimento, Edson da Silva Lima Junior e Diogo
+
 A apresentação usa o [reveal.js](https://revealjs.com) com o tema autoral **Aventura ambiental**, inspirado na exploração de mundos 2D em pixel art. Os títulos usam **Pixelify Sans**, incluída localmente, e o corpo mantém uma fonte legível para textos, fotos e gráficos. A divisão **Caio → Diogo → Edson** permite que cada integrante edite sua parte, mantendo uma sequência única. Quantidade de slides, abordagem e distribuição definitiva podem mudar depois.
 
 ## Editar e conferir
@@ -44,7 +48,7 @@ Os arquivos de `comum/` valem para todos os slides. Ajustes neles devem ser comb
 | `modelo.html` | Página que recebe os slides; define quais arquivos do reveal são carregados. |
 | `modelos/` | Slides prontos para copiar; veja [modelos/LEIAME.md](comum/modelos/LEIAME.md). |
 
-As imagens ficam em `assets/`, e seus créditos permanecem em [fontes.md](fontes.md). `aventura-floresta.png` é uma paisagem ilustrada gerada por IA, usada na capa e como cenário noturno. Descreva-a como ilustração; os créditos de local e autoria das fotografias continuam vinculados às fotos correspondentes.
+As imagens ficam em `assets/`, e seus créditos permanecem em [fontes.md](fontes.md). `aventura-floresta.png` é uma paisagem ilustrada em pixel art, usada na capa e como cenário noturno. Descreva-a como ilustração; os créditos de local e autoria das fotografias continuam vinculados às fotos correspondentes.
 
 Para avaliar a tipografia, abra [comparar-fontes.html](comparar-fontes.html). O estudo contém amostras dos slides 4 e 5, compara a Pixelify original e ajustada com VT323, Silkscreen e Chakra Petch, e permite variar tamanho e espaçamento. A Pixelify ajustada foi adotada na apresentação; os controles do estudo não alteram seus arquivos.
 
