@@ -1,57 +1,40 @@
 <section class="slide" id="slide-3">
-  <p class="olho">Contexto</p>
-  <h2 class="larga">A questão ambiental ganha escala em um país urbano-industrial</h2>
+  <h2>A questão ambiental ganha escala em um país urbano-industrial</h2>
 
-  <nav class="tempo" data-passo="1" aria-label="Marcos da Educação Ambiental">
-    <div class="trilho" aria-hidden="true"></div>
-    <ol>
-      <li><span class="ano">1972</span><span class="ponto" aria-hidden="true"></span>
-        <span class="marco">Estocolmo</span><span class="oque">A questão ambiental entra na agenda internacional.</span></li>
-      <li><span class="ano">1977</span><span class="ponto" aria-hidden="true"></span>
-        <span class="marco">Tbilisi</span><span class="oque">A Educação Ambiental ganha princípios orientadores.</span></li>
-      <li><span class="ano">1992</span><span class="ponto" aria-hidden="true"></span>
-        <span class="marco">Rio-92</span><span class="oque">A agenda de ambiente e desenvolvimento ganha escala global (Agenda 21).</span></li>
-      <li><span class="ano">1999</span><span class="ponto" aria-hidden="true"></span>
-        <span class="marco">PNEA</span><span class="oque">O Brasil passa a ter uma política nacional própria de Educação Ambiental.</span></li>
-    </ol>
-  </nav>
+  <ol class="colunas quatro marcos fragment" data-fragment-index="1" aria-label="Marcos da Educação Ambiental">
+    <li><h3>1972</h3><p><strong>Estocolmo</strong><br>A questão ambiental entra na agenda internacional.</p></li>
+    <li><h3>1977</h3><p><strong>Tbilisi</strong><br>A Educação Ambiental ganha princípios orientadores.</p></li>
+    <li><h3>1992</h3><p><strong>Rio-92</strong><br>A agenda de ambiente e desenvolvimento ganha escala global (Agenda 21).</p></li>
+    <li><h3>1999</h3><p><strong>PNEA</strong><br>O Brasil passa a ter uma política nacional própria de Educação Ambiental.</p></li>
+  </ol>
 
-  <div class="bloco-grafico" data-passo="2">
-    <svg class="grafico" viewBox="0 0 460 244" role="img" aria-labelledby="g1t g1d">
+  <div class="colunas grafico-texto fragment" data-fragment-index="2">
+    <svg class="grafico neutro" viewBox="0 0 460 244" role="img" aria-labelledby="g1t g1d">
       <title id="g1t">Consumo de energia elétrica do setor industrial brasileiro</title>
       <desc id="g1d">Gráfico de duas colunas. Em 1960, o consumo de eletricidade do setor industrial brasileiro foi de 9.174 gigawatts-hora; em 1987, de 107.391 gigawatts-hora — cerca de doze vezes mais. Fonte: IBGE.</desc>
-
-      <text class="g-titulo" x="0" y="13">Consumo de eletricidade — setor industrial, Brasil</text>
-      <line class="g-eixo" x1="0" y1="190" x2="460" y2="190"></line>
+      <text class="titulo" x="0" y="15">Consumo de eletricidade — setor industrial, Brasil</text>
+      <line class="eixo" x1="0" y1="190" x2="460" y2="190"></line>
 
       <!-- 1960: 9.174 GWh → 9174/107391 × 140 = 11,96 px -->
-      <rect class="b-antes" x="62" y="178" width="88" height="12" stroke="var(--prag)"></rect>
-      <text class="g-valor-peq" x="62" y="168">9.174 GWh</text>
-      <text class="g-rotulo" x="62" y="212">1960</text>
+      <rect class="antes" x="62" y="178" width="88" height="12"></rect>
+      <text class="valor" x="62" y="168">9.174 GWh</text>
+      <text x="62" y="212">1960</text>
 
       <!-- 1987: 107.391 GWh → 140 px -->
-      <rect class="b-depois" x="268" y="50" width="88" height="140" fill="var(--prag-fill)"></rect>
-      <text class="g-valor" x="268" y="40">107.391 GWh</text>
-      <text class="g-rotulo" x="268" y="212">1987</text>
+      <rect class="depois" x="268" y="50" width="88" height="140"></rect>
+      <text class="valor" x="268" y="40">107.391 GWh</text>
+      <text x="268" y="212">1987</text>
 
-      <text class="g-mini" x="0" y="236">Gigawatts-hora por ano. Escala linear; as colunas são comparáveis entre si.</text>
+      <text class="nota" x="0" y="236">Gigawatts-hora por ano. Escala linear; as colunas são comparáveis entre si.</text>
     </svg>
 
-    <p class="leitura">
-      O dado <strong>contextualiza a expansão produtiva</strong> de um país que, no mesmo período, também se tornava
-      majoritariamente urbano, e ajuda a entender por que poluição, saneamento e resíduos ganham visibilidade pública.
-      Ele <strong>não</strong> demonstra que a industrialização tenha causado a vertente conservacionista:
-      é cenário, não causa.
-    </p>
+    <p>O dado <strong>contextualiza a expansão produtiva</strong> de um país que, no mesmo período, também se tornava majoritariamente urbano, e ajuda a entender por que poluição, saneamento e resíduos ganham visibilidade pública. Ele <strong>não</strong> demonstra que a industrialização tenha causado a vertente conservacionista: é cenário, não causa.</p>
   </div>
 
-  <p class="fonte" style="margin-top:auto;">
-    <b>Fonte do gráfico:</b> IBGE, <i>Estatísticas do Século XX</i>, tab. 9.3 — <i>Produção e consumo de energia elétrica,
-    1952–87</i> (planilha 9_03a_energia1952_93.xls, aba 9.3a_1952-87); consumo de eletricidade do setor industrial, Brasil,
-    em GWh, com série industrial a partir de 1960. Urbanização: IBGE, Censo Demográfico 2022, Tabela 4. Acesso em 11 set. 2026.
-    <b>Limites de leitura:</b> o consumo industrial de eletricidade é indicador indireto de expansão produtiva — não mede
-    industrialização nem dano ambiental; a série termina em 1987 e não alcança os marcos de 1992 e 1999; o espaçamento da
-    linha do tempo é cronológico, não proporcional ao intervalo entre os anos.
-  </p>
-  <div class="rodape"><span>Vertentes da Educação Ambiental</span><span data-numero-slide></span></div>
+  <p class="fonte">Fonte: IBGE, <i>Estatísticas do Século XX</i>, tab. 9.3 (GWh por ano, 1960 e 1987); urbanização: IBGE, Censo Demográfico 2022, Tabela 4. Acesso em 11 set. 2026.</p>
+
+  <aside class="notes">
+    <p>Fonte do gráfico: IBGE, Estatísticas do Século XX, tab. 9.3 — Produção e consumo de energia elétrica, 1952–87 (planilha 9_03a_energia1952_93.xls, aba 9.3a_1952-87); consumo de eletricidade do setor industrial, Brasil, em GWh, com série industrial a partir de 1960. Urbanização: IBGE, Censo Demográfico 2022, Tabela 4. Acesso em 11 set. 2026.</p>
+    <p>Limites de leitura: o consumo industrial de eletricidade é indicador indireto de expansão produtiva — não mede industrialização nem dano ambiental; a série termina em 1987 e não alcança os marcos de 1992 e 1999; o espaçamento da linha do tempo é cronológico, não proporcional ao intervalo entre os anos.</p>
+  </aside>
 </section>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparação de fontes · Aventura ambiental</title>
+  <link rel="stylesheet" href="comum/reveal/reset.css">
+  <link rel="stylesheet" href="comum/reveal/reveal.css">
+  <link rel="stylesheet" href="comum/tema.css">
+  <style>
+    @font-face { font-family: VT323; src: url('comum/fontes/comparacao/vt323/VT323-Regular.ttf'); font-weight: 400; }
+    @font-face { font-family: Silkscreen; src: url('comum/fontes/comparacao/silkscreen/Silkscreen-Regular.ttf'); font-weight: 400; }
+    @font-face { font-family: 'Chakra Petch'; src: url('comum/fontes/comparacao/chakrapetch/ChakraPetch-SemiBold.ttf'); font-weight: 600; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #1d3328; color: #f5edcf; font: 16px/1.5 'Segoe UI', sans-serif; }
+    main { max-width: 1440px; margin: auto; padding: 40px 32px 52px; }
+    .intro { max-width: 950px; }
+    .intro h1 { font: 600 34px/1.2 'Segoe UI', sans-serif; margin: 0 0 12px; }
+    .intro p { color: #d7ddcb; margin: 0 0 16px; }
+    .kicker { color: #c1d494; text-transform: uppercase; letter-spacing: .13em; font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+    .variants { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 12px; margin-top: 28px; }
+    .variant { padding: 16px; border: 2px solid #758966; color: #2f422c; background: #f6edcf; text-align: left; cursor: pointer; min-width: 0; box-shadow: 3px 3px 0 #0e2218; }
+    .variant[aria-pressed="true"] { border-color: #dfcc80; box-shadow: 0 0 0 3px #a4bd75; }
+    .variant strong { display: block; font: 700 15px/1.25 'Segoe UI',sans-serif; }
+    .variant small { display: block; font: 12px/1.4 'Segoe UI',sans-serif; color: #596552; margin: 6px 0 14px; min-height: 35px; }
+    .mini { display: block; font-family: var(--font); font-weight: var(--weight); font-size: var(--mini); line-height: 1.2; overflow-wrap: break-word; }
+    .variant:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible { outline: 3px solid #efce68; outline-offset: 4px; }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 24px 0 18px; }
+    .toolbar label { display: flex; align-items: center; gap: 10px; color: #e2e8d8; }
+    .toolbar select { padding: 7px 12px; background: #f6edcf; color: #26392b; border: 1px solid #90a079; font: inherit; }
+    input[type="range"] { accent-color: #c6d891; width: 145px; }
+    output { min-width: 36px; font-variant-numeric: tabular-nums; }
+    .description { color: #d6dfc9; margin: 0 0 20px; }
+    .preview-viewport { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; box-shadow: 6px 6px 0 #11251b; }
+    .preview { width: 1280px; height: 720px; transform: scale(var(--scale,1)); transform-origin: top left; }
+    .preview .slides { position: absolute; width: 1280px; height: 720px; top: 0; left: 0; margin: 0; transform: none; perspective: none; }
+    .preview .slides > section { display: block; top: 0; left: 0; padding: 0; transform: none; opacity: 1; }
+    .reveal.preview .slides section .fragment { opacity: 1; visibility: visible; transform: none; }
+    .preview h2 { font-family: var(--preview-font,'Pixelify Sans'); font-size: var(--preview-size,44px); font-weight: var(--preview-weight,500); line-height: var(--preview-leading,1.14); letter-spacing: var(--preview-spacing,.2px); }
+    .preview h3 { font-family: var(--preview-font,'Pixelify Sans'); font-weight: var(--preview-weight,500); }
+    .preview ul, .preview ol { list-style-position: outside; }
+    .preview .slide::before, .preview .slide::after { box-sizing: content-box; }
+    .caption { margin: 14px 0 26px; color: #b7cba6; font-size: 13px; }
+    .samples { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .sample { background: #f6edcf; color: #2f422c; padding: 22px; border: 5px solid #7e5735; }
+    .sample h2 { font: 700 13px/1.4 'Segoe UI',sans-serif; margin: 0 0 16px; color: #69745a; text-transform: uppercase; letter-spacing: .08em; }
+    .long-sample { font-family: var(--preview-font,'Pixelify Sans'); font-size: var(--preview-size,44px); font-weight: var(--preview-weight,500); line-height: var(--preview-leading,1.14); letter-spacing: var(--preview-spacing,.2px); overflow-wrap: break-word; }
+    .cover-sample { font-family: 'Pixelify Sans'; font-size: 58px; font-weight: 500; line-height: 1.1; color: #fff2bd; text-shadow: 2px 2px 0 #183728; }
+    .cover { background: linear-gradient(90deg,#173c36dd,#173c3677),url('assets/aventura-floresta.png') center/cover; }
+    .cover h2 { color: #e5edc3; }
+    .links { color: #c5d3b9; font-size: 13px; margin-top: 26px; }
+    .links a { color: #ebdaa3; text-underline-offset: 3px; }
+    @media (max-width: 1000px) { .variants { grid-template-columns: repeat(3,minmax(0,1fr)); } .samples { grid-template-columns: 1fr; } }
+    @media (max-width: 620px) { main { padding: 24px 14px; } .variants { grid-template-columns: 1fr 1fr; } .toolbar { gap: 14px; } .long-sample { font-size: 30px; } .cover-sample { font-size: 42px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header class="intro">
+    <div class="kicker">Aventura ambiental · estudo de tipografia</div>
+    <h1>Qual fonte fica mais confortável de ler?</h1>
+    <p>Compare as opções no mesmo slide, com palavras acentuadas e títulos longos. Clique em uma fonte e ajuste o tamanho e o espaço entre as letras.</p>
+  </header>
+  <div class="variants" role="group" aria-label="Escolha uma opção de fonte">
+    <button class="variant" data-option="atual" aria-pressed="false" style="--font:'Pixelify Sans';--weight:600;--mini:26px"><strong>1 · Pixelify original</strong><small>42 px · peso 600 · entrelinha 1,08</small><span class="mini">Educação Ambiental</span></button>
+    <button class="variant" data-option="ajustada" aria-pressed="true" style="--font:'Pixelify Sans';--weight:500;--mini:26px"><strong>2 · Pixelify ajustada</strong><small>44 px · peso 500 · entrelinha 1,14</small><span class="mini">Educação Ambiental</span></button>
+    <button class="variant" data-option="vt323" aria-pressed="false" style="--font:VT323;--weight:400;--mini:32px"><strong>3 · VT323</strong><small>56 px · peso 400 · estilo terminal</small><span class="mini">Educação Ambiental</span></button>
+    <button class="variant" data-option="silkscreen" aria-pressed="false" style="--font:Silkscreen;--weight:400;--mini:20px"><strong>4 · Silkscreen</strong><small>34 px · peso 400 · pixel quadrado</small><span class="mini">Educação Ambiental</span></button>
+    <button class="variant" data-option="chakra" aria-pressed="false" style="--font:'Chakra Petch';--weight:600;--mini:26px"><strong>5 · Chakra Petch</strong><small>44 px · peso 600 · alternativa híbrida</small><span class="mini">Educação Ambiental</span></button>
+  </div>
+  <div class="toolbar">
+    <label>Prévia <select id="slide-choice"><option value="conservacionista">Título longo e fotografia</option><option value="macrotendencias">Três macrotendências</option></select></label>
+    <label>Tamanho <input id="size" type="range" min="30" max="60" value="44"><output id="size-value">44 px</output></label>
+    <label>Espaçamento <input id="spacing" type="range" min="0" max="1" step="0.1" value="0.2"><output id="spacing-value">0,2 px</output></label>
+  </div>
+  <p class="description" id="description" aria-live="polite">Minha primeira opção: aliviar o peso e abrir um pouco as linhas, preservando o desenho pixelado.</p>
+  <div class="preview-viewport">
+    <div class="reveal preview" aria-label="Prévia do slide com a fonte escolhida"><div class="slides" id="preview-content">
+      <section class="slide" id="slide-5">
+  <h2 class="cons">Conservacionista: aproximar pessoas da natureza para preservá-la</h2>
+
+  <div class="colunas foto-texto">
+    <figure class="fragment" data-fragment-index="1">
+      <img src="assets/conservacionista.jpg" style="aspect-ratio: 4 / 3; object-position: center 50%"
+        alt="Uma mulher caminha por uma trilha na floresta e encosta a mão no tronco de uma árvore alta coberta de musgo.">
+      <figcaption>Trilha da Vovó Sumaúma, Floresta Nacional do Tapajós (PA). Foto: Leonardo Milano / Amazônia Real — Wikimedia Commons (CC BY 2.0)</figcaption>
+    </figure>
+
+    <div>
+      <dl class="fragment" data-fragment-index="2">
+        <dt class="cons">Diagnóstico</dt>
+        <dd>Degradação da natureza e <strong>afastamento humano</strong> da pauta ecológica.</dd>
+        <dt class="cons">Estratégia</dt>
+        <dd>Sensibilização, conhecimento ecológico e <strong>mudança de comportamento</strong>.</dd>
+        <dt class="cons">Contribuição (leitura do grupo)</dt>
+        <dd>Vínculo afetivo, cuidado e <strong>preservação</strong>.</dd>
+      </dl>
+      <blockquote class="fragment" data-fragment-index="3">“O cuidado individual é suficiente para enfrentar todos os conflitos ambientais?”</blockquote>
+    </div>
+  </div>
+
+  <p class="fonte">Fonte: LAYRARGUES &amp; LIMA (2014, p. 27 e 30–31); exemplos de trilhas e vivências ao ar livre: SANTOS &amp; TOSCHI (2015, p. 245).</p>
+
+  <aside class="notes">
+    <p>Caracterização a partir de LAYRARGUES &amp; LIMA (2014, p. 27 e 30–31); os exemplos de trilhas e vivências ao ar livre seguem SANTOS &amp; TOSCHI (2015, p. 245).</p>
+    <p>A linha Contribuição é uma leitura do grupo: os autores não enunciam contribuições e avaliam criticamente os limites desta macrotendência.</p>
+  </aside>
+</section>
+
+    </div></div>
+  </div>
+  <p class="caption">A prévia acompanha a largura da janela. Abra em tela cheia para avaliar a leitura à distância.</p>
+  <div class="samples">
+    <article class="sample"><h2>Teste de acentos e palavras longas</h2><p class="long-sample">Macrotendências são lentes em disputa, não etapas</p></article>
+    <article class="sample cover"><h2>Ajuste da capa · peso 500 e sombra simples</h2><p class="cover-sample">Vertentes da<br>Educação Ambiental</p></article>
+  </div>
+  <p class="links">Fontes locais com licença SIL OFL: <a href="https://fonts.google.com/specimen/Pixelify+Sans">Pixelify Sans</a>, <a href="https://fonts.google.com/specimen/VT323">VT323</a>, <a href="https://fonts.google.com/specimen/Silkscreen">Silkscreen</a> e <a href="https://fonts.google.com/specimen/Chakra+Petch">Chakra Petch</a>. <a href="index.html">Abrir a apresentação</a>.</p>
+</main>
+<template id="conservacionista"><section class="slide" id="slide-5">
+  <h2 class="cons">Conservacionista: aproximar pessoas da natureza para preservá-la</h2>
+
+  <div class="colunas foto-texto">
+    <figure class="fragment" data-fragment-index="1">
+      <img src="assets/conservacionista.jpg" style="aspect-ratio: 4 / 3; object-position: center 50%"
+        alt="Uma mulher caminha por uma trilha na floresta e encosta a mão no tronco de uma árvore alta coberta de musgo.">
+      <figcaption>Trilha da Vovó Sumaúma, Floresta Nacional do Tapajós (PA). Foto: Leonardo Milano / Amazônia Real — Wikimedia Commons (CC BY 2.0)</figcaption>
+    </figure>
+
+    <div>
+      <dl class="fragment" data-fragment-index="2">
+        <dt class="cons">Diagnóstico</dt>
+        <dd>Degradação da natureza e <strong>afastamento humano</strong> da pauta ecológica.</dd>
+        <dt class="cons">Estratégia</dt>
+        <dd>Sensibilização, conhecimento ecológico e <strong>mudança de comportamento</strong>.</dd>
+        <dt class="cons">Contribuição (leitura do grupo)</dt>
+        <dd>Vínculo afetivo, cuidado e <strong>preservação</strong>.</dd>
+      </dl>
+      <blockquote class="fragment" data-fragment-index="3">“O cuidado individual é suficiente para enfrentar todos os conflitos ambientais?”</blockquote>
+    </div>
+  </div>
+
+  <p class="fonte">Fonte: LAYRARGUES &amp; LIMA (2014, p. 27 e 30–31); exemplos de trilhas e vivências ao ar livre: SANTOS &amp; TOSCHI (2015, p. 245).</p>
+
+  <aside class="notes">
+    <p>Caracterização a partir de LAYRARGUES &amp; LIMA (2014, p. 27 e 30–31); os exemplos de trilhas e vivências ao ar livre seguem SANTOS &amp; TOSCHI (2015, p. 245).</p>
+    <p>A linha Contribuição é uma leitura do grupo: os autores não enunciam contribuições e avaliam criticamente os limites desta macrotendência.</p>
+  </aside>
+</section>
+</template>
+<template id="macrotendencias"><section class="slide" id="slide-4">
+  <h2>Macrotendências são lentes em disputa, não etapas</h2>
+  <p>Philippe Pomier Layrargues e Gustavo Ferreira da Costa Lima descrevem o campo brasileiro da Educação Ambiental como plural e disputado, e propõem três macrotendências como instrumento de análise.</p>
+
+  <div class="colunas tres lentes">
+    <div class="fragment" data-fragment-index="1">
+      <img class="icone-lente" src="comum/icones/folha.svg" alt="" aria-hidden="true">
+      <h3 class="cons">Conservacionista</h3>
+      <p>natureza e preservação</p>
+    </div>
+    <div class="fragment" data-fragment-index="2">
+      <img class="icone-lente" src="comum/icones/engrenagem.svg" alt="" aria-hidden="true">
+      <h3 class="prag">Pragmática</h3>
+      <p>eficiência e resultados</p>
+    </div>
+    <div class="fragment" data-fragment-index="3">
+      <img class="icone-lente" src="comum/icones/coletivo.svg" alt="" aria-hidden="true">
+      <h3 class="crit">Crítica</h3>
+      <p>justiça e participação</p>
+    </div>
+  </div>
+
+  <p class="fragment" data-fragment-index="4">São <strong>tipos ideais</strong>, construídos para analisar práticas educativas. Coexistem, disputam sentidos e não formam uma escada: uma prática real pode combinar elementos de mais de uma lente.</p>
+
+  <p class="fonte">Fonte: LAYRARGUES &amp; LIMA (2014).</p>
+</section>
+</template>
+<script>
+  const choices = {
+    atual: { font: 'Pixelify Sans', weight: 600, size: 42, leading: 1.08, spacing: 0, text: 'Referência original: peso 600, com as linhas mais próximas.' },
+    ajustada: { font: 'Pixelify Sans', weight: 500, size: 44, leading: 1.14, spacing: .2, text: 'Minha primeira opção: aliviar o peso e abrir um pouco as linhas, preservando o desenho pixelado.' },
+    vt323: { font: 'VT323', weight: 400, size: 56, leading: 1.08, spacing: 0, text: 'VT323: letras estreitas com aparência de terminal retrô. O tamanho maior ajuda a comparar a altura visual.' },
+    silkscreen: { font: 'Silkscreen', weight: 400, size: 34, leading: 1.18, spacing: 0, text: 'Silkscreen: formas quadradas e largas. Observe o espaço ocupado e a leitura dos títulos em duas linhas.' },
+    chakra: { font: 'Chakra Petch', weight: 600, size: 44, leading: 1.14, spacing: .2, text: 'Alternativa híbrida: Chakra Petch nos títulos de conteúdo e Pixelify na capa. Contornos contínuos com desenho angular.' }
+  };
+  const main = document.querySelector('main');
+  const preview = document.querySelector('.preview');
+  const size = document.getElementById('size');
+  const spacing = document.getElementById('spacing');
+  const setNumbers = () => {
+    main.style.setProperty('--preview-size', size.value + 'px');
+    main.style.setProperty('--preview-spacing', spacing.value + 'px');
+    document.getElementById('size-value').textContent = size.value + ' px';
+    document.getElementById('spacing-value').textContent = Number(spacing.value).toLocaleString('pt-BR') + ' px';
+  };
+  document.querySelectorAll('[data-option]').forEach(button => button.addEventListener('click', () => {
+    const choice = choices[button.dataset.option];
+    document.querySelectorAll('[data-option]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+    main.style.setProperty('--preview-font', '"' + choice.font + '"');
+    main.style.setProperty('--preview-weight', choice.weight);
+    main.style.setProperty('--preview-leading', choice.leading);
+    size.value = choice.size;
+    spacing.value = choice.spacing;
+    document.getElementById('description').textContent = choice.text;
+    setNumbers();
+  }));
+  size.addEventListener('input', setNumbers);
+  spacing.addEventListener('input', setNumbers);
+  document.getElementById('slide-choice').addEventListener('change', event => {
+    document.getElementById('preview-content').replaceChildren(document.getElementById(event.target.value).content.cloneNode(true));
+  });
+  new ResizeObserver(entries => preview.style.setProperty('--scale', entries[0].contentRect.width / 1280)).observe(document.querySelector('.preview-viewport'));
+  setNumbers();
+</script>
+</body>
+</html>

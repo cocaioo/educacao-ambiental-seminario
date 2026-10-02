@@ -6,25 +6,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{TITULO}}</title>
 <meta name="description" content="Apresentação acadêmica sobre as macrotendências conservacionista, pragmática e crítica da Educação Ambiental brasileira.">
+<link rel="stylesheet" href="{{COMUM}}/reveal/reset.css">
+<link rel="stylesheet" href="{{COMUM}}/reveal/reveal.css">
+<link rel="stylesheet" href="{{COMUM}}/tema.css">
 <style>
 {{ESTILOS}}
 </style>
 </head>
 <body>
-
-<div id="palco" role="region" aria-label="Apresentação: Vertentes da Educação Ambiental">
+<div class="reveal">
+<div class="slides">
 {{SLIDES}}
-</div><!-- /palco -->
-
-<div class="barra" id="barra" aria-hidden="true"></div>
-<p class="dica" id="dica">← → navegar · <b>A</b> revelar tudo · <b>I</b> imprimir</p>
-<div class="nav" role="group" aria-label="Navegação da apresentação">
-  <button type="button" id="btn-voltar" aria-label="Slide anterior">‹</button>
-  <span id="contador" aria-live="polite">1 / {{TOTAL}}</span>
-  <button type="button" id="btn-avancar" aria-label="Próximo slide">›</button>
 </div>
-<script>
-{{NAVEGACAO}}
-</script>
+</div>
+<script src="{{COMUM}}/reveal/reveal.js"></script>
+<script src="{{COMUM}}/reveal/notes.js"></script>
+<script src="{{COMUM}}/reveal/zoom.js"></script>
+<script src="{{COMUM}}/iniciar.js"></script>
 </body>
 </html>

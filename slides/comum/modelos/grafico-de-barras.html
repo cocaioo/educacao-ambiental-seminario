@@ -1,0 +1,35 @@
+<!-- MODELO: gráfico de duas colunas ("antes" vazada, "depois" cheia) feito em SVG, ao lado de um texto de leitura.
+     Regras do projeto: todo dado exibido precisa de fonte, unidade e ano visíveis no slide; ids do SVG únicos em todo o projeto.
+     Escala: altura da coluna = valor / maior valor × 140. Troque a classe do svg (neutro, cons, prag ou crit) para mudar a cor. -->
+<section class="slide" id="modelo-grafico-de-barras">
+  <h2>Título do slide</h2>
+
+  <div class="colunas grafico-texto">
+    <svg class="grafico neutro" viewBox="0 0 460 244" role="img" aria-labelledby="modelo-grafico-t modelo-grafico-d">
+      <title id="modelo-grafico-t">Título do gráfico</title>
+      <desc id="modelo-grafico-d">Descrição em uma frase: o valor passou de X em 2000 para Y em 2020. Fonte: AUTOR.</desc>
+      <text class="titulo" x="0" y="15">Título do gráfico</text>
+      <line class="eixo" x1="0" y1="190" x2="460" y2="190"></line>
+
+      <g class="fragment" data-fragment-index="1">
+        <rect class="antes" x="62" y="140" width="88" height="50"></rect>
+        <text class="valor" x="62" y="130">X unidade</text>
+        <text x="62" y="212">2000</text>
+      </g>
+      <g class="fragment" data-fragment-index="2">
+        <rect class="depois" x="268" y="50" width="88" height="140"></rect>
+        <text class="valor" x="268" y="40">Y unidade</text>
+        <text x="268" y="212">2020</text>
+      </g>
+
+      <text class="nota" x="0" y="236">Unidade por ano. Escala linear a partir de zero.</text>
+    </svg>
+
+    <p class="fragment" data-fragment-index="3">Leitura do dado em uma ou duas frases, dizendo também o que ele <strong>não</strong> demonstra.</p>
+  </div>
+
+  <p class="fonte">Fonte: AUTOR, <i>Título da publicação</i> (unidade, 2000 e 2020). Acesso em dd mmm. aaaa.</p>
+  <aside class="notes">
+    <p>Limites de leitura, definições do indicador e referência completa vão aqui.</p>
+  </aside>
+</section>

@@ -130,6 +130,15 @@ function Reescrever-Srcset([string]$Valor, [string]$Base, [string]$Destino, [str
     return $itens -join ', '
 }
 
+function Reescrever-Lista-Urls([string]$Valor, [string]$Base, [string]$Destino, [string]$Arquivo) {
+    # Imagens e vídeos de fundo do reveal.js aceitam fontes separadas por vírgula.
+    # Uma imagem data: contém vírgulas próprias e deve permanecer inteira.
+    if ($Valor.Trim() -match '^(?i)data:') { return Reescrever-Url $Valor $Base $Destino $Arquivo }
+    $itens = New-Object 'System.Collections.Generic.List[string]'
+    foreach ($item in ($Valor -split ',')) { $itens.Add((Reescrever-Url $item.Trim() $Base $Destino $Arquivo)) }
+    return $itens -join ', '
+}
+
 function Reescrever-Css([string]$Css, [string]$Base, [string]$Destino, [string]$Arquivo) {
     $urlPattern = '(?<ignorar>/\*[\s\S]*?\*/|"(?:\\.|[^"\\])*"|''(?:\\.|[^''\\])*'')|(?i:url\(\s*(?:"(?<dq>[^"]*)"|''(?<sq>[^'']*)''|(?<bare>[^\s)]+))\s*\))'
     return [regex]::Replace($Css, $urlPattern, [System.Text.RegularExpressions.MatchEvaluator]{
@@ -152,7 +161,7 @@ function Validar-Css-Pessoal([string]$Css, [string]$Autor, [string]$Arquivo) {
     # Estas folhas aceitam apenas regras simples: nenhuma at-rule ou CSS nesting.
     $mascarado = [regex]::Replace($semComentarios, '"(?:\\.|[^"\\])*"|''(?:\\.|[^''\\])*''', [System.Text.RegularExpressions.MatchEvaluator]{ param($m) return (' ' * $m.Length) })
     if ($mascarado.Contains('/*') -or $mascarado.Contains('*/')) { Falhar $Arquivo 'Comentário CSS sem fechamento.' }
-    if ($mascarado.Contains('@')) { Falhar $Arquivo 'Regras @ não são permitidas no CSS pessoal; coloque regras compartilhadas em comum/estilos.css.' }
+    if ($mascarado.Contains('@')) { Falhar $Arquivo 'Regras @ não são permitidas no CSS pessoal; coloque regras compartilhadas em comum/tema.css.' }
     $cursor = 0
     foreach ($regra in [regex]::Matches($mascarado, '(?<seletor>[^{}]+)\{(?<corpo>[^{}]*)\}')) {
         if ($semComentarios.Substring($cursor, $regra.Index - $cursor).Trim().Length -gt 0) { Falhar $Arquivo 'CSS inválido ou aninhado; use apenas regras simples.' }
@@ -207,10 +216,13 @@ function Preparar-Fragmento($Fragmento, [string]$Autor, [string]$Base, [string]$
             if (-not $fecho.Success) { Falhar $Fragmento.File 'O <span data-numero-slide> deve ficar vazio; a numeração é gerada.' }
             $texto = $texto.Remove($inicio, $fecho.Groups['vazio'].Length).Insert($inicio, ('{0} / {1}' -f $Numero, $Total))
         }
-        foreach ($nome in @('src', 'href', 'xlink:href', 'poster', 'srcset', 'style')) {
+        if ($info.Attrs.ContainsKey('data-background')) { Falhar $Fragmento.File 'Use data-background-color ou data-background-image em vez de data-background; o caminho da imagem não seria ajustado.' }
+        # Atributos do reveal.js que apontam para arquivos recebem o mesmo tratamento de src.
+        foreach ($nome in @('src', 'href', 'xlink:href', 'poster', 'srcset', 'style', 'data-background-image', 'data-background-video', 'data-background-iframe', 'data-src', 'data-preview-image', 'data-preview-video')) {
             if (-not $info.Attrs.ContainsKey($nome)) { continue }
             $valor = $info.Attrs[$nome]
             if ($nome -eq 'srcset') { $novo = Reescrever-Srcset $valor $Base $Destino $Fragmento.File }
+            elseif ($nome -eq 'data-background-image' -or $nome -eq 'data-background-video') { $novo = Reescrever-Lista-Urls $valor $Base $Destino $Fragmento.File }
             elseif ($nome -eq 'style') { $novo = Reescrever-Css $valor $Base $Destino $Fragmento.File }
             else { $novo = Reescrever-Url $valor $Base $Destino $Fragmento.File ($info.Name -eq 'a' -and $nome -eq 'href') }
             if ($novo -ne $valor) { $tag = Alterar-Atributo $tag $nome $novo }
@@ -230,9 +242,27 @@ function Preparar-Fragmento($Fragmento, [string]$Autor, [string]$Base, [string]$
     return $texto
 }
 
-function Renderizar([string]$Modelo, [string]$Titulo, [string]$Css, [string]$Slides, [string]$Js, [int]$Total) {
-    $valores = @{ TITULO = [Net.WebUtility]::HtmlEncode($Titulo); ESTILOS = $Css; SLIDES = $Slides; NAVEGACAO = $Js; TOTAL = [string]$Total }
-    return [regex]::Replace($Modelo, '\{\{(?<nome>TITULO|ESTILOS|SLIDES|NAVEGACAO|TOTAL)\}\}', [System.Text.RegularExpressions.MatchEvaluator]{ param($m) return $valores[$m.Groups['nome'].Value] })
+function Caminho-Relativo([string]$Destino, [string]$Alvo) {
+    $baseUri = New-Object Uri(($Destino.TrimEnd('\', '/') + [IO.Path]::DirectorySeparatorChar))
+    $alvoUri = New-Object Uri(($Alvo.TrimEnd('\', '/') + [IO.Path]::DirectorySeparatorChar))
+    return $baseUri.MakeRelativeUri($alvoUri).ToString().TrimEnd('/')
+}
+
+function Renderizar([string]$Modelo, [string]$Titulo, [string]$Comum, [string]$Css, [string]$Slides) {
+    $valores = @{ TITULO = [Net.WebUtility]::HtmlEncode($Titulo); COMUM = $Comum; ESTILOS = $Css; SLIDES = $Slides }
+    return [regex]::Replace($Modelo, '\{\{(?<nome>TITULO|COMUM|ESTILOS|SLIDES)\}\}', [System.Text.RegularExpressions.MatchEvaluator]{ param($m) return $valores[$m.Groups['nome'].Value] })
+}
+
+# O modelo referencia o reveal.js e o tema em comum/. Confere se esses arquivos existem para a saída abrir offline.
+function Validar-Modelo([string]$Modelo, [string]$Arquivo) {
+    $exemplo = Renderizar $Modelo '' 'comum' '' ''
+    foreach ($tag in [regex]::Matches($exemplo, $script:TagPattern)) {
+        if (-not $tag.Groups['tag'].Success -or $tag.Groups['closing'].Success) { continue }
+        $attrs = Atributos $tag.Groups['attrs'].Value $Arquivo
+        foreach ($nome in @('src', 'href')) {
+            if ($attrs.ContainsKey($nome)) { Caminho-Local $attrs[$nome] $script:Raiz $Arquivo $false | Out-Null }
+        }
+    }
 }
 
 function Salvar-Saidas($Saidas) {
@@ -267,13 +297,11 @@ try {
     $comum = Join-Path $script:Raiz 'comum'
     $modeloArquivo = Join-Path $comum 'modelo.html'
     $modelo = Ler-Utf8 $modeloArquivo
-    foreach ($token in @('TITULO', 'ESTILOS', 'SLIDES', 'NAVEGACAO', 'TOTAL')) {
+    foreach ($token in @('TITULO', 'COMUM', 'ESTILOS', 'SLIDES')) {
         if (-not $modelo.Contains('{{' + $token + '}}')) { Falhar $modeloArquivo ('Token obrigatório ausente: {{' + $token + '}}.') }
     }
-    if ($modelo -match '\{\{(?!(?:TITULO|ESTILOS|SLIDES|NAVEGACAO|TOTAL)\}\})[^}]+\}\}') { Falhar $modeloArquivo 'Token desconhecido no modelo.' }
-    $cssArquivo = Join-Path $comum 'estilos.css'
-    $cssComum = Ler-Utf8 $cssArquivo
-    $js = Ler-Utf8 (Join-Path $comum 'navegacao.js')
+    if ($modelo -match '\{\{(?!(?:TITULO|COMUM|ESTILOS|SLIDES)\}\})[^}]+\}\}') { Falhar $modeloArquivo 'Token desconhecido no modelo.' }
+    Validar-Modelo $modelo $modeloArquivo
     $ids = New-Object 'System.Collections.Generic.Dictionary[string,string]' ([StringComparer]::Ordinal)
     foreach ($tag in [regex]::Matches($modelo, $script:TagPattern)) {
         if (-not $tag.Groups['tag'].Success -or $tag.Groups['closing'].Success) { continue }
@@ -314,23 +342,23 @@ try {
     }
     if ($todos.Count -eq 0) { Falhar $script:Raiz 'A apresentação completa não pode ficar vazia; inclua ao menos um slide em ordem.json.' }
     $saidas = New-Object 'System.Collections.Generic.List[object]'
-    $cssCompleto = Reescrever-Css $cssComum $comum $script:Raiz $cssArquivo
-    foreach ($bloco in $blocos) { $cssCompleto += "`n" + (Reescrever-Css $bloco.Css $bloco.Base $script:Raiz $bloco.CssFile) }
+    $cssCompleto = ''
+    foreach ($bloco in $blocos) { $cssCompleto += (Reescrever-Css $bloco.Css $bloco.Base $script:Raiz $bloco.CssFile) + "`n" }
     $slidesCompletos = New-Object 'System.Collections.Generic.List[string]'
     $numero = 0
     foreach ($item in $todos) { $numero++; $slidesCompletos.Add((Preparar-Fragmento $item.Fragmento $item.Autor $item.Base $script:Raiz $numero $todos.Count)) }
     $titulo = 'Vertentes da Educação Ambiental — macrotendências político-pedagógicas'
-    $textoCompleto = Renderizar $modelo $titulo $cssCompleto ($slidesCompletos -join "`n`n") $js $todos.Count
+    $textoCompleto = Renderizar $modelo $titulo (Caminho-Relativo $script:Raiz $comum) $cssCompleto ($slidesCompletos -join "`n`n")
     $saidas.Add([pscustomobject]@{ Path = (Join-Path $script:Raiz 'index.html'); Text = $textoCompleto })
     foreach ($bloco in $blocos) {
         if ($bloco.Fragmentos.Count -eq 0) {
             $texto = '<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>' + $bloco.Autor + ' — bloco vazio</title><style>body{font:18px/1.5 "Segoe UI",sans-serif;background:#F6F1E7;color:#24282A;margin:3rem;max-width:52rem}</style></head><body><h1>' + $bloco.Autor + ': bloco vazio</h1><p>Adicione arquivos HTML em conteudo/, liste-os em ordem.json e execute atualizar.cmd para gerar sua prévia.</p><p><a href="../index.html">Abrir a apresentação completa</a></p></body></html>' + "`n"
         } else {
-            $css = (Reescrever-Css $cssComum $comum $bloco.Base $cssArquivo) + "`n" + (Reescrever-Css $bloco.Css $bloco.Base $bloco.Base $bloco.CssFile)
+            $css = Reescrever-Css $bloco.Css $bloco.Base $bloco.Base $bloco.CssFile
             $slides = New-Object 'System.Collections.Generic.List[string]'
             $numero = 0
             foreach ($fragmento in $bloco.Fragmentos) { $numero++; $slides.Add((Preparar-Fragmento $fragmento $bloco.Autor $bloco.Base $bloco.Base $numero $bloco.Fragmentos.Count)) }
-            $texto = Renderizar $modelo ($titulo + ' — ' + $bloco.Autor) $css ($slides -join "`n`n") $js $bloco.Fragmentos.Count
+            $texto = Renderizar $modelo ($titulo + ' — ' + $bloco.Autor) (Caminho-Relativo $bloco.Base $comum) $css ($slides -join "`n`n")
         }
         $saidas.Add([pscustomobject]@{ Path = (Join-Path $bloco.Base 'index.html'); Text = $texto })
     }

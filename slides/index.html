@@ -6,350 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vertentes da Educa&#231;&#227;o Ambiental — macrotend&#234;ncias pol&#237;tico-pedag&#243;gicas</title>
 <meta name="description" content="Apresentação acadêmica sobre as macrotendências conservacionista, pragmática e crítica da Educação Ambiental brasileira.">
+<link rel="stylesheet" href="comum/reveal/reset.css">
+<link rel="stylesheet" href="comum/reveal/reveal.css">
+<link rel="stylesheet" href="comum/tema.css">
 <style>
-/* ==========================================================================
-   VERTENTES DA EDUCAÇÃO AMBIENTAL — apresentação 16:9, quantidade variável
-   Palco fixo de 1280x720 px, escalado por transform na tela e impresso em
-   páginas de 13,333in x 7,5in (16:9 exato).
-   Navegação: setas, espaço, clique. "A" revela tudo. "I" imprime.
-   ?estatico=1 abre com todas as revelações visíveis.
-   ========================================================================== */
-
-:root{
-  --papel:#F6F1E7;  --papel-2:#EFE8DA;  --papel-3:#E5DCC9;
-  --tinta:#24282A;  --tinta-2:#4C5352;  --tinta-3:#7A817E;
-
-  /* As três lentes. As luminâncias foram aproximadas de propósito para que
-     nenhuma cor pareça mais "nobre" ou mais "correta" que as outras.
-     Contraste sobre o papel: 7,0:1 · 6,6:1 · 5,8:1 (todas acima de AA). */
-  --cons:#2A5A45;  --cons-fill:#3E7A5E;   /* verde profundo */
-  --prag:#6E5115;  --prag-fill:#A07D28;   /* areia / ocre    */
-  --crit:#94472A;  --crit-fill:#B35F3C;   /* terracota       */
-
-  --linha:rgba(36,40,42,0.18);
-  --linha-forte:rgba(36,40,42,0.34);
-  --escuro:#1B2320;
-
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
-  --sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
-}
-
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;height:100%;}
-body{
-  background:var(--papel-3); color:var(--tinta); font-family:var(--sans);
-  overflow:hidden; -webkit-print-color-adjust:exact; print-color-adjust:exact;
-}
-
-/* ---------- palco ---------- */
-#palco{
-  position:absolute; left:50%; top:50%;
-  width:1280px; height:720px; margin-left:-640px; margin-top:-360px;
-  transform-origin:center center;
-  background:var(--papel); box-shadow:0 18px 60px rgba(20,24,22,0.28);
-}
-.slide{
-  position:absolute; inset:0; display:flex; flex-direction:column;
-  padding:46px 74px 40px; background:var(--papel);
-  opacity:0; visibility:hidden; z-index:1;
-  transition:opacity .26s ease, visibility 0s linear .26s;
-}
-.slide.ativo{
-  opacity:1; visibility:visible; z-index:2;
-  transition:opacity .26s ease, visibility 0s linear 0s;
-}
-
-/* ---------- tipografia ---------- */
-.olho{
-  font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--tinta-3); font-weight:600; margin:0 0 12px;
-}
-h1{font-family:var(--serif); font-weight:600; font-size:58px; line-height:1.06; letter-spacing:-0.01em; margin:0;}
-h2{
-  font-family:var(--serif); font-weight:600; font-size:35px; line-height:1.15;
-  letter-spacing:-0.005em; margin:0; max-width:26ch;
-}
-h2.larga{max-width:34ch;}
-h2.extra{max-width:42ch;}
-.chamada{font-family:var(--serif); font-size:20px; line-height:1.45; color:var(--tinta-2); margin:14px 0 0; max-width:78ch;}
-p{margin:0;}
-.corpo{font-size:18px; line-height:1.52; color:var(--tinta-2);}
-.pergunta{font-family:var(--serif); font-size:25px; line-height:1.34; color:var(--tinta); font-style:italic; margin:0;}
-.pergunta::before{content:"“";}
-.pergunta::after{content:"”";}
-
-.fonte{font-size:12px; line-height:1.45; color:var(--tinta-3); margin:0;}
-.fonte b{font-weight:600; color:var(--tinta-2);}
-.credito{font-size:10.5px; line-height:1.35; color:var(--tinta-3); margin:0;}
-.credito.sobre-foto{color:rgba(255,255,255,0.80);}
-
-.rodape{
-  position:absolute; left:74px; right:74px; bottom:16px;
-  display:flex; justify-content:space-between; align-items:baseline;
-  font-size:11px; letter-spacing:.13em; text-transform:uppercase;
-  color:var(--tinta-3); pointer-events:none;
-}
-.slide--escuro .rodape{color:rgba(246,241,231,0.42);}
-
-/* ---------- controles (aparecem com o mouse e somem sozinhos) ---------- */
-.nav,.dica,.barra{opacity:0; transition:opacity .25s ease; pointer-events:none;}
-body.mostrar-chrome .nav,
-body.mostrar-chrome .dica,
-body.mostrar-chrome .barra{opacity:1;}
-body.mostrar-chrome .nav{pointer-events:auto;}
-.nav{
-  position:fixed; right:16px; bottom:12px; z-index:40;
-  display:flex; align-items:center; gap:6px;
-  font-family:var(--sans); font-size:12px; color:var(--tinta-2);
-  background:rgba(246,241,231,0.92); border:1px solid var(--linha); padding:4px 6px;
-}
-.nav button{
-  font:inherit; line-height:1; cursor:pointer; background:none;
-  border:1px solid var(--linha); color:var(--tinta-2); padding:3px 8px;
-}
-.nav button:hover{background:var(--papel-2);}
-.nav button:focus-visible{outline:2px solid var(--cons); outline-offset:1px;}
-#contador{min-width:52px; text-align:center; letter-spacing:.06em;}
-.barra{position:fixed; left:0; bottom:0; height:3px; z-index:41; background:var(--cons); width:0;}
-body.mostrar-chrome .barra{transition:opacity .25s ease, width .24s ease;}
-.dica{
-  position:fixed; left:16px; bottom:14px; z-index:40; font-size:11px;
-  color:var(--tinta-3); background:rgba(246,241,231,0.92);
-  padding:3px 7px; border:1px solid var(--linha);
-}
-
-/* ---------- revelações progressivas ---------- */
-[data-passo]{opacity:0; transform:translateY(6px); transition:opacity .32s ease, transform .32s ease;}
-[data-passo].revelado{opacity:1; transform:none;}
-
-/* ==========================================================================
-   SLIDE 1 — capa
-   ========================================================================== */
-.capa{padding:0; justify-content:flex-end;}
-.capa .foto-fundo{position:absolute; inset:0; overflow:hidden; background:#1d2b25;}
-.capa .foto-fundo img{width:100%; height:100%; object-fit:cover; display:block;}
-.capa .veu{
-  position:absolute; inset:0;
-  background:linear-gradient(100deg, rgba(16,26,21,0.92) 0%, rgba(16,26,21,0.78) 40%, rgba(16,26,21,0.26) 74%, rgba(16,26,21,0.12) 100%);
-}
-.capa .bloco{position:relative; z-index:2; padding:0 74px 62px; max-width:900px; color:#F7F4EC;}
-.capa h1{color:#FBF8F1; font-size:60px; max-width:17ch;}
-.capa .olho{color:rgba(247,244,236,0.74); margin-bottom:16px;}
-.capa .ficha{font-size:16px; line-height:1.6; color:rgba(247,244,236,0.88); margin:20px 0 0;}
-.capa .pergunta{
-  color:#FBF8F1; font-size:26px; margin-top:24px; padding-top:18px;
-  border-top:1px solid rgba(247,244,236,0.32); max-width:32ch;
-}
-.capa .credito{
-  position:absolute; right:18px; bottom:14px; z-index:3; text-align:right; max-width:52ch;
-  background:rgba(16,26,21,0.62); padding:4px 8px;
-}
-
-/* ==========================================================================
-   SLIDE 2 — três faixas fotográficas
-   ========================================================================== */
-.faixas{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:22px;}
-.faixa{margin:0;}
-.faixa .moldura{height:300px; overflow:hidden; background:var(--papel-2);}
-.faixa img{width:100%; height:100%; object-fit:cover; display:block;}
-.faixa figcaption{
-  display:flex; align-items:baseline; gap:10px;
-  padding-top:10px; border-top:2px solid currentColor; margin-top:10px;
-}
-.faixa .palavra{font-family:var(--serif); font-size:24px; font-weight:600;}
-.faixa .nota{font-size:13px; color:var(--tinta-2); line-height:1.35;}
-.faixa--a{color:var(--cons);} .faixa--b{color:var(--prag);} .faixa--c{color:var(--crit);}
-
-/* ==========================================================================
-   SLIDE 3 — linha do tempo + gráfico
-   ========================================================================== */
-.tempo{margin:20px 0 0; position:relative;}
-.tempo .trilho{position:absolute; left:0; right:24%; top:34px; height:1px; background:var(--linha-forte);}
-.tempo ol{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4,1fr); gap:18px; position:relative;}
-.tempo li{padding-right:14px;}
-.tempo .ano{font-family:var(--serif); font-size:25px; font-weight:600; color:var(--tinta); line-height:1; display:block; margin-bottom:9px;}
-.tempo .ponto{display:block; width:9px; height:9px; border-radius:50%; background:var(--papel); border:2px solid var(--tinta); margin-bottom:12px;}
-.tempo .marco{font-size:14px; font-weight:600; color:var(--tinta); display:block; margin-bottom:3px;}
-.tempo .oque{font-size:13.5px; line-height:1.42; color:var(--tinta-2);}
-
-.bloco-grafico{display:grid; grid-template-columns:460px 1fr; gap:40px; align-items:center; margin-top:22px;}
-.leitura{font-size:16.5px; line-height:1.55; color:var(--tinta-2); max-width:46ch;}
-.leitura strong{color:var(--tinta); font-weight:600;}
-
-/* ---------- gramática comum dos gráficos ----------
-   1 unidade do viewBox = 1 px na tela: a largura de cada viewBox foi ajustada
-   à largura real da coluna, para o texto sair no tamanho pretendido.
-   "Antes" = barra vazada; "depois" = barra cheia — a leitura sobrevive em
-   preto e branco e a quem não distingue cores. */
-.grafico{display:block; width:100%; height:auto;}
-.g-titulo{font-family:var(--sans); font-size:12.5px; font-weight:600; fill:var(--tinta-2); letter-spacing:.05em; text-transform:uppercase;}
-.g-valor{font-family:var(--serif); font-size:21px; font-weight:600; fill:var(--tinta);}
-.g-valor-peq{font-family:var(--serif); font-size:16px; font-weight:600; fill:var(--tinta);}
-.g-rotulo{font-family:var(--sans); font-size:13.5px; fill:var(--tinta-2);}
-.g-mini{font-family:var(--sans); font-size:11.5px; fill:var(--tinta-3);}
-.g-dado{font-family:var(--sans); font-size:12px; font-weight:600; fill:var(--tinta-2);}
-.g-eixo{stroke:var(--linha-forte); stroke-width:1;}
-.g-grade{stroke:var(--linha); stroke-width:1; stroke-dasharray:2 4;}
-.b-antes{fill:var(--papel); stroke-width:2;}
-.b-depois{stroke:none;}
-
-/* ==========================================================================
-   SLIDE 4 — três campos
-   ========================================================================== */
-.campos{display:grid; grid-template-columns:repeat(3,1fr); margin-top:40px; border-top:1px solid var(--linha);}
-.campo{padding:38px 34px 42px; border-left:1px solid var(--linha);}
-.campo:first-child{border-left:0; padding-left:0;}
-.campo .marca{display:block; width:58px; height:5px; margin-bottom:20px;}
-.campo h3{font-family:var(--serif); font-size:27px; font-weight:600; margin:0 0 12px; line-height:1.12;}
-.campo .eixo{font-size:17.5px; line-height:1.45; color:var(--tinta-2);}
-.campo--cons h3{color:var(--cons);} .campo--cons .marca{background:var(--cons);}
-.campo--prag h3{color:var(--prag);} .campo--prag .marca{background:var(--prag);}
-.campo--crit h3{color:var(--crit);} .campo--crit .marca{background:var(--crit);}
-.coexistencia{
-  font-family:var(--serif); font-size:21px; line-height:1.5; color:var(--tinta);
-  margin-top:40px; padding-top:26px; border-top:1px solid var(--linha); max-width:84ch;
-}
-
-/* ==========================================================================
-   SLIDES 5, 9, 11 — foto + texto
-   ========================================================================== */
-.duas{display:grid; gap:44px; margin-top:20px; flex:1; align-items:start;}
-.duas--foto-esq{grid-template-columns:468px 1fr;}
-.duas--foto-dir{grid-template-columns:1fr 468px;}
-.painel-foto{margin:0;}
-.painel-foto .moldura{overflow:hidden; background:var(--papel-2); height:404px;}
-.painel-foto img{width:100%; height:100%; object-fit:cover; display:block;}
-.painel-foto figcaption{padding-top:8px;}
-
-.eixos{list-style:none; margin:0; padding:0;}
-.eixos li{padding:13px 0; border-top:1px solid var(--linha); font-size:17.5px; line-height:1.48; color:var(--tinta-2);}
-.eixos li:first-child{border-top:0; padding-top:0;}
-.eixos .rot{display:block; font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; font-weight:600; margin-bottom:5px;}
-.eixos li strong{color:var(--tinta); font-weight:600;}
-.tema--cons .eixos .rot, .tema--cons h2{color:var(--cons);}
-.tema--prag .eixos .rot, .tema--prag h2{color:var(--prag);}
-.tema--crit .eixos .rot, .tema--crit h2{color:var(--crit);}
-.caixa-pergunta{margin-top:20px; padding-top:16px; border-top:2px solid currentColor;}
-.tema--cons .caixa-pergunta{color:var(--cons);}
-.tema--prag .caixa-pergunta{color:var(--prag);}
-.tema--crit .caixa-pergunta{color:var(--crit);}
-.caixa-pergunta .pergunta{color:var(--tinta);}
-.destaque{font-size:14px; line-height:1.45; font-weight:600; margin-top:10px;}
-.tema--crit .destaque{color:var(--crit);}
-
-/* ==========================================================================
-   SLIDES 6 e 7 — texto + gráfico + foto estreita
-   ========================================================================== */
-.tres{display:grid; gap:34px; margin-top:18px; flex:1; align-items:start;}
-.tres--prag{grid-template-columns:330px 548px 182px;}
-.tres--crit{grid-template-columns:300px 578px 182px;}
-.tira{margin:0;}
-.tira .moldura{height:360px; overflow:hidden; background:var(--papel-2);}
-.tira img{width:100%; height:100%; object-fit:cover; display:block;}
-.tira figcaption{padding-top:8px;}
-
-/* ==========================================================================
-   SLIDE 8 — matriz comparativa
-   ========================================================================== */
-.matriz{width:100%; border-collapse:collapse; margin-top:32px; font-size:18px; line-height:1.45;}
-.matriz caption{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;}
-.matriz th,.matriz td{text-align:left; vertical-align:top; padding:32px 22px 32px 0; border-bottom:1px solid var(--linha);}
-.matriz thead th{font-family:var(--serif); font-size:23px; font-weight:600; padding-bottom:16px; border-bottom:1px solid var(--linha-forte);}
-.matriz thead th:first-child,
-.matriz tbody th{
-  font-family:var(--sans); font-size:11.5px; letter-spacing:.16em;
-  text-transform:uppercase; color:var(--tinta-3); font-weight:600;
-}
-.matriz tbody th{width:184px; padding-right:26px;}
-.matriz td{color:var(--tinta-2);}
-.matriz .col-cons{color:var(--cons);} .matriz .col-prag{color:var(--prag);} .matriz .col-crit{color:var(--crit);}
-.matriz tbody tr:last-child th,.matriz tbody tr:last-child td{border-bottom:0;}
-
-/* ==========================================================================
-   SLIDE 9 — fatos
-   ========================================================================== */
-.fatos{list-style:none; margin:0; padding:0; counter-reset:f;}
-.fatos li{
-  counter-increment:f; position:relative; padding:18px 0 18px 42px;
-  border-top:1px solid var(--linha); font-size:17.5px; line-height:1.5; color:var(--tinta-2);
-}
-.fatos li:first-child{border-top:0;}
-.fatos li::before{
-  content:counter(f); position:absolute; left:0; top:18px;
-  font-family:var(--serif); font-size:20px; font-weight:600; color:var(--crit);
-}
-.fatos li strong{color:var(--tinta); font-weight:600;}
-
-/* ==========================================================================
-   SLIDE 10 — debate
-   ========================================================================== */
-.slide--escuro{background:var(--escuro); color:#F4F0E6; justify-content:center; padding:60px 92px 52px;}
-.slide--escuro .olho{color:rgba(244,240,230,0.58);}
-.slide--escuro h2{color:#FBF8F1; font-size:43px; max-width:27ch; line-height:1.15;}
-.guias{list-style:none; margin:40px 0 0; padding:0;}
-.guias li{
-  font-family:var(--serif); font-size:29px; line-height:1.3; color:#F4F0E6;
-  padding:19px 0; border-top:1px solid rgba(244,240,230,0.22);
-  display:flex; gap:20px; align-items:baseline;
-}
-.guias li:last-child{border-bottom:1px solid rgba(244,240,230,0.22);}
-.guias .ord{font-family:var(--sans); font-size:11.5px; letter-spacing:.18em; font-weight:600; color:rgba(244,240,230,0.54); flex:0 0 auto; min-width:26px;}
-.slide--escuro .corpo{color:rgba(244,240,230,0.74);}
-
-/* ==========================================================================
-   SLIDE 11 — síntese
-   ========================================================================== */
-.sintese{list-style:none; margin:0; padding:0;}
-.sintese li{
-  padding:12px 0 12px 20px; position:relative; font-size:17.5px; line-height:1.46;
-  color:var(--tinta-2); border-top:1px solid var(--linha);
-}
-.sintese li:first-child{border-top:0;}
-.sintese li::before{content:""; position:absolute; left:0; top:21px; width:9px; height:2px; background:var(--tinta-3);}
-.sintese li.marca--cons::before{background:var(--cons);}
-.sintese li.marca--prag::before{background:var(--prag);}
-.sintese li.marca--crit::before{background:var(--crit);}
-.frase-final{
-  font-family:var(--serif); font-size:25px; line-height:1.38; color:var(--tinta);
-  margin-top:24px; padding-top:20px; border-top:2px solid var(--cons); max-width:44ch;
-}
-
-/* ==========================================================================
-   SLIDE 12 — referências
-   ========================================================================== */
-.refs{columns:2; column-gap:52px; margin-top:22px; font-size:15px; line-height:1.48; list-style:none; padding:0;}
-.refs li{break-inside:avoid; -webkit-column-break-inside:avoid; margin:0 0 13px; color:var(--tinta-2); padding-left:15px; text-indent:-15px;}
-.refs b{color:var(--tinta); font-weight:600;}
-.refs .url{display:block; text-indent:0; padding-left:0; font-size:12.5px; color:var(--tinta-3); word-break:break-all; margin-top:1px;}
-
-/* ---------- movimento reduzido ---------- */
-@media (prefers-reduced-motion: reduce){
-  .slide{transition:none;}
-  [data-passo]{transform:none; transition:opacity .01ms linear;}
-  [data-passo].revelado{transform:none;}
-  .barra,.nav,.dica{transition:none;}
-}
-.so-leitor{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;}
-
-/* ==========================================================================
-   IMPRESSÃO / PDF — páginas 16:9, tudo revelado, sem controles
-   ========================================================================== */
-@media print{
-  @page{ size:13.333in 7.5in; margin:0; }
-  html,body{background:#fff; width:auto; height:auto; overflow:visible; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
-  #palco{position:static; transform:none !important; width:1280px; height:auto; margin:0; box-shadow:none;}
-  .slide{
-    position:relative !important; inset:auto;
-    display:flex !important; opacity:1 !important; visibility:visible !important;
-    width:1280px; height:720px; overflow:hidden;
-    page-break-after:always; break-after:page; page-break-inside:avoid; break-inside:avoid;
-    transition:none !important;
-  }
-  .slide:last-child{page-break-after:auto; break-after:auto;}
-  [data-passo]{opacity:1 !important; transform:none !important; transition:none !important;}
-  .nav,.barra,.dica{display:none !important;}
-}
-
 /*
   Ajustes exclusivos da parte de Caio. Cada seletor deve começar com:
   .slide[data-autor="Caio"]
@@ -374,354 +34,326 @@ body.mostrar-chrome .barra{transition:opacity .25s ease, width .24s ease;}
   Caminhos de imagens são relativos à pasta Edson, como assets/minha-foto.jpg.
 */
 
+
 </style>
 </head>
 <body>
-
-<div id="palco" role="region" aria-label="Apresentação: Vertentes da Educação Ambiental">
-<section class="slide capa" id="slide-1" aria-label="Slide 1 de 12: capa" data-autor="Caio">
-  <div class="foto-fundo">
-    <img src="assets/capa.jpg" style="object-position:center 50%"
-         alt="Vista aérea de Teresina: o rio Poti corre ao centro, entre faixas de vegetação, com bairros, avenidas e prédios nas duas margens e três pontes cruzando o rio.">
-  </div>
-  <div class="veu"></div>
-  <div class="bloco">
-    <p class="olho">Seminário · Macrotendências político-pedagógicas</p>
-    <h1>Vertentes da Educação&nbsp;Ambiental</h1>
-    <p class="ficha">[disciplina] · [curso] · [integrantes] · [docente]</p>
-    <p class="pergunta" data-passo="1">Todo projeto de Educação Ambiental busca a mesma transformação?</p>
-  </div>
-  <p class="credito sobre-foto">Rio Poti, Teresina (PI). Foto: Alexandro Dias / Wikimedia Commons (CC BY-SA 4.0)</p>
+<div class="reveal">
+<div class="slides">
+<section class="slide capa" id="slide-1" aria-label="Slide 1 de 12: capa" data-background-image="assets/aventura-floresta.png" data-background-color="#173C36" data-autor="Caio">
+  <p class="sobrelinha">Seminário · Educação Ambiental</p>
+  <h1>Vertentes da<br>Educação Ambiental</h1>
+  <p class="subtitulo">Macrotendências político-pedagógicas</p>
+  <p class="ficha">Caio · Diogo · Edson<br>[disciplina] · [curso] · [docente]</p>
+  <blockquote class="pergunta fragment" data-fragment-index="1">“Todo projeto de Educação Ambiental busca a mesma transformação?”</blockquote>
+  <p class="so-leitor">Cenário ilustrativo de aventura 2D em pixel art: céu azul-esverdeado, montanhas ao fundo, rio, árvores e plataformas de terra cobertas por grama. Paisagem fictícia.</p>
+  <small class="assinatura credito">Paisagem fictícia · ilustração gerada por IA</small>
 </section>
 
 
 <section class="slide" id="slide-2" data-autor="Caio" aria-label="Slide 2 de 12">
-  <p class="olho">Ponto de partida</p>
-  <h2 class="larga">A mesma crise ambiental pode receber respostas muito diferentes</h2>
-  <p class="chamada">Problemas ambientais envolvem, ao mesmo tempo, natureza, consumo, infraestrutura, desigualdade e decisões coletivas. Cada resposta educativa escolhe onde colocar o foco.</p>
+  <h2>A mesma crise ambiental pode receber respostas muito diferentes</h2>
+  <p>Problemas ambientais envolvem, ao mesmo tempo, natureza, consumo, infraestrutura, desigualdade e decisões coletivas. Cada resposta educativa escolhe onde colocar o foco.</p>
 
-  <div class="faixas">
-    <figure class="faixa faixa--a" data-passo="1">
-      <div class="moldura"><img src="assets/faixa-natureza.jpg" style="object-position:center 45%"
-        alt="Trecho do rio Preto correndo entre blocos de rocha claros, com mata fechada cobrindo as encostas dos dois lados."></div>
-      <figcaption><span class="palavra">preservar</span><span class="nota">natureza, biodiversidade, vínculo</span></figcaption>
+  <div class="colunas tres">
+    <figure class="fragment" data-fragment-index="1">
+      <img src="assets/faixa-natureza.jpg" style="aspect-ratio: 4 / 3; object-position: center 45%"
+        alt="Trecho do rio Preto correndo entre blocos de rocha claros, com mata fechada cobrindo as encostas dos dois lados.">
+      <figcaption><b class="cons">preservar</b>natureza, biodiversidade, vínculo</figcaption>
     </figure>
 
-    <figure class="faixa faixa--b" data-passo="2">
-      <div class="moldura"><img src="assets/faixa-residuos.jpg" style="object-position:58% 55%"
-        alt="Grande monte de latas de alumínio e garrafas plásticas ocupa o pátio entre dois sobrados coloniais; um trabalhador recolhe material no meio da pilha."></div>
-      <figcaption><span class="palavra">gerir</span><span class="nota">consumo, resíduos, eficiência</span></figcaption>
+    <figure class="fragment" data-fragment-index="2">
+      <img src="assets/faixa-residuos.jpg" style="aspect-ratio: 4 / 3; object-position: 58% 55%"
+        alt="Grande monte de latas de alumínio e garrafas plásticas ocupa o pátio entre dois sobrados coloniais; um trabalhador recolhe material no meio da pilha.">
+      <figcaption><b class="prag">gerir</b>consumo, resíduos, eficiência</figcaption>
     </figure>
 
-    <figure class="faixa faixa--c" data-passo="3">
-      <div class="moldura"><img src="assets/faixa-comunidade.jpg" style="object-position:center 58%"
-        alt="Pessoas sentadas em um auditório erguem crachás e folhas de papel em votação, diante de uma tela de projeção."></div>
-      <figcaption><span class="palavra">transformar</span><span class="nota">território, participação, decisão</span></figcaption>
+    <figure class="fragment" data-fragment-index="3">
+      <img src="assets/faixa-comunidade.jpg" style="aspect-ratio: 4 / 3; object-position: center 58%"
+        alt="Pessoas sentadas em um auditório erguem crachás e folhas de papel em votação, diante de uma tela de projeção.">
+      <figcaption><b class="crit">transformar</b>território, participação, decisão</figcaption>
     </figure>
   </div>
 
-  <p class="fonte" style="margin-top:auto;">
-    Fotos, da esquerda para a direita: rio Preto, Parque Nacional da Chapada dos Veadeiros (GO) — Elci Guerra Junior (CC BY-SA 4.0);
-    coleta de recicláveis do Carnaval, Olinda (PE) — Alice Mafra / Prefeitura de Olinda (CC BY 2.0);
-    7ª Conferência Municipal de Meio Ambiente, Porto Alegre (RS) — Sérgio Louruz / SMAMUS / PMPA (Attribution). Todas via Wikimedia Commons.
-  </p>
-  <div class="rodape"><span>Vertentes da Educação Ambiental</span><span data-numero-slide>2 / 12</span></div>
+  <p class="fonte">Fotos: Elci Guerra Junior (CC BY-SA 4.0); Alice Mafra / Prefeitura de Olinda (CC BY 2.0); Sérgio Louruz / SMAMUS / PMPA (Attribution). Todas via Wikimedia Commons.</p>
+
+  <aside class="notes">
+    <p>Fotos, da esquerda para a direita: rio Preto, Parque Nacional da Chapada dos Veadeiros (GO) — Elci Guerra Junior (CC BY-SA 4.0); coleta de recicláveis do Carnaval, Olinda (PE) — Alice Mafra / Prefeitura de Olinda (CC BY 2.0); 7ª Conferência Municipal de Meio Ambiente, Porto Alegre (RS) — Sérgio Louruz / SMAMUS / PMPA (Attribution). Todas via Wikimedia Commons.</p>
+  </aside>
 </section>
 
 
 <section class="slide" id="slide-3" data-autor="Caio" aria-label="Slide 3 de 12">
-  <p class="olho">Contexto</p>
-  <h2 class="larga">A questão ambiental ganha escala em um país urbano-industrial</h2>
+  <h2>A questão ambiental ganha escala em um país urbano-industrial</h2>
 
-  <nav class="tempo" data-passo="1" aria-label="Marcos da Educação Ambiental">
-    <div class="trilho" aria-hidden="true"></div>
-    <ol>
-      <li><span class="ano">1972</span><span class="ponto" aria-hidden="true"></span>
-        <span class="marco">Estocolmo</span><span class="oque">A questão ambiental entra na agenda internacional.</span></li>
-      <li><span class="ano">1977</span><span class="ponto" aria-hidden="true"></span>
-        <span class="marco">Tbilisi</span><span class="oque">A Educação Ambiental ganha princípios orientadores.</span></li>
-      <li><span class="ano">1992</span><span class="ponto" aria-hidden="true"></span>
-        <span class="marco">Rio-92</span><span class="oque">A agenda de ambiente e desenvolvimento ganha escala global (Agenda 21).</span></li>
-      <li><span class="ano">1999</span><span class="ponto" aria-hidden="true"></span>
-        <span class="marco">PNEA</span><span class="oque">O Brasil passa a ter uma política nacional própria de Educação Ambiental.</span></li>
-    </ol>
-  </nav>
+  <ol class="colunas quatro marcos fragment" data-fragment-index="1" aria-label="Marcos da Educação Ambiental">
+    <li><h3>1972</h3><p><strong>Estocolmo</strong><br>A questão ambiental entra na agenda internacional.</p></li>
+    <li><h3>1977</h3><p><strong>Tbilisi</strong><br>A Educação Ambiental ganha princípios orientadores.</p></li>
+    <li><h3>1992</h3><p><strong>Rio-92</strong><br>A agenda de ambiente e desenvolvimento ganha escala global (Agenda 21).</p></li>
+    <li><h3>1999</h3><p><strong>PNEA</strong><br>O Brasil passa a ter uma política nacional própria de Educação Ambiental.</p></li>
+  </ol>
 
-  <div class="bloco-grafico" data-passo="2">
-    <svg class="grafico" viewBox="0 0 460 244" role="img" aria-labelledby="g1t g1d">
+  <div class="colunas grafico-texto fragment" data-fragment-index="2">
+    <svg class="grafico neutro" viewBox="0 0 460 244" role="img" aria-labelledby="g1t g1d">
       <title id="g1t">Consumo de energia elétrica do setor industrial brasileiro</title>
       <desc id="g1d">Gráfico de duas colunas. Em 1960, o consumo de eletricidade do setor industrial brasileiro foi de 9.174 gigawatts-hora; em 1987, de 107.391 gigawatts-hora — cerca de doze vezes mais. Fonte: IBGE.</desc>
-
-      <text class="g-titulo" x="0" y="13">Consumo de eletricidade — setor industrial, Brasil</text>
-      <line class="g-eixo" x1="0" y1="190" x2="460" y2="190"></line>
+      <text class="titulo" x="0" y="15">Consumo de eletricidade — setor industrial, Brasil</text>
+      <line class="eixo" x1="0" y1="190" x2="460" y2="190"></line>
 
       <!-- 1960: 9.174 GWh → 9174/107391 × 140 = 11,96 px -->
-      <rect class="b-antes" x="62" y="178" width="88" height="12" stroke="var(--prag)"></rect>
-      <text class="g-valor-peq" x="62" y="168">9.174 GWh</text>
-      <text class="g-rotulo" x="62" y="212">1960</text>
+      <rect class="antes" x="62" y="178" width="88" height="12"></rect>
+      <text class="valor" x="62" y="168">9.174 GWh</text>
+      <text x="62" y="212">1960</text>
 
       <!-- 1987: 107.391 GWh → 140 px -->
-      <rect class="b-depois" x="268" y="50" width="88" height="140" fill="var(--prag-fill)"></rect>
-      <text class="g-valor" x="268" y="40">107.391 GWh</text>
-      <text class="g-rotulo" x="268" y="212">1987</text>
+      <rect class="depois" x="268" y="50" width="88" height="140"></rect>
+      <text class="valor" x="268" y="40">107.391 GWh</text>
+      <text x="268" y="212">1987</text>
 
-      <text class="g-mini" x="0" y="236">Gigawatts-hora por ano. Escala linear; as colunas são comparáveis entre si.</text>
+      <text class="nota" x="0" y="236">Gigawatts-hora por ano. Escala linear; as colunas são comparáveis entre si.</text>
     </svg>
 
-    <p class="leitura">
-      O dado <strong>contextualiza a expansão produtiva</strong> de um país que, no mesmo período, também se tornava
-      majoritariamente urbano, e ajuda a entender por que poluição, saneamento e resíduos ganham visibilidade pública.
-      Ele <strong>não</strong> demonstra que a industrialização tenha causado a vertente conservacionista:
-      é cenário, não causa.
-    </p>
+    <p>O dado <strong>contextualiza a expansão produtiva</strong> de um país que, no mesmo período, também se tornava majoritariamente urbano, e ajuda a entender por que poluição, saneamento e resíduos ganham visibilidade pública. Ele <strong>não</strong> demonstra que a industrialização tenha causado a vertente conservacionista: é cenário, não causa.</p>
   </div>
 
-  <p class="fonte" style="margin-top:auto;">
-    <b>Fonte do gráfico:</b> IBGE, <i>Estatísticas do Século XX</i>, tab. 9.3 — <i>Produção e consumo de energia elétrica,
-    1952–87</i> (planilha 9_03a_energia1952_93.xls, aba 9.3a_1952-87); consumo de eletricidade do setor industrial, Brasil,
-    em GWh, com série industrial a partir de 1960. Urbanização: IBGE, Censo Demográfico 2022, Tabela 4. Acesso em 11 set. 2026.
-    <b>Limites de leitura:</b> o consumo industrial de eletricidade é indicador indireto de expansão produtiva — não mede
-    industrialização nem dano ambiental; a série termina em 1987 e não alcança os marcos de 1992 e 1999; o espaçamento da
-    linha do tempo é cronológico, não proporcional ao intervalo entre os anos.
-  </p>
-  <div class="rodape"><span>Vertentes da Educação Ambiental</span><span data-numero-slide>3 / 12</span></div>
+  <p class="fonte">Fonte: IBGE, <i>Estatísticas do Século XX</i>, tab. 9.3 (GWh por ano, 1960 e 1987); urbanização: IBGE, Censo Demográfico 2022, Tabela 4. Acesso em 11 set. 2026.</p>
+
+  <aside class="notes">
+    <p>Fonte do gráfico: IBGE, Estatísticas do Século XX, tab. 9.3 — Produção e consumo de energia elétrica, 1952–87 (planilha 9_03a_energia1952_93.xls, aba 9.3a_1952-87); consumo de eletricidade do setor industrial, Brasil, em GWh, com série industrial a partir de 1960. Urbanização: IBGE, Censo Demográfico 2022, Tabela 4. Acesso em 11 set. 2026.</p>
+    <p>Limites de leitura: o consumo industrial de eletricidade é indicador indireto de expansão produtiva — não mede industrialização nem dano ambiental; a série termina em 1987 e não alcança os marcos de 1992 e 1999; o espaçamento da linha do tempo é cronológico, não proporcional ao intervalo entre os anos.</p>
+  </aside>
 </section>
 
 
 <section class="slide" id="slide-4" data-autor="Caio" aria-label="Slide 4 de 12">
-  <p class="olho">Layrargues &amp; Lima (2014)</p>
-  <h2 class="larga">Macrotendências são lentes em disputa, não etapas</h2>
-  <p class="chamada">Philippe Pomier Layrargues e Gustavo Ferreira da Costa Lima descrevem o campo brasileiro da
-  Educação Ambiental como plural e disputado, e propõem três macrotendências como instrumento de análise.</p>
+  <h2>Macrotendências são lentes em disputa, não etapas</h2>
+  <p>Philippe Pomier Layrargues e Gustavo Ferreira da Costa Lima descrevem o campo brasileiro da Educação Ambiental como plural e disputado, e propõem três macrotendências como instrumento de análise.</p>
 
-  <div class="campos">
-    <div class="campo campo--cons" data-passo="1">
-      <span class="marca" aria-hidden="true"></span><h3>Conservacionista</h3>
-      <p class="eixo">natureza e preservação</p>
+  <div class="colunas tres lentes">
+    <div class="fragment" data-fragment-index="1">
+      <img class="icone-lente" src="comum/icones/folha.svg" alt="" aria-hidden="true">
+      <h3 class="cons">Conservacionista</h3>
+      <p>natureza e preservação</p>
     </div>
-    <div class="campo campo--prag" data-passo="2">
-      <span class="marca" aria-hidden="true"></span><h3>Pragmática</h3>
-      <p class="eixo">eficiência e resultados</p>
+    <div class="fragment" data-fragment-index="2">
+      <img class="icone-lente" src="comum/icones/engrenagem.svg" alt="" aria-hidden="true">
+      <h3 class="prag">Pragmática</h3>
+      <p>eficiência e resultados</p>
     </div>
-    <div class="campo campo--crit" data-passo="3">
-      <span class="marca" aria-hidden="true"></span><h3>Crítica</h3>
-      <p class="eixo">justiça e participação</p>
+    <div class="fragment" data-fragment-index="3">
+      <img class="icone-lente" src="comum/icones/coletivo.svg" alt="" aria-hidden="true">
+      <h3 class="crit">Crítica</h3>
+      <p>justiça e participação</p>
     </div>
   </div>
 
-  <p class="coexistencia" data-passo="4">
-    São <b>tipos ideais</b>, construídos para analisar práticas educativas. Coexistem, disputam sentidos e
-    não formam uma escada: uma prática real pode combinar elementos de mais de uma lente.
-  </p>
-  <div class="rodape"><span>Vertentes da Educação Ambiental</span><span data-numero-slide>4 / 12</span></div>
+  <p class="fragment" data-fragment-index="4">São <strong>tipos ideais</strong>, construídos para analisar práticas educativas. Coexistem, disputam sentidos e não formam uma escada: uma prática real pode combinar elementos de mais de uma lente.</p>
+
+  <p class="fonte">Fonte: LAYRARGUES &amp; LIMA (2014).</p>
 </section>
 
 
-<section class="slide tema--cons" id="slide-5" data-autor="Diogo" aria-label="Slide 5 de 12">
-  <p class="olho">Macrotendência 1 de 3</p>
-  <h2 class="larga">Conservacionista: aproximar pessoas da natureza para preservá-la</h2>
+<section class="slide" id="slide-5" data-autor="Diogo" aria-label="Slide 5 de 12">
+  <h2 class="cons">Conservacionista: aproximar pessoas da natureza para preservá-la</h2>
 
-  <div class="duas duas--foto-esq">
-    <figure class="painel-foto" data-passo="1">
-      <div class="moldura"><img src="assets/conservacionista.jpg" style="object-position:center 50%; filter:brightness(1.08)"
-        alt="Uma mulher caminha por uma trilha na floresta e encosta a mão no tronco de uma árvore alta coberta de musgo."></div>
-      <figcaption class="credito">Trilha da Vovó Sumaúma, Floresta Nacional do Tapajós (PA). Foto: Leonardo Milano / Amazônia Real — Wikimedia Commons (CC BY 2.0)</figcaption>
+  <div class="colunas foto-texto">
+    <figure class="fragment" data-fragment-index="1">
+      <img src="assets/conservacionista.jpg" style="aspect-ratio: 4 / 3; object-position: center 50%"
+        alt="Uma mulher caminha por uma trilha na floresta e encosta a mão no tronco de uma árvore alta coberta de musgo.">
+      <figcaption>Trilha da Vovó Sumaúma, Floresta Nacional do Tapajós (PA). Foto: Leonardo Milano / Amazônia Real — Wikimedia Commons (CC BY 2.0)</figcaption>
     </figure>
 
     <div>
-      <ul class="eixos" data-passo="2">
-        <li><span class="rot">Diagnóstico</span>Degradação da natureza e <strong>afastamento humano</strong> da pauta ecológica.</li>
-        <li><span class="rot">Estratégia</span>Sensibilização, conhecimento ecológico e <strong>mudança de comportamento</strong>.</li>
-        <li><span class="rot">Contribuição</span>Vínculo afetivo, cuidado e <strong>preservação</strong>.</li>
-      </ul>
-      <div class="caixa-pergunta" data-passo="3">
-        <p class="pergunta">O cuidado individual é suficiente para enfrentar todos os conflitos ambientais?</p>
-      </div>
+      <dl class="fragment" data-fragment-index="2">
+        <dt class="cons">Diagnóstico</dt>
+        <dd>Degradação da natureza e <strong>afastamento humano</strong> da pauta ecológica.</dd>
+        <dt class="cons">Estratégia</dt>
+        <dd>Sensibilização, conhecimento ecológico e <strong>mudança de comportamento</strong>.</dd>
+        <dt class="cons">Contribuição (leitura do grupo)</dt>
+        <dd>Vínculo afetivo, cuidado e <strong>preservação</strong>.</dd>
+      </dl>
+      <blockquote class="fragment" data-fragment-index="3">“O cuidado individual é suficiente para enfrentar todos os conflitos ambientais?”</blockquote>
     </div>
   </div>
 
-  <p class="fonte" style="margin-top:auto;">Caracterização a partir de LAYRARGUES &amp; LIMA (2014, p. 27 e 30–31);
-  os exemplos de trilhas e vivências ao ar livre seguem SANTOS &amp; TOSCHI (2015, p. 245).
-  A linha <i>Contribuição</i> é uma leitura do grupo: os autores não enunciam contribuições e avaliam criticamente
-  os limites desta macrotendência.</p>
-  <div class="rodape"><span>Conservacionista</span><span data-numero-slide>5 / 12</span></div>
+  <p class="fonte">Fonte: LAYRARGUES &amp; LIMA (2014, p. 27 e 30–31); exemplos de trilhas e vivências ao ar livre: SANTOS &amp; TOSCHI (2015, p. 245).</p>
+
+  <aside class="notes">
+    <p>Caracterização a partir de LAYRARGUES &amp; LIMA (2014, p. 27 e 30–31); os exemplos de trilhas e vivências ao ar livre seguem SANTOS &amp; TOSCHI (2015, p. 245).</p>
+    <p>A linha Contribuição é uma leitura do grupo: os autores não enunciam contribuições e avaliam criticamente os limites desta macrotendência.</p>
+  </aside>
 </section>
 
 
-<section class="slide tema--prag" id="slide-6" data-autor="Diogo" aria-label="Slide 6 de 12">
-  <p class="olho">Macrotendência 2 de 3</p>
-  <h2 class="larga">Pragmática: gerir melhor os fluxos de materiais e reduzir impactos</h2>
+<section class="slide" id="slide-6" data-autor="Diogo" aria-label="Slide 6 de 12">
+  <h2 class="prag">Pragmática: gerir melhor os fluxos de materiais e reduzir impactos</h2>
 
-  <div class="tres tres--prag">
-    <ul class="eixos">
-      <li><span class="rot">Diagnóstico</span>Consumo, desperdício, resíduos e <strong>ineficiência</strong>.</li>
-      <li><span class="rot">Estratégia</span>Reciclagem, coleta seletiva, consumo sustentável, certificações e <strong>ecoeficiência</strong>.</li>
-      <li><span class="rot">Contribuição</span>Soluções <strong>concretas e aplicáveis</strong>.</li>
-    </ul>
+  <div class="colunas analise">
+    <dl>
+      <dt class="prag">Diagnóstico</dt>
+      <dd>Consumo, desperdício, resíduos e <strong>ineficiência</strong>.</dd>
+      <dt class="prag">Estratégia</dt>
+      <dd>Reciclagem, coleta seletiva, consumo sustentável, certificações e <strong>ecoeficiência</strong>.</dd>
+      <dt class="prag">Contribuição (leitura do grupo)</dt>
+      <dd>Soluções <strong>concretas e aplicáveis</strong>.</dd>
+    </dl>
 
     <div>
-      <svg class="grafico" viewBox="0 0 548 292" role="img" aria-labelledby="g2t g2d">
+      <svg class="grafico prag" viewBox="0 0 520 290" role="img" aria-labelledby="g2t g2d">
         <title id="g2t">Extração global anual de materiais</title>
         <desc id="g2d">Gráfico de duas colunas. A extração global anual de materiais passou de 30,9 bilhões de toneladas em 1970 para 95,1 bilhões de toneladas em 2020 — cerca de três vezes mais. Fonte: PNUMA, Global Resources Outlook 2024.</desc>
+        <text class="titulo" x="0" y="15">Extração global anual de materiais</text>
+        <line class="eixo" x1="0" y1="238" x2="520" y2="238"></line>
 
-        <text class="g-titulo" x="0" y="13">Extração global anual de materiais</text>
-        <line class="g-eixo" x1="0" y1="238" x2="548" y2="238"></line>
+        <!-- 1970: 30,9 bi t → 30,9/95,1 × 170 = 55,2 px -->
+        <g class="fragment" data-fragment-index="1">
+          <rect class="antes" x="90" y="183" width="110" height="55"></rect>
+          <text class="valor" x="90" y="173">30,9 bilhões de t</text>
+          <text x="90" y="260">1970</text>
+        </g>
 
-        <!-- 1970: 30,9 bi t → 30,9/95,1 × 130 = 42,2 px -->
-        <rect class="b-antes" x="90" y="183" width="110" height="55" stroke="var(--prag)" data-passo="1"></rect>
-        <text class="g-valor-peq" x="90" y="173" data-passo="1">30,9 bilhões de t</text>
-        <text class="g-rotulo" x="90" y="259" data-passo="1">1970</text>
+        <!-- 2020: 95,1 bi t → 170 px -->
+        <g class="fragment" data-fragment-index="2">
+          <rect class="depois" x="310" y="68" width="110" height="170"></rect>
+          <text class="valor" x="310" y="58">95,1 bilhões de t</text>
+          <text x="310" y="260">2020</text>
+        </g>
 
-        <!-- 2020: 95,1 bi t → 130 px -->
-        <rect class="b-depois" x="310" y="68" width="110" height="170" fill="var(--prag-fill)" data-passo="2"></rect>
-        <text class="g-valor" x="310" y="58" data-passo="2">95,1 bilhões de t</text>
-        <text class="g-rotulo" x="310" y="259" data-passo="2">2020</text>
-
-        <text class="g-mini" x="0" y="284">Toneladas de materiais extraídos por ano, no mundo.</text>
+        <text class="nota" x="0" y="284">Toneladas de materiais extraídos por ano, no mundo.</text>
       </svg>
 
-      <div class="caixa-pergunta" data-passo="3">
-        <p class="pergunta">Reduzir impactos por unidade produzida basta se o volume total continua crescendo?</p>
-      </div>
+      <blockquote class="fragment" data-fragment-index="3">“Reduzir impactos por unidade produzida basta se o volume total continua crescendo?”</blockquote>
     </div>
 
-    <figure class="tira">
-      <div class="moldura"><img src="assets/pragmatica.jpg" style="object-position:60% center; transform:scale(1.5); transform-origin:62% 44%"
-        alt="Pátio de uma usina de reciclagem de resíduos da construção: esteiras transportadoras verdes convergem para uma peneira metálica com plataforma amarela, entre pilhas cônicas de brita e areia sobre o solo."></div>
-      <figcaption class="credito">Usina de reciclagem, Hortolândia (SP). Foto: Ana Perugini — Wikimedia Commons (CC BY 2.0)</figcaption>
+    <figure>
+      <img src="assets/pragmatica.jpg" style="aspect-ratio: 3 / 4; object-position: 60% center"
+        alt="Pátio de uma usina de reciclagem de resíduos da construção: esteiras transportadoras verdes convergem para uma peneira metálica com plataforma amarela, entre pilhas cônicas de brita e areia sobre o solo.">
+      <figcaption>Usina de reciclagem, Hortolândia (SP). Foto: Ana Perugini — Wikimedia Commons (CC BY 2.0)</figcaption>
     </figure>
   </div>
 
-  <p class="fonte" style="margin-top:auto;">
-    <b>Fonte do gráfico:</b> PNUMA/UNEP, International Resource Panel, <i>Global Resources Outlook 2024</i>, p. 26 e
-    fig. 2.9 (base: Global Material Flows Database) — extração global anual de materiais, em bilhões de toneladas.
-    wedocs.unep.org/20.500.11822/44901. Acesso em 11 set. 2026.
-    <b>Limites de leitura:</b> 95,1 bilhões de toneladas é o valor de 2020, não uma estimativa atual; a série é global e
-    mede extração, não resíduos nem consumo por pessoa. Caracterização a partir de LAYRARGUES &amp; LIMA (2014, p. 30–33);
-    a linha <i>Contribuição</i> é leitura do grupo.
-  </p>
-  <div class="rodape"><span>Pragmática</span><span data-numero-slide>6 / 12</span></div>
+  <p class="fonte">Fonte do gráfico: PNUMA/UNEP, <i>Global Resources Outlook 2024</i>, p. 26 (bilhões de toneladas por ano, 1970 e 2020). Acesso em 11 set. 2026. Caracterização: LAYRARGUES &amp; LIMA (2014, p. 30–33).</p>
+
+  <aside class="notes">
+    <p>Fonte do gráfico: PNUMA/UNEP, International Resource Panel, Global Resources Outlook 2024, p. 26 e fig. 2.9 (base: Global Material Flows Database) — extração global anual de materiais, em bilhões de toneladas. wedocs.unep.org/20.500.11822/44901. Acesso em 11 set. 2026.</p>
+    <p>Limites de leitura: 95,1 bilhões de toneladas é o valor de 2020, não uma estimativa atual; a série é global e mede extração, não resíduos nem consumo por pessoa.</p>
+    <p>Caracterização a partir de LAYRARGUES &amp; LIMA (2014, p. 30–33); a linha Contribuição é leitura do grupo.</p>
+  </aside>
 </section>
 
 
-<section class="slide tema--crit" id="slide-7" data-autor="Diogo" aria-label="Slide 7 de 12">
-  <p class="olho">Macrotendência 3 de 3</p>
-  <h2 class="larga">Crítica: a crise ambiental também distribui riscos de forma desigual</h2>
+<section class="slide" id="slide-7" data-autor="Diogo" aria-label="Slide 7 de 12">
+  <h2 class="crit">Crítica: a crise ambiental também distribui riscos de forma desigual</h2>
 
-  <div class="tres tres--crit">
-    <ul class="eixos">
-      <li><span class="rot">Diagnóstico</span>Desigualdade, poder, conflitos e <strong>modelo de desenvolvimento</strong>.</li>
-      <li><span class="rot">Estratégia</span>Problematização, diálogo, participação, cidadania e <strong>ação coletiva</strong>.</li>
-      <li><span class="rot">Contribuição</span>Evidencia <strong>responsabilidades e impactos desiguais</strong>.</li>
-    </ul>
+  <div class="colunas analise">
+    <dl>
+      <dt class="crit">Diagnóstico</dt>
+      <dd>Desigualdade, poder, conflitos e <strong>modelo de desenvolvimento</strong>.</dd>
+      <dt class="crit">Estratégia</dt>
+      <dd>Problematização, diálogo, participação, cidadania e <strong>ação coletiva</strong>.</dd>
+      <dt class="crit">Contribuição (leitura do grupo)</dt>
+      <dd>Evidencia <strong>responsabilidades e impactos desiguais</strong>.</dd>
+    </dl>
 
     <div>
-      <svg class="grafico" viewBox="0 0 578 272" role="img" aria-labelledby="g3t g3d">
+      <svg class="grafico crit" viewBox="0 0 520 262" role="img" aria-labelledby="g3t g3d">
         <title id="g3t">Domicílios com saneamento básico, 1991 e 2000</title>
         <desc id="g3d">Gráfico de barras emparelhadas. Proporção de domicílios particulares permanentes com saneamento básico: no Brasil, 45,30 por cento em 1991 e 56,47 por cento em 2000; no Norte, 16,69 e 22,98 por cento; no Sudeste, 66,77 e 77,58 por cento. Em 2000, a diferença entre Norte e Sudeste era de 54,6 pontos percentuais. Fonte: IBGE, Censo Demográfico 2000, Tabela 56.</desc>
-
-        <text class="g-titulo" x="0" y="13">Domicílios com saneamento básico (%)</text>
+        <text class="titulo" x="0" y="15">Domicílios com saneamento básico (%)</text>
 
         <!-- grade: 0 % em y=202, 100 % em y=52 (150 px = 100 pontos percentuais) -->
-        <line class="g-grade" x1="44" y1="52"    x2="578" y2="52"></line>
-        <line class="g-grade" x1="44" y1="89.5"  x2="578" y2="89.5"></line>
-        <line class="g-grade" x1="44" y1="127"   x2="578" y2="127"></line>
-        <line class="g-grade" x1="44" y1="164.5" x2="578" y2="164.5"></line>
-        <text class="g-mini" x="8" y="56">100</text>
-        <text class="g-mini" x="8" y="131">50</text>
-        <text class="g-mini" x="8" y="206">0</text>
-        <line class="g-eixo" x1="44" y1="202" x2="578" y2="202"></line>
+        <line class="grade" x1="36" y1="52"    x2="520" y2="52"></line>
+        <line class="grade" x1="36" y1="89.5"  x2="520" y2="89.5"></line>
+        <line class="grade" x1="36" y1="127"   x2="520" y2="127"></line>
+        <line class="grade" x1="36" y1="164.5" x2="520" y2="164.5"></line>
+        <text class="nota" x="0" y="56">100</text>
+        <text class="nota" x="0" y="131">50</text>
+        <text class="nota" x="0" y="206">0</text>
+        <line class="eixo" x1="36" y1="202" x2="520" y2="202"></line>
 
-        <g data-passo="1">
-          <rect class="b-antes" x="90"  y="134.1" width="54" height="67.9"  stroke="var(--crit)"></rect>
-          <text class="g-dado" x="90"  y="128">45,30</text>
-          <rect class="b-antes" x="250" y="177.0" width="54" height="25.0"  stroke="var(--crit)"></rect>
-          <text class="g-dado" x="250" y="171">16,69</text>
-          <rect class="b-antes" x="410" y="101.8" width="54" height="100.2" stroke="var(--crit)"></rect>
-          <text class="g-dado" x="410" y="96">66,77</text>
+        <g class="fragment" data-fragment-index="1">
+          <rect class="antes" x="62"  y="134.1" width="50" height="67.9"></rect>
+          <text class="dado" x="62"  y="128">45,30</text>
+          <rect class="antes" x="206" y="177.0" width="50" height="25.0"></rect>
+          <text class="dado" x="206" y="171">16,69</text>
+          <rect class="antes" x="350" y="101.8" width="50" height="100.2"></rect>
+          <text class="dado" x="350" y="96">66,77</text>
         </g>
-        <g data-passo="2">
-          <rect class="b-depois" x="150" y="117.3" width="54" height="84.7"  fill="var(--crit-fill)"></rect>
-          <text class="g-dado" x="150" y="111">56,47</text>
-          <rect class="b-depois" x="310" y="167.5" width="54" height="34.5"  fill="var(--crit-fill)"></rect>
-          <text class="g-dado" x="310" y="161">22,98</text>
-          <rect class="b-depois" x="470" y="85.6"  width="54" height="116.4" fill="var(--crit-fill)"></rect>
-          <text class="g-dado" x="470" y="79">77,58</text>
+        <g class="fragment" data-fragment-index="2">
+          <rect class="depois" x="116" y="117.3" width="50" height="84.7"></rect>
+          <text class="dado" x="116" y="111">56,47</text>
+          <rect class="depois" x="260" y="167.5" width="50" height="34.5"></rect>
+          <text class="dado" x="260" y="161">22,98</text>
+          <rect class="depois" x="404" y="85.6"  width="50" height="116.4"></rect>
+          <text class="dado" x="404" y="79">77,58</text>
         </g>
 
-        <text class="g-rotulo" x="90"  y="222">Brasil</text>
-        <text class="g-rotulo" x="250" y="222">Norte</text>
-        <text class="g-rotulo" x="410" y="222">Sudeste</text>
+        <text class="rotulo" x="114" y="224" text-anchor="middle">Brasil</text>
+        <text class="rotulo" x="258" y="224" text-anchor="middle">Norte</text>
+        <text class="rotulo" x="402" y="224" text-anchor="middle">Sudeste</text>
 
         <!-- destaque: patamar do Norte em 2000 prolongado até o Sudeste -->
-        <g data-passo="3" stroke="var(--crit)" fill="none">
-          <line x1="364" y1="167.5" x2="556" y2="167.5" stroke-width="1.5" stroke-dasharray="4 3"></line>
-          <line x1="548" y1="167.5" x2="548" y2="85.6" stroke-width="1.5"></line>
-          <line x1="542" y1="167.5" x2="554" y2="167.5" stroke-width="1.5"></line>
-          <line x1="542" y1="85.6"  x2="554" y2="85.6"  stroke-width="1.5"></line>
+        <g class="fragment destaque" data-fragment-index="3">
+          <line x1="310" y1="167.5" x2="482" y2="167.5" stroke-dasharray="4 3"></line>
+          <line x1="474" y1="167.5" x2="474" y2="85.6"></line>
+          <line x1="468" y1="167.5" x2="480" y2="167.5"></line>
+          <line x1="468" y1="85.6"  x2="480" y2="85.6"></line>
         </g>
 
-        <rect class="b-antes" x="44" y="242" width="16" height="11" stroke="var(--crit)"></rect>
-        <text class="g-mini" x="66" y="252">1991</text>
-        <rect class="b-depois" x="112" y="242" width="16" height="11" fill="var(--crit-fill)"></rect>
-        <text class="g-mini" x="134" y="252">2000</text>
+        <rect class="antes" x="36" y="240" width="16" height="11"></rect>
+        <text class="nota" x="58" y="250">1991</text>
+        <rect class="depois" x="106" y="240" width="16" height="11"></rect>
+        <text class="nota" x="128" y="250">2000</text>
       </svg>
 
-      <p class="destaque" data-passo="3">Em 2000, a diferença entre Norte e Sudeste era de 54,6 pontos percentuais.</p>
-
-      <div class="caixa-pergunta" data-passo="3" style="margin-top:12px;">
-        <p class="pergunta">Quando a infraestrutura avança, quem continua mais exposto?</p>
-      </div>
+      <p class="fragment crit" data-fragment-index="3"><strong>Em 2000, a diferença entre Norte e Sudeste era de 54,6 pontos percentuais.</strong></p>
+      <blockquote class="fragment" data-fragment-index="3">“Quando a infraestrutura avança, quem continua mais exposto?”</blockquote>
     </div>
 
-    <figure class="tira">
-      <div class="moldura"><img src="assets/critica.jpg" style="object-position:center 55%"
-        alt="Tanques retangulares de concreto de uma estação de tratamento de água, com guarda-corpos metálicos, prédio operacional e caixa d'água ao fundo."></div>
-      <figcaption class="credito">ETA Gramame-Mamuaba, Conde (PB). Foto: Marcos Elias de Oliveira Júnior — Wikimedia Commons (CC0 1.0)</figcaption>
+    <figure>
+      <img src="assets/critica.jpg" style="aspect-ratio: 3 / 4; object-position: center 55%"
+        alt="Tanques retangulares de concreto de uma estação de tratamento de água, com guarda-corpos metálicos, prédio operacional e caixa d'água ao fundo.">
+      <figcaption>ETA Gramame-Mamuaba, Conde (PB). Foto: Marcos Elias de Oliveira Júnior — Wikimedia Commons (CC0 1.0)</figcaption>
     </figure>
   </div>
 
-  <p class="fonte" style="margin-top:auto;">
-    <b>Fonte do gráfico:</b> IBGE, Censo Demográfico 1991/2000, Tabela 56 — <i>Domicílios particulares permanentes com
-    saneamento básico, absoluto e proporção em relação ao total de domicílios particulares permanentes, segundo as Grandes
-    Regiões e Unidades da Federação — 1991/2000</i>. Acesso em 11 set. 2026.
-    <b>Indicador composto</b> (nota da tabela): domicílios atendidos por rede geral de abastecimento de água, existência de
-    banheiro ou sanitário, rede de esgoto pluvial ou fossa séptica de esgotamento sanitário e lixo coletado.
-    A diferença de 54,6 p.p. é a subtração entre os dois percentuais de 2000; o indicador não identifica causas da
-    desigualdade. Caracterização da macrotendência a partir de LAYRARGUES &amp; LIMA (2014, p. 33–35).
-  </p>
-  <div class="rodape"><span>Crítica</span><span data-numero-slide>7 / 12</span></div>
+  <p class="fonte">Fonte do gráfico: IBGE, Censo Demográfico 1991/2000, Tabela 56 (% de domicílios, 1991 e 2000); indicador composto por rede geral de água, banheiro ou sanitário, esgoto (rede pluvial ou fossa séptica) e lixo coletado. Acesso em 11 set. 2026. Caracterização: LAYRARGUES &amp; LIMA (2014, p. 33–35).</p>
+
+  <aside class="notes">
+    <p>Fonte do gráfico: IBGE, Censo Demográfico 1991/2000, Tabela 56 — Domicílios particulares permanentes com saneamento básico, absoluto e proporção em relação ao total de domicílios particulares permanentes, segundo as Grandes Regiões e Unidades da Federação — 1991/2000. Acesso em 11 set. 2026.</p>
+    <p>Indicador composto (nota da tabela): domicílios atendidos por rede geral de abastecimento de água, existência de banheiro ou sanitário, rede de esgoto pluvial ou fossa séptica de esgotamento sanitário e lixo coletado.</p>
+    <p>A diferença de 54,6 p.p. é a subtração entre os dois percentuais de 2000; o indicador não identifica causas da desigualdade. Caracterização da macrotendência a partir de LAYRARGUES &amp; LIMA (2014, p. 33–35); a linha Contribuição é leitura do grupo.</p>
+  </aside>
 </section>
 
 
 <section class="slide" id="slide-8" data-autor="Diogo" aria-label="Slide 8 de 12">
-  <p class="olho">Comparação</p>
-  <h2 class="larga">As vertentes diferem no que consideram problema e solução</h2>
+  <h2>As vertentes diferem no que consideram problema e solução</h2>
 
-  <table class="matriz">
-    <caption>Comparação entre as três macrotendências segundo diagnóstico, sujeito da ação e mudança considerada suficiente.</caption>
+  <table>
+    <caption class="so-leitor">Comparação entre as três macrotendências segundo diagnóstico, sujeito da ação e mudança considerada suficiente.</caption>
     <thead>
       <tr>
         <th scope="col">Critério</th>
-        <th scope="col" class="col-cons">Conservacionista</th>
-        <th scope="col" class="col-prag">Pragmática</th>
-        <th scope="col" class="col-crit">Crítica</th>
+        <th scope="col" class="cons">Conservacionista</th>
+        <th scope="col" class="prag">Pragmática</th>
+        <th scope="col" class="crit">Crítica</th>
       </tr>
     </thead>
     <tbody>
-      <tr data-passo="1">
+      <tr class="fragment" data-fragment-index="1">
         <th scope="row">Diagnóstico</th>
         <td>Degradação ambiental</td>
         <td>Resíduos, consumo e ineficiência</td>
         <td>Desigualdade, poder e desenvolvimento</td>
       </tr>
-      <tr data-passo="2">
+      <tr class="fragment" data-fragment-index="2">
         <th scope="row">Quem age</th>
         <td>Indivíduo sensibilizado</td>
         <td>Consumidores, empresas e gestores</td>
         <td>Coletividades, Estado e sujeitos afetados</td>
       </tr>
-      <tr data-passo="3">
+      <tr class="fragment" data-fragment-index="3">
         <th scope="row">Mudança suficiente</th>
         <td>Preservação e cuidado</td>
         <td>Redução de impactos e melhor gestão</td>
@@ -730,93 +362,78 @@ body.mostrar-chrome .barra{transition:opacity .25s ease, width .24s ease;}
     </tbody>
   </table>
 
-  <p class="fonte" style="margin-top:auto;">
-    Quadro de síntese didática elaborado a partir de LAYRARGUES &amp; LIMA (2014) e SANTOS &amp; TOSCHI (2015, p. 249).
-    As colunas descrevem tipos ideais; não classificam pessoas nem instituições, e a ordem em que aparecem é expositiva,
-    não uma progressão. <b>Nota de vocabulário:</b> em Layrargues &amp; Lima, a “Educação Ambiental no processo de gestão
-    ambiental” é uma das correntes reunidas na macrotendência <i>crítica</i>.
-  </p>
-  <div class="rodape"><span>Vertentes da Educação Ambiental</span><span data-numero-slide>8 / 12</span></div>
+  <p class="fonte">Quadro de síntese didática a partir de LAYRARGUES &amp; LIMA (2014) e SANTOS &amp; TOSCHI (2015, p. 249). Tipos ideais: a ordem das colunas é expositiva, não uma progressão.</p>
+
+  <aside class="notes">
+    <p>Quadro de síntese didática elaborado a partir de LAYRARGUES &amp; LIMA (2014) e SANTOS &amp; TOSCHI (2015, p. 249). As colunas descrevem tipos ideais; não classificam pessoas nem instituições, e a ordem em que aparecem é expositiva, não uma progressão.</p>
+    <p>Nota de vocabulário: em Layrargues &amp; Lima, a “Educação Ambiental no processo de gestão ambiental” é uma das correntes reunidas na macrotendência crítica.</p>
+  </aside>
 </section>
 
 
 <section class="slide" id="slide-9" data-autor="Edson" aria-label="Slide 9 de 12">
-  <p class="olho">Estudo de caso · Distrito Federal</p>
-  <h2 class="extra">O Lixão da Estrutural mostra que um mesmo problema pode ter várias leituras</h2>
+  <h2>O Lixão da Estrutural mostra que um mesmo problema pode ter várias leituras</h2>
 
-  <div class="duas duas--foto-dir">
-    <div>
-      <ol class="fatos">
-        <li data-passo="1">Depósito a céu aberto por quase seis décadas, vizinho ao <strong>Parque Nacional de Brasília</strong>; a contaminação das águas subterrâneas é o impacto mais crítico.</li>
-        <li data-passo="2">O Aterro Controlado do Jóquei foi <strong>encerrado em 20 de janeiro de 2018</strong>; os resíduos domiciliares passaram ao Aterro Sanitário de Brasília.</li>
-        <li data-passo="3">O Plano de Transição de 2017 identificou <strong>2.816 pessoas autodeclaradas catadoras</strong> de materiais recicláveis trabalhando na área.</li>
-      </ol>
-    </div>
+  <div class="colunas texto-foto">
+    <ol>
+      <li class="fragment" data-fragment-index="1">Depósito a céu aberto por quase seis décadas, vizinho ao <strong>Parque Nacional de Brasília</strong>; a contaminação das águas subterrâneas é o impacto mais crítico.</li>
+      <li class="fragment" data-fragment-index="2">O Aterro Controlado do Jóquei foi <strong>encerrado em 20 de janeiro de 2018</strong>; os resíduos domiciliares passaram ao Aterro Sanitário de Brasília.</li>
+      <li class="fragment" data-fragment-index="3">O Plano de Transição de 2017 identificou <strong>2.816 pessoas autodeclaradas catadoras</strong> de materiais recicláveis trabalhando na área.</li>
+    </ol>
 
-    <figure class="painel-foto">
-      <div class="moldura"><img src="assets/estrutural.jpg" style="object-position:center 48%"
-        alt="Catadoras e catadores de materiais recicláveis, com sacos nas costas, caminham sobre uma extensa camada de lixo a céu aberto, em contraluz de fim de tarde."></div>
-      <figcaption class="credito">Lixão da Estrutural (DF) em junho de 2017, antes do encerramento. Foto: Leopoldo Silva / Agência Senado — Wikimedia Commons (CC BY 2.0)</figcaption>
+    <figure>
+      <img src="assets/estrutural.jpg" style="aspect-ratio: 4 / 3; object-position: center 48%"
+        alt="Catadoras e catadores de materiais recicláveis, com sacos nas costas, caminham sobre uma extensa camada de lixo a céu aberto, em contraluz de fim de tarde.">
+      <figcaption>Lixão da Estrutural (DF) em junho de 2017, antes do encerramento. Foto: Leopoldo Silva / Agência Senado — Wikimedia Commons (CC BY 2.0)</figcaption>
     </figure>
   </div>
 
-  <p class="fonte" style="margin-top:auto;">
-    <b>Fontes:</b> DISTRITO FEDERAL, Decreto nº 38.402/2017, Anexo III — Plano de Transição (registro das 2.816 pessoas
-    autodeclaradas catadoras, pelo Projeto Pró-Catador); SLU-DF (data de encerramento); ADASA/DF, <i>PDGIRS — Relatório 2024</i>
-    (destinação atual e passivo ambiental). Acesso em 11 set. 2026.
-  </p>
-  <div class="rodape"><span>Caso da Estrutural</span><span data-numero-slide>9 / 12</span></div>
+  <p class="fonte">Fontes: DISTRITO FEDERAL, Decreto nº 38.402/2017, Anexo III (2.816 catadoras); SLU-DF (encerramento); ADASA/DF, <i>PDGIRS — Relatório 2024</i> (destinação). Acesso em 11 set. 2026.</p>
+
+  <aside class="notes">
+    <p>Fontes: DISTRITO FEDERAL, Decreto nº 38.402/2017, Anexo III — Plano de Transição (registro das 2.816 pessoas autodeclaradas catadoras, pelo Projeto Pró-Catador); SLU-DF (data de encerramento); ADASA/DF, PDGIRS — Relatório 2024 (destinação atual e passivo ambiental). Acesso em 11 set. 2026.</p>
+  </aside>
 </section>
 
 
-<section class="slide slide--escuro" id="slide-10" data-autor="Edson" aria-label="Slide 10 de 12">
-  <p class="olho">Debate</p>
-  <h2 data-passo="1">Fechar o lixão e ampliar a reciclagem resolve o problema?</h2>
+<section class="slide debate" id="slide-10" data-background-color="#132D29" data-background-image="assets/aventura-floresta.png" data-background-opacity="0.18" data-autor="Edson" aria-label="Slide 10 de 12">
+  <h2 class="grande">Fechar o lixão e ampliar a reciclagem resolve o problema?</h2>
 
   <ol class="guias">
-    <li data-passo="2"><span class="ord">01</span><span>Qual é o problema principal?</span></li>
-    <li data-passo="3"><span class="ord">02</span><span>Quem precisa agir?</span></li>
-    <li data-passo="4"><span class="ord">03</span><span>Como saberíamos que a solução foi suficiente?</span></li>
+    <li class="fragment" data-fragment-index="1">Qual é o problema principal?</li>
+    <li class="fragment" data-fragment-index="2">Quem precisa agir?</li>
+    <li class="fragment" data-fragment-index="3">Como saberíamos que a solução foi suficiente?</li>
   </ol>
 
-  <p class="corpo" style="margin-top:28px; max-width:72ch;">
-    Cada resposta possível entende “resolver” de um jeito diferente. Não há gabarito aqui: o exercício é
-    identificar qual leitura está por trás de cada proposta.
-  </p>
-  <div class="rodape"><span>Debate</span><span data-numero-slide>10 / 12</span></div>
+  <p class="fragment" data-fragment-index="4">Cada resposta possível entende “resolver” de um jeito diferente. Não há gabarito aqui: o exercício é identificar qual leitura está por trás de cada proposta.</p>
 </section>
 
 
 <section class="slide" id="slide-11" data-autor="Edson" aria-label="Slide 11 de 12">
-  <p class="olho">Síntese</p>
-  <h2 class="larga">Toda prática ambiental educa para algum projeto de sociedade</h2>
+  <h2>Toda prática ambiental educa para algum projeto de sociedade</h2>
 
-  <div class="duas duas--foto-esq">
-    <figure class="painel-foto">
-      <div class="moldura"><img src="assets/sintese.jpg" style="object-position:center 60%"
-        alt="Pessoas sentadas e deitadas no gramado à beira do lago de um parque urbano, entre palmeiras, com prédios residenciais ao fundo."></div>
-      <figcaption class="credito">Parque Vaca Brava, Goiânia (GO). Foto: Fronteira / Wikimedia Commons (CC BY-SA 4.0)</figcaption>
+  <div class="colunas foto-texto">
+    <figure>
+      <img src="assets/sintese.jpg" style="aspect-ratio: 4 / 3; object-position: center 60%"
+        alt="Pessoas sentadas e deitadas no gramado à beira do lago de um parque urbano, entre palmeiras, com prédios residenciais ao fundo.">
+      <figcaption>Parque Vaca Brava, Goiânia (GO). Foto: Fronteira / Wikimedia Commons (CC BY-SA 4.0)</figcaption>
     </figure>
 
     <div>
-      <ul class="sintese">
-        <li class="marca--cons">Preservar é relevante.</li>
-        <li class="marca--prag">Gerir melhor é relevante.</li>
-        <li class="marca--crit">Discutir desigualdade e participação é relevante.</li>
+      <ul>
+        <li><strong class="cons">Preservar</strong> é relevante.</li>
+        <li><strong class="prag">Gerir melhor</strong> é relevante.</li>
+        <li><strong class="crit">Discutir desigualdade e participação</strong> é relevante.</li>
         <li>As vertentes diferem no diagnóstico, nas responsabilidades que atribuem e no horizonte de transformação que consideram suficiente.</li>
       </ul>
-      <p class="frase-final" data-passo="1">
-        Reconhecer as vertentes ajuda a tornar conscientes as escolhas presentes em toda prática de
-        Educação Ambiental.
-      </p>
+      <blockquote class="fragment" data-fragment-index="1">Reconhecer as vertentes ajuda a tornar conscientes as escolhas presentes em toda prática de Educação Ambiental.</blockquote>
     </div>
   </div>
-  <div class="rodape"><span>Vertentes da Educação Ambiental</span><span data-numero-slide>11 / 12</span></div>
 </section>
 
 
 <section class="slide" id="slide-12" data-autor="Edson" aria-label="Slide 12 de 12">
-  <h2 class="larga">Referências</h2>
+  <h2>Referências</h2>
 
   <ul class="refs">
     <li><b>LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.</b> As macrotendências político-pedagógicas
@@ -861,144 +478,14 @@ body.mostrar-chrome .barra{transition:opacity .25s ease, width .24s ease;}
       Brasília: Governo do Distrito Federal, 2024. <span class="url">adasa.df.gov.br</span></li>
   </ul>
 
-  <p class="fonte" style="margin-top:auto;">
-    Créditos, licenças e condições de uso de todas as fotografias em <b>fontes.md</b>.
-    Todas as páginas foram consultadas em 11 de setembro de 2026.
-  </p>
-  <div class="rodape"><span>Vertentes da Educação Ambiental</span><span data-numero-slide>12 / 12</span></div>
+  <p class="fonte">Créditos, licenças e condições de uso de todas as fotografias em <b>fontes.md</b>. Todas as páginas foram consultadas em 11 de setembro de 2026.</p>
 </section>
 
-</div><!-- /palco -->
-
-<div class="barra" id="barra" aria-hidden="true"></div>
-<p class="dica" id="dica">← → navegar · <b>A</b> revelar tudo · <b>I</b> imprimir</p>
-<div class="nav" role="group" aria-label="Navegação da apresentação">
-  <button type="button" id="btn-voltar" aria-label="Slide anterior">‹</button>
-  <span id="contador" aria-live="polite">1 / 12</span>
-  <button type="button" id="btn-avancar" aria-label="Próximo slide">›</button>
 </div>
-<script>
-(function(){
-  "use strict";
-
-  var palco    = document.getElementById('palco');
-  var slides   = Array.prototype.slice.call(document.querySelectorAll('.slide'));
-  var contador = document.getElementById('contador');
-  var barra    = document.getElementById('barra');
-  var dica     = document.getElementById('dica');
-
-  var atual = 0, passo = 0, tudoRevelado = false, tChrome = null;
-
-  var maxPassos = slides.map(function(s){
-    var m = 0;
-    Array.prototype.forEach.call(s.querySelectorAll('[data-passo]'), function(e){
-      var n = parseInt(e.getAttribute('data-passo'), 10);
-      if (!isNaN(n) && n > m) m = n;
-    });
-    return m;
-  });
-
-  function ajustar(){
-    palco.style.transform = 'scale(' + Math.min(window.innerWidth/1280, window.innerHeight/720) + ')';
-  }
-
-  /* controles aparecem ao mover o mouse e somem sozinhos */
-  function mostrarChrome(ms){
-    document.body.classList.add('mostrar-chrome');
-    clearTimeout(tChrome);
-    tChrome = setTimeout(function(){ document.body.classList.remove('mostrar-chrome'); }, ms || 2600);
-  }
-
-  function pintar(){
-    slides.forEach(function(s, i){
-      var ativo = (i === atual);
-      s.classList.toggle('ativo', ativo);
-      s.setAttribute('aria-hidden', ativo ? 'false' : 'true');
-      Array.prototype.forEach.call(s.querySelectorAll('[data-passo]'), function(e){
-        var n = parseInt(e.getAttribute('data-passo'), 10) || 0;
-        e.classList.toggle('revelado', tudoRevelado || (ativo && n <= passo));
-      });
-    });
-    contador.textContent = (atual + 1) + ' / ' + slides.length;
-    barra.style.width = (((atual + 1) / slides.length) * 100) + '%';
-    if (history.replaceState) history.replaceState(null, '', '#' + (atual + 1));
-  }
-
-  function irPara(i, comTudo){
-    atual = Math.max(0, Math.min(slides.length - 1, i));
-    passo = comTudo ? maxPassos[atual] : 0;
-    pintar();
-  }
-
-  function avancar(){
-    if (tudoRevelado){ if (atual < slides.length - 1) irPara(atual + 1, true); return; }
-    if (passo < maxPassos[atual]){ passo++; pintar(); return; }
-    if (atual < slides.length - 1) irPara(atual + 1, false);
-  }
-
-  function voltar(){
-    if (tudoRevelado){ if (atual > 0) irPara(atual - 1, true); return; }
-    if (passo > 0){ passo--; pintar(); return; }
-    if (atual > 0) irPara(atual - 1, true);
-  }
-
-  function alternarTudo(){
-    tudoRevelado = !tudoRevelado;
-    if (!tudoRevelado) passo = maxPassos[atual];
-    pintar();
-    dica.innerHTML = tudoRevelado
-      ? 'Modo <b>estático</b>: tudo revelado · <b>A</b> volta ao modo por cliques'
-      : '← → navegar · <b>A</b> revelar tudo · <b>I</b> imprimir';
-    mostrarChrome(3200);
-  }
-
-  document.addEventListener('keydown', function(e){
-    if (e.ctrlKey || e.metaKey || e.altKey) return;
-    var k = e.key;
-    if (k === 'ArrowRight' || k === 'ArrowDown' || k === ' ' || k === 'PageDown' || k === 'Enter'){ e.preventDefault(); avancar(); }
-    else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp' || k === 'Backspace'){ e.preventDefault(); voltar(); }
-    else if (k === 'Home'){ e.preventDefault(); irPara(0, false); }
-    else if (k === 'End'){ e.preventDefault(); irPara(slides.length - 1, true); }
-    else if (k === 'a' || k === 'A'){ e.preventDefault(); alternarTudo(); }
-    else if (k === 'i' || k === 'I'){ e.preventDefault(); window.print(); }
-    else if (k === 'f' || k === 'F'){
-      e.preventDefault();
-      if (!document.fullscreenElement && document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();
-      else if (document.exitFullscreen) document.exitFullscreen();
-    }
-    else if (k >= '1' && k <= '9'){ e.preventDefault(); irPara(parseInt(k,10) - 1, false); }
-  });
-
-  document.addEventListener('click', function(e){
-    if (e.target.closest('a, button, .nav')) return;
-    avancar();
-  });
-  document.getElementById('btn-avancar').addEventListener('click', function(e){ e.stopPropagation(); avancar(); });
-  document.getElementById('btn-voltar').addEventListener('click', function(e){ e.stopPropagation(); voltar(); });
-  document.addEventListener('mousemove', function(){ mostrarChrome(); });
-
-  /* impressão: nada pode ficar oculto no PDF */
-  window.addEventListener('beforeprint', function(){
-    slides.forEach(function(s){
-      Array.prototype.forEach.call(s.querySelectorAll('[data-passo]'), function(e){ e.classList.add('revelado'); });
-    });
-  });
-  window.addEventListener('afterprint', function(){ pintar(); });
-
-  window.addEventListener('resize', ajustar);
-  ajustar();
-
-  /* ?estatico=1 abre com todas as revelações visíveis — leitura corrida e conferência */
-  if (/[?&]estatico=1/.test(location.search)){
-    tudoRevelado = true;
-    dica.innerHTML = 'Modo <b>estático</b>: tudo revelado · <b>A</b> volta ao modo por cliques';
-  }
-
-  var alvo = parseInt((location.hash || '').replace('#',''), 10);
-  irPara(isNaN(alvo) ? 0 : alvo - 1, tudoRevelado);
-  mostrarChrome(4200);
-})();
-
-</script>
+</div>
+<script src="comum/reveal/reveal.js"></script>
+<script src="comum/reveal/notes.js"></script>
+<script src="comum/reveal/zoom.js"></script>
+<script src="comum/iniciar.js"></script>
 </body>
 </html>

@@ -3,6 +3,8 @@
 Apresentação **Vertentes da Educação Ambiental** (`index.html`, 12 slides).
 Processo executado em **11 de setembro de 2026**, conforme o processo multiagente exigido no briefing.
 
+As seções 1 a 7 registram a auditoria da versão inicial. A validação técnica da migração para reveal.js está na seção 8; a atualização para o tema de aventura 2D está na seção 9.
+
 ---
 
 ## 1. Como o trabalho foi conduzido
@@ -151,7 +153,7 @@ puxaria a leitura para a lente crítica, já coberta pelo slide 9.
 | Fonte que não sustenta a afirmação | **Nenhuma.** Três associações erradas foram encontradas (S9-2, S9-3, link do UNEP) e corrigidas. |
 | Contexto estatístico virando causa de uma macrotendência | **Nenhum.** O slide 3 nega explicitamente a causalidade no corpo do texto e repete o limite no rodapé. |
 | Imagem sem origem, crédito ou condição de uso | **Nenhuma.** Nove imagens, todas com autoria, licença, local, data e página de origem em `fontes.md`, e crédito visível no slide. |
-| Informação importante acessível apenas por animação | **Nenhuma.** `@media print` força todos os elementos `[data-passo]` a `opacity:1`, e o parâmetro `?estatico=1` (ou a tecla **A**) revela tudo na tela. |
+| Informação importante acessível apenas por animação | **Nenhuma.** No reveal.js, `pdfSeparateFragments: false` imprime todos os elementos `.fragment` visíveis em uma página por slide, e o parâmetro `?estatico=1` (ou a tecla **A**) revela tudo na tela. |
 | Falha de legibilidade, navegação, impressão ou exportação | **Nenhuma conhecida.** Os 12 slides foram renderizados a 1280×720 e conferidos um a um; o PDF sai com 12 páginas de 960×540 pt (16:9 exato). |
 
 ---
@@ -189,3 +191,27 @@ puxaria a leitura para a lente crítica, já coberta pelo slide 9.
 - **Números não auditados do caso da Estrutural.** Os “42 contratos com cooperativas” (Relatório 2024) e o
   Complexo de Reciclagem anunciado pela Sema-DF em 2025 aparecem na pesquisa do projeto, mas **não** foram
   verificados nesta auditoria e **não** entraram nos slides. Não os cite sem checar.
+
+## 8. Validação da migração para reveal.js — 2 de outubro de 2026
+
+Na primeira etapa da migração, a apresentação usou reveal.js 6.0.2 e o tema `serif`, ambos locais. Os arquivos editáveis e a sequência Caio → Diogo → Edson foram preservados; `atualizar.cmd` regenera a apresentação completa e as três prévias.
+
+- **Composição:** os 22 cenários de `testar.ps1` passaram no Windows PowerShell. A verificação cobre manifestos, ordem, UTF-8, IDs, recursos locais, rejeição de entradas inválidas e preservação das saídas anteriores em caso de erro. Listas de imagens/vídeos de fundo e iframes locais têm os caminhos ajustados para a apresentação e as prévias.
+- **Navegador:** os 12 slides e as três prévias individuais abriram por `file://`, com a conexão desativada, sem erros de JavaScript no Chrome. Navegação, fragmentos, modo estático, visão geral, ajuda de teclado, notas e impressão pela tecla `I` foram conferidos. No Edge, também foram confirmados o carregamento offline, a sincronização das notas e a preferência por movimento reduzido.
+- **Layout:** todos os slides foram inspecionados após o término das transições a 1280×720, sem imagens quebradas, cortes ou sobreposição com as fontes.
+- **PDF:** `vertentes-educacao-ambiental.pdf` foi exportado novamente e suas 12 páginas foram renderizadas e inspecionadas. Todas medem 960×540 pt (16:9), com os fragmentos visíveis e sem notas do apresentador sobrepostas.
+
+Esta etapa valida a migração técnica; os registros de fontes e as ressalvas da auditoria acadêmica permanecem nos materiais de pesquisa.
+
+## 9. Tema Aventura ambiental — 2 de outubro de 2026
+
+A pedido do grupo, o tema foi substituído por uma estética autoral de aventura 2D em pixel art, inspirada em Terraria. A capa usa uma paisagem fictícia gerada por IA; os demais slides usam painel claro, moldura de madeira e terreno decorativo desenhado por CSS. Pixelify Sans local é usada nos títulos; o corpo continua em fonte de leitura. A composição acadêmica, as oito fotografias documentais em uso, os dados dos gráficos e as referências foram preservados.
+
+- Os 12 slides foram inspecionados a 1280×720 com todos os fragmentos visíveis, sem cortes, imagens quebradas ou sobreposição com as fontes.
+- As três prévias individuais carregaram a fonte local e seus quatro slides offline, sem erros no Chrome. A apresentação também foi validada offline no Edge, com preferência por movimento reduzido.
+- Os 22 cenários de composição passaram. Navegação, fragmentos, modo estático, visão geral, notas e impressão pela tecla `I` foram conferidos no tema atualizado.
+- Foi corrigido o deslocamento de um slide ao abrir as notas: os iframes `receiver` do plugin usam índices a partir de zero. A configuração agora preserva esse formato nos iframes e os links a partir de 1 na apresentação. Chrome e Edge mantêm o slide atual ao abrir `S`.
+- O PDF foi exportado novamente: 12 páginas de 960×540 pt, com os fragmentos visíveis. Todas as páginas foram renderizadas e inspecionadas.
+- A origem da ilustração, dos ícones e da fonte está registrada em `fontes.md`; o `serif.css` original permanece disponível como alternativa manual.
+
+Após a comparação de fontes, o grupo escolheu manter a Pixelify Sans ajustada: títulos de 44 px, peso 500, entrelinha 1,14 e espaçamento de 0,2 px. A capa mantém 76 px, com entrelinha 1,10 e sombra simples. Os 12 slides e as três prévias foram conferidos offline no Chrome após o ajuste, sem cortes ou sobreposições. O PDF atualizado tem 12 páginas de 960×540 pt; todas foram renderizadas e inspecionadas.
