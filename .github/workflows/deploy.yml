@@ -42,6 +42,9 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build
+    # O deploy no ambiente github-pages só ocorre na branch main ou por acionamento manual.
+    # Na branch dev, o pipeline apenas valida a compilação no job build.
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
