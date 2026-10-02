@@ -71,6 +71,21 @@ function Get-OtherSourceHashes {
     }) -join "`n")
 }
 
+# A saida referencia o reveal.js e o tema em comum/: tudo precisa ser local e existir (funciona offline).
+function Assert-Offline([string]$Html, [string]$Folder, [string]$RevealScript) {
+    Assert-True ($Html.Contains('src="' + $RevealScript + '"')) "A saida nao carrega o reveal.js de $RevealScript."
+    Assert-True ($Html -match '(?is)<link\b[^>]*\bhref="[^"]*comum/tema\.css"') 'A saida nao carrega o tema.'
+    $refs = [regex]::Matches($Html, '(?is)<(?:script|link|img)\b[^>]*?\b(?:src|href)\s*=\s*"(?<url>[^"]*)"')
+    Assert-True ($refs.Count -ge 8) 'A saida deveria referenciar o reveal.js, o tema e as imagens.'
+    foreach ($ref in $refs) {
+        $url = $ref.Groups['url'].Value
+        if ($url -match '^(?i)data:') { continue }
+        Assert-True ($url -notmatch '^(?i)(?:[a-z][a-z0-9+.-]*:|//)') "A saida depende de recurso externo: $url"
+        $path = Join-Path $Folder ([Uri]::UnescapeDataString($url).Replace('/', [System.IO.Path]::DirectorySeparatorChar))
+        Assert-True (Test-Path -LiteralPath $path -PathType Leaf) "Recurso local ausente na saida: $url"
+    }
+}
+
 function Pass([string]$Message) {
     $script:passos++
     Write-Host "OK $script:passos - $Message"
@@ -117,8 +132,8 @@ try {
     foreach ($autor in $autores) {
         Assert-True ((Get-SlideCount (Get-Deck $autor)) -eq $baselineCounts[$autor]) "A previa de $autor nao respeitou seu manifesto."
     }
-    Assert-True ($full -match '<style\b' -and $full -match '<script\b') 'CSS e JavaScript devem estar embutidos na saida.'
-    Assert-True ($full -notmatch '(?is)<script\b[^>]*\bsrc\s*=|<link\b[^>]*\brel\s*=\s*["'']stylesheet') 'A saida depende de CSS ou JavaScript externos.'
+    Assert-Offline $full $testSlides 'comum/reveal/reveal.js'
+    foreach ($autor in $autores) { Assert-Offline (Get-Deck $autor) (Join-Path $testSlides $autor) '../comum/reveal/reveal.js' }
     Assert-True (-not $full.Contains([string][char]0xFFFD)) 'A saida perdeu caracteres UTF-8.'
     Pass "Manifestos atuais ($baselineTotal slides) e saidas offline"
 
@@ -131,7 +146,7 @@ try {
     $imageSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10" fill="#123456"/></svg>'
     Write-Text (Join-Path $testSlides 'assets/compartilhada-teste.svg') $imageSvg
     Write-Text (Join-Path $testSlides 'Caio/assets/pessoal-teste.svg') $imageSvg
-    Write-Text $extraPath '<section class="slide" id="teste-extra"><h2 class="marcador-teste">Nova unidade: ação colaborativa</h2><img src="assets/pessoal-teste.svg" alt="Imagem pessoal de teste"><img src="../assets/compartilhada-teste.svg" alt="Imagem compartilhada de teste"><div class="rodape"><span>Teste</span><span data-numero-slide></span></div></section>'
+    Write-Text $extraPath '<section class="slide" id="teste-extra" data-background-image="../assets/compartilhada-teste.svg"><h2 class="marcador-teste">Nova unidade: ação colaborativa</h2><img src="assets/pessoal-teste.svg" alt="Imagem pessoal de teste"><img src="../assets/compartilhada-teste.svg" alt="Imagem compartilhada de teste"><div class="rodape"><span>Teste</span><span data-numero-slide></span></div></section>'
     Write-Text $draftPath '<section class="slide" id="teste-rascunho"><h2>RASCUNHO_NAO_PUBLICADO</h2></section>'
     Write-Text $caioCssPath ($originalCss + "`n.slide[data-autor=`"Caio`"] .marcador-teste { color: #123456; }`n")
     $reversed = @($orders['Caio'])
@@ -149,6 +164,7 @@ try {
     Assert-True ($full.Contains('Nova unidade: ação colaborativa') -and $preview.Contains('Nova unidade: ação colaborativa')) 'O texto de teste perdeu caracteres UTF-8.'
     Assert-True ($full.Contains('Caio/assets/pessoal-teste.svg') -and $preview.Contains('src="assets/pessoal-teste.svg"')) 'A imagem pessoal nao funciona nas duas saidas.'
     Assert-True ($full.Contains('src="assets/compartilhada-teste.svg"') -and $preview.Contains('src="../assets/compartilhada-teste.svg"')) 'A imagem compartilhada nao funciona nas duas saidas.'
+    Assert-True ($full.Contains('data-background-image="assets/compartilhada-teste.svg"') -and $preview.Contains('data-background-image="../assets/compartilhada-teste.svg"')) 'A imagem de fundo do reveal nao funciona nas duas saidas.'
     Assert-True ($full.Contains('.marcador-teste { color: #123456; }') -and $preview.Contains('.marcador-teste { color: #123456; }')) 'O estilo pessoal nao foi incorporado nas duas saidas.'
     Assert-True (-not $full.Contains('RASCUNHO_NAO_PUBLICADO') -and -not $preview.Contains('RASCUNHO_NAO_PUBLICADO')) 'Um rascunho nao listado entrou na apresentacao.'
     $previousPosition = $preview.IndexOf('Nova unidade: ação colaborativa')
@@ -164,6 +180,23 @@ try {
     }
     Assert-True ((Get-OtherSourceHashes) -eq $otherSources) 'Editar Caio alterou fontes de Diogo ou Edson.'
     Pass 'Adicionar e reordenar somente Caio, rascunhos, UTF-8, imagens e estilo pessoais'
+
+    $videoName = 'teste-video.html'
+    $iframeName = 'teste-iframe.html'
+    Write-Text (Join-Path $testSlides 'Caio/assets/video-teste.mp4') ''
+    Write-Text (Join-Path $testSlides 'assets/video-teste.webm') ''
+    Write-Text (Join-Path $testSlides 'Caio/assets/frame-teste.html') '<!DOCTYPE html><html><body>Fundo local</body></html>'
+    Write-Text $extraPath '<section class="slide" id="teste-fundos-imagem" data-background-image="../assets/compartilhada-teste.svg, assets/pessoal-teste.svg"><h2>Imagens de fundo</h2></section>'
+    Write-Text (Join-Path $testSlides "Caio/conteudo/$videoName") '<section class="slide" id="teste-fundos-video" data-background-video="assets/video-teste.mp4, ../assets/video-teste.webm"><h2>Fontes de video</h2></section>'
+    Write-Text (Join-Path $testSlides "Caio/conteudo/$iframeName") '<section class="slide" id="teste-fundo-iframe" data-background-iframe="assets/frame-teste.html"><h2>Fundo em iframe</h2></section>'
+    Set-Order 'Caio' (@($extraName, $videoName, $iframeName) + $orders['Caio'])
+    Invoke-Composer | Out-Null
+    $full = Get-Deck
+    $preview = Get-Deck 'Caio'
+    Assert-True ($full.Contains('data-background-image="assets/compartilhada-teste.svg, Caio/assets/pessoal-teste.svg"') -and $preview.Contains('data-background-image="../assets/compartilhada-teste.svg, assets/pessoal-teste.svg"')) 'A lista de imagens de fundo nao foi ajustada nas duas saidas.'
+    Assert-True ($full.Contains('data-background-video="Caio/assets/video-teste.mp4, assets/video-teste.webm"') -and $preview.Contains('data-background-video="assets/video-teste.mp4, ../assets/video-teste.webm"')) 'A lista de fontes de video nao foi ajustada nas duas saidas.'
+    Assert-True ($full.Contains('data-background-iframe="Caio/assets/frame-teste.html"') -and $preview.Contains('data-background-iframe="assets/frame-teste.html"')) 'O iframe de fundo nao foi ajustado nas duas saidas.'
+    Pass 'Listas de imagens e videos de fundo e iframe local funcionam na apresentacao e na previa'
 
     Set-Order 'Caio' $orders['Caio']
     Write-Text $caioCssPath $originalCss
@@ -210,6 +243,42 @@ try {
         Set-Order 'Caio' (@($extraName) + $orders['Caio'])
     } { Set-Order 'Caio' $orders['Caio'] } 'Arquivo referenciado não encontrado'
     Check-Rejected 'CSS pessoal global' { Write-Text $caioCssPath 'body { color: red; }' } { Write-Text $caioCssPath $originalCss } 'Cada seletor deve começar'
+    Check-Rejected 'Imagem de fundo do reveal ausente' {
+        Write-Text $extraPath '<section class="slide" id="teste-fundo-ausente" data-background-image="assets/nao-existe.jpg"><h2>Fundo ausente</h2></section>'
+        Set-Order 'Caio' (@($extraName) + $orders['Caio'])
+    } { Set-Order 'Caio' $orders['Caio'] } 'Arquivo referenciado não encontrado'
+    Check-Rejected 'Segunda fonte de video ausente' {
+        Write-Text $extraPath '<section class="slide" id="teste-video-ausente" data-background-video="assets/video-teste.mp4, assets/nao-existe.webm"><h2>Video ausente</h2></section>'
+        Set-Order 'Caio' (@($extraName) + $orders['Caio'])
+    } { Set-Order 'Caio' $orders['Caio'] } 'Arquivo referenciado não encontrado: assets/nao-existe.webm'
+    Check-Rejected 'Iframe de fundo externo' {
+        Write-Text $extraPath '<section class="slide" id="teste-iframe-externo" data-background-iframe="https://example.com/"><h2>Iframe externo</h2></section>'
+        Set-Order 'Caio' (@($extraName) + $orders['Caio'])
+    } { Set-Order 'Caio' $orders['Caio'] } 'Use mídia local para funcionar offline'
+    Check-Rejected 'Atalho data-background com caminho' {
+        Write-Text $extraPath '<section class="slide" id="teste-fundo-curto" data-background="../assets/compartilhada-teste.svg"><h2>Atalho</h2></section>'
+        Set-Order 'Caio' (@($extraName) + $orders['Caio'])
+    } { Set-Order 'Caio' $orders['Caio'] } 'Use data-background-color ou data-background-image'
+    Check-Rejected 'Script dentro do fragmento' {
+        Write-Text $extraPath '<section class="slide" id="teste-script"><h2>Script</h2><script>alert(1)</script></section>'
+        Set-Order 'Caio' (@($extraName) + $orders['Caio'])
+    } { Set-Order 'Caio' $orders['Caio'] } 'não permitida no fragmento'
+    Check-Rejected 'Imagem externa' {
+        Write-Text $extraPath '<section class="slide" id="teste-externa"><img src="https://example.com/a.jpg" alt="Externa"></section>'
+        Set-Order 'Caio' (@($extraName) + $orders['Caio'])
+    } { Set-Order 'Caio' $orders['Caio'] } 'Use mídia local para funcionar offline'
+
+    $revealJs = Join-Path $testSlides 'comum/reveal/reveal.js'
+    $revealJsHold = $revealJs + '.hold'
+    Check-Rejected 'Arquivo do reveal.js ausente' {
+        Move-Item -LiteralPath $revealJs -Destination $revealJsHold
+    } {
+        if (Test-Path -LiteralPath $revealJsHold) { Move-Item -LiteralPath $revealJsHold -Destination $revealJs }
+    } 'Arquivo referenciado não encontrado: comum/reveal/reveal.js'
+    $modeloPath = Join-Path $testSlides 'comum/modelo.html'
+    $modeloOriginal = Read-Text $modeloPath
+    Check-Rejected 'Token obrigatorio ausente no modelo' { Write-Text $modeloPath $modeloOriginal.Replace('{{SLIDES}}', '') } { Write-Text $modeloPath $modeloOriginal } 'Token obrigatório ausente'
+    Check-Rejected 'Token desconhecido no modelo' { Write-Text $modeloPath ($modeloOriginal + '{{OUTRO}}') } { Write-Text $modeloPath $modeloOriginal } 'Token desconhecido'
 
     Assert-True ((Get-OtherSourceHashes) -eq $otherSources) 'Os cenarios alteraram as fontes de outros integrantes.'
     Write-Host "Todos os $passos cenarios passaram; os fontes reais permaneceram intactos."

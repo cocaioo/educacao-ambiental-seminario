@@ -17,6 +17,6 @@ Esta divisão é provisória. Você pode mudar conteúdo, abordagem e quantidade
 5. Execute `../atualizar.cmd` por duplo clique e abra `index.html` desta pasta para conferir a prévia. Abra `../index.html` para verificar a conexão com os outros integrantes.
 6. Devolva a pasta **Caio** completa ao responsável pela composição. Ele reúne as partes e executa a atualização novamente.
 
-`index.html` é gerado e será sobrescrito. O tema e a navegação compartilhados ficam em `../comum/`; combine alterações nesses arquivos com o grupo. Em `estilos.css`, cada seletor deve começar com `.slide[data-autor="Caio"]`.
+`index.html` é gerado e será sobrescrito. O tema (o `serif` do reveal.js), a configuração e os modelos de slide compartilhados ficam em `../comum/`; combine alterações nesses arquivos com o grupo. Em `estilos.css`, cada seletor deve começar com `.slide[data-autor="Caio"]`.
 
-O [guia completo](../README.md) traz exemplos de manifesto e slide, caminhos de recursos, navegação, impressão e cuidados com identificadores. A numeração é automática, usando `<span data-numero-slide></span>` quando houver rodapé.
+O [guia completo](../README.md) traz exemplos de manifesto e slide, caminhos de recursos, revelação por itens, notas do orador, atalhos, PDF e cuidados com identificadores. Em `../comum/modelos/` há slides prontos para copiar.

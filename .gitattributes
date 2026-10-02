@@ -1,0 +1,2 @@
+# Cópia local do reveal.js: preservar os bytes do pacote original (sem conversão de fim de linha).
+slides/comum/reveal/** -text
