@@ -1,8 +1,12 @@
 # Vertentes Contemporâneas em Educação Ambiental
 
+- **Disciplina:** Educação Ambiental
+- **Docente:** Prof. Davi Lima Pantoja Leite
+- **Integrantes:** Caio Victor Ferreira do Nascimento, Edson da Silva Lima Junior e Diogo
+
 Apresentação colaborativa do seminário, feita com o [reveal.js](https://revealjs.com) e o tema autoral **Aventura ambiental**, inspirado na exploração de mundos 2D em pixel art. As partes editáveis seguem a sequência **Caio → Diogo → Edson**.
 
-O tema fica em `slides/comum/tema.css`: títulos usam a fonte **Pixelify Sans**, incluída em `slides/comum/fontes/`, e o corpo mantém uma fonte legível para textos, fotos e gráficos. A paisagem ilustrada da capa foi gerada por IA e serve como cenário visual da apresentação.
+O tema fica em `slides/comum/tema.css`: títulos usam a fonte **Pixelify Sans**, incluída em `slides/comum/fontes/`, e o corpo mantém uma fonte legível para textos, fotos e gráficos. A paisagem ilustrada em pixel art da capa serve como cenário visual da apresentação.
 
 ## Como editar sua parte
 

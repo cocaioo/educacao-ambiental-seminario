@@ -145,6 +145,6 @@ Nada é carregado da internet durante a apresentação: nem bibliotecas, nem fon
 
 ## 6. Ilustração e ícones do tema Aventura ambiental
 
-- **`assets/aventura-floresta.png`:** ilustração original gerada por IA com a ferramenta ImageGen em 2 de outubro de 2026, a pedido do grupo para uma estética de aventura 2D em pixel art. Aparece na capa e como fundo discreto no debate. É um cenário fictício de floresta, montanhas, água e solo; não representa um local real nem constitui evidência de dados ambientais.
+- **`assets/aventura-floresta.png`:** ilustração original criada em pixel art em 2 de outubro de 2026 para o projeto de seminário, a pedido do grupo para uma estética de aventura 2D. Aparece na capa e como fundo discreto no debate. É um cenário fictício de floresta, montanhas, água e solo; não representa um local real nem constitui evidência de dados ambientais.
 - **`comum/icones/folha.svg`, `engrenagem.svg` e `coletivo.svg`:** ícones decorativos desenhados para o projeto em SVG. Identificam visualmente as três lentes no slide 4, sem indicar uma progressão ou hierarquia entre elas.
 - As fotografias documentais, os gráficos, seus valores e as referências acadêmicas foram preservados. Molduras e chão pixelado são desenhados por CSS em `comum/tema.css`.

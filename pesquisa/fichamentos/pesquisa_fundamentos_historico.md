@@ -16,7 +16,7 @@
 
 PELICIONI, Maria Cecília Focesi; PHILIPPI Jr., Arlindo. **Bases políticas, conceituais, filosóficas e ideológicas da Educação Ambiental**. In: PHILIPPI Jr., Arlindo; PELICIONI, Maria Cecília Focesi (org.). *Educação Ambiental e Sustentabilidade*. Barueri, SP: Manole, 2005. p. 3–12.
 
-**Nota bibliográfica importante:** o ano “2014” informado no `prompt.md` não foi confirmado. Uma referência acadêmica recuperada registra o capítulo como 2005, pp. 3–12, e o sumário da 1ª edição também o inicia na p. 3. Portanto, não se deve repetir “2014” sem verificar a folha de rosto da edição que será citada.
+**Nota bibliográfica importante:** o ano “2014” informado no `roteiro_pesquisa.md` não foi confirmado. Uma referência acadêmica recuperada registra o capítulo como 2005, pp. 3–12, e o sumário da 1ª edição também o inicia na p. 3. Portanto, não se deve repetir “2014” sem verificar a folha de rosto da edição que será citada.
 
 ### Problema e tese (paráfrases verificadas na reprodução digital; conferir na edição)
 

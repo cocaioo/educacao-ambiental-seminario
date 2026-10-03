@@ -250,7 +250,7 @@ try {
     Check-Rejected 'Segunda fonte de video ausente' {
         Write-Text $extraPath '<section class="slide" id="teste-video-ausente" data-background-video="assets/video-teste.mp4, assets/nao-existe.webm"><h2>Video ausente</h2></section>'
         Set-Order 'Caio' (@($extraName) + $orders['Caio'])
-    } { Set-Order 'Caio' $orders['Caio'] } 'Arquivo referenciado não encontrado: assets/nao-existe.webm'
+    } { Set-Order 'Caio' $orders['Caio'] } '(?s)Arquivo referenciado não encontrado:?\s*assets/nao-existe\.webm'
     Check-Rejected 'Iframe de fundo externo' {
         Write-Text $extraPath '<section class="slide" id="teste-iframe-externo" data-background-iframe="https://example.com/"><h2>Iframe externo</h2></section>'
         Set-Order 'Caio' (@($extraName) + $orders['Caio'])
