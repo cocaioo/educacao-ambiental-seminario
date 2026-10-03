@@ -12,69 +12,30 @@
   font-size: 14px;
 }
 
-/* Slide 11: Quadro comparativo */
-.slide[data-autor="Edson"]#slide-11 table {
-  width: calc(100% - 2 * var(--margem));
-  table-layout: fixed;
-  font-size: 17px;
-  line-height: 1.20;
-  margin-top: 4px;
-}
-
-.slide[data-autor="Edson"]#slide-11 table thead th {
-  font-size: 19px;
-  padding: .18em .35em .2em 0;
-  border-bottom: 2px solid #9ea570;
-}
-
-.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(1) { width: 18%; }
-.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(2) { width: 27%; }
-.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(3) { width: 27%; }
-.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(4) { width: 28%; }
-
-.slide[data-autor="Edson"]#slide-11 table th,
-.slide[data-autor="Edson"]#slide-11 table td {
-  padding: .20em .35em .20em 0;
-  border-bottom: 1px solid #c7bc94;
-}
-
-.slide[data-autor="Edson"]#slide-11 table th[scope="row"] {
-  font-size: 16.5px;
-  font-weight: 700;
-  padding-right: .4em;
-}
-
-.slide[data-autor="Edson"]#slide-11 table small {
-  display: block;
-  font-size: 13.5px;
-  color: var(--discreto);
-  margin-top: 1px;
-}
-
-/* Slide 12: Síntese */
-.slide[data-autor="Edson"]#slide-12 figure img {
+/* Slide 11: Síntese */
+.slide[data-autor="Edson"]#slide-11 figure img {
   max-height: 250px;
 }
 
-.slide[data-autor="Edson"]#slide-12 ul {
+.slide[data-autor="Edson"]#slide-11 ul {
   font-size: 17.5px;
   line-height: 1.25;
   margin-top: 0;
   margin-bottom: 8px;
 }
 
-.slide[data-autor="Edson"]#slide-12 li {
+.slide[data-autor="Edson"]#slide-11 li {
   margin-bottom: 6px;
 }
 
-.slide[data-autor="Edson"]#slide-12 blockquote {
+.slide[data-autor="Edson"]#slide-11 blockquote {
   font-size: 18px;
   line-height: 1.25;
   margin-top: 10px;
   padding: 6px 12px;
 }
 
-/* Slide 13: Referências em duas colunas */
+/* Slide 12: Referências em duas colunas */
 .slide[data-autor="Edson"] .colunas-refs {
   --cols: 1fr 1fr;
   column-gap: 28px;

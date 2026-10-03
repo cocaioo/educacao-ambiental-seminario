@@ -12,7 +12,7 @@ No roteiro aprovado de **15 slides / 30 minutos** (`pesquisa/investigacao/roteir
 
 ### Conexões no grupo
 - **Recebe de Caio (slides 01 a 05):** A definição da Educação Ambiental como campo social em disputa e a análise da vertente fundacional (conservacionista: contexto militar e proposta de sensibilização afetiva da natureza).
-- **Entrega a Edson (slides 11 a 13):** Ao final do slide 10, passa a palavra a Edson, que utilizará as três vertentes contextualizadas no tempo para apresentar a matriz comparativa direta e a síntese final.
+- **Entrega a Edson (slides 11 a 13):** Ao final do slide 10, passa a palavra a Edson, que utilizará as três vertentes contextualizadas no tempo para apresentar a síntese final.
 
 ---
 

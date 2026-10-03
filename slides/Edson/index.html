@@ -24,69 +24,30 @@
   font-size: 14px;
 }
 
-/* Slide 11: Quadro comparativo */
-.slide[data-autor="Edson"]#slide-11 table {
-  width: calc(100% - 2 * var(--margem));
-  table-layout: fixed;
-  font-size: 17px;
-  line-height: 1.20;
-  margin-top: 4px;
-}
-
-.slide[data-autor="Edson"]#slide-11 table thead th {
-  font-size: 19px;
-  padding: .18em .35em .2em 0;
-  border-bottom: 2px solid #9ea570;
-}
-
-.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(1) { width: 18%; }
-.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(2) { width: 27%; }
-.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(3) { width: 27%; }
-.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(4) { width: 28%; }
-
-.slide[data-autor="Edson"]#slide-11 table th,
-.slide[data-autor="Edson"]#slide-11 table td {
-  padding: .20em .35em .20em 0;
-  border-bottom: 1px solid #c7bc94;
-}
-
-.slide[data-autor="Edson"]#slide-11 table th[scope="row"] {
-  font-size: 16.5px;
-  font-weight: 700;
-  padding-right: .4em;
-}
-
-.slide[data-autor="Edson"]#slide-11 table small {
-  display: block;
-  font-size: 13.5px;
-  color: var(--discreto);
-  margin-top: 1px;
-}
-
-/* Slide 12: Síntese */
-.slide[data-autor="Edson"]#slide-12 figure img {
+/* Slide 11: Síntese */
+.slide[data-autor="Edson"]#slide-11 figure img {
   max-height: 250px;
 }
 
-.slide[data-autor="Edson"]#slide-12 ul {
+.slide[data-autor="Edson"]#slide-11 ul {
   font-size: 17.5px;
   line-height: 1.25;
   margin-top: 0;
   margin-bottom: 8px;
 }
 
-.slide[data-autor="Edson"]#slide-12 li {
+.slide[data-autor="Edson"]#slide-11 li {
   margin-bottom: 6px;
 }
 
-.slide[data-autor="Edson"]#slide-12 blockquote {
+.slide[data-autor="Edson"]#slide-11 blockquote {
   font-size: 18px;
   line-height: 1.25;
   margin-top: 10px;
   padding: 6px 12px;
 }
 
-/* Slide 13: Referências em duas colunas */
+/* Slide 12: Referências em duas colunas */
 .slide[data-autor="Edson"] .colunas-refs {
   --cols: 1fr 1fr;
   column-gap: 28px;
@@ -127,69 +88,7 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section class="slide" id="slide-11" data-autor="Edson" aria-label="Slide 1 de 4">
-  <h2>Quadro comparativo</h2>
-
-  <table>
-    <caption class="so-leitor">Quadro comparativo entre as macrotendências conservacionista, pragmática e crítica segundo contexto de emergência, diagnóstico, quem age, objetivo, público e correspondências teóricas.</caption>
-    <thead>
-      <tr>
-        <th scope="col">Critério</th>
-        <th scope="col" class="cons">Conservacionista</th>
-        <th scope="col" class="prag">Pragmática</th>
-        <th scope="col" class="crit">Crítica</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="fragment" data-fragment-index="1">
-        <th scope="row">Contexto de emergência</th>
-        <td>Ditadura e ecologia como base <small>(L&amp;L 14:27)</small></td>
-        <td>Neoliberalismo e desenv. sustentável <small>(p. 29–31)</small></td>
-        <td>Redemocratização e mov. sociais <small>(p. 33)</small></td>
-      </tr>
-      <tr class="fragment" data-fragment-index="2">
-        <th scope="row">Diagnóstico</th>
-        <td>Destruição da natureza <small>(L&amp;L 14:27)</small></td>
-        <td>Desperdício e resíduos <small>(p. 29)</small></td>
-        <td>Relações sociais desiguais <small>(p. 29)</small></td>
-      </tr>
-      <tr class="fragment" data-fragment-index="3">
-        <th scope="row">Quem age</th>
-        <td>Indivíduo sensibilizado <small>(L&amp;L 14:27)</small></td>
-        <td>Consumidor e empresas <small>(p. 31)</small></td>
-        <td>Coletivos e grupos de pressão <small>(PELICIONI 7; SOUZA 67)</small></td>
-      </tr>
-      <tr class="fragment" data-fragment-index="4">
-        <th scope="row">Objetivo</th>
-        <td>Amar e cuidar <small>(L&amp;L 14:27; S&amp;T 248)</small></td>
-        <td>Mudar setores sem ruptura <small>(S&amp;T 248–249)</small></td>
-        <td>Nova sociedade <small>(S&amp;T 248–249)</small></td>
-      </tr>
-      <tr class="fragment" data-fragment-index="5">
-        <th scope="row">Público</th>
-        <td>Crianças, UCs <small>(LAYRARGUES apud S&amp;T 245)</small></td>
-        <td>Mídia, empresas, escolas <small>(S&amp;T 246)</small></td>
-        <td>Adultos, ONGs, pós-graduação <small>(S&amp;T 248)</small></td>
-      </tr>
-      <tr class="fragment" data-fragment-index="6">
-        <th scope="row">Correspondências</th>
-        <td>Natural / Culto ao silvestre <small>(apud L&amp;L 14:34)</small></td>
-        <td>Racional / Ecoeficiência <small>(apud L&amp;L 14:34)</small></td>
-        <td>Histórica / Ecologismo dos pobres <small>(apud L&amp;L 14:34)</small></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 27, 29–34); SANTOS &amp; TOSCHI (2015, p. 245–249); PELICIONI &amp; PHILIPPI JR. (2014, p. 7); SOUZA (2018, p. 67). Tipos ideais que coexistem sem hierarquia.</p>
-
-  <aside class="notes">
-    <p>Este quadro sintetiza a comparação entre as macrotendências compreendidas como tipos ideais weberianos com fins analíticos e didáticos (Layrargues &amp; Lima, 2014, p. 34; 2011, p. 1, 12). A ordem das colunas é puramente expositiva: as vertentes coexistem e disputam sentidos hoje, sem formar etapas históricas sucessivas ou hierarquia moral; cada macrotendência reúne posições mais ou menos próximas do tipo ideal em um eixo conservação–transformação não binário (Layrargues &amp; Lima, 2014, p. 25, 30).</p>
-    <p>Observamos que conservacionismo e pragmatismo compartilham uma linhagem comportamentalista voltada ao indivíduo (Layrargues &amp; Lima, 2014, p. 32; Santos &amp; Toschi, 2015, p. 249), enquanto a crítica fundamenta-se em matriz emancipatória distinta (Guimarães, 2004 apud Santos &amp; Toschi, 2015, p. 247). As correspondências mapeiam Tozoni-Reis (natural, racional e histórica) e Martínez-Alier (culto ao silvestre, evangelho da ecoeficiência e ecologismo dos pobres), ambas citadas apud Layrargues e Lima (2014, p. 34). A gestão ambiental integra a crítica quando concebida sob a dimensão política (Quintas &amp; Gualda, 1995 apud Layrargues &amp; Lima, 2014, p. 35 n. iii). Passemos agora à síntese final.</p>
-  </aside>
-</section>
-
-
-<section class="slide" id="slide-12" data-autor="Edson" aria-label="Slide 2 de 4">
+<section class="slide" id="slide-11" data-autor="Edson" aria-label="Slide 1 de 3">
   <h2>Toda prática ambiental educa para algum projeto de sociedade</h2>
 
   <div class="colunas foto-texto">
@@ -223,7 +122,7 @@
 </section>
 
 
-<section class="slide" id="slide-13" data-autor="Edson" aria-label="Slide 3 de 4">
+<section class="slide" id="slide-12" data-autor="Edson" aria-label="Slide 2 de 3">
   <h2>Referências</h2>
 
   <div class="colunas colunas-refs">
@@ -271,7 +170,7 @@
 </section>
 
 
-<section class="slide final" id="slide-14" aria-label="Slide 4 de 4: encerramento" data-autor="Edson">
+<section class="slide final" id="slide-13" aria-label="Slide 3 de 3: encerramento" data-autor="Edson">
   <h2 class="fim-titulo" aria-hidden="true"><span aria-hidden="true" style="--i:0">O</span><span aria-hidden="true" style="--i:1">b</span><span aria-hidden="true" style="--i:2">r</span><span aria-hidden="true" style="--i:3">i</span><span aria-hidden="true" style="--i:4">g</span><span aria-hidden="true" style="--i:5">a</span><span aria-hidden="true" style="--i:6">d</span><span aria-hidden="true" style="--i:7">o</span><span aria-hidden="true" style="--i:8">&nbsp;</span><span aria-hidden="true" style="--i:9">p</span><span aria-hidden="true" style="--i:10">e</span><span aria-hidden="true" style="--i:11">l</span><span aria-hidden="true" style="--i:12">a</span><span aria-hidden="true" style="--i:13">&nbsp;</span><span aria-hidden="true" style="--i:14">a</span><span aria-hidden="true" style="--i:15">t</span><span aria-hidden="true" style="--i:16">e</span><span aria-hidden="true" style="--i:17">n</span><span aria-hidden="true" style="--i:18">ç</span><span aria-hidden="true" style="--i:19">ã</span><span aria-hidden="true" style="--i:20">o</span><span aria-hidden="true" style="--i:21">!</span></h2>
   <p class="so-leitor">Obrigado pela atenção!</p>
 

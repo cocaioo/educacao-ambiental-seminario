@@ -11,11 +11,11 @@ Referências validadas na revisão de 3 out. 2026 (autoria, veículo, volume, p�
 
 | # | Referência | Onde aparece |
 | --- | --- | --- |
-| 1 | **LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.** As macrotendências político-pedagógicas da educação ambiental brasileira. *Ambiente & Sociedade*, São Paulo, v. 17, n. 1, p. 23–40, jan./mar. 2014. DOI [10.1590/1809-44220003500](https://doi.org/10.1590/1809-44220003500) | Slides 1–12 |
-| 2 | **LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.** Mapeando as macro-tendências político-pedagógicas da educação ambiental contemporânea no Brasil. In: VI Encontro Pesquisa em Educação Ambiental, Ribeirão Preto, 2011. 15 p. | Slides 3, 5–7, 10, 12 |
-| 3 | **PELICIONI, Maria Cecília Focesi; PHILIPPI JR., Arlindo.** Bases políticas, conceituais, filosóficas e ideológicas da educação ambiental. In: PHILIPPI JR., A.; PELICIONI, M. C. F. (ed.). *Educação ambiental e sustentabilidade*. 2. ed. Barueri: Manole, 2014. cap. 1, p. 3–12. A cópia local não tem folha de rosto; edição conforme o repositório USP (ISBN 9788520432006). | Slides 2, 4–9, 11, 12 |
-| 4 | **SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra.** Vertentes da educação ambiental: da conservacionista à crítica. *Fronteiras: Journal of Social, Technological and Environmental Science*, v. 4, n. 2, p. 241–250, jul./dez. 2015. DOI [10.21664/2238-8869.2015v4i2.p241-250](https://doi.org/10.21664/2238-8869.2015v4i2.p241-250) | Slides 2, 4, 5, 7–12 |
-| 5 | **SOUZA, Tiago Zanquêta de.** A educação ambiental popular: contribuições em práticas sociais. *Motricidades: Rev. SPQMH*, v. 2, n. 1, p. 60–70, jan./abr. 2018. DOI [10.29181/2594-6463.2018.v2.n1.p60-70](https://doi.org/10.29181/2594-6463.2018.v2.n1.p60-70) | Slides 2, 8, 9, 11 |
+| 1 | **LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.** As macrotendências político-pedagógicas da educação ambiental brasileira. *Ambiente & Sociedade*, São Paulo, v. 17, n. 1, p. 23–40, jan./mar. 2014. DOI [10.1590/1809-44220003500](https://doi.org/10.1590/1809-44220003500) | Slides 1–11 |
+| 2 | **LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.** Mapeando as macro-tendências político-pedagógicas da educação ambiental contemporânea no Brasil. In: VI Encontro Pesquisa em Educação Ambiental, Ribeirão Preto, 2011. 15 p. | Slides 3, 5–7, 10, 11 |
+| 3 | **PELICIONI, Maria Cecília Focesi; PHILIPPI JR., Arlindo.** Bases políticas, conceituais, filosóficas e ideológicas da educação ambiental. In: PHILIPPI JR., A.; PELICIONI, M. C. F. (ed.). *Educação ambiental e sustentabilidade*. 2. ed. Barueri: Manole, 2014. cap. 1, p. 3–12. A cópia local não tem folha de rosto; edição conforme o repositório USP (ISBN 9788520432006). | Slides 2, 4–9, 11 |
+| 4 | **SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra.** Vertentes da educação ambiental: da conservacionista à crítica. *Fronteiras: Journal of Social, Technological and Environmental Science*, v. 4, n. 2, p. 241–250, jul./dez. 2015. DOI [10.21664/2238-8869.2015v4i2.p241-250](https://doi.org/10.21664/2238-8869.2015v4i2.p241-250) | Slides 2, 4, 5, 7–11 |
+| 5 | **SOUZA, Tiago Zanquêta de.** A educação ambiental popular: contribuições em práticas sociais. *Motricidades: Rev. SPQMH*, v. 2, n. 1, p. 60–70, jan./abr. 2018. DOI [10.29181/2594-6463.2018.v2.n1.p60-70](https://doi.org/10.29181/2594-6463.2018.v2.n1.p60-70) | Slides 2, 8, 9 |
 
 Correções registradas na revisão: Santos & Toschi datam Tbilisi em 1975 (p. 243) e grafam "Kelle" (p. 242); o correto é 1977 e Keele. Loureiro é citado só como "2014 apud Souza, 2018, p. 66", porque a p. 49 indicada por Souza não cabe no intervalo da referência que ele mesmo dá. A nota 7 de Souza (p. 63), que atribui "ecopedagogia" a Layrargues & Lima 2014, não é usada.
 
@@ -62,7 +62,7 @@ enquadramento CSS (`object-fit: cover`), o que constitui adaptação para efeito
 | 7 | `assets/pragmatica.jpg` | Usina de reciclagem, Hortolândia (SP) — 30 maio 2012 | Ana Perugini | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar autora e licença |
 | 9 | `assets/critica.jpg` | ETA Gramame-Mamuaba, Conde (PB) — 4 jul. 2022 | Marcos Elias de Oliveira Júnior | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | Domínio público; crédito mantido por boa prática acadêmica, não por exigência |
 | Não usada | `assets/estrutural.jpg` | Lixão da Estrutural (SCIA/DF) — 22 jun. 2017, antes do encerramento | Leopoldo Silva / Agência Senado | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar fotógrafo e agência |
-| 12 | `assets/sintese.jpg` | Parque Vaca Brava, Setor Bueno, Goiânia (GO) — 27 ago. 2023 | Fronteira (Wikimedia Commons) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; compartilhamento pela mesma licença |
+| 11 | `assets/sintese.jpg` | Parque Vaca Brava, Setor Bueno, Goiânia (GO) — 27 ago. 2023 | Fronteira (Wikimedia Commons) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; compartilhamento pela mesma licença |
 
 ### Páginas de origem no Commons
 
