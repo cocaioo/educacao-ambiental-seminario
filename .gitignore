@@ -6,3 +6,6 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Textos extraidos dos PDFs da bibliografia (material de trabalho local)
+pesquisa/investigacao/textos/

@@ -1,7 +1,190 @@
 /*
   Ajustes exclusivos da parte de Caio. Cada seletor deve começar com:
   .slide[data-autor="Caio"]
-  Exemplo: .slide[data-autor="Caio"] .minha-classe { font-weight: 700; }
   Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
   Caminhos de imagens são relativos à pasta Caio, como assets/minha-foto.jpg.
 */
+
+/* Protege o título, ficha e pergunta da capa, mantendo a paisagem visível. */
+.slide[data-autor="Caio"].capa::before {
+  background: linear-gradient(90deg,
+    rgba(20, 46, 41, .85) 0%,
+    rgba(20, 46, 41, .80) 68%,
+    rgba(20, 46, 41, .30) 84%,
+    transparent 100%);
+}
+
+.slide[data-autor="Caio"].capa dl.ficha {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 14px;
+  row-gap: 5px;
+  max-width: 760px;
+  margin-top: 14px;
+  margin-bottom: 0;
+  line-height: 1.32;
+  align-items: baseline;
+}
+
+.slide[data-autor="Caio"].capa dl.ficha dt {
+  margin: 0;
+  font-family: var(--r-heading-font);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #dbe7be;
+  text-shadow: 1px 1px 0 #183728;
+}
+
+.slide[data-autor="Caio"].capa dl.ficha dd {
+  margin: 0;
+  font-family: var(--r-main-font);
+  font-size: 18px;
+  color: #fff5d7;
+  text-shadow: 1px 1px 0 #183728;
+}
+
+.slide[data-autor="Caio"].capa .roteiro-linha {
+  max-width: 760px;
+  font-size: 19px;
+  color: #dbe7be;
+  margin-top: 14px;
+  margin-bottom: 0;
+  letter-spacing: .2px;
+}
+
+.slide[data-autor="Caio"].capa .pergunta {
+  margin-top: 20px;
+}
+
+/* Slide 2: Eixo de tensão entre conservação e transformação */
+.slide[data-autor="Caio"]#slide-2 .eixo-disputa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding: 10px 20px;
+  background: rgba(230, 222, 195, 0.65);
+  border: 2px solid #a89f78;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.slide[data-autor="Caio"]#slide-2 .eixo-disputa .seta {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--discreto);
+  letter-spacing: .5px;
+}
+
+/* Slide 3: Três macrotendências com ícones e correspondências */
+.slide[data-autor="Caio"]#slide-3 .lentes {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.slide[data-autor="Caio"]#slide-3 .lentes .icone-lente {
+  width: 48px;
+  height: 48px;
+  margin: 0 0 6px;
+}
+
+.slide[data-autor="Caio"]#slide-3 .lentes h3 {
+  font-size: 29px;
+  margin-bottom: 8px;
+}
+
+.slide[data-autor="Caio"]#slide-3 .lentes p {
+  font-size: 17px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+
+.slide[data-autor="Caio"]#slide-3 .lentes .corresp {
+  font-size: 15px;
+  color: var(--discreto);
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed #bfb791;
+}
+
+/* Slide 4: Faixas de cenário (linha do tempo) e condições de emergência */
+.slide[data-autor="Caio"] .faixa-rotulo {
+  display: inline-block;
+  font-family: var(--r-heading-font);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  background: rgba(106, 71, 43, 0.12);
+  border-left: 3px solid currentColor;
+}
+
+.slide[data-autor="Caio"] .colunas.cinco {
+  --cols: repeat(5, 1fr);
+  column-gap: 12px;
+}
+
+.slide[data-autor="Caio"] ol.marcos {
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.slide[data-autor="Caio"] ol.marcos li {
+  padding-left: 10px;
+  border-left-width: 3px;
+}
+
+.slide[data-autor="Caio"] ol.marcos h3 {
+  font-size: 24px;
+  margin-bottom: 2px;
+  line-height: 1.15;
+  color: var(--cons);
+}
+
+.slide[data-autor="Caio"] ol.marcos p {
+  font-size: 15px;
+  line-height: 1.22;
+  margin: 0;
+}
+
+.slide[data-autor="Caio"] .card-contexto {
+  background: rgba(255, 255, 255, 0.50);
+  border: 2px solid #b8a682;
+  padding: 8px 10px;
+  clip-path: var(--canto);
+  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.2);
+}
+
+.slide[data-autor="Caio"] .card-contexto h4 {
+  font-size: 18px;
+  margin: 0 0 4px;
+  line-height: 1.2;
+  font-family: var(--r-heading-font);
+}
+
+.slide[data-autor="Caio"] .card-contexto p {
+  font-size: 14px;
+  line-height: 1.24;
+  margin: 0;
+}
+
+/* Slide 5: Ajustes de tipografia para o bloco de práticas e limites */
+.slide[data-autor="Caio"]#slide-5 dl dt {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.slide[data-autor="Caio"]#slide-5 dl dd {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.slide[data-autor="Caio"]#slide-5 blockquote {
+  margin-top: 14px;
+  font-size: 20px;
+}

@@ -2,10 +2,10 @@
 
 ## Missão
 
-Crie uma apresentação acadêmica navegável em **HTML/CSS/JS**, em português do Brasil, com 12 slides 16:9, sobre as macrotendências político-pedagógicas da Educação Ambiental. A apresentação será exibida em HTML e depois exportada para PDF; portanto, sua narrativa e seus elementos essenciais devem permanecer íntegros mesmo sem animações.
+Crie uma apresentação acadêmica navegável em **HTML/CSS/JS**, em português do Brasil, com 13 slides 16:9, sobre as macrotendências político-pedagógicas da Educação Ambiental. A apresentação será exibida em HTML e depois exportada para PDF; portanto, sua narrativa e seus elementos essenciais devem permanecer íntegros mesmo sem animações.
 
 **Público:** turma universitária.  
-**Duração:** 40 minutos, incluindo 8–10 minutos de debate.  
+**Duração:** cerca de 22,5 minutos.  
 **Tom:** acadêmico, claro, visualmente sóbrio e convidativo ao pensamento crítico.
 
 ## Resultado de aprendizagem
@@ -29,7 +29,7 @@ O planejamento e a execução da apresentação seguem um processo colaborativo 
 
 2. **Revisão Histórico-Conceitual**
    - Audita a fidelidade à formulação teórica de Layrargues e Lima (2014) e demais referências bibliográficas.
-   - Verifica enunciados sobre os marcos históricos (Estocolmo, Tbilisi, Rio-92, PNEA) e o estudo de caso do Lixão da Estrutural.
+   - Verifica enunciados sobre os marcos históricos (Estocolmo, Tbilisi, Rio-92, PNEA).
    - Assegura que as macrotendências não sejam apresentadas como etapas cronológicas, rótulos rígidos ou hierarquia moral.
    - Para cada ponto observado, registra: afirmação, fonte confiável, ajuste necessário e status de validação (`aprovado`, `corrigir` ou `não verificável`).
 
@@ -46,7 +46,7 @@ O planejamento e a execução da apresentação seguem um processo colaborativo 
 
 ### Sequência de Trabalho da Equipe
 
-1. Estruturação da matriz de evidências e do roteiro temático dos 12 slides.
+1. Estruturação da matriz de evidências e do roteiro temático dos 13 slides.
 2. Auditoria paralela de consistência histórico-conceitual e de dados/fontes primárias.
 3. Resolução editorial das pendências identificadas pelo grupo.
 4. Produção e composição modular dos slides no ambiente web (reveal.js).
@@ -68,143 +68,26 @@ Não avance de fase se houver:
 
 ## Estrutura obrigatória dos slides
 
-### 1. Vertentes da Educação Ambiental
+A estrutura segue o roteiro aprovado em [`pesquisa/investigacao/roteiro_15_slides_30min.md`](pesquisa/investigacao/roteiro_15_slides_30min.md), que traz o conteúdo, a fala e o fundamento teórico (obra e página) de cada slide. O estudo de caso do Lixão da Estrutural e o debate (slides 12 e 13 do roteiro) foram retirados, porque o caso não está na bibliografia. Cada vertente tem dois slides: **"Por que surgiu?"** (contexto histórico da época, com a faixa *Cenário — documentos oficiais* separada da faixa *O que dizem os autores*) e **"O que propõe?"**.
 
-- Subtítulo com placeholders: `[disciplina] · [curso] · [integrantes] · [docente]`.
-- Pergunta central: **“Todo projeto de Educação Ambiental busca a mesma transformação?”**
-- Visual: fotografia documental ampla que una cidade, vegetação e água, preferencialmente em contexto brasileiro.
-- Animação: título em fade; pergunta no clique seguinte.
-
-### 2. A mesma crise ambiental pode receber respostas muito diferentes
-
-- Ideia: problemas ambientais envolvem natureza, consumo, infraestrutura, desigualdade e decisões coletivas.
-- Visual: composição de três faixas fotográficas documentais:
-  1. biodiversidade/natureza;
-  2. resíduos, consumo ou triagem;
-  3. comunidade, território ou participação.
-- Palavras mínimas: **preservar · gerir · transformar**.
-- Revelar cada faixa gradualmente durante a fala.
-
-### 3. A questão ambiental ganha escala em um país urbano-industrial
-
-- Linha do tempo enxuta:
-  - **1972 — Estocolmo:** a questão ambiental entra na agenda internacional;
-  - **1977 — Tbilisi:** a Educação Ambiental ganha princípios orientadores;
-  - **1992 — Rio-92:** ambiente e desenvolvimento passam a integrar o mesmo debate;
-  - **1999 — PNEA:** a Educação Ambiental é institucionalizada no Brasil.
-- Gráfico minimalista, no mesmo slide: consumo de eletricidade pelo setor industrial brasileiro:
-  - 1960: **9.174 GWh**;
-  - 1987: **107.391 GWh**.
-- Leitura correta: o dado contextualiza a expansão produtiva e ajuda a entender por que impactos, poluição e preservação ganham visibilidade. Não afirmar que industrialização causou a vertente conservacionista.
-- Fonte do gráfico: IBGE, *Produção e consumo de energia elétrica, 1952–87* — <https://seculoxx.ibge.gov.br/economicas/tabelas-setoriais/energia/producao-e-consumo-de-energia-eletrica-1952-87.html>.
-- Animação: linha do tempo aparece da esquerda para a direita; gráfico surge em seguida.
-
-### 4. Macrotendências são lentes em disputa, não etapas
-
-- Introduza Layrargues e Lima.
-- Visual conceitual equilibrado, com três campos:
-  - Conservacionista — **natureza e preservação**;
-  - Pragmática — **gestão e eficiência**;
-  - Crítica — **justiça e participação**.
-- Mensagem: são tipos ideais para analisar práticas educativas; uma prática real pode combinar elementos de mais de uma lente.
-- Animação: revelar um campo por vez; a mensagem de coexistência entra por último.
-
-### 5. Conservacionista: aproximar pessoas da natureza para preservá-la
-
-- Diagnóstico: degradação da natureza e afastamento humano da pauta ecológica.
-- Estratégia: sensibilização, conhecimento ecológico e mudança de comportamento.
-- Contribuição: vínculo, cuidado e preservação.
-- Pergunta: **“O cuidado individual é suficiente para enfrentar todos os conflitos ambientais?”**
-- Visual: fotografia documental de vivência ecológica brasileira — trilha, biodiversidade ou atividade educativa ao ar livre.
-- Animação: imagem, palavras-chave e pergunta em sequência.
-
-### 6. Pragmática: gerir melhor os fluxos de materiais e reduzir impactos
-
-- Diagnóstico: consumo, desperdício, resíduos e ineficiência.
-- Estratégia: reciclagem, consumo sustentável, coleta seletiva, ecoeficiência e gestão.
-- Contribuição: soluções concretas e aplicáveis.
-- Gráfico minimalista de extração global anual de materiais:
-  - 1970: **30,9 bilhões de toneladas**;
-  - 2020: **95,1 bilhões de toneladas**.
-- Pergunta: **“Reduzir impactos por unidade produzida basta se o volume total continua crescendo?”**
-- Fonte: UNEP International Resource Panel, *Global Resources Outlook 2024*, p. 26 — <https://wedocs.unep.org/bitstream/handle/20.500.11822/44901/Global-Resource-Outlook_2024.pdf>.
-- Visual complementar: fotografia estreita de materiais, triagem ou logística reversa.
-- Animação: valor de 1970, valor de 2020 e pergunta, nessa ordem.
-
-### 7. Crítica: a crise ambiental também distribui riscos de forma desigual
-
-- Diagnóstico: desigualdade, poder, conflitos e modelo de desenvolvimento.
-- Estratégia: problematização, diálogo, participação, cidadania e ação coletiva.
-- Contribuição: evidencia responsabilidades e impactos desiguais.
-- Gráfico de barras emparelhadas para domicílios com saneamento básico:
-  - Brasil: 45,30% (1991) → 56,47% (2000);
-  - Norte: 16,69% (1991) → 22,98% (2000);
-  - Sudeste: 66,77% (1991) → 77,58% (2000).
-- Nota curta: indicador composto por rede geral de água, banheiro/sanitário, esgotamento por rede ou fossa séptica e lixo coletado.
-- Pergunta: **“Quando a infraestrutura avança, quem continua mais exposto?”**
-- Fonte: IBGE, Censo Demográfico 2000, Tabela 56 — <https://www.ibge.gov.br/estatisticas/sociais/saude/9663-censo-demografico-2000.html?edicao=10558>.
-- Visual complementar discreto: infraestrutura urbana, água ou drenagem; não usar imagens estigmatizantes de pobreza.
-- Animação: barras de 1991; depois barras de 2000; por fim, destaque Norte–Sudeste.
-
-### 8. As vertentes diferem no que consideram problema e solução
-
-- Matriz visual limpa e curta — sem aparência de dashboard.
-
-| Critério | Conservacionista | Pragmática | Crítica |
+| # | Slide | Integrante | Min |
 | --- | --- | --- | --- |
-| Diagnóstico | Degradação ambiental | Resíduos, consumo e ineficiência | Desigualdade, poder e desenvolvimento |
-| Quem age | Indivíduo sensibilizado | Consumidores, empresas e gestores | Coletividades, Estado e sujeitos afetados |
-| Mudança suficiente | Preservação e cuidado | Redução de impactos e melhor gestão | Transformação socioambiental com participação |
+| 1 | Capa: Vertentes da Educação Ambiental | Caio | 1,5 |
+| 2 | EA é educação, e é um campo em disputa | Caio | 2 |
+| 3 | Três macrotendências: tipos ideais, não etapas | Caio | 2 |
+| 4 | Conservacionista: por que surgiu? (1960–1980) | Caio | 2 |
+| 5 | Conservacionista: o que propõe? | Caio | 2 |
+| 6 | Pragmática: por que surgiu? (pós-guerra → 1990–2000) | Diogo | 2 |
+| 7 | Pragmática: o que propõe? | Diogo | 2 |
+| 8 | Crítica: por que surgiu? (redemocratização, 1980–1990) | Diogo | 2 |
+| 9 | Crítica: o que propõe? | Diogo | 2,5 |
+| 10 | Coexistência, não sucessão: as três no tempo | Diogo | 1,5 |
+| 11 | Toda prática ambiental educa para algum projeto de sociedade | Edson | 2 |
+| 12 | Referências | Edson | 0,5 |
+| 13 | Encerramento: Obrigado pela atenção (cena animada em pixel art) | Edson | 0,5 |
+| | **Total** | | **22,5** |
 
-- Revelar uma linha por vez.
-
-### 9. O Lixão da Estrutural mostra que um mesmo problema pode ter várias leituras
-
-- Três fatos curtos:
-  - impacto ambiental do descarte inadequado;
-  - desativação/fechamento em 2018 e mudança de destinação;
-  - catadores e condições de vida/trabalho como parte central da história.
-- Visual: fotografia documental ou institucional do território/sistema de resíduos; não expor pessoas de modo degradante.
-- Não inserir quarto gráfico ou análise estatística neste slide.
-- Fontes:
-  - Decreto Distrital nº 38.402/2017 — <https://www.sinj.df.gov.br/sinj/Norma/7205b88fd0044888bf4d2c1f60e486f3/Decreto_38402_10_08_2017.html>;
-  - PDGIRS-DF 2024 — <https://www.adasa.df.gov.br/images/storage/area_de_atuacao/residuos_solidos_gas_energia/PDGIRS/Relatorio_PDGIRS_2024_v2.pdf>.
-- Animação: revelar os três fatos em sequência.
-
-### 10. Fechar o lixão e ampliar a reciclagem resolve o problema?
-
-- Slide de debate; não apresentar resposta pronta.
-- Perguntas-guia:
-  - **Qual é o problema principal?**
-  - **Quem precisa agir?**
-  - **Como saberíamos que a solução foi suficiente?**
-- Visual: fundo sólido escuro, tipografia de alto contraste, sem fotografia dominante.
-- Animação: pergunta central primeiro; perguntas-guia uma a uma.
-
-### 11. Toda prática ambiental educa para algum projeto de sociedade
-
-- Síntese curta:
-  - preservar é relevante;
-  - gerir melhor é relevante;
-  - discutir desigualdade e participação é relevante;
-  - as vertentes diferem no diagnóstico, nas responsabilidades e no horizonte de transformação.
-- Frase final: **“Reconhecer as vertentes ajuda a tornar conscientes as escolhas presentes em toda prática de Educação Ambiental.”**
-- Visual: fotografia documental de território compartilhado, com pessoas, cidade e natureza.
-- Animação: somente a frase final.
-
-### 12. Referências
-
-- Use referências em padrão ABNT simplificado e texto legível:
-  - LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa. *As macrotendências político-pedagógicas da educação ambiental brasileira*. Ambiente & Sociedade, 2014.
-  - Declaração de Estocolmo, 1972.
-  - Conferência Intergovernamental de Tbilisi, 1977.
-  - Agenda 21, Rio-92.
-  - BRASIL. Lei nº 9.795/1999 — Política Nacional de Educação Ambiental.
-  - IBGE — Produção e consumo de energia elétrica, 1952–87.
-  - UNEP — *Global Resources Outlook 2024*.
-  - IBGE — Censo Demográfico 2000, Tabela 56.
-  - Fontes institucionais do Distrito Federal sobre o Lixão da Estrutural.
-- Sem animações.
+Nos slides de contexto, use "condições de emergência" ou "contexto que favoreceu", nunca "causa": os próprios autores escrevem "provavelmente", "impulsionada" e "coincide".
 
 ---
 
@@ -237,14 +120,13 @@ Não avance de fase se houver:
 - `assets/` — imagens e demais recursos usados;
 - `fontes.md` — referências, URLs, data de acesso, créditos e condição de uso das imagens;
 - `auditoria.md` — matriz de evidências, relatórios de verificação da equipe e resolução das pendências;
-- versão exportável em PDF, com 12 páginas/slides e todos os elementos essenciais visíveis.
+- versão exportável em PDF, com 13 páginas/slides e todos os elementos essenciais visíveis.
 
 ## Exclusões obrigatórias
 
-- Não criar slide de agenda ou slide final de “Obrigado”.
-- Não criar análise de dados adicional nem gráficos sobre o Lixão da Estrutural.
-- Não incluir Educação Ambiental Popular como quarta vertente, nem outras taxonomias de Educação Ambiental.
-- Não transformar o contexto histórico em uma lista longa de datas.
+- Não criar slide de agenda.
+- Não incluir Educação Ambiental Popular como quarta vertente (ela é corrente interna da crítica); outras taxonomias (Sorrentino, Sauvé) só são mencionadas, sem desenvolvimento.
+- Não transformar o contexto histórico em uma lista longa de datas: no máximo cerca de sete marcos por slide de contexto, sempre ligados às condições descritas pelos autores.
 - Não inserir definições extensas, tabelas densas ou parágrafos longos.
 - Não defender explicitamente uma macrotendência.
 - Não usar estatística sem fonte, dado sem unidade/ano, imagem sem crédito ou citação inventada.
