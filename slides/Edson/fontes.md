@@ -1,6 +1,6 @@
-# Novas fontes e créditos — Edson (Slides 11 a 13)
+# Novas fontes e créditos — Edson (Slides 11 a 14)
 
-As referências e os créditos dos slides compartilhados estão preservados em [../fontes.md](../fontes.md). Este arquivo registra a consolidação das referências teóricas, documentais e empíricas integradas aos slides **11 a 13** (o caso do Lixão da Estrutural e o debate foram retirados a pedido do grupo), em estrita conformidade com o roteiro aprovado (`pesquisa/investigacao/roteiro_15_slides_30min.md`).
+As referências e os créditos dos slides compartilhados estão preservados em [../fontes.md](../fontes.md). Este arquivo registra a consolidação das referências teóricas, documentais e empíricas integradas aos slides **11 a 14** (o caso do Lixão da Estrutural e o debate foram retirados a pedido do grupo), em estrita conformidade com o roteiro aprovado (`pesquisa/investigacao/roteiro_15_slides_30min.md`).
 
 ## Referências bibliográficas validadas
 
@@ -46,3 +46,4 @@ As referências e os créditos dos slides compartilhados estão preservados em [
 ## Fotografias e mídias visuais
 
 - `assets/sintese.jpg` (Slide 12): Parque Vaca Brava, Goiânia (GO) — Fronteira / Wikimedia Commons (CC BY-SA 4.0).
+- Slide 14: Ilustrações decorativas em pixel art (SVG inline) criadas para o projeto, sem fonte externa; personagens representam os integrantes de forma estilizada.

@@ -2,10 +2,10 @@
 
 ## Missão
 
-Crie uma apresentação acadêmica navegável em **HTML/CSS/JS**, em português do Brasil, com 13 slides 16:9, sobre as macrotendências político-pedagógicas da Educação Ambiental. A apresentação será exibida em HTML e depois exportada para PDF; portanto, sua narrativa e seus elementos essenciais devem permanecer íntegros mesmo sem animações.
+Crie uma apresentação acadêmica navegável em **HTML/CSS/JS**, em português do Brasil, com 14 slides 16:9, sobre as macrotendências político-pedagógicas da Educação Ambiental. A apresentação será exibida em HTML e depois exportada para PDF; portanto, sua narrativa e seus elementos essenciais devem permanecer íntegros mesmo sem animações.
 
 **Público:** turma universitária.  
-**Duração:** cerca de 23,5 minutos.  
+**Duração:** cerca de 24 minutos.  
 **Tom:** acadêmico, claro, visualmente sóbrio e convidativo ao pensamento crítico.
 
 ## Resultado de aprendizagem
@@ -46,7 +46,7 @@ O planejamento e a execução da apresentação seguem um processo colaborativo 
 
 ### Sequência de Trabalho da Equipe
 
-1. Estruturação da matriz de evidências e do roteiro temático dos 13 slides.
+1. Estruturação da matriz de evidências e do roteiro temático dos 14 slides.
 2. Auditoria paralela de consistência histórico-conceitual e de dados/fontes primárias.
 3. Resolução editorial das pendências identificadas pelo grupo.
 4. Produção e composição modular dos slides no ambiente web (reveal.js).
@@ -85,7 +85,8 @@ A estrutura segue o roteiro aprovado em [`pesquisa/investigacao/roteiro_15_slide
 | 11 | Quadro comparativo: contexto, diagnóstico e ação | Edson | 1,5 |
 | 12 | Toda prática ambiental educa para algum projeto de sociedade | Edson | 2 |
 | 13 | Referências | Edson | 0,5 |
-| | **Total** | | **23,5** |
+| 14 | Encerramento: Obrigado pela atenção (cena animada em pixel art) | Edson | 0,5 |
+| | **Total** | | **24** |
 
 Nos slides de contexto, use "condições de emergência" ou "contexto que favoreceu", nunca "causa": os próprios autores escrevem "provavelmente", "impulsionada" e "coincide".
 
@@ -120,11 +121,11 @@ Nos slides de contexto, use "condições de emergência" ou "contexto que favore
 - `assets/` — imagens e demais recursos usados;
 - `fontes.md` — referências, URLs, data de acesso, créditos e condição de uso das imagens;
 - `auditoria.md` — matriz de evidências, relatórios de verificação da equipe e resolução das pendências;
-- versão exportável em PDF, com 13 páginas/slides e todos os elementos essenciais visíveis.
+- versão exportável em PDF, com 14 páginas/slides e todos os elementos essenciais visíveis.
 
 ## Exclusões obrigatórias
 
-- Não criar slide de agenda ou slide final de “Obrigado”.
+- Não criar slide de agenda.
 - Não incluir Educação Ambiental Popular como quarta vertente (ela é corrente interna da crítica); outras taxonomias (Sorrentino, Sauvé) só são mencionadas, sem desenvolvimento.
 - Não transformar o contexto histórico em uma lista longa de datas: no máximo cerca de sete marcos por slide de contexto, sempre ligados às condições descritas pelos autores.
 - Não inserir definições extensas, tabelas densas ou parágrafos longos.
