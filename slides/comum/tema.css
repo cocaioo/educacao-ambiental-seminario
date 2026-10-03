@@ -14,36 +14,36 @@
   --r-background-color: #243c2b;
   --r-main-font: "Trebuchet MS", "Segoe UI", sans-serif;
   --r-main-font-size: 27px;
-  --r-main-color: #303b2b;
+  --r-main-color: #263323;
   --r-block-margin: 14px;
   --r-heading-font: "Pixelify Sans", "Trebuchet MS", sans-serif;
-  --r-heading-color: #2f422c;
-  --r-heading-font-weight: 500;
+  --r-heading-color: #1e331c;
+  --r-heading-font-weight: 600;
   --r-heading-line-height: 1.14;
   --r-heading-letter-spacing: .2px;
   --r-heading-text-transform: none;
-  --r-heading-text-shadow: none;
+  --r-heading-text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
   --r-heading-margin: 0 0 18px;
   --r-heading1-size: 76px;
   --r-heading2-size: 44px;
   --r-heading3-size: 31px;
   --r-heading4-size: 27px;
-  --r-link-color: #355b43;
-  --r-link-color-hover: #537b4b;
+  --r-link-color: #284f37;
+  --r-link-color-hover: #3d6a4c;
   --r-selection-background-color: #8aa55b;
   --r-selection-color: #172c20;
   --r-code-font: "Cascadia Code", Consolas, monospace;
   --r-overlay-element-bg-color: 31, 51, 36;
   --r-overlay-element-fg-color: 247, 239, 211;
 
-  /* Luminâncias próximas dão o mesmo peso às três vertentes. */
-  --cons: #376049;
-  --cons-fill: #5b8561;
-  --prag: #795c25;
-  --prag-fill: #b18c44;
-  --crit: #8b4d3c;
-  --crit-fill: #b76f59;
-  --discreto: #626653;
+  /* Luminâncias calibradas para assegurar contraste WCAG AA (>= 4,5:1 para texto normal) sobre o pergaminho translúcido. */
+  --cons: #285038;
+  --cons-fill: #557f5b;
+  --prag: #684a14;
+  --prag-fill: #aa853e;
+  --crit: #783827;
+  --crit-fill: #b06852;
+  --discreto: #4a503d;
   --papel: #f6edcf;
   --madeira: #6a472b;
   --margem: 64px;
@@ -57,10 +57,34 @@
 }
 
 /* Base completa: este arquivo dispensa um segundo tema do reveal.js. */
-.reveal-viewport { background: var(--r-background-color); }
+.reveal-viewport {
+  background-color: var(--r-background-color);
+  background-image: url("../assets/aventura-floresta.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .reveal { font: 400 var(--r-main-font-size) / 1.32 var(--r-main-font); color: var(--r-main-color); }
 .reveal ::selection { color: var(--r-selection-color); background: var(--r-selection-background-color); text-shadow: none; }
 .reveal .slides section { line-height: 1.32; font-weight: inherit; }
+
+/* Fundo global em pixel art para TODOS os 12 slides com camada protetora (overlay atmosférico) */
+.reveal .slide-background {
+  background-image:
+    linear-gradient(rgba(20, 44, 34, 0.18), rgba(20, 44, 34, 0.32)),
+    url("../assets/aventura-floresta.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+/* Capa e debate mantêm seu tratamento próprio */
+.reveal .slide-background.capa,
+.reveal .slide-background.debate {
+  background-image: none;
+}
+
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: var(--r-heading-margin);
   color: var(--r-heading-color);
@@ -69,7 +93,7 @@
   line-height: var(--r-heading-line-height);
   letter-spacing: var(--r-heading-letter-spacing);
   text-transform: none;
-  text-shadow: none;
+  text-shadow: var(--r-heading-text-shadow);
   text-wrap: balance;
   overflow-wrap: break-word;
 }
@@ -97,7 +121,7 @@
 .reveal dd { margin-left: 0; }
 .reveal blockquote { width: auto; margin: 18px 0 0; padding: 0 0 0 17px; border-left: 4px solid #afbd82; font-size: 1.02em; font-style: normal; background: none; box-shadow: none; }
 
-/* Uma só superfície de leitura; madeira nas bordas, papel claro no interior. */
+/* Uma só superfície de leitura; madeira nas bordas, pergaminho translúcido no interior. */
 .reveal section.slide { height: 100%; text-align: left; isolation: isolate; }
 .reveal section.slide > * { position: relative; z-index: 1; margin-left: var(--margem); margin-right: var(--margem); }
 .reveal section.slide > :first-child { margin-top: 50px; }
@@ -107,7 +131,8 @@
   z-index: 0;
   inset: 18px 20px 52px;
   border: 10px solid transparent;
-  background: linear-gradient(110deg, #fbf4de, #f4e8c5) padding-box,
+  background:
+    linear-gradient(110deg, rgba(251, 244, 222, 0.90), rgba(244, 232, 197, 0.86)) padding-box,
     repeating-linear-gradient(0deg, #6a472b 0 6px, #805632 6px 12px, #5a3c26 12px 16px) border-box;
   box-shadow: inset 0 0 0 3px #bd935b, inset 0 0 0 5px #e5cfa2;
   clip-path: var(--canto);
@@ -150,7 +175,7 @@
 /* Fotografias mantêm sua resolução e os créditos completos. */
 .reveal figure { margin: 0; }
 .reveal figure img { display: block; width: 100%; max-width: none; max-height: none; margin: 0; object-fit: cover; box-sizing: border-box; border: 4px solid #806449; box-shadow: 4px 4px 0 #d9c69c; }
-.reveal figcaption, .reveal .credito, .reveal .fonte { font-size: 14px; line-height: 1.3; color: var(--discreto); text-align: left; }
+.reveal figcaption, .reveal .credito, .reveal .fonte { font-size: 14px; line-height: 1.3; color: var(--discreto); text-align: left; font-weight: 500; }
 .reveal figcaption { margin-top: 8px; }
 .reveal section.slide > .fonte { position: absolute; left: var(--margem); right: 108px; bottom: 75px; margin: 0; }
 
@@ -169,7 +194,7 @@
 .reveal .colunas.analise p { font-size: 23px; margin: 0; }
 .reveal .colunas li { margin-bottom: .42em; }
 .reveal .colunas.tres figcaption { margin-top: 13px; font-size: 21px; line-height: 1.25; color: var(--r-main-color); }
-.reveal .colunas.tres figcaption b { display: block; font-family: var(--r-heading-font); font-size: 34px; font-weight: 500; line-height: 1.15; margin-bottom: 3px; }
+.reveal .colunas.tres figcaption b { display: block; font-family: var(--r-heading-font); font-size: 34px; font-weight: 600; line-height: 1.15; margin-bottom: 3px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65); }
 .reveal ol.marcos { list-style: none; padding: 0; margin-top: 6px; margin-bottom: 17px; }
 .reveal ol.marcos li { margin: 0; padding-left: 12px; border-left: 3px solid #b3be89; }
 .reveal ol.marcos h3 { margin-bottom: 5px; font-size: 33px; }
@@ -183,8 +208,8 @@
 /* Quadro comparativo: linhas abertas, sem transformar cada célula em cartão. */
 .reveal table { border-collapse: collapse; border-spacing: 0; width: calc(100% - 2 * var(--margem)); margin: auto; font-size: 24px; }
 .reveal table th, .reveal table td { text-align: left; vertical-align: top; padding: .55em .65em .55em 0; border-bottom: 1px solid #c7bc94; }
-.reveal table th { font-weight: 700; }
-.reveal table thead th { font-family: var(--r-heading-font); font-size: 29px; font-weight: 500; border-bottom: 3px solid #a7ad7b; }
+.reveal table th { font-weight: 700; color: var(--r-main-color); }
+.reveal table thead th { font-family: var(--r-heading-font); font-size: 29px; font-weight: 600; border-bottom: 3px solid #9ea570; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65); }
 .reveal table th:first-child { width: 18%; }
 .reveal table tbody tr:last-child th, .reveal table tbody tr:last-child td { border-bottom: none; }
 .reveal table [align="center"] { text-align: center; }
@@ -235,13 +260,13 @@
 /* Os gráficos preservam escalas e codificações; só mudam a paleta e a tipografia. */
 .reveal svg.grafico { display: block; width: 100%; height: auto; overflow: visible; }
 .reveal svg.grafico text { font-family: var(--r-main-font); fill: var(--r-main-color); font-size: 15px; }
-.reveal svg.grafico .titulo { font-weight: 700; }
+.reveal svg.grafico .titulo { font-weight: 700; fill: var(--r-heading-color); }
 .reveal svg.grafico .valor { font-size: 20px; font-weight: 700; }
 .reveal svg.grafico .dado { font-size: 15px; font-weight: 700; }
-.reveal svg.grafico .rotulo { font-size: 16px; }
-.reveal svg.grafico .nota { font-size: 14px; fill: var(--discreto); }
-.reveal svg.grafico .eixo { stroke: #8c9277; stroke-width: 1; }
-.reveal svg.grafico .grade { stroke: #ccc9ad; stroke-width: 1; stroke-dasharray: 2 4; }
+.reveal svg.grafico .rotulo { font-size: 16px; font-weight: 600; }
+.reveal svg.grafico .nota { font-size: 14px; fill: var(--discreto); font-weight: 500; }
+.reveal svg.grafico .eixo { stroke: #7b8366; stroke-width: 1.5; }
+.reveal svg.grafico .grade { stroke: #c4c1a5; stroke-width: 1; stroke-dasharray: 2 4; }
 .reveal svg.grafico .antes { fill: var(--papel); stroke-width: 2; }
 .reveal svg.grafico .depois { stroke: none; }
 .reveal svg.grafico.cons .antes { stroke: var(--cons); }
@@ -250,8 +275,8 @@
 .reveal svg.grafico.prag .depois { fill: var(--prag-fill); }
 .reveal svg.grafico.crit .antes { stroke: var(--crit); }
 .reveal svg.grafico.crit .depois { fill: var(--crit-fill); }
-.reveal svg.grafico.neutro .antes { stroke: #53624b; }
-.reveal svg.grafico.neutro .depois { fill: #788368; }
+.reveal svg.grafico.neutro .antes { stroke: #46553e; }
+.reveal svg.grafico.neutro .depois { fill: #6e7a5e; }
 .reveal svg.grafico .destaque { stroke: var(--crit); fill: none; stroke-width: 1.5; }
 
 /* Controles discretos e numeração que não invade títulos ou fontes. */
@@ -261,11 +286,259 @@
 .reveal .slide-number { top: 6px; bottom: auto; right: 30px; color: #e5edbc; background: #243c2b; padding: 4px 10px; font-family: var(--r-heading-font); font-size: 17px; }
 .reveal .slide-number a { color: inherit; text-decoration: none; }
 .reveal.has-dark-background .slide-number { color: #e5edbc; }
-.reveal .slide-number-pdf { color: var(--discreto); font-family: var(--r-heading-font); }
+.reveal .slide-number-pdf { color: #e5edbc; background: #243c2b; font-family: var(--r-heading-font); }
+
+/* Encerramento: cena em pixel art animada só enquanto o slide está visível.
+   O estado sem animação já é a cena completa, para o PDF e para quem pede menos movimento. */
+.reveal section.final { text-align: center; color: #fff5d7; }
+.reveal section.final::before { inset: 0; border: 0; box-shadow: none; clip-path: none; background: radial-gradient(ellipse 62% 48% at 50% 30%, #102a20d9 0, #12302494 55%, transparent 100%); }
+.reveal section.final .fim-titulo { max-width: none; font-size: 78px; line-height: 1.05; margin: 170px var(--margem) 0; color: #fff2bd; text-shadow: 5px 5px 0 #183728; }
+.reveal section.final .fim-titulo span { display: inline-block; }
+.reveal section.final .fim-cena { position: absolute; inset: 0; margin: 0; pointer-events: none; }
+.reveal section.final .vagalume { position: absolute; left: var(--x); top: var(--y); width: 8px; height: 8px; background: #fbf5a6; box-shadow: 0 0 10px 4px #fbf5a6aa; }
+.reveal section.final .fim-turma { position: absolute; left: 36%; bottom: 40px; transform: translateX(-50%); display: flex; align-items: flex-end; gap: 30px; }
+.reveal section.final .slime { position: relative; width: 96px; transform-origin: 50% 100%; }
+.reveal section.final .slime svg { display: block; width: 96px; height: 84px; }
+.reveal section.final .slime.cons { color: #7fc06a; }
+.reveal section.final .slime.prag { color: #e8b44f; }
+.reveal section.final .slime.crit { color: #e0795e; }
+.reveal section.final .slime .coracao { position: absolute; left: 50%; top: -34px; width: 28px; height: 24px; transform: translateX(-50%); }
+.reveal section.final .broto { display: flex; flex-direction: column-reverse; align-items: center; transform-origin: 50% 100%; }
+.reveal section.final .caule { position: relative; width: 6px; height: 54px; background: #4d8a3a; transform-origin: 50% 100%; }
+.reveal section.final .caule::before, .reveal section.final .caule::after { content: ""; position: absolute; width: 12px; height: 6px; background: #6dbb4a; top: 22px; }
+.reveal section.final .caule::before { right: 6px; }
+.reveal section.final .caule::after { left: 6px; top: 32px; }
+.reveal section.final .broto-2 .caule { height: 40px; }
+.reveal section.final .flor { display: block; width: 42px; height: 42px; }
+.reveal section.final .fim-grupo { position: absolute; right: 56px; bottom: 40px; display: flex; align-items: flex-end; gap: 14px; }
+.reveal section.final .pessoa { position: relative; width: 110px; transform-origin: 50% 100%; }
+.reveal section.final .pessoa svg { display: block; width: 110px; filter: drop-shadow(3px 0 0 #fbf4de) drop-shadow(-3px 0 0 #fbf4de) drop-shadow(0 -3px 0 #fbf4de) drop-shadow(4px 4px 0 #183728); }
+.reveal section.final .pessoa .braco { transform-box: view-box; transform-origin: 15px 13px; }
+.reveal section.final .pessoa .nome { margin: 0 0 6px; font-family: var(--r-heading-font); font-size: 18px; color: #fff2bd; text-shadow: 2px 2px 0 #183728; }
+
+.reveal section.final.present .fim-titulo span { animation: fim-cai .7s steps(7) calc(var(--i) * 90ms) both, fim-flutua 1.6s steps(4) calc(1s + var(--i) * 120ms) infinite; }
+.reveal section.final.present .slime { animation: fim-pulo 1.3s var(--d) infinite; }
+.reveal section.final.present .slime .coracao { animation: fim-coracao 2.6s steps(10) 1.5s infinite both; }
+.reveal section.final.present .caule { animation: fim-cresce .8s steps(8) .9s both; }
+.reveal section.final.present .flor { animation: fim-abre .6s steps(6) 1.7s both; }
+.reveal section.final.present .broto { animation: fim-balanca 2.2s steps(4) 2.4s infinite; }
+.reveal section.final.present .vagalume { animation: fim-pisca 3s steps(6) var(--d) infinite; }
+.reveal section.final.present .pessoa { animation: fim-surge .6s steps(6) calc(.4s + var(--d)) both, fim-flutua 1.8s steps(3) calc(1.2s + var(--d)) infinite; }
+.reveal section.final.present .pessoa .braco { animation: fim-aceno .9s steps(3) calc(.8s + var(--d)) infinite; }
+
+@keyframes fim-cai { 0% { transform: translateY(-140px); opacity: 0; } 60% { transform: translateY(12px); opacity: 1; } 80% { transform: translateY(-6px); } 100% { transform: none; opacity: 1; } }
+@keyframes fim-flutua { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes fim-surge { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes fim-pulo { 0%, 100% { transform: translateY(0) scale(1.14, .86); } 15% { transform: translateY(0) scale(1, 1); } 45% { transform: translateY(-48px) scale(.9, 1.1); } 75% { transform: translateY(0) scale(1, 1); } 85% { transform: translateY(0) scale(1.14, .86); } }
+@keyframes fim-coracao { 0% { transform: translate(-50%, 0) scale(.4); opacity: 0; } 15% { transform: translate(-50%, -10px) scale(1); opacity: 1; } 100% { transform: translate(-50%, -96px) scale(1); opacity: 0; } }
+@keyframes fim-cresce { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes fim-abre { 0% { transform: scale(0) rotate(-90deg); } 70% { transform: scale(1.3) rotate(10deg); } 100% { transform: none; } }
+@keyframes fim-balanca { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+@keyframes fim-pisca { 0%, 100% { opacity: .15; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(12px, -16px); } }
+@keyframes fim-aceno { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(22deg); } }
+
+/* Encerramento: passaros */
+/* Pássaros voando no céu do encerramento */
+.reveal section.final .passaro { position: absolute; width: 36px; height: 30px; pointer-events: none; }
+.reveal section.final .passaro-svg { display: block; width: 36px; height: 30px; }
+.reveal section.final .passaro-azul { color: #6aa9e0; }
+.reveal section.final .passaro-amarelo { color: #f2c84b; }
+.reveal section.final .passaro-rosa { color: #e98aa8; }
+.reveal section.final .passaro-verde { color: #7bc99a; }
+
+.reveal section.final .passaro-1 { top: 7%; left: 180px; }
+.reveal section.final .passaro-2 { top: 12%; left: 998px; }
+.reveal section.final .passaro-3 { top: 44%; left: 282px; }
+.reveal section.final .passaro-4 { top: 51%; left: 1050px; }
+
+.reveal section.final .passaro-asa-cima { opacity: 1; }
+.reveal section.final .passaro-asa-baixo { opacity: 0; }
+
+.reveal section.final.present .passaro-1 { animation: passaro-voo-1 11s steps(110) -2s infinite; }
+.reveal section.final.present .passaro-2 { animation: passaro-voo-2 14s steps(140) -5.5s infinite; }
+.reveal section.final.present .passaro-3 { animation: passaro-voo-3 10s steps(100) -2.5s infinite; }
+.reveal section.final.present .passaro-4 { animation: passaro-voo-4 15s steps(150) -8s infinite; }
+
+.reveal section.final.present .passaro-1 .passaro-anim { animation: passaro-flutua-1 1.8s steps(4) 0s infinite; }
+.reveal section.final.present .passaro-2 .passaro-anim { animation: passaro-flutua-2 2.1s steps(4) .4s infinite; }
+.reveal section.final.present .passaro-3 .passaro-anim { animation: passaro-flutua-1 1.6s steps(4) .2s infinite; }
+.reveal section.final.present .passaro-4 .passaro-anim { animation: passaro-flutua-2 2.3s steps(4) .6s infinite; }
+
+.reveal section.final.present .passaro-1 .passaro-asa-cima { animation: passaro-bate-cima .36s steps(1) 0s infinite; }
+.reveal section.final.present .passaro-1 .passaro-asa-baixo { animation: passaro-bate-baixo .36s steps(1) 0s infinite; }
+.reveal section.final.present .passaro-2 .passaro-asa-cima { animation: passaro-bate-cima .36s steps(1) .12s infinite; }
+.reveal section.final.present .passaro-2 .passaro-asa-baixo { animation: passaro-bate-baixo .36s steps(1) .12s infinite; }
+.reveal section.final.present .passaro-3 .passaro-asa-cima { animation: passaro-bate-cima .36s steps(1) .24s infinite; }
+.reveal section.final.present .passaro-3 .passaro-asa-baixo { animation: passaro-bate-baixo .36s steps(1) .24s infinite; }
+.reveal section.final.present .passaro-4 .passaro-asa-cima { animation: passaro-bate-cima .36s steps(1) .08s infinite; }
+.reveal section.final.present .passaro-4 .passaro-asa-baixo { animation: passaro-bate-baixo .36s steps(1) .08s infinite; }
+
+@keyframes passaro-voo-1 {
+  0% { transform: translateX(-240px); }
+  100% { transform: translateX(1160px); }
+}
+@keyframes passaro-voo-2 {
+  0% { transform: translateX(-1058px); }
+  100% { transform: translateX(342px); }
+}
+@keyframes passaro-voo-3 {
+  0% { transform: translateX(-342px); }
+  100% { transform: translateX(1058px); }
+}
+@keyframes passaro-voo-4 {
+  0% { transform: translateX(-1110px); }
+  100% { transform: translateX(290px); }
+}
+
+@keyframes passaro-flutua-1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+@keyframes passaro-flutua-2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes passaro-bate-cima {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@keyframes passaro-bate-baixo {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Encerramento: lagarto */
+.reveal section.final .lagarto { position: absolute; left: 755px; bottom: 40px; width: 84px; height: 42px; transform-origin: 50% 100%; }
+.reveal section.final .lagarto-svg { display: block; width: 84px; height: 42px; overflow: visible; }
+.reveal section.final .lagarto-cauda { transform-box: view-box; transform-origin: 7px 7px; }
+.reveal section.final .lagarto-cabeca { transform-box: view-box; transform-origin: 19px 7px; }
+
+.reveal section.final.present .lagarto { animation: lagarto-anda 7s steps(28) infinite; }
+.reveal section.final.present .lagarto-cauda { animation: lagarto-cauda 1.2s steps(3) infinite; }
+.reveal section.final.present .lagarto-cabeca { animation: lagarto-cabeca 1.6s steps(2) infinite; }
+
+@keyframes lagarto-anda {
+  0%, 15% { transform: translateX(0) scaleX(1); }
+  35%, 44.9% { transform: translateX(28px) scaleX(1); }
+  45% { transform: translateX(28px) scaleX(-1); }
+  65%, 74.9% { transform: translateX(-28px) scaleX(-1); }
+  75% { transform: translateX(-28px) scaleX(1); }
+  90%, 100% { transform: translateX(0) scaleX(1); }
+}
+@keyframes lagarto-cauda { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-10deg); } }
+@keyframes lagarto-cabeca { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+/* Encerramento: lobos */
+/* Lobo: dois lobinhos fofos no encerramento */
+.reveal section.final .lobo-alcateia {
+  position: absolute;
+  left: 34px;
+  bottom: 40px;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+.reveal section.final .lobo {
+  position: relative;
+  width: 82px;
+  height: 82px;
+}
+.reveal section.final .lobo-sprite {
+  display: block;
+  width: 82px;
+  height: 82px;
+  overflow: visible;
+}
+.reveal section.final .lobo-cauda {
+  transform-box: view-box;
+  transform-origin: 3px 13px;
+}
+.reveal section.final .lobo-2 .lobo-cabeca {
+  transform-box: view-box;
+  transform-origin: 6px 11px;
+}
+.reveal section.final .lobo-nota {
+  position: absolute;
+  font-family: var(--r-heading-font);
+  color: #fff2bd;
+  text-shadow: 2px 2px 0 #183728;
+  pointer-events: none;
+  line-height: 1;
+}
+.reveal section.final .lobo-nota-1 {
+  left: 68px;
+  top: 14px;
+  font-size: 20px;
+  opacity: 1;
+}
+.reveal section.final .lobo-nota-2 {
+  left: 80px;
+  top: 4px;
+  font-size: 15px;
+  opacity: 1;
+}
+
+.reveal section.final.present .lobo-1 .lobo-cauda {
+  animation: lobo-abanar-1 0.8s steps(3) infinite;
+}
+.reveal section.final.present .lobo-2 .lobo-cauda {
+  animation: lobo-abanar-2 0.9s steps(3) 0.15s infinite;
+}
+.reveal section.final.present .lobo-2 .lobo-cabeca {
+  animation: lobo-uivo 4.5s steps(3) infinite;
+}
+.reveal section.final.present .lobo-nota-1 {
+  animation: lobo-nota-1 4.5s steps(6) infinite;
+}
+.reveal section.final.present .lobo-nota-2 {
+  animation: lobo-nota-2 4.5s steps(6) infinite;
+}
+
+@keyframes lobo-abanar-1 {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-16deg); }
+}
+@keyframes lobo-abanar-2 {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-14deg); }
+}
+@keyframes lobo-uivo {
+  0%, 20% { transform: rotate(14deg); }
+  32%, 68% { transform: rotate(0deg); }
+  80%, 100% { transform: rotate(14deg); }
+}
+@keyframes lobo-nota-1 {
+  0%, 24% { opacity: 0; transform: translate(-4px, 10px) scale(0.5); }
+  32% { opacity: 1; transform: translate(0, 0) scale(1); }
+  62% { opacity: 0; transform: translate(14px, -24px) scale(1.1); }
+  63%, 100% { opacity: 0; transform: translate(-4px, 10px) scale(0.5); }
+}
+@keyframes lobo-nota-2 {
+  0%, 38% { opacity: 0; transform: translate(-4px, 10px) scale(0.5); }
+  46% { opacity: 1; transform: translate(0, 0) scale(0.9); }
+  72% { opacity: 0; transform: translate(18px, -28px) scale(1); }
+  73%, 100% { opacity: 0; transform: translate(-4px, 10px) scale(0.5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal section.final *, .reveal section.final *::before, .reveal section.final *::after { animation: none !important; }
+}
+html.reveal-print .reveal section.final * { animation: none !important; }
+@media print {
+  .reveal section.final *, .reveal section.final *::before, .reveal section.final *::after { animation: none !important; }
+}
 
 @media (prefers-reduced-motion: reduce) { .reveal .fragment { transition: none; } }
 @media print {
-  .reveal section.slide::before, .reveal section.slide::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .reveal .slide-background, .reveal section.slide::before, .reveal section.slide::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .reveal .slide-number-pdf { top: 28px !important; bottom: auto !important; right: 43px !important; font-size: 16px !important; }
   .reveal section.capa .slide-number-pdf, .reveal section.debate .slide-number-pdf { color: #e5edbc; }
+}
+
+html.reveal-print .reveal .slide-background,
+html.reveal-print .reveal section.slide::before,
+html.reveal-print .reveal section.slide::after {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }

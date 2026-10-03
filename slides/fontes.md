@@ -1,81 +1,48 @@
 # Fontes, créditos e condições de uso
 
-Apresentação **Vertentes da Educação Ambiental — macrotendências político-pedagógicas** (`index.html`, 12 slides).
-Todas as páginas foram consultadas em **11 de setembro de 2026**.
+Apresentação **Vertentes da Educação Ambiental — macrotendências político-pedagógicas** (`index.html`, 13 slides).
+Páginas consultadas em **11 de setembro de 2026**; bibliografia e documentos oficiais revisados em **3 de outubro de 2026**.
 
 ---
 
 ## 1. Fontes bibliográficas
 
+Referências validadas na revisão de 3 out. 2026 (autoria, veículo, volume, páginas e DOI conferidos no PDF e em fonte externa). Autores clássicos citados nos slides (Bourdieu, Lima, Brügger, Capra, Sauvé, Tozoni-Reis, Martínez-Alier, Acselrad, Dias, Reigota, Layrargues 2012, Guimarães, Tristão, Loureiro, Freire, Mello e Souza, Peralta & Ruiz, Ruiz, Barbosa, Carvalho) aparecem **sempre como apud** dessas obras.
+
 | # | Referência | Onde aparece |
 | --- | --- | --- |
-| 1 | **LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.** As macrotendências político-pedagógicas da educação ambiental brasileira. *Ambiente & Sociedade*, São Paulo, v. XVII, n. 1, p. 23–40, jan./mar. 2014. DOI [10.1590/1809-44220003500](https://doi.org/10.1590/1809-44220003500) · [SciELO](https://www.scielo.br/j/asoc/a/8FP6nynhjdZ4hYdqVFdYRtx/) | Slides 4, 5, 6, 7, 8, 11, 12 |
-| 2 | **SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra.** Vertentes da Educação Ambiental: da conservacionista à crítica. *Fronteira: Journal of Social, Technological and Environmental Science*, v. 4, n. 2, p. 241–250, 2015. DOI [10.21664/2238-8869.2015v4i2.p241-250](https://doi.org/10.21664/2238-8869.2015v4i2.p241-250) | Slides 5, 8, 12 |
-| 3 | **ORGANIZAÇÃO DAS NAÇÕES UNIDAS.** Declaração da Conferência das Nações Unidas sobre o Meio Ambiente Humano. Estocolmo, 1972. [un.org/en/conferences/environment/stockholm1972](https://www.un.org/en/conferences/environment/stockholm1972) | Slides 3, 12 |
-| 4 | **UNESCO; PNUMA.** Conferência Intergovernamental sobre Educação Ambiental: Declaração e Recomendações de Tbilisi. Tbilisi, 14–26 out. 1977. [unesdoc.unesco.org/ark:/48223/pf0000032763](https://unesdoc.unesco.org/ark:/48223/pf0000032763) · verbete do MMA: [gov.br/mma — Recomendações de Tbilisi](https://www.gov.br/mma/pt-br/assuntos/educacao-ambiental/glossario-ea/recomendacoes-de-tbilisi) | Slides 3, 12 |
-| 5 | **ORGANIZAÇÃO DAS NAÇÕES UNIDAS.** Agenda 21. Conferência das Nações Unidas sobre Meio Ambiente e Desenvolvimento (Rio-92). Rio de Janeiro, 3–14 jun. 1992. [un.org/en/conferences/environment/rio1992](https://www.un.org/en/conferences/environment/rio1992) | Slides 3, 12 |
-| 6 | **BRASIL.** Lei nº 9.795, de 27 de abril de 1999. Institui a Política Nacional de Educação Ambiental. *DOU*, 28 abr. 1999. [planalto.gov.br/ccivil_03/leis/l9795.htm](https://www.planalto.gov.br/ccivil_03/leis/l9795.htm) | Slides 3, 12 |
-| 7 | **DISTRITO FEDERAL.** Decreto nº 38.402, de 10 de agosto de 2017 — Anexo III, Plano de Transição. [sinj.df.gov.br](https://www.sinj.df.gov.br/sinj/Norma/7205b88fd0044888bf4d2c1f60e486f3/Decreto_38402_10_08_2017.html) | Slides 9, 12 |
-| 8 | **SLU-DF.** Serviço de Limpeza Urbana do Distrito Federal — encerramento do Aterro Controlado do Jóquei. [slu.df.gov.br](https://www.slu.df.gov.br/) | Slides 9, 12 |
-| 9 | **ADASA/DF.** *Plano Distrital de Gestão Integrada de Resíduos Sólidos — Relatório 2024*. [adasa.df.gov.br (PDF)](https://www.adasa.df.gov.br/images/storage/area_de_atuacao/residuos_solidos_gas_energia/PDGIRS/Relatorio_PDGIRS_2024_v2.pdf) | Slides 9, 12 |
+| 1 | **LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.** As macrotendências político-pedagógicas da educação ambiental brasileira. *Ambiente & Sociedade*, São Paulo, v. 17, n. 1, p. 23–40, jan./mar. 2014. DOI [10.1590/1809-44220003500](https://doi.org/10.1590/1809-44220003500) | Slides 1–11 |
+| 2 | **LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.** Mapeando as macro-tendências político-pedagógicas da educação ambiental contemporânea no Brasil. In: VI Encontro Pesquisa em Educação Ambiental, Ribeirão Preto, 2011. 15 p. | Slides 3, 5–7, 10, 11 |
+| 3 | **PELICIONI, Maria Cecília Focesi; PHILIPPI JR., Arlindo.** Bases políticas, conceituais, filosóficas e ideológicas da educação ambiental. In: PHILIPPI JR., A.; PELICIONI, M. C. F. (ed.). *Educação ambiental e sustentabilidade*. 2. ed. Barueri: Manole, 2014. cap. 1, p. 3–12. A cópia local não tem folha de rosto; edição conforme o repositório USP (ISBN 9788520432006). | Slides 2, 4–9, 11 |
+| 4 | **SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra.** Vertentes da educação ambiental: da conservacionista à crítica. *Fronteiras: Journal of Social, Technological and Environmental Science*, v. 4, n. 2, p. 241–250, jul./dez. 2015. DOI [10.21664/2238-8869.2015v4i2.p241-250](https://doi.org/10.21664/2238-8869.2015v4i2.p241-250) | Slides 2, 4, 5, 7–11 |
+| 5 | **SOUZA, Tiago Zanquêta de.** A educação ambiental popular: contribuições em práticas sociais. *Motricidades: Rev. SPQMH*, v. 2, n. 1, p. 60–70, jan./abr. 2018. DOI [10.29181/2594-6463.2018.v2.n1.p60-70](https://doi.org/10.29181/2594-6463.2018.v2.n1.p60-70) | Slides 2, 8, 9 |
 
----
+Correções registradas na revisão: Santos & Toschi datam Tbilisi em 1975 (p. 243) e grafam "Kelle" (p. 242); o correto é 1977 e Keele. Loureiro é citado só como "2014 apud Souza, 2018, p. 66", porque a p. 49 indicada por Souza não cabe no intervalo da referência que ele mesmo dá. A nota 7 de Souza (p. 63), que atribui "ecopedagogia" a Layrargues & Lima 2014, não é usada.
 
-## 2. Fontes de dados (os três gráficos)
+## 2. Documentos oficiais (slides 4, 6 e 8)
 
-### Slide 3 — Consumo de eletricidade do setor industrial
+Marcos históricos conferidos em fonte oficial em 3 out. 2026. Eles formam a faixa "Cenário" dos slides de contexto e **não são atribuídos aos autores da bibliografia**.
 
-- **Valores exibidos:** 9.174 GWh (1960) e 107.391 GWh (1987).
-- **Fonte:** IBGE, *Estatísticas do Século XX*, tab. 9.3 — *Produção e consumo de energia elétrica, 1952–87*.
-  [seculoxx.ibge.gov.br — energia](https://seculoxx.ibge.gov.br/economicas/tabelas-setoriais/energia/producao-e-consumo-de-energia-eletrica-1952-87.html)
-- **Atenção:** a página **não mostra a tabela em HTML**; ela só oferece o download da planilha
-  `9_03a_energia1952_93.xls`. Os valores estão na aba **`9.3a_1952-87`**. Sem nomear planilha e aba, quem clicar
-  no link não encontra o dado.
-- **Unidade e cobertura:** gigawatts-hora por ano, Brasil; a desagregação do setor industrial começa em 1960 e
-  a série termina em 1987.
-- **Limite de interpretação:** é indicador **indireto** de expansão produtiva/energética. Não mede
-  industrialização, não mede dano ambiental e não explica o surgimento de nenhuma macrotendência.
-- Menção complementar à urbanização no texto do slide: IBGE, *Censo Demográfico 2022: características dos
-  domicílios*, Tabela 4 — população residente por situação do domicílio e grau de urbanização, Brasil, 1940/2022.
-  [biblioteca.ibge.gov.br (PDF)](https://www.ibge.gov.br/biblioteca/visualizacao/livros/liv102138.pdf)
+| Marco | Fonte | Slide |
+| --- | --- | --- |
+| Estocolmo, 5–16 jun. 1972 | ONU. [Declaration of the UN Conference on the Human Environment](https://legal.un.org/avl/ha/dunche/dunche.html) | 4 |
+| SEMA, 1973 | BRASIL. Decreto nº 73.030, de 30 out. 1973, art. 4º, i. [camara.leg.br](https://www2.camara.leg.br/legin/fed/decret/1970-1979/decreto-73030-30-outubro-1973-421650-publicacaooriginal-1-pe.html) | 4 |
+| Tbilisi, 14–26 out. 1977 | UNESCO. *Intergovernmental Conference on Environmental Education: final report*. Paris, 1978 (ED/MD/49). [unesdoc](https://unesdoc.unesco.org/ark:/48223/pf0000032763) | 4 |
+| Documento MEC/CETESB, 1979; GT permanente de EA (Portaria 2.421/91); PRONEA, dez. 1994 | BRASIL. MEC/SECAD. *Um pouco da história da educação ambiental* (cronologia oficial). Santos & Toschi (p. 243), via Dias 2003, datam o documento em 1976 | 4, 6, 8 |
+| PNMA, 1981 | BRASIL. Lei nº 6.938, de 31 ago. 1981, art. 2º, X. [planalto.gov.br](https://www.planalto.gov.br/ccivil_03/leis/l6938.htm) | 4 |
+| Fim do regime militar, 15 mar. 1985 | Câmara dos Deputados. [Há 40 anos, Brasil encerrava ditadura militar](https://www.camara.leg.br/noticias/1140355) | 8 |
+| Relatório Brundtland, 1987 | ONU. *Our Common Future*, A/42/427, 4 ago. 1987. [documents.un.org](https://documents.un.org/doc/undoc/gen/n87/184/67/pdf/n8718467.pdf) | 6 |
+| Constituição de 1988 | BRASIL. CF/1988, art. 225, §1º, VI. [planalto.gov.br](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm) | 8 |
+| Desestatização, 1990 | BRASIL. Lei nº 8.031, de 12 abr. 1990 (revogada pela Lei nº 9.491/1997). [planalto.gov.br](https://www.planalto.gov.br/ccivil_03/leis/l8031.htm) | 6 |
+| Rio-92 e Agenda 21 | ONU. UNCED, Rio de Janeiro, 3–14 jun. 1992. [un.org](https://www.un.org/en/conferences/environment/rio1992) | 6 |
+| Tratado de EA, 1992 | *Tratado de Educação Ambiental para Sociedades Sustentáveis e Responsabilidade Global*. Fórum Global (sociedade civil, não ONU), Rio de Janeiro, jun. 1992, princípio 4 | 8 |
+| REPEC/CEAAL, 1987 | Só fonte secundária: Barbosa 2002 apud Souza 2018, p. 66 | 8 |
+| PNEA, 1999 | BRASIL. Lei nº 9.795, de 27 abr. 1999, arts. 4º e 5º. [planalto.gov.br](https://www.planalto.gov.br/ccivil_03/leis/l9795.htm) | 8 |
+| Década da EDS 2005–2014 | ONU. Resolução A/RES/57/254, 20 dez. 2002 (UNESCO como agência líder) | 6 |
 
-### Slide 6 — Extração global anual de materiais
+### Conteúdo retirado da tela
 
-- **Valores exibidos:** 30,9 bilhões de toneladas (1970) e 95,1 bilhões de toneladas (2020).
-- **Fonte:** PNUMA/UNEP, International Resource Panel, *Global Resources Outlook 2024*, **p. 26** e fig. 2.9,
-  seção 2.3.1 *Global trends in material extraction*. Base: *Global Material Flows Database*.
-  [wedocs.unep.org/20.500.11822/44901](https://wedocs.unep.org/20.500.11822/44901)
-- **Atenção:** a URL terminada em `.pdf` que circula nas citações entrega a página HTML do repositório, não o
-  arquivo. Use o endereço canônico acima.
-- **Limites de interpretação:** 95,1 bi t é o valor de **2020**, não uma estimativa atual (o relatório projeta
-  106,6 bi t para 2024). A série é **global**, mede **extração** — não resíduos, não reciclagem, não consumo
-  por pessoa.
-
-### Slide 7 — Domicílios com saneamento básico, 1991 e 2000
-
-- **Valores exibidos:** Brasil 45,30 → 56,47; Norte 16,69 → 22,98; Sudeste 66,77 → 77,58 (%).
-- **Fonte:** IBGE, Censo Demográfico 1991/2000, **Tabela 56** — *Domicílios particulares permanentes com
-  saneamento básico, absoluto e proporção em relação ao total de domicílios particulares permanentes, segundo
-  as Grandes Regiões e Unidades da Federação — 1991/2000*.
-  [ibge.gov.br — Censo Demográfico 2000, aba Downloads](https://www.ibge.gov.br/estatisticas/sociais/saude/9663-censo-demografico-2000.html?edicao=10558&t=downloads#tabela-56-censo2000)
-- **Definição do indicador, na nota literal da tabela:** “Os dados referem-se aos domicílios particulares
-  permanentes atendidos por rede geral de abastecimento de água, existência de banheiro ou sanitário, com rede
-  de esgoto pluvial ou fossa séptica de esgotamento sanitário e lixo coletado.”
-- **Série completa da tabela** (proporção %, 1991 → 2000), conferida linha a linha na fonte:
-
-  | Região | 1991 | 2000 |
-  | --- | ---: | ---: |
-  | Brasil | 45,30 | 56,47 |
-  | Norte | 16,69 | 22,98 |
-  | Nordeste | 18,05 | 32,32 |
-  | Sudeste | 66,77 | 77,58 |
-  | Sul | 44,72 | 56,97 |
-  | Centro-Oeste | 29,79 | 37,16 |
-
-- **Cálculo do grupo:** a diferença de **54,6 pontos percentuais** exibida no slide é a subtração
-  77,58 − 22,98 entre os dois percentuais de 2000. Não há nenhum outro cálculo derivado na apresentação.
-- **Limite de interpretação:** indicador composto e regional. Não identifica causas da desigualdade, não mede
-  justiça ambiental e não prova nenhuma macrotendência.
+O estudo de caso do Lixão da Estrutural e o slide de debate foram retirados a pedido do grupo, porque o caso não está na bibliografia (era aplicação do grupo). O gráfico de energia elétrica do IBGE (antigo slide 3), o de extração de materiais do PNUMA (antigo slide 6) e o de saneamento do IBGE (antigo slide 7) saíram na reestruturação. Os valores do PNUMA (*Global Resources Outlook 2024*, p. 26, fig. 2.9) e da Tabela 56 do Censo 1991/2000 não foram reconferidos na revisão de 3 out. 2026: confira antes de reutilizar.
 
 ---
 
@@ -88,13 +55,13 @@ enquadramento CSS (`object-fit: cover`), o que constitui adaptação para efeito
 | Slide | Arquivo | Assunto, local e data | Autoria | Licença | Condição prática de uso |
 | --- | --- | --- | --- | --- | --- |
 | Capa anterior | `assets/capa.jpg` | Vista aérea do rio Poti, Teresina (PI) — 9 ago. 2018 | Alexandro Dias | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; obra derivada da foto deve ficar sob a mesma licença |
-| 2 | `assets/faixa-natureza.jpg` | Rio Preto visto do Salto I, Parque Nacional da Chapada dos Veadeiros (GO) — 28 maio 2016 | Elci Guerra Junior | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; compartilhamento pela mesma licença |
-| 2 | `assets/faixa-residuos.jpg` | Coleta de material reciclável do Carnaval, Olinda (PE) — 7 mar. 2019 | Alice Mafra / Prefeitura de Olinda | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar autor e licença |
-| 2 | `assets/faixa-comunidade.jpg` | 7ª Conferência Municipal de Meio Ambiente, Porto Alegre (RS) — 24 jan. 2025 | Sérgio Louruz / SMAMUS / Prefeitura de Porto Alegre | Licença livre de atribuição ([Template:Attribution](https://commons.wikimedia.org/wiki/Template:Attribution)) | Creditar integralmente autor e órgão; permite uso comercial e derivados. **Não há deed de CC**: cite o template e o link do arquivo |
+| Não usada | `assets/faixa-natureza.jpg` | Rio Preto visto do Salto I, Parque Nacional da Chapada dos Veadeiros (GO) — 28 maio 2016 | Elci Guerra Junior | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; compartilhamento pela mesma licença |
+| Não usada | `assets/faixa-residuos.jpg` | Coleta de material reciclável do Carnaval, Olinda (PE) — 7 mar. 2019 | Alice Mafra / Prefeitura de Olinda | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar autor e licença |
+| Não usada | `assets/faixa-comunidade.jpg` | 7ª Conferência Municipal de Meio Ambiente, Porto Alegre (RS) — 24 jan. 2025 | Sérgio Louruz / SMAMUS / Prefeitura de Porto Alegre | Licença livre de atribuição ([Template:Attribution](https://commons.wikimedia.org/wiki/Template:Attribution)) | Creditar integralmente autor e órgão; permite uso comercial e derivados. **Não há deed de CC**: cite o template e o link do arquivo |
 | 5 | `assets/conservacionista.jpg` | Trilha da Vovó Sumaúma, Floresta Nacional do Tapajós, Jamaraquá (PA) — 18 out. 2020 | Leonardo Milano / Amazônia Real | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar autor e veículo. O título do arquivo grafa “Miilano”; a grafia correta é **Milano** |
-| 6 | `assets/pragmatica.jpg` | Usina de reciclagem, Hortolândia (SP) — 30 maio 2012 | Ana Perugini | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar autora e licença |
-| 7 | `assets/critica.jpg` | ETA Gramame-Mamuaba, Conde (PB) — 4 jul. 2022 | Marcos Elias de Oliveira Júnior | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | Domínio público; crédito mantido por boa prática acadêmica, não por exigência |
-| 9 | `assets/estrutural.jpg` | Lixão da Estrutural (SCIA/DF) — 22 jun. 2017, antes do encerramento | Leopoldo Silva / Agência Senado | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar fotógrafo e agência |
+| 7 | `assets/pragmatica.jpg` | Usina de reciclagem, Hortolândia (SP) — 30 maio 2012 | Ana Perugini | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar autora e licença |
+| 9 | `assets/critica.jpg` | ETA Gramame-Mamuaba, Conde (PB) — 4 jul. 2022 | Marcos Elias de Oliveira Júnior | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | Domínio público; crédito mantido por boa prática acadêmica, não por exigência |
+| Não usada | `assets/estrutural.jpg` | Lixão da Estrutural (SCIA/DF) — 22 jun. 2017, antes do encerramento | Leopoldo Silva / Agência Senado | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar fotógrafo e agência |
 | 11 | `assets/sintese.jpg` | Parque Vaca Brava, Setor Bueno, Goiânia (GO) — 27 ago. 2023 | Fronteira (Wikimedia Commons) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; compartilhamento pela mesma licença |
 
 ### Páginas de origem no Commons
@@ -130,7 +97,7 @@ contaminado pela BY-SA: apenas as imagens derivadas.
 - **Nenhuma imagem de banco comercial** e nenhuma captura de tela de terceiros. A ilustração decorativa do tema está registrada na seção 6.
 - **Nenhuma fotografia com pessoa identificável em situação degradante.** Na foto da Estrutural, todas as
   pessoas estão de costas, de perfil ou com o rosto coberto, em contraluz e em atividade de trabalho.
-- **Nenhum dado sem fonte, unidade e ano**, e nenhum cálculo derivado além da subtração declarada no slide 7.
+- **Nenhum dado sem fonte, unidade e ano**, e nenhum cálculo derivado.
 
 ---
 
@@ -146,5 +113,5 @@ Nada é carregado da internet durante a apresentação: nem bibliotecas, nem fon
 ## 6. Ilustração e ícones do tema Aventura ambiental
 
 - **`assets/aventura-floresta.png`:** ilustração original criada em pixel art em 2 de outubro de 2026 para o projeto de seminário, a pedido do grupo para uma estética de aventura 2D. Aparece na capa e como fundo discreto no debate. É um cenário fictício de floresta, montanhas, água e solo; não representa um local real nem constitui evidência de dados ambientais.
-- **`comum/icones/folha.svg`, `engrenagem.svg` e `coletivo.svg`:** ícones decorativos desenhados para o projeto em SVG. Identificam visualmente as três lentes no slide 4, sem indicar uma progressão ou hierarquia entre elas.
+- **`comum/icones/folha.svg`, `engrenagem.svg` e `coletivo.svg`:** ícones decorativos desenhados para o projeto em SVG. Identificam visualmente as três lentes no slide 3, sem indicar uma progressão ou hierarquia entre elas.
 - As fotografias documentais, os gráficos, seus valores e as referências acadêmicas foram preservados. Molduras e chão pixelado são desenhados por CSS em `comum/tema.css`.

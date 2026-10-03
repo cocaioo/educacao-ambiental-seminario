@@ -11,232 +11,401 @@
 <link rel="stylesheet" href="../comum/tema.css">
 <style>
 /*
-  Ajustes exclusivos da parte de Diogo. Cada seletor deve começar com:
-  .slide[data-autor="Diogo"]
-  Exemplo: .slide[data-autor="Diogo"] .minha-classe { font-weight: 700; }
-  Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
-  Caminhos de imagens são relativos à pasta Diogo, como assets/minha-foto.jpg.
+  Ajustes visuais exclusivos da parte de Diogo (slides 06 a 10).
+  Regra do compositor: cada seletor deve iniciar por .slide[data-autor="Diogo"].
+  Sem regras @, sem nesting e sem combinadores de irmãos (+ ou ~).
 */
+
+.slide[data-autor="Diogo"] .faixa-rotulo {
+  display: inline-block;
+  font-family: var(--r-heading-font);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  background: rgba(106, 71, 43, 0.12);
+  border-left: 3px solid currentColor;
+}
+
+.slide[data-autor="Diogo"] ol.marcos {
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+
+.slide[data-autor="Diogo"] ol.marcos li {
+  padding-left: 10px;
+  border-left-width: 3px;
+}
+
+.slide[data-autor="Diogo"] ol.marcos h3 {
+  font-size: 24px;
+  margin-bottom: 2px;
+  line-height: 1.15;
+}
+
+.slide[data-autor="Diogo"] ol.marcos p {
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.slide[data-autor="Diogo"] .card-contexto {
+  background: rgba(255, 255, 255, 0.50);
+  border: 2px solid #b8a682;
+  padding: 8px 10px;
+  clip-path: var(--canto);
+  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.2);
+}
+
+.slide[data-autor="Diogo"] .card-contexto h4 {
+  font-size: 18px;
+  margin: 0 0 4px;
+  line-height: 1.2;
+  font-family: var(--r-heading-font);
+}
+
+.slide[data-autor="Diogo"] .card-contexto p {
+  font-size: 15px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.slide[data-autor="Diogo"] .dl-proposta {
+  font-size: 0.88em;
+}
+
+.slide[data-autor="Diogo"] .dl-proposta dt {
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 7px;
+  line-height: 1.2;
+}
+
+.slide[data-autor="Diogo"] .dl-proposta dt:first-child {
+  margin-top: 0;
+}
+
+.slide[data-autor="Diogo"] .dl-proposta dd {
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.slide[data-autor="Diogo"] .aspas-proposta {
+  font-size: 19px;
+  line-height: 1.3;
+  margin-top: 14px;
+  padding-left: 14px;
+}
+
+.slide[data-autor="Diogo"] .coexistencia-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 8px 0 12px;
+}
+
+.slide[data-autor="Diogo"] .coexistencia-sintese {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 28px;
+  margin-top: 6px;
+}
+
+.slide[data-autor="Diogo"] .coexistencia-box {
+  background: rgba(255, 255, 255, 0.52);
+  border: 2px solid #b3a27d;
+  padding: 10px 14px;
+  clip-path: var(--canto);
+  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.18);
+}
+
+.slide[data-autor="Diogo"] .coexistencia-box h4 {
+  font-size: 19px;
+  margin: 0 0 4px;
+  font-family: var(--r-heading-font);
+}
+
+.slide[data-autor="Diogo"] .coexistencia-box p {
+  font-size: 16px;
+  line-height: 1.28;
+  margin: 0;
+}
 
 </style>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
-<section class="slide" id="slide-5" data-autor="Diogo" aria-label="Slide 1 de 4">
-  <h2 class="cons">Conservacionista: aproximar pessoas da natureza para preservá-la</h2>
+<section class="slide" id="slide-6" data-autor="Diogo" aria-label="Slide 1 de 5">
+  <h2 class="prag">Pragmática: por que surgiu? (pós-guerra → 1990–2000)</h2>
+
+  <div class="fragment" data-fragment-index="1">
+    <div class="faixa-rotulo prag">Cenário (marcos oficiais e econômicos)</div>
+    <ol class="colunas quatro marcos" aria-label="Marcos históricos da vertente pragmática">
+      <li>
+        <h3>1987</h3>
+        <p><strong>Relatório Brundtland</strong><br>Desenvolvimento sustentável e consumo (ONU A/42/427).</p>
+      </li>
+      <li>
+        <h3>1991</h3>
+        <p><strong>GT de EA no MEC</strong><br>Portaria 2.421/91; desestatização (Lei 8.031/90).</p>
+      </li>
+      <li>
+        <h3>1992</h3>
+        <p><strong>Rio-92 / Agenda 21</strong><br>Padrões de consumo (cap. 4) e educação (cap. 36).</p>
+      </li>
+      <li>
+        <h3>2002</h3>
+        <p><strong>Res. ONU 57/254</strong><br>Década da EDS 2005–2014; UNESCO coordena.</p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="fragment" data-fragment-index="2">
+    <div class="faixa-rotulo prag">O que dizem os autores (condições de emergência)</div>
+    <div class="colunas quatro">
+      <div class="card-contexto">
+        <h4 class="prag">Pós-guerra e consumo</h4>
+        <p>Raízes no estilo de produção e consumo de massa (LAYRARGUES &amp; LIMA, 2014, p. 31).</p>
+      </div>
+      <div class="card-contexto">
+        <h4 class="prag">Hegemonia neoliberal</h4>
+        <p>Mercado global desde os anos 1980 e governo Collor no Brasil (LAYRARGUES &amp; LIMA, 2014, p. 30–31).</p>
+      </div>
+      <div class="card-contexto">
+        <h4 class="prag">"Fazer sua parte"</h4>
+        <p>Soluções locais e apelo individual diante do recuo estatal (LAYRARGUES &amp; LIMA, 2014, p. 29).</p>
+      </div>
+      <div class="card-contexto">
+        <h4 class="prag">Debate EA × EDS</h4>
+        <p>Controvérsia iniciada na Rio-92 e aprofundada pós-2002 (LAYRARGUES &amp; LIMA, 2014, p. 32; PELICIONI, p. 8).</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 27, 29–32, 34); LAYRARGUES &amp; LIMA (2011, p. 8–10, 12); PELICIONI &amp; PHILIPPI JR. (2014, p. 8). Cenário: ONU (Relatório Brundtland, 1987; Res. 57/254, 2002); BRASIL (Portaria MEC 2.421/1991; Lei 8.031/1990).</p>
+
+  <aside class="notes">
+    <p>A macrotendência pragmática ganha forte impulso ao longo da década de 1990 (Layrargues &amp; Lima, 2014, p. 29), sob as condições favoráveis da hegemonia neoliberal instituída mundialmente desde os anos 1980 e no Brasil a partir do governo Collor de Mello (Layrargues &amp; Lima, 2014, p. 30–31). Trata-se de uma derivação evolutiva e adaptada da vertente conservacionista (Layrargues &amp; Lima, 2014, p. 32), compartilhando sua linhagem comportamentalista e individualista sob o lema "cada um fazer a sua parte", sem que a conservacionista tenha deixado de existir (Layrargues &amp; Lima, 2014, p. 34).</p>
+    <p>No cenário oficial, destacam-se marcos que contextualizam o debate econômico e institucional: em 1987, a ONU publica o Relatório Brundtland (Our Common Future, Doc. A/42/427), consagrando o conceito hegemônico de desenvolvimento sustentável; em 1990, o governo Collor institui a Lei 8.031 (Programa Nacional de Desestatização, posteriormente revogada pela Lei 9.491/1997). Vale frisar que o Relatório Brundtland e a Lei 8.031 compõem o cenário oficial macroeconômico, não sendo citados diretamente pelos autores analisados como referências de suas tipologias. Em 1991, o MEC institui o Grupo de Trabalho permanente de Educação Ambiental pela Portaria nº 2.421/1991 (às vésperas da Rio-92), e não uma "Coordenação" (Layrargues &amp; Lima, 2014, p. 27). Na Rio-92, a Agenda 21 dedica o capítulo 4 aos padrões de consumo e o capítulo 36 à educação e capacitação pública; a Rio-92 também criou ambiente propício para a crítica. Em 1997 ocorre a Conferência de Tessalônica (Pelicioni &amp; Philippi Jr., 2014, p. 8) e, em 20 de dezembro de 2002, a Assembleia Geral da ONU adota a Resolução A/RES/57/254 proclamando a Década da Educação para o Desenvolvimento Sustentável (DEDS, 2005–2014), sob coordenação internacional da UNESCO.</p>
+    <p>Os autores apontam como condições de emergência: (1) raízes no estilo de produção e consumo do pós-guerra (Layrargues &amp; Lima, 2014, p. 31); (2) a hegemonia neoliberal que converteu a cidadania em consumo consciente e responsabilidade social empresarial (Layrargues &amp; Lima, 2014, p. 30–31); (3) o pragmatismo das soluções pontuais e o recuo do Estado (Layrargues &amp; Lima, 2014, p. 29); (4) a controvérsia entre EA e EDS (Layrargues &amp; Lima, 2014, p. 32; Pelicioni &amp; Philippi Jr., 2014, p. 8); (5) o cruzamento de vetores entre mercado, descartabilidade tecnológica e a emergência da crise climática (Layrargues &amp; Lima, 2014, p. 31); e (6) a conjuntura contemporânea de globalização, falência do socialismo real e revolução informacional (Layrargues &amp; Lima, 2011, p. 12; 2014, p. 34). Fale sempre em "condições que favoreceram" ou "ambiente de emergência", nunca em causalidade estrita.</p>
+  </aside>
+</section>
+
+
+<section class="slide" id="slide-7" data-autor="Diogo" aria-label="Slide 2 de 5">
+  <h2 class="prag">Pragmática: o que propõe?</h2>
 
   <div class="colunas foto-texto">
     <figure class="fragment" data-fragment-index="1">
-      <img src="../assets/conservacionista.jpg" style="aspect-ratio: 4 / 3; object-position: center 50%"
-        alt="Uma mulher caminha por uma trilha na floresta e encosta a mão no tronco de uma árvore alta coberta de musgo.">
-      <figcaption>Trilha da Vovó Sumaúma, Floresta Nacional do Tapajós (PA). Foto: Leonardo Milano / Amazônia Real — Wikimedia Commons (CC BY 2.0)</figcaption>
-    </figure>
-
-    <div>
-      <dl class="fragment" data-fragment-index="2">
-        <dt class="cons">Diagnóstico</dt>
-        <dd>Degradação da natureza e <strong>afastamento humano</strong> da pauta ecológica.</dd>
-        <dt class="cons">Estratégia</dt>
-        <dd>Sensibilização, conhecimento ecológico e <strong>mudança de comportamento</strong>.</dd>
-        <dt class="cons">Contribuição (leitura do grupo)</dt>
-        <dd>Vínculo afetivo, cuidado e <strong>preservação</strong>.</dd>
-      </dl>
-      <blockquote class="fragment" data-fragment-index="3">“O cuidado individual é suficiente para enfrentar todos os conflitos ambientais?”</blockquote>
-    </div>
-  </div>
-
-  <p class="fonte">Fonte: LAYRARGUES &amp; LIMA (2014, p. 27 e 30–31); exemplos de trilhas e vivências ao ar livre: SANTOS &amp; TOSCHI (2015, p. 245).</p>
-
-  <aside class="notes">
-    <p>Caracterização a partir de LAYRARGUES &amp; LIMA (2014, p. 27 e 30–31); os exemplos de trilhas e vivências ao ar livre seguem SANTOS &amp; TOSCHI (2015, p. 245).</p>
-    <p>A linha Contribuição é uma leitura do grupo: os autores não enunciam contribuições e avaliam criticamente os limites desta macrotendência.</p>
-  </aside>
-</section>
-
-
-<section class="slide" id="slide-6" data-autor="Diogo" aria-label="Slide 2 de 4">
-  <h2 class="prag">Pragmática: gerir melhor os fluxos de materiais e reduzir impactos</h2>
-
-  <div class="colunas analise">
-    <dl>
-      <dt class="prag">Diagnóstico</dt>
-      <dd>Consumo, desperdício, resíduos e <strong>ineficiência</strong>.</dd>
-      <dt class="prag">Estratégia</dt>
-      <dd>Reciclagem, coleta seletiva, consumo sustentável, certificações e <strong>ecoeficiência</strong>.</dd>
-      <dt class="prag">Contribuição (leitura do grupo)</dt>
-      <dd>Soluções <strong>concretas e aplicáveis</strong>.</dd>
-    </dl>
-
-    <div>
-      <svg class="grafico prag" viewBox="0 0 520 290" role="img" aria-labelledby="g2t g2d">
-        <title id="g2t">Extração global anual de materiais</title>
-        <desc id="g2d">Gráfico de duas colunas. A extração global anual de materiais passou de 30,9 bilhões de toneladas em 1970 para 95,1 bilhões de toneladas em 2020 — cerca de três vezes mais. Fonte: PNUMA, Global Resources Outlook 2024.</desc>
-        <text class="titulo" x="0" y="15">Extração global anual de materiais</text>
-        <line class="eixo" x1="0" y1="238" x2="520" y2="238"></line>
-
-        <!-- 1970: 30,9 bi t → 30,9/95,1 × 170 = 55,2 px -->
-        <g class="fragment" data-fragment-index="1">
-          <rect class="antes" x="90" y="183" width="110" height="55"></rect>
-          <text class="valor" x="90" y="173">30,9 bilhões de t</text>
-          <text x="90" y="260">1970</text>
-        </g>
-
-        <!-- 2020: 95,1 bi t → 170 px -->
-        <g class="fragment" data-fragment-index="2">
-          <rect class="depois" x="310" y="68" width="110" height="170"></rect>
-          <text class="valor" x="310" y="58">95,1 bilhões de t</text>
-          <text x="310" y="260">2020</text>
-        </g>
-
-        <text class="nota" x="0" y="284">Toneladas de materiais extraídos por ano, no mundo.</text>
-      </svg>
-
-      <blockquote class="fragment" data-fragment-index="3">“Reduzir impactos por unidade produzida basta se o volume total continua crescendo?”</blockquote>
-    </div>
-
-    <figure>
-      <img src="../assets/pragmatica.jpg" style="aspect-ratio: 3 / 4; object-position: 60% center"
+      <img src="../assets/pragmatica.jpg" style="aspect-ratio: 4 / 3; object-position: 60% center"
         alt="Pátio de uma usina de reciclagem de resíduos da construção: esteiras transportadoras verdes convergem para uma peneira metálica com plataforma amarela, entre pilhas cônicas de brita e areia sobre o solo.">
       <figcaption>Usina de reciclagem, Hortolândia (SP). Foto: Ana Perugini — Wikimedia Commons (CC BY 2.0)</figcaption>
     </figure>
+
+    <div>
+      <dl class="dl-proposta fragment" data-fragment-index="2">
+        <dt class="prag">Diagnóstico</dt>
+        <dd>Resíduos, desperdício e consumo: a “pauta marrom” urbano-industrial.</dd>
+        <dt class="prag">Estratégia e traços</dt>
+        <dd>Reciclagem, ecoeficiência e crença na neutralidade da ciência.</dd>
+        <dt class="prag">Trajetória temática</dt>
+        <dd>Resíduos nos anos 1990 → consumo sustentável → economia verde e clima.</dd>
+        <dt class="prag">Limites nas fontes</dt>
+        <dd>“Armadilhas paradigmáticas”; apelo individual mascara causas estruturais.</dd>
+        <dt class="prag">Status no campo</dt>
+        <dd>Francamente hegemônica; opera como “conservadorismo dinâmico”.</dd>
+      </dl>
+
+      <blockquote class="aspas-proposta fragment" data-fragment-index="3">“Compensar o consumo por meio da reciclagem basta sem transformar o modelo de produção?”</blockquote>
+    </div>
   </div>
 
-  <p class="fonte">Fonte do gráfico: PNUMA/UNEP, <i>Global Resources Outlook 2024</i>, p. 26 (bilhões de toneladas por ano, 1970 e 2020). Acesso em 11 set. 2026. Caracterização: LAYRARGUES &amp; LIMA (2014, p. 30–33).</p>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 30–32); LAYRARGUES &amp; LIMA (2011, p. 9–10); SANTOS &amp; TOSCHI (2015, p. 245–248); PELICIONI &amp; PHILIPPI JR. (2014, p. 8); GUIMARÃES (2004 apud SANTOS &amp; TOSCHI, 2015, p. 247–248).</p>
 
   <aside class="notes">
-    <p>Fonte do gráfico: PNUMA/UNEP, International Resource Panel, Global Resources Outlook 2024, p. 26 e fig. 2.9 (base: Global Material Flows Database) — extração global anual de materiais, em bilhões de toneladas. wedocs.unep.org/20.500.11822/44901. Acesso em 11 set. 2026.</p>
-    <p>Limites de leitura: 95,1 bilhões de toneladas é o valor de 2020, não uma estimativa atual; a série é global e mede extração, não resíduos nem consumo por pessoa.</p>
-    <p>Caracterização a partir de LAYRARGUES &amp; LIMA (2014, p. 30–33); a linha Contribuição é leitura do grupo.</p>
+    <p>A macrotendência pragmática é caracterizada por Layrargues e Lima (2014, p. 30–31) sob as expressões "ambientalismo de resultados", "pragmatismo contemporâneo" e "ecologismo de mercado". Ela desloca a atenção da "pauta verde" da conservação da natureza para a "pauta marrom" dos resíduos sólidos e dos efluentes industriais, propondo a reciclagem, a ecoeficiência e a mitigação tecnológica como mecanismos de compensação moral e técnica para o consumo predatório ("conservadorismo dinâmico", p. 31).</p>
+    <p>Sua trajetória temática reflete as fases do ambientalismo de mercado (Layrargues, 2012 apud Santos &amp; Toschi, 2015, p. 246): emergiu na década de 1990 centrada na gestão de resíduos e na reciclagem, ampliou-se nos anos 2000 como Educação para o Consumo Sustentável e convergiu recentemente para a neutralização de emissões de carbono, créditos ambientais e "economia verde".</p>
+    <p>Entre seus traços pedagógicos centrais sobressai a crença na neutralidade da ciência (Layrargues &amp; Lima, 2014, p. 32; a expressão estendida "da ciência e da tecnologia" constava na versão preliminar de Layrargues &amp; Lima, 2011, p. 10). Adota ações factíveis de adesão imediata ("cada um faz sua parte"), transformando ações pontuais em atividade-fim e esvaziando a dimensão política do conflito ecológico. Layrargues e Lima (2014, p. 32) documentam ainda a controvérsia gerada pela tentativa internacional de substituir a Educação Ambiental pela "Educação para o Desenvolvimento Sustentável" (EDS).</p>
+    <p>Como limites centrais: Guimarães (2004 apud Santos &amp; Toschi, 2015, p. 247–248; ideia introduzida na p. 245) define como "armadilhas paradigmáticas" a ilusão de resolver a degradação operando estritamente dentro da mesma racionalidade econômica e cartesiana que originou a crise. A distribuição desigual de custos e benefícios ecológicos permanece oculta (Layrargues &amp; Lima, 2014, p. 31). Pelicioni e Philippi Jr. (2014, p. 8) alertam enfaticamente que a ênfase na responsabilidade individual desloca e fragiliza a discussão das verdadeiras causas e das relações de poder. Trata-se da vertente francamente hegemônica na sociedade contemporânea (Layrargues &amp; Lima, 2014, p. 31).</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-7" data-autor="Diogo" aria-label="Slide 3 de 4">
-  <h2 class="crit">Crítica: a crise ambiental também distribui riscos de forma desigual</h2>
+<section class="slide" id="slide-8" data-autor="Diogo" aria-label="Slide 3 de 5">
+  <h2 class="crit">Crítica: por que surgiu? (redemocratização, 1980–1990)</h2>
 
-  <div class="colunas analise">
-    <dl>
-      <dt class="crit">Diagnóstico</dt>
-      <dd>Desigualdade, poder, conflitos e <strong>modelo de desenvolvimento</strong>.</dd>
-      <dt class="crit">Estratégia</dt>
-      <dd>Problematização, diálogo, participação, cidadania e <strong>ação coletiva</strong>.</dd>
-      <dt class="crit">Contribuição (leitura do grupo)</dt>
-      <dd>Evidencia <strong>responsabilidades e impactos desiguais</strong>.</dd>
-    </dl>
+  <div class="fragment" data-fragment-index="1">
+    <div class="faixa-rotulo crit">Cenário (marcos oficiais e da sociedade civil)</div>
+    <ol class="colunas quatro marcos" aria-label="Marcos históricos da vertente crítica">
+      <li>
+        <h3>1985–88</h3>
+        <p><strong>Redemocratização / CF/88</strong><br>Fim da ditadura; art. 225 assegura EA para a sociedade.</p>
+      </li>
+      <li>
+        <h3>1987</h3>
+        <p><strong>Rede REPEC / CEAAL</strong><br>Encontro pioneiro entre EA e Educação Popular.</p>
+      </li>
+      <li>
+        <h3>1992</h3>
+        <p><strong>Tratado do Fórum Global</strong><br>Sociedade civil na Rio-92: EA não é neutra, é ato político.</p>
+      </li>
+      <li>
+        <h3>1994</h3>
+        <p><strong>PRONEA (dez. 1994)</strong><br>Articulação interministerial (MEC, MMA, MinC e MCT).</p>
+      </li>
+    </ol>
+  </div>
 
-    <div>
-      <svg class="grafico crit" viewBox="0 0 520 262" role="img" aria-labelledby="g3t g3d">
-        <title id="g3t">Domicílios com saneamento básico, 1991 e 2000</title>
-        <desc id="g3d">Gráfico de barras emparelhadas. Proporção de domicílios particulares permanentes com saneamento básico: no Brasil, 45,30 por cento em 1991 e 56,47 por cento em 2000; no Norte, 16,69 e 22,98 por cento; no Sudeste, 66,77 e 77,58 por cento. Em 2000, a diferença entre Norte e Sudeste era de 54,6 pontos percentuais. Fonte: IBGE, Censo Demográfico 2000, Tabela 56.</desc>
-        <text class="titulo" x="0" y="15">Domicílios com saneamento básico (%)</text>
-
-        <!-- grade: 0 % em y=202, 100 % em y=52 (150 px = 100 pontos percentuais) -->
-        <line class="grade" x1="36" y1="52"    x2="520" y2="52"></line>
-        <line class="grade" x1="36" y1="89.5"  x2="520" y2="89.5"></line>
-        <line class="grade" x1="36" y1="127"   x2="520" y2="127"></line>
-        <line class="grade" x1="36" y1="164.5" x2="520" y2="164.5"></line>
-        <text class="nota" x="0" y="56">100</text>
-        <text class="nota" x="0" y="131">50</text>
-        <text class="nota" x="0" y="206">0</text>
-        <line class="eixo" x1="36" y1="202" x2="520" y2="202"></line>
-
-        <g class="fragment" data-fragment-index="1">
-          <rect class="antes" x="62"  y="134.1" width="50" height="67.9"></rect>
-          <text class="dado" x="62"  y="128">45,30</text>
-          <rect class="antes" x="206" y="177.0" width="50" height="25.0"></rect>
-          <text class="dado" x="206" y="171">16,69</text>
-          <rect class="antes" x="350" y="101.8" width="50" height="100.2"></rect>
-          <text class="dado" x="350" y="96">66,77</text>
-        </g>
-        <g class="fragment" data-fragment-index="2">
-          <rect class="depois" x="116" y="117.3" width="50" height="84.7"></rect>
-          <text class="dado" x="116" y="111">56,47</text>
-          <rect class="depois" x="260" y="167.5" width="50" height="34.5"></rect>
-          <text class="dado" x="260" y="161">22,98</text>
-          <rect class="depois" x="404" y="85.6"  width="50" height="116.4"></rect>
-          <text class="dado" x="404" y="79">77,58</text>
-        </g>
-
-        <text class="rotulo" x="114" y="224" text-anchor="middle">Brasil</text>
-        <text class="rotulo" x="258" y="224" text-anchor="middle">Norte</text>
-        <text class="rotulo" x="402" y="224" text-anchor="middle">Sudeste</text>
-
-        <!-- destaque: patamar do Norte em 2000 prolongado até o Sudeste -->
-        <g class="fragment destaque" data-fragment-index="3">
-          <line x1="310" y1="167.5" x2="482" y2="167.5" stroke-dasharray="4 3"></line>
-          <line x1="474" y1="167.5" x2="474" y2="85.6"></line>
-          <line x1="468" y1="167.5" x2="480" y2="167.5"></line>
-          <line x1="468" y1="85.6"  x2="480" y2="85.6"></line>
-        </g>
-
-        <rect class="antes" x="36" y="240" width="16" height="11"></rect>
-        <text class="nota" x="58" y="250">1991</text>
-        <rect class="depois" x="106" y="240" width="16" height="11"></rect>
-        <text class="nota" x="128" y="250">2000</text>
-      </svg>
-
-      <p class="fragment crit" data-fragment-index="3"><strong>Em 2000, a diferença entre Norte e Sudeste era de 54,6 pontos percentuais.</strong></p>
-      <blockquote class="fragment" data-fragment-index="3">“Quando a infraestrutura avança, quem continua mais exposto?”</blockquote>
+  <div class="fragment" data-fragment-index="2">
+    <div class="faixa-rotulo crit">O que dizem os autores (condições de emergência)</div>
+    <div class="colunas quatro">
+      <div class="card-contexto">
+        <h4 class="crit">Contexto politizante</h4>
+        <p>Redemocratização e novos movimentos sociais após 20 anos de ditadura (LAYRARGUES &amp; LIMA, 2014, p. 33).</p>
+      </div>
+      <div class="card-contexto">
+        <h4 class="crit">Matriz freireana</h4>
+        <p>Encontro da EA com a Educação Popular na 2ª metade dos anos 1980 (SOUZA, p. 65; SANTOS &amp; TOSCHI, p. 244).</p>
+      </div>
+      <div class="card-contexto">
+        <h4 class="crit">Reação ao conservadorismo</h4>
+        <p>Recusa da EA a-histórica, apolítica e normativa no início dos anos 1990 (LAYRARGUES &amp; LIMA, 2014, p. 28–29).</p>
+      </div>
+      <div class="card-contexto">
+        <h4 class="crit">Ecologia Política</h4>
+        <p>Articulação entre degradação ambiental, acumulação e lutas sociais (LAYRARGUES &amp; LIMA, 2014, p. 23, 33).</p>
+      </div>
     </div>
+  </div>
 
-    <figure>
-      <img src="../assets/critica.jpg" style="aspect-ratio: 3 / 4; object-position: center 55%"
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 23, 28–29, 33); SOUZA (2018, p. 61, 65–66); PELICIONI &amp; PHILIPPI JR. (2014, p. 5–6); SANTOS &amp; TOSCHI (2015, p. 243–244). Cenário: BRASIL (CF/1988; PRONEA/1994; Lei 9.795/1999); FÓRUM GLOBAL (Tratado de EA, 1992).</p>
+
+  <aside class="notes">
+    <p>A emergência da macrotendência crítica é sintetizada por Layrargues e Lima (2014, p. 33) como tendo sido "impulsionada por um contexto histórico politizante": o processo de redemocratização política "após duas décadas de ditadura militar", a ascensão de novos movimentos sociais urbanos e do campo e o "ambiente favorável da Conferência do Rio em 1992".</p>
+    <p>No cenário institucional e político do país: o regime militar encerrou-se em 15 de março de 1985; em 1988, a Constituição Cidadã consagrou em seu artigo 225, §1º, inciso VI, o dever estatal de promover a Educação Ambiental em todos os níveis de ensino e a conscientização pública para a preservação do meio ambiente. No âmbito da sociedade civil organizada, surge em 1987 a Rede de Educação Popular e Ecologia (REPEC), vinculada ao Conselho de Educação de Adultos da América Latina (CEAAL), marcando o estreitamento entre práticas comunitárias e consciência ecológica (Barbosa, 2002 apud Souza, 2018, p. 66 — citado via fonte secundária). Em junho de 1992, as ONGs e movimentos sociais reunidos no Fórum Global da sociedade civil paralela à Rio-92 promulgam o Tratado de Educação Ambiental para Sociedades Sustentáveis e Responsabilidade Global, cujo Princípio 4 afirma taxativamente que "a educação ambiental não é neutra, mas ideológica. É um ato político" (documento coletivo da sociedade civil e movimentos, não atribuível à ONU). Em dezembro de 1994 é instituído o Programa Nacional de Educação Ambiental (PRONEA), construído conjuntamente por quatro pastas ministeriais: MEC, MMA, Ministério da Cultura (MinC) e Ministério da Ciência e Tecnologia (MCT).</p>
+    <p>Na literatura acadêmica, os autores mostram que o sentido político da EA "começou a tomar vulto na década de 1980" (Pelicioni &amp; Philippi Jr., 2014, p. 5; Souza, 2018, p. 61), fortalecido pelo encontro histórico com a Educação Popular e a pedagogia libertadora de Paulo Freire na segunda metade dos anos 1980 (Peralta &amp; Ruiz, 2010 apud Souza, 2018, p. 65; Tristão, 2007 apud Santos &amp; Toschi, 2015, p. 244). Fundamentalmente, Layrargues e Lima (2014, p. 28–29) assinalam que a macrotendência crítica se consolida no início dos anos 1990 como uma reação explícita contra uma Educação Ambiental "a-histórica, apolítica, conteudística e normativa", própria das abordagens conservacionistas herdadas do período autoritário. Essa reação ancora-se nas premissas da Ecologia Política construídas desde o final dos anos 1970 (Layrargues &amp; Lima, 2014, p. 23, 33).</p>
+    <p>Ressalva importante para a fala: ao mencionar a Lei 9.795/1999 (PNEA), esclareça que a lei federal não oficializou a vertente crítica como hegemônica; seu artigo 4º, inciso III, estabelece o princípio do pluralismo de ideias e concepções pedagógicas. Fale sempre em "condições de emergência", nunca em "causa".</p>
+  </aside>
+</section>
+
+
+<section class="slide" id="slide-9" data-autor="Diogo" aria-label="Slide 4 de 5">
+  <h2 class="crit">Crítica: o que propõe?</h2>
+
+  <div class="colunas foto-texto">
+    <figure class="fragment" data-fragment-index="1">
+      <img src="../assets/critica.jpg" style="aspect-ratio: 4 / 3; object-position: center 55%"
         alt="Tanques retangulares de concreto de uma estação de tratamento de água, com guarda-corpos metálicos, prédio operacional e caixa d'água ao fundo.">
       <figcaption>ETA Gramame-Mamuaba, Conde (PB). Foto: Marcos Elias de Oliveira Júnior — Wikimedia Commons (CC0 1.0)</figcaption>
     </figure>
+
+    <div>
+      <dl class="dl-proposta fragment" data-fragment-index="2">
+        <dt class="crit">Diagnóstico</dt>
+        <dd>Crise não é da natureza, mas social manifestada na natureza (L&amp;L 2014, p. 29).</dd>
+        <dt class="crit">Estratégia e práxis</dt>
+        <dd>Ação coletiva, grupos de pressão, pedagogia do conflito e emancipação.</dd>
+        <dt class="crit">Matrizes e correntes</dt>
+        <dd>Freire, Teoria Crítica e Ecologia Política; EA Popular e Gestão política.</dd>
+        <dt class="crit">Limites e alertas</dt>
+        <dd>Rejeita “sociologismos e politicismos”; pouco presente com crianças.</dd>
+        <dt class="crit">Status no campo</dt>
+        <dd>Contra-hegemônica; forte na academia, mas sob constante erosão.</dd>
+      </dl>
+
+      <blockquote class="aspas-proposta fragment" data-fragment-index="3">“Como promover sustentabilidade sem enfrentar as desigualdades e as relações de poder?”</blockquote>
+    </div>
   </div>
 
-  <p class="fonte">Fonte do gráfico: IBGE, Censo Demográfico 1991/2000, Tabela 56 (% de domicílios, 1991 e 2000); indicador composto por rede geral de água, banheiro ou sanitário, esgoto (rede pluvial ou fossa séptica) e lixo coletado. Acesso em 11 set. 2026. Caracterização: LAYRARGUES &amp; LIMA (2014, p. 33–35).</p>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 29, 33–35); SOUZA (2018, p. 63–68); PELICIONI &amp; PHILIPPI JR. (2014, p. 7–8); SANTOS &amp; TOSCHI (2015, p. 247–248); QUINTAS &amp; GUALDA (1995 apud LAYRARGUES &amp; LIMA, 2014, p. 35).</p>
 
   <aside class="notes">
-    <p>Fonte do gráfico: IBGE, Censo Demográfico 1991/2000, Tabela 56 — Domicílios particulares permanentes com saneamento básico, absoluto e proporção em relação ao total de domicílios particulares permanentes, segundo as Grandes Regiões e Unidades da Federação — 1991/2000. Acesso em 11 set. 2026.</p>
-    <p>Indicador composto (nota da tabela): domicílios atendidos por rede geral de abastecimento de água, existência de banheiro ou sanitário, rede de esgoto pluvial ou fossa séptica de esgotamento sanitário e lixo coletado.</p>
-    <p>A diferença de 54,6 p.p. é a subtração entre os dois percentuais de 2000; o indicador não identifica causas da desigualdade. Caracterização da macrotendência a partir de LAYRARGUES &amp; LIMA (2014, p. 33–35); a linha Contribuição é leitura do grupo.</p>
+    <p>A macrotendência crítica parte de um diagnóstico radicalmente distinto: "a crise ambiental não expressava problemas da natureza, mas problemas que se manifestavam na natureza" (Layrargues &amp; Lima, 2014, p. 29). Para essa vertente, a degradação biofísica é consequência direta das relações sociais de dominação, da injustiça distributiva e da lógica de acumulação do capital.</p>
+    <p>Suas matrizes teóricas fundamentam-se na pedagogia libertadora de Paulo Freire, na Educação Popular latino-americana, na Teoria Crítica frankfurtiana, na Ecologia Política e em vertentes do materialismo histórico (Layrargues &amp; Lima, 2014, p. 29, 33; Souza, 2018, p. 63). Opera com conceitos estruturantes como cidadania ativa, participação democrática direta, emancipação humana, pedagogia do conflito socioambiental e justiça ambiental (Layrargues &amp; Lima, 2014, p. 33; Souza, 2018, p. 63).</p>
+    <p>Correntes internas fundamentais: a Educação Ambiental Popular integra a macrotendência crítica como corrente viva e engajada, e não como uma "quarta vertente" separada (Ruiz, 1994 apud Souza, 2018, p. 66; Souza, 2018, p. 64, 68), promovendo uma síntese entre os princípios ecológicos e as lutas políticas das classes subalternas. Do mesmo modo, a "Educação Ambiental no processo de gestão ambiental", formulada por Quintas e Gualda (1995 apud Layrargues &amp; Lima, 2014, p. 35, nota iii), insere-se na vertente crítica ao enfatizar a gestão pública como arena de conflito político e participação social, rompendo com o viés puramente gerencialista ou tecnocrático.</p>
+    <p>Práxis e ação pedagógica: estrutura-se no método "ação – reflexão – ação", mobilizando comunidades e fortalecendo grupos de pressão perante os tomadores de decisão. Pelicioni e Philippi Jr. (2014, p. 7) sublinham que as camadas de menor renda sofrem de modo desproporcional os efeitos da poluição e a ausência de infraestrutura sanitária básica.</p>
+    <p>Limites e tensões internas: Layrargues e Lima (2014, p. 33) documentam que formuladores da própria vertente crítica advertem contra reducionismos como "sociologismos e politicismos", que correm o risco de desconsiderar as bases biológicas e biofísicas dos ecossistemas. Santos e Toschi (2015, p. 248), referenciando Layrargues (2012), apontam sua concentração predominante nos debates acadêmicos de pós-graduação e reduzida incidência formativa com crianças nas escolas. Além disso, sendo expressamente contra-hegemônica, encontra-se sob constante ameaça de erosão diante do apelo de mercado da vertente pragmática (Layrargues &amp; Lima, 2014, p. 34–35).</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-8" data-autor="Diogo" aria-label="Slide 4 de 4">
-  <h2>As vertentes diferem no que consideram problema e solução</h2>
+<section class="slide" id="slide-10" data-autor="Diogo" aria-label="Slide 5 de 5">
+  <h2 class="slide-titulo">Coexistência, não sucessão: as três no tempo</h2>
 
-  <table>
-    <caption class="so-leitor">Comparação entre as três macrotendências segundo diagnóstico, sujeito da ação e mudança considerada suficiente.</caption>
-    <thead>
-      <tr>
-        <th scope="col">Critério</th>
-        <th scope="col" class="cons">Conservacionista</th>
-        <th scope="col" class="prag">Pragmática</th>
-        <th scope="col" class="crit">Crítica</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="fragment" data-fragment-index="1">
-        <th scope="row">Diagnóstico</th>
-        <td>Degradação ambiental</td>
-        <td>Resíduos, consumo e ineficiência</td>
-        <td>Desigualdade, poder e desenvolvimento</td>
-      </tr>
-      <tr class="fragment" data-fragment-index="2">
-        <th scope="row">Quem age</th>
-        <td>Indivíduo sensibilizado</td>
-        <td>Consumidores, empresas e gestores</td>
-        <td>Coletividades, Estado e sujeitos afetados</td>
-      </tr>
-      <tr class="fragment" data-fragment-index="3">
-        <th scope="row">Mudança suficiente</th>
-        <td>Preservação e cuidado</td>
-        <td>Redução de impactos e melhor gestão</td>
-        <td>Transformação socioambiental com participação</td>
-      </tr>
-    </tbody>
-  </table>
+  <svg class="coexistencia-svg" viewBox="0 0 1200 185" role="img" aria-labelledby="s10-t s10-d">
+    <title id="s10-t">Coexistência e disputa das macrotendências no tempo (1960–2014)</title>
+    <desc id="s10-d">Linha do tempo qualitativa com três faixas: Conservacionista (hegemônica no início, segue forte e consolidada), Pragmática (impulsionada nos anos 1990, francamente hegemônica) e Crítica (diferencia-se nos anos 1990 e cresce na academia). Conservacionista e Pragmática são da mesma linhagem; a Crítica tem matriz distinta.</desc>
 
-  <p class="fonte">Quadro de síntese didática a partir de LAYRARGUES &amp; LIMA (2014) e SANTOS &amp; TOSCHI (2015, p. 249). Tipos ideais: a ordem das colunas é expositiva, não uma progressão.</p>
+    <!-- Linhas de grade e marcos temporais -->
+    <g stroke="#baa982" stroke-dasharray="2 3" stroke-width="1">
+      <line x1="220" y1="20" x2="220" y2="175"></line>
+      <line x1="410" y1="20" x2="410" y2="175"></line>
+      <line x1="610" y1="20" x2="610" y2="175"></line>
+      <line x1="810" y1="20" x2="810" y2="175"></line>
+      <line x1="1010" y1="20" x2="1010" y2="175"></line>
+    </g>
+
+    <!-- Rótulos dos marcos temporais -->
+    <text x="220" y="16" font-family="'Pixelify Sans', sans-serif" font-size="15" fill="#4a503d" text-anchor="middle" font-weight="700">1960–70</text>
+    <text x="410" y="16" font-family="'Pixelify Sans', sans-serif" font-size="15" fill="#4a503d" text-anchor="middle" font-weight="700">1980</text>
+    <text x="610" y="16" font-family="'Pixelify Sans', sans-serif" font-size="15" fill="#4a503d" text-anchor="middle" font-weight="700">1990</text>
+    <text x="810" y="16" font-family="'Pixelify Sans', sans-serif" font-size="15" fill="#4a503d" text-anchor="middle" font-weight="700">2000</text>
+    <text x="1010" y="16" font-family="'Pixelify Sans', sans-serif" font-size="15" fill="#4a503d" text-anchor="middle" font-weight="700">2014</text>
+
+    <!-- Faixa 1: Conservacionista -->
+    <text x="210" y="47" font-family="'Pixelify Sans', sans-serif" font-size="14" fill="var(--cons)" font-weight="700" text-anchor="end">Conservacionista</text>
+    <rect x="220" y="28" width="790" height="26" rx="4" fill="var(--cons-fill)" stroke="var(--cons)" stroke-width="2"></rect>
+    <text x="230" y="46" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="700" fill="#ffffff">Momento fundacional (hegemônica) → Segue forte e consolidada em escolas e UCs</text>
+
+    <!-- Faixa 2: Pragmática -->
+    <text x="210" y="93" font-family="'Pixelify Sans', sans-serif" font-size="14" fill="var(--prag)" font-weight="700" text-anchor="end">Pragmática</text>
+    <rect x="220" y="74" width="390" height="28" rx="4" fill="var(--prag-fill)" stroke="var(--prag)" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.8"></rect>
+    <rect x="610" y="72" width="400" height="32" rx="4" fill="var(--prag-fill)" stroke="var(--prag)" stroke-width="2.5"></rect>
+    <text x="230" y="92" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#241a05">Raízes no pós-guerra →</text>
+    <text x="625" y="93" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="700" fill="#ffffff">Impulso nos anos 1990 → Francamente hegemônica (mercado)</text>
+
+    <!-- Faixa 3: Crítica -->
+    <text x="210" y="146" font-family="'Pixelify Sans', sans-serif" font-size="14" fill="var(--crit)" font-weight="700" text-anchor="end">Crítica</text>
+    <rect x="410" y="132" width="200" height="22" rx="4" fill="var(--crit-fill)" stroke="var(--crit)" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.8"></rect>
+    <rect x="610" y="130" width="400" height="26" rx="4" fill="var(--crit-fill)" stroke="var(--crit)" stroke-width="2"></rect>
+    <text x="420" y="147" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Redemocratização →</text>
+    <text x="625" y="148" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="700" fill="#ffffff">Diferencia-se anos 1990 → Cresce na pós-graduação e fóruns</text>
+
+    <!-- Chave / Conexão linhagem Conservacionista e Pragmática -->
+    <path d="M 1018 41 L 1028 41 L 1028 64 L 1034 64 L 1028 64 L 1028 88 L 1018 88" fill="none" stroke="var(--prag)" stroke-width="2"></path>
+    <text x="1040" y="60" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="var(--prag)">Mesma linhagem</text>
+    <text x="1040" y="74" font-family="'Trebuchet MS', sans-serif" font-size="11" fill="#4a503d">comportamental</text>
+
+    <!-- Indicação Matriz Crítica -->
+    <text x="1040" y="138" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="var(--crit)">Matriz distinta</text>
+    <text x="1040" y="152" font-family="'Trebuchet MS', sans-serif" font-size="11" fill="#4a503d">emancipatória</text>
+  </svg>
+
+  <div class="coexistencia-sintese">
+    <div class="coexistencia-box fragment" data-fragment-index="1">
+      <h4 class="slide-subtitulo">Coexistência e disputa contínua</h4>
+      <p>Tipos ideais em convivência simultânea no presente, disputando a hegemonia do campo da EA; não representam etapas sucessivas ou superadas (LAYRARGUES &amp; LIMA, 2014, p. 34).</p>
+    </div>
+    <div class="coexistencia-box fragment" data-fragment-index="2">
+      <h4 class="slide-subtitulo">Percepção das correntes</h4>
+      <p>A percepção da pluralidade das correntes explicita-se e amadurece nos debates dos anos 1990, não sendo possível delimitar cronologicamente sua origem (LAYRARGUES &amp; LIMA, 2011, p. 4; 2014, p. 25).</p>
+    </div>
+  </div>
+
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 25–26, 28–34); LAYRARGUES &amp; LIMA (2011, p. 4, 12); SANTOS &amp; TOSCHI (2015, p. 247, 249); GUIMARÃES (2004 apud SANTOS &amp; TOSCHI, 2015, p. 247).</p>
 
   <aside class="notes">
-    <p>Quadro de síntese didática elaborado a partir de LAYRARGUES &amp; LIMA (2014) e SANTOS &amp; TOSCHI (2015, p. 249). As colunas descrevem tipos ideais; não classificam pessoas nem instituições, e a ordem em que aparecem é expositiva, não uma progressão.</p>
-    <p>Nota de vocabulário: em Layrargues &amp; Lima, a “Educação Ambiental no processo de gestão ambiental” é uma das correntes reunidas na macrotendência crítica.</p>
+    <p>Esta linha do tempo qualitativa sintetiza a trajetória temporal das três macrotendências entre as décadas de 1960 e 2014 (marco do artigo de Layrargues &amp; Lima). Não expressa medições quantitativas ou percentuais absolutos, mas a evolução de sua presença e influência no campo socioambiental.</p>
+    <p>A vertente conservacionista deteve a hegemonia no momento fundacional da EA brasileira nos anos 1970 e 1980 (Layrargues &amp; Lima, 2014, p. 26). Longe de desaparecer, permanece como tendência histórica "forte e bem consolidada" (p. 30, 34), sustentando práticas de sensibilização ecológica, ecoturismo e vivências na natureza em escolas e unidades de conservação.</p>
+    <p>A macrotendência pragmática, com raízes materiais no pós-guerra, é fortemente impulsionada ao longo dos anos 1990 com a onda neoliberal e o apelo ao ambientalismo de resultados (Layrargues &amp; Lima, 2014, p. 29, 31). Converte-se na abordagem "francamente hegemônica na atualidade" (p. 31–32), amplamente financiada por setores corporativos e disseminada na mídia sob a fórmula "cada um faz sua parte".</p>
+    <p>A vertente crítica emerge das lutas sociais da redemocratização na década de 1980 e diferencia-se expressamente no início dos anos 1990 como contestação à EA conservadora (Layrargues &amp; Lima, 2014, p. 28–29). Nos anos 2000, expande-se com vigor na produção acadêmica da pós-graduação e nas redes de educação popular (Layrargues &amp; Lima, 2011, p. 12; 2014, p. 33), operando como contraponto contra-hegemônico em permanente disputa pelo campo.</p>
+    <p>Articulação teórica: Conservacionismo e pragmatismo configuram "dois momentos de uma mesma linhagem" (Layrargues &amp; Lima, 2014, p. 32), compartilhando pressupostos comportamentalistas e foco nas ações individuais no âmbito privado. Em contrapartida, a crítica ancora-se em matriz emancipatória e sociopolítica substancialmente distinta (Guimarães, 2004 apud Santos &amp; Toschi, 2015, p. 247).</p>
+    <p>Ressalva epistemológica: Conforme Layrargues e Lima (2011, p. 4; 2014, p. 25), não é possível fixar uma data de nascimento precisa para as correntes ou delimitar cronologicamente com rigor quando surgiu a sua percepção; a consciência reflexiva da coexistência dessas diferentes vertentes explicita-se e amadurece nos debates da década de 1990.</p>
+    <p>Transição: Com essa compreensão sobre como as três vertentes coexistem e disputam sentidos na contemporaneidade, passo a palavra ao Edson, que apresentará a síntese final.</p>
   </aside>
 </section>
 

@@ -1,22 +1,26 @@
-# Parte de Edson
+# Parte de Edson (Slides 11 a 13)
 
 ## Objetivo e conexão
 
-O bloco inicial contém os slides originais **9–12**: caso do Lixão da Estrutural, questão para debate, síntese e referências.
+O bloco de Edson encerra o seminário com os slides **11 a 13** (tempo estimado: ≈ 3 min):
+- **Slide 11 (`11-sintese.html`):** Síntese: toda prática ambiental educa para algum projeto de sociedade. Destaca que as vertentes se diferenciam pelos objetivos (Santos & Toschi, 2015, p. 248), resgata os limites do desvelamento crítico (Freire 1992 apud Pelicioni, p. 9), três passos formativos (Loureiro 2007 apud Santos & Toschi, p. 249) e retoma a pergunta da capa: *"Todo projeto de EA busca a mesma transformação?"*
+- **Slide 12 (`12-referencias.html`):** Referências em duas colunas: as 5 obras teóricas validadas na bibliografia e a relação consolidada de documentos oficiais e fontes de dados.
+- **Slide 13 (`13-final.html`):** Encerramento animado: slimes nas cores das vertentes, flores, vagalumes e os três integrantes acenando; animações em comum/tema.css, desligadas no PDF e com movimento reduzido.
 
-A parte recebe de **Diogo** os critérios de comparação das vertentes e os aplica ao caso. O debate retoma as diferentes leituras do problema e conduz à síntese sobre os projetos de sociedade presentes nas práticas ambientais. Combine essa passagem com Diogo, sem falas ou tempos fixos.
+Edson recebe a fala de **Diogo** após o slide 10 ("Coexistência, não sucessão: as três no tempo") e abre a síntese final no slide 11.
 
-Esta divisão é provisória. Você pode mudar conteúdo, abordagem e quantidade de slides conforme os acordos do grupo.
+## Estrutura da pasta
 
-## Como trabalhar
+- `conteudo/`: contém os 3 fragmentos HTML (`11-sintese.html` a `13-final.html`).
+- `ordem.json`: manifesto com os 3 slides em ordem.
+- `estilos.css`: regras específicas da parte de Edson (prefixadas por `.slide[data-autor="Edson"]`), calibrando fontes de tabelas e referências em duas colunas.
+- `fontes.md`: documentação analítica de todas as referências teóricas, dados oficiais e créditos fotográficos.
+- `index.html`: prévia local gerada automaticamente pelo compositor (`compor.ps1`).
 
-1. Trabalhe em uma cópia completa do projeto e edite os arquivos de `conteudo/` desta pasta.
-2. Em `ordem.json`, liste os arquivos na ordem que deseja apresentar. Para adicionar um slide, copie um existente, dê IDs únicos a todos os elementos copiados e acrescente o nome à lista. Para remover, retire o nome; para reordenar, mova o item. Não renumere arquivos ou IDs.
-3. Coloque novas imagens em `assets/`. No HTML e no CSS, use `assets/minha-foto.jpg` para imagens próprias ou `../assets/arquivo.jpg` para imagens compartilhadas; a referência parte desta pasta, mesmo nos arquivos de `conteudo/`.
-4. Registre novas fontes, dados e créditos em [fontes.md](fontes.md). Reúna os novos registros de Caio e Diogo para atualizar manualmente o slide final de referências quando necessário. A composição não faz essa atualização editorial.
-5. Execute `../atualizar.cmd` por duplo clique e abra `index.html` desta pasta para conferir a prévia. Abra `../index.html` para verificar a conexão com os outros integrantes.
-6. Devolva a pasta **Edson** completa ao responsável pela composição. Ele reúne as partes e executa a atualização novamente.
+## Composição e verificação
 
-`index.html` é gerado e será sobrescrito. O tema (o `serif` do reveal.js), a configuração e os modelos de slide compartilhados ficam em `../comum/`; combine alterações nesses arquivos com o grupo. Em `estilos.css`, cada seletor deve começar com `.slide[data-autor="Edson"]`.
+Após qualquer alteração nos arquivos de `conteudo/`, execute o compositor na raiz do projeto:
 
-O [guia completo](../README.md) traz exemplos de manifesto e slide, caminhos de recursos, revelação por itens, notas do orador, atalhos, PDF e cuidados com identificadores. Em `../comum/modelos/` há slides prontos para copiar.
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File slides/compor.ps1
+```
