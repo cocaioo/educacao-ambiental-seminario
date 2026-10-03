@@ -18,6 +18,20 @@
   Caminhos de imagens são relativos à pasta Caio, como assets/minha-foto.jpg.
 */
 
+/* Protege todo o título e a ficha da capa, mantendo a paisagem visível. */
+.slide[data-autor="Caio"].capa::before {
+  background: linear-gradient(90deg,
+    rgba(20, 46, 41, .82) 0%,
+    rgba(20, 46, 41, .78) 66%,
+    rgba(20, 46, 41, .28) 82%,
+    transparent 100%);
+}
+
+/* Reserva espaço entre as legendas e os três créditos do slide 02. */
+.slide[data-autor="Caio"]#slide-2 .colunas.tres figure img {
+  height: 238px;
+}
+
 /*
   Ajustes exclusivos da parte de Diogo. Cada seletor deve começar com:
   .slide[data-autor="Diogo"]
@@ -33,6 +47,26 @@
   Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
   Caminhos de imagens são relativos à pasta Edson, como assets/minha-foto.jpg.
 */
+
+/* Créditos maiores, com espaço reservado antes das fontes. */
+.slide[data-autor="Edson"] figcaption,
+.slide[data-autor="Edson"] > .fonte {
+  font-size: 16px;
+}
+
+.slide[data-autor="Edson"] .colunas figure img {
+  max-height: 350px;
+}
+
+/* Aproveita o espaço do pergaminho sem comprimir a bibliografia. */
+.slide[data-autor="Edson"] .refs {
+  font-size: 20px;
+  line-height: 1.32;
+}
+
+.slide[data-autor="Edson"] .refs .url {
+  font-size: 1em;
+}
 
 
 </style>
@@ -422,7 +456,7 @@
 
   <p class="fragment" data-fragment-index="4">Sem gabarito: cada leitura define “resolver” de modo distinto. A partir de Loureiro, cabe perguntar: quem porta qual proposta e com que fim?</p>
 
-  <p class="fonte" style="font-size: 14px; bottom: 100px; left: 82px; right: 82px; max-width: none">Provocação teórica: LOUREIRO (2014, p. 49 apud SOUZA, 2018, p. 66).</p>
+  <p class="fonte" style="font-size: 16px; bottom: 100px; left: 82px; right: 82px; max-width: none">Provocação teórica: LOUREIRO (2014, p. 49 apud SOUZA, 2018, p. 66).</p>
 
   <aside class="notes">
     <p>A página 49 atribuída a Loureiro é reproduzida conforme Souza, p. 66; não foi conferida na obra original. A bibliografia de Souza lista Loureiro (2014) com páginas 13–38, uma inconsistência interna registrada em fontes.md.</p>

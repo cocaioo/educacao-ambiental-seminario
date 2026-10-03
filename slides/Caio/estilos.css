@@ -5,3 +5,17 @@
   Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
   Caminhos de imagens são relativos à pasta Caio, como assets/minha-foto.jpg.
 */
+
+/* Protege todo o título e a ficha da capa, mantendo a paisagem visível. */
+.slide[data-autor="Caio"].capa::before {
+  background: linear-gradient(90deg,
+    rgba(20, 46, 41, .82) 0%,
+    rgba(20, 46, 41, .78) 66%,
+    rgba(20, 46, 41, .28) 82%,
+    transparent 100%);
+}
+
+/* Reserva espaço entre as legendas e os três créditos do slide 02. */
+.slide[data-autor="Caio"]#slide-2 .colunas.tres figure img {
+  height: 238px;
+}

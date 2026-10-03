@@ -5,3 +5,23 @@
   Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
   Caminhos de imagens são relativos à pasta Edson, como assets/minha-foto.jpg.
 */
+
+/* Créditos maiores, com espaço reservado antes das fontes. */
+.slide[data-autor="Edson"] figcaption,
+.slide[data-autor="Edson"] > .fonte {
+  font-size: 16px;
+}
+
+.slide[data-autor="Edson"] .colunas figure img {
+  max-height: 350px;
+}
+
+/* Aproveita o espaço do pergaminho sem comprimir a bibliografia. */
+.slide[data-autor="Edson"] .refs {
+  font-size: 20px;
+  line-height: 1.32;
+}
+
+.slide[data-autor="Edson"] .refs .url {
+  font-size: 1em;
+}
