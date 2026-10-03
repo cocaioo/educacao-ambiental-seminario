@@ -18,24 +18,108 @@
   Caminhos de imagens são relativos à pasta Edson, como assets/minha-foto.jpg.
 */
 
-/* Créditos maiores, com espaço reservado antes das fontes. */
+/* Tipografia de rodapé e legendas */
 .slide[data-autor="Edson"] figcaption,
 .slide[data-autor="Edson"] > .fonte {
-  font-size: 16px;
+  font-size: 14px;
 }
 
-.slide[data-autor="Edson"] .colunas figure img {
-  max-height: 350px;
+/* Slide 11: Quadro comparativo */
+.slide[data-autor="Edson"]#slide-11 table {
+  width: calc(100% - 2 * var(--margem));
+  table-layout: fixed;
+  font-size: 17px;
+  line-height: 1.20;
+  margin-top: 4px;
 }
 
-/* Aproveita o espaço do pergaminho sem comprimir a bibliografia. */
-.slide[data-autor="Edson"] .refs {
-  font-size: 20px;
-  line-height: 1.32;
+.slide[data-autor="Edson"]#slide-11 table thead th {
+  font-size: 19px;
+  padding: .18em .35em .2em 0;
+  border-bottom: 2px solid #9ea570;
 }
 
-.slide[data-autor="Edson"] .refs .url {
-  font-size: 1em;
+.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(1) { width: 18%; }
+.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(2) { width: 27%; }
+.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(3) { width: 27%; }
+.slide[data-autor="Edson"]#slide-11 table thead th:nth-child(4) { width: 28%; }
+
+.slide[data-autor="Edson"]#slide-11 table th,
+.slide[data-autor="Edson"]#slide-11 table td {
+  padding: .20em .35em .20em 0;
+  border-bottom: 1px solid #c7bc94;
+}
+
+.slide[data-autor="Edson"]#slide-11 table th[scope="row"] {
+  font-size: 16.5px;
+  font-weight: 700;
+  padding-right: .4em;
+}
+
+.slide[data-autor="Edson"]#slide-11 table small {
+  display: block;
+  font-size: 13.5px;
+  color: var(--discreto);
+  margin-top: 1px;
+}
+
+/* Slide 12: Síntese */
+.slide[data-autor="Edson"]#slide-12 figure img {
+  max-height: 250px;
+}
+
+.slide[data-autor="Edson"]#slide-12 ul {
+  font-size: 17.5px;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.slide[data-autor="Edson"]#slide-12 li {
+  margin-bottom: 6px;
+}
+
+.slide[data-autor="Edson"]#slide-12 blockquote {
+  font-size: 18px;
+  line-height: 1.25;
+  margin-top: 10px;
+  padding: 6px 12px;
+}
+
+/* Slide 13: Referências em duas colunas */
+.slide[data-autor="Edson"] .colunas-refs {
+  --cols: 1fr 1fr;
+  column-gap: 28px;
+  align-items: start;
+}
+
+.slide[data-autor="Edson"] .colunas-refs .refs-subtitulo {
+  font-size: 18px;
+  margin: 0 0 6px 0;
+  color: var(--r-heading-color);
+}
+
+.slide[data-autor="Edson"] .colunas-refs ul.refs {
+  columns: 1;
+  font-size: 12px;
+  line-height: 1.20;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.slide[data-autor="Edson"] .colunas-refs ul.refs li {
+  margin-bottom: 5px;
+  padding-left: 0.9em;
+  text-indent: -0.9em;
+}
+
+.slide[data-autor="Edson"] .colunas-refs ul.refs.refs-docs li {
+  margin-bottom: 4px;
+  font-size: 11.5px;
+}
+
+.slide[data-autor="Edson"] .colunas-refs .url {
+  font-size: 0.95em;
 }
 
 </style>
@@ -43,59 +127,69 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section class="slide" id="slide-9" data-autor="Edson" aria-label="Slide 1 de 4">
-  <h2>Estudo de caso: o fechamento do Lixão da Estrutural (DF)</h2>
+<section class="slide" id="slide-11" data-autor="Edson" aria-label="Slide 1 de 3">
+  <h2>Quadro comparativo</h2>
 
-  <div class="colunas texto-foto">
-    <ol>
-      <li class="fragment" data-fragment-index="1"><strong class="cons">Preservação:</strong> depósito por quase seis décadas, vizinho ao Parque Nacional; contaminação freática crítica.</li>
-      <li class="fragment" data-fragment-index="2"><strong class="prag">Resultados:</strong> encerramento do depósito; resíduos domiciliares destinados ao Aterro Sanitário de Brasília.</li>
-      <li class="fragment" data-fragment-index="3"><strong class="crit">Justiça social:</strong> Plano de Transição identificou 2.816 pessoas autodeclaradas catadoras na área.</li>
-    </ol>
+  <table>
+    <caption class="so-leitor">Quadro comparativo entre as macrotendências conservacionista, pragmática e crítica segundo contexto de emergência, diagnóstico, quem age, objetivo, público e correspondências teóricas.</caption>
+    <thead>
+      <tr>
+        <th scope="col">Critério</th>
+        <th scope="col" class="cons">Conservacionista</th>
+        <th scope="col" class="prag">Pragmática</th>
+        <th scope="col" class="crit">Crítica</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="fragment" data-fragment-index="1">
+        <th scope="row">Contexto de emergência</th>
+        <td>Ditadura e ecologia como base <small>(L&amp;L 14:27)</small></td>
+        <td>Neoliberalismo e desenv. sustentável <small>(p. 29–31)</small></td>
+        <td>Redemocratização e mov. sociais <small>(p. 33)</small></td>
+      </tr>
+      <tr class="fragment" data-fragment-index="2">
+        <th scope="row">Diagnóstico</th>
+        <td>Destruição da natureza <small>(L&amp;L 14:27)</small></td>
+        <td>Desperdício e resíduos <small>(p. 29)</small></td>
+        <td>Relações sociais desiguais <small>(p. 29)</small></td>
+      </tr>
+      <tr class="fragment" data-fragment-index="3">
+        <th scope="row">Quem age</th>
+        <td>Indivíduo sensibilizado <small>(L&amp;L 14:27)</small></td>
+        <td>Consumidor e empresas <small>(p. 31)</small></td>
+        <td>Coletivos e grupos de pressão <small>(PELICIONI 7; SOUZA 67)</small></td>
+      </tr>
+      <tr class="fragment" data-fragment-index="4">
+        <th scope="row">Objetivo</th>
+        <td>Amar e cuidar <small>(L&amp;L 14:27; S&amp;T 248)</small></td>
+        <td>Mudar setores sem ruptura <small>(S&amp;T 248–249)</small></td>
+        <td>Nova sociedade <small>(S&amp;T 248–249)</small></td>
+      </tr>
+      <tr class="fragment" data-fragment-index="5">
+        <th scope="row">Público</th>
+        <td>Crianças, UCs <small>(LAYRARGUES apud S&amp;T 245)</small></td>
+        <td>Mídia, empresas, escolas <small>(S&amp;T 246)</small></td>
+        <td>Adultos, ONGs, pós-graduação <small>(S&amp;T 248)</small></td>
+      </tr>
+      <tr class="fragment" data-fragment-index="6">
+        <th scope="row">Correspondências</th>
+        <td>Natural / Culto ao silvestre <small>(apud L&amp;L 14:34)</small></td>
+        <td>Racional / Ecoeficiência <small>(apud L&amp;L 14:34)</small></td>
+        <td>Histórica / Ecologismo dos pobres <small>(apud L&amp;L 14:34)</small></td>
+      </tr>
+    </tbody>
+  </table>
 
-    <figure>
-      <img src="../assets/estrutural.jpg" style="aspect-ratio: 4 / 3; object-position: center 48%"
-        alt="Catadoras e catadores de materiais recicláveis, com sacos nas costas, caminham sobre uma extensa camada de lixo a céu aberto, em contraluz de fim de tarde.">
-      <figcaption>Lixão da Estrutural (DF) em junho de 2017, antes do encerramento. Foto: Leopoldo Silva / Agência Senado — Wikimedia Commons (CC BY 2.0)</figcaption>
-    </figure>
-  </div>
-
-  <p class="fonte">Fatos: Decreto DF 38.402/2017, Anexo III (2.816 pessoas); SLU-DF (20 jan. 2018); Sema-DF; ADASA (2024). Lentes do grupo: LAYRARGUES &amp; LIMA (2014, p. 30–31); PELICIONI &amp; PHILIPPI JR. (2014, p. 4, 8); SOUZA (2018, p. 68).</p>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 27, 29–34); SANTOS &amp; TOSCHI (2015, p. 245–249); PELICIONI &amp; PHILIPPI JR. (2014, p. 7); SOUZA (2018, p. 67). Tipos ideais que coexistem sem hierarquia.</p>
 
   <aside class="notes">
-    <p>Analisamos o fechamento do Lixão da Estrutural como estudo de caso empírico aplicado pelo grupo, pois os autores investigados não examinaram esse território. Três lentes teóricas iluminam diferentes dimensões do mesmo conflito:</p>
-    <p>Pela lente conservacionista (Pelicioni &amp; Philippi Jr., 2014, p. 4; Layrargues &amp; Lima, 2014, p. 30), a prioridade é o passivo ecológico de quase seis décadas e a contaminação freática vizinha ao Parque Nacional.</p>
-    <p>Pela lente pragmática (Layrargues &amp; Lima, 2014, p. 31; Santos &amp; Toschi, 2015, p. 246), a prioridade é a solução técnico-operacional: encerramento em 2018 e destinação ao aterro sanitário.</p>
-    <p>Pela lente crítica (Pelicioni &amp; Philippi Jr., 2014, p. 8; Souza, 2018, p. 68), a prioridade são as 2.816 pessoas autodeclaradas catadoras identificadas em 2017, exigindo levar em conta os interesses de classes historicamente excluídas e a justiça socioambiental. Uma prática real pode sobrepor essas três dimensões.</p>
+    <p>Este quadro sintetiza a comparação entre as macrotendências compreendidas como tipos ideais weberianos com fins analíticos e didáticos (Layrargues &amp; Lima, 2014, p. 34; 2011, p. 1, 12). A ordem das colunas é puramente expositiva: as vertentes coexistem e disputam sentidos hoje, sem formar etapas históricas sucessivas ou hierarquia moral; cada macrotendência reúne posições mais ou menos próximas do tipo ideal em um eixo conservação–transformação não binário (Layrargues &amp; Lima, 2014, p. 25, 30).</p>
+    <p>Observamos que conservacionismo e pragmatismo compartilham uma linhagem comportamentalista voltada ao indivíduo (Layrargues &amp; Lima, 2014, p. 32; Santos &amp; Toschi, 2015, p. 249), enquanto a crítica fundamenta-se em matriz emancipatória distinta (Guimarães, 2004 apud Santos &amp; Toschi, 2015, p. 247). As correspondências mapeiam Tozoni-Reis (natural, racional e histórica) e Martínez-Alier (culto ao silvestre, evangelho da ecoeficiência e ecologismo dos pobres), ambas citadas apud Layrargues e Lima (2014, p. 34). A gestão ambiental integra a crítica quando concebida sob a dimensão política (Quintas &amp; Gualda, 1995 apud Layrargues &amp; Lima, 2014, p. 35 n. iii). Passemos agora à síntese final.</p>
   </aside>
 </section>
 
 
-<section class="slide debate" id="slide-10" data-background-color="#132D29" data-background-image="../assets/aventura-floresta.png" data-background-opacity="0.18" data-autor="Edson" aria-label="Slide 2 de 4">
-  <h2 class="grande">Fechar o lixão e transferir resíduos resolve o problema?</h2>
-
-  <ol class="guias">
-    <li class="fragment" data-fragment-index="1">Qual é o problema principal?</li>
-    <li class="fragment" data-fragment-index="2">Quem precisa agir?</li>
-    <li class="fragment" data-fragment-index="3">Como saberíamos que a solução foi suficiente?</li>
-  </ol>
-
-  <p class="fragment" data-fragment-index="4">Sem gabarito: cada leitura define “resolver” de modo distinto. A partir de Loureiro, cabe perguntar: quem porta qual proposta e com que fim?</p>
-
-  <p class="fonte" style="font-size: 16px; bottom: 100px; left: 82px; right: 82px; max-width: none">Provocação teórica: LOUREIRO (2014, p. 49 apud SOUZA, 2018, p. 66).</p>
-
-  <aside class="notes">
-    <p>A página 49 atribuída a Loureiro é reproduzida conforme Souza, p. 66; não foi conferida na obra original. A bibliografia de Souza lista Loureiro (2014) com páginas 13–38, uma inconsistência interna registrada em fontes.md.</p>
-    <p>Roteiro de mediação do debate (8–10 min). Abrir com a pergunta central sem antecipar resposta: não há gabarito.</p>
-    <p>Convidar a turma a responder às três perguntas-guia e contrapor as lentes com neutralidade:</p>
-    <p>1. Se a turma focar na conservação da natureza: ela valoriza a dimensão afetiva e relativiza o antropocentrismo, mas as mudanças culturais dificilmente se concretizam sem transformar as bases econômicas e políticas (Layrargues &amp; Lima, 2014, p. 30). Pelicioni e Philippi Jr. (2014, p. 6) afirmam que “consciência ecológica sem ação transformadora ajuda a manter a sociedade tal qual ela se encontra”. Perguntar: o que muda no caso da Estrutural?</p>
-    <p>2. Se a turma focar na técnica e na reciclagem: ela busca ações factíveis (Layrargues &amp; Lima, 2014, p. 32), mas pode atuar como mecanismo de compensação do sistema de consumo (p. 31). Para Pelicioni e Philippi Jr. (2014, p. 8), a ênfase na responsabilidade individual desloca a discussão das causas e escamoteia o modelo de consumo e as relações de poder.</p>
-    <p>3. Se a turma focar na justiça socioambiental: os resíduos teriam caráter crítico se articulados a análises sociais, econômicas e políticas (Santos &amp; Toschi, 2015, p. 246); em contrapartida, a vertente crítica está quase restrita à pós-graduação e pouco presente no universo infantil (p. 248). Perguntar, a partir de Loureiro (2014, apud Souza, 2018, p. 66, sobre desenvolvimento sustentável): quem porta qual proposta e com que fim?</p>
-  </aside>
-</section>
-
-
-<section class="slide" id="slide-11" data-autor="Edson" aria-label="Slide 3 de 4">
+<section class="slide" id="slide-12" data-autor="Edson" aria-label="Slide 2 de 3">
   <h2>Toda prática ambiental educa para algum projeto de sociedade</h2>
 
   <div class="colunas foto-texto">
@@ -107,46 +201,72 @@
 
     <div>
       <ul>
-        <li><strong class="cons">Conservacionista:</strong> valoriza o afeto; tende a não questionar a estrutura social.</li>
-        <li><strong class="prag">Pragmática:</strong> busca ações factíveis, mas pode compensar o consumismo.</li>
-        <li><strong class="crit">Crítica:</strong> problematiza poder e desigualdade; é pouco presente no universo infantil.</li>
-        <li>Santos e Toschi apontam que as vertentes se diferenciam sobretudo por seus objetivos.</li>
+        <li>Vertentes diferenciam-se por seus <strong>objetivos</strong> e projetos de sociedade (S&amp;T, p. 248); o contexto explica a emergência, não a hierarquia.</li>
+        <li>Classificar traz riscos, mas os ganhos conceituais e a autonomia do educador se sobrepõem (L&amp;L, 2011, p. 13; 2014, p. 24).</li>
+        <li>Desvelamento crítico <em>“não opera por si só, a mudança da realidade”</em> (Freire 1992 apud PELICIONI, p. 9): exige ação organizada.</li>
+        <li>Três passos: problematizar a realidade, avaliar o currículo e atuar em conselhos e fóruns (LOUREIRO apud S&amp;T, p. 249).</li>
       </ul>
-      <blockquote class="fragment" data-fragment-index="1">Reconhecer as vertentes ajuda a tornar conscientes as escolhas presentes em toda prática de Educação Ambiental.</blockquote>
+      <blockquote class="fragment" data-fragment-index="1">“Todo projeto de EA busca a mesma transformação?” — Não: cada vertente educa para um projeto distinto de sociedade.</blockquote>
     </div>
   </div>
 
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 24, 30–32; 2011, p. 13); SANTOS &amp; TOSCHI (2015, p. 248); PELICIONI &amp; PHILIPPI JR. (2014, p. 4, 6); SOUZA (2018, p. 67–68).</p>
+  <p class="fonte">Fontes: SANTOS &amp; TOSCHI (2015, p. 248–249); LAYRARGUES &amp; LIMA (2014, p. 24; 2011, p. 13); FREIRE (1992 apud PELICIONI &amp; PHILIPPI JR., 2014, p. 9); LOUREIRO (2007 apud SANTOS &amp; TOSCHI, 2015, p. 249).</p>
 
   <aside class="notes">
-    <p>Concluímos o seminário sintetizando que nenhuma prática educativa é neutra. Conforme Layrargues e Lima (2014, p. 23–25; 2011, p. 2–3), a partir de Bourdieu, a Educação Ambiental constitui um campo social concorrencial onde diferentes grupos disputam legitimidade e projetos de sociedade.</p>
-    <p>A síntese exige reconhecer alcances e limites de cada macrotendência, sem ordená-las: a conservacionista valoriza a dimensão afetiva e relativiza o antropocentrismo (L&amp;L, p. 30), mas as mudanças culturais dificilmente se concretizam sem transformar as bases econômicas e políticas (p. 30); a pragmática busca ações factíveis (p. 32), mas age como mecanismo de compensação do consumismo, deixando à margem a distribuição desigual dos custos (p. 31); e a crítica problematiza o poder e a injustiça ambiental (S&amp;T, p. 248), mas é pouco presente no universo infantil e quase restrita à pós-graduação (p. 248). Setores do pensamento crítico reconhecem ainda que reducionismos, inclusive sociologismos e politicismos, são empobrecedores (L&amp;L, p. 33).</p>
-    <p>Pelicioni e Philippi Jr. (2014, p. 4, 6) lembram que o conservacionismo pioneiro tinha foco no manejo de recursos e que consciência ecológica sem ação transformadora mantém a sociedade como está. Souza (2018, p. 67–68), apoiado em Gadotti (2000 apud Souza, 2018, p. 67), defende soluções simultâneas para problemas ambientais e sociais e destaca a contribuição do Popular na historicidade e na luta por justiça socioambiental.</p>
-    <p>Classificar tem riscos de simplificação (L&amp;L, 2011, p. 6), mas os benefícios analíticos e políticos superam as perdas (2011, p. 13) e a diferenciação oferece uma visão cartográfica que dá mais autonomia ao educador (2014, p. 24; 2011, p. 3).</p>
+    <p>Concluímos o seminário sintetizando que não existe prática educativa neutra: toda ação em Educação Ambiental responde a um projeto implícito ou explícito de sociedade. Conforme Santos e Toschi (2015, p. 248), as macrotendências diferenciam-se primordialmente por seus objetivos e pelo alcance pretendido da transformação.</p>
+    <p>Compreender o contexto histórico de emergência de cada vertente não visa classificá-las em um ranking evolutivo ou moral, mas situar as forças sociopolíticas que as impulsionaram (Layrargues &amp; Lima, 2014, p. 34).</p>
+    <p>Embora classificar envolva riscos de redução e rigidez esquemática (Layrargues &amp; Lima, 2011, p. 6), seus benefícios políticos e didáticos superam as limitações (2011, p. 13), pois conferem ao educador uma cartografia crítica e maior autonomia de escolha pedagógica (2014, p. 24).</p>
+    <p>Contudo, como lembrava Paulo Freire (1992 apud Pelicioni &amp; Philippi Jr., 2014, p. 9), a tomada de consciência ou o desvelamento crítico da opressão não transformam a realidade por si sós; demandam ação organizada e práxis concreta.</p>
+    <p>Para materializar essa postura, Loureiro (2007 apud Santos &amp; Toschi, 2015, p. 249) propõe três passos práticos para os educadores ambientais: 1) problematizar permanentemente as situações do cotidiano; 2) realizar a avaliação e intervenção crítica nos currículos escolares e programas formativos; e 3) ocupar ativamente fóruns da sociedade civil e conselhos deliberativos de políticas públicas.</p>
+    <p>Retornamos, assim, à pergunta formulada na capa deste seminário: “Todo projeto de EA busca a mesma transformação?” A constatação final é que não. Cada vertente constrói respostas distintas para o dilema socioambiental contemporâneo, e reconhecer essas matrizes é o primeiro passo para uma prática consciente, consequente e transformadora.</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-12" data-autor="Edson" aria-label="Slide 4 de 4">
+<section class="slide" id="slide-13" data-autor="Edson" aria-label="Slide 3 de 3">
   <h2>Referências</h2>
 
-  <ul class="refs">
-    <li><b>LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.</b> Mapeando as macro-tendências político-pedagógicas da educação ambiental contemporânea no Brasil. In: <i>VI Encontro Pesquisa em Educação Ambiental (VI EPEA)</i>, Ribeirão Preto, 2011. p. 1–15.</li>
+  <div class="colunas colunas-refs">
+    <div>
+      <h3 class="refs-subtitulo">Bibliografia validada</h3>
+      <ul class="refs">
+        <li><b>LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.</b> Mapeando as macro-tendências político-pedagógicas da educação ambiental contemporânea no Brasil. In: <i>VI Encontro Pesquisa em Educação Ambiental (VI EPEA)</i>, Ribeirão Preto, 2011. 15 p.</li>
 
-    <li><b>LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.</b> As macrotendências político-pedagógicas da educação ambiental brasileira. <i>Ambiente &amp; Sociedade</i>, São Paulo, v. XVII, n. 1, p. 23–40, jan./mar. 2014. <span class="url">doi.org/10.1590/1809-44220003500</span></li>
+        <li><b>LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.</b> As macrotendências político-pedagógicas da educação ambiental brasileira. <i>Ambiente &amp; Sociedade</i>, São Paulo, v. 17, n. 1, p. 23–40, jan./mar. 2014. <span class="url">DOI: 10.1590/1809-44220003500</span></li>
 
-    <li><b>PELICIONI, Maria Cecília Focesi; PHILIPPI JR., Arlindo.</b> Bases políticas, conceituais, filosóficas e ideológicas da educação ambiental. In: PHILIPPI JR., A.; PELICIONI, M. C. F. (org.). <i>Educação ambiental e sustentabilidade</i>. 2. ed. Barueri: Manole, 2014. p. 3–12.</li>
+        <li><b>PELICIONI, Maria Cecília Focesi; PHILIPPI JR., Arlindo.</b> Bases políticas, conceituais, filosóficas e ideológicas da educação ambiental. In: PHILIPPI JR., A.; PELICIONI, M. C. F. (ed.). <i>Educação ambiental e sustentabilidade</i>. 2. ed. Barueri: Manole, 2014. cap. 1, p. 3–12.</li>
 
-    <li><b>SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra.</b> Vertentes da Educação Ambiental: da conservacionista à crítica. <i>Fronteiras: Journal of Social, Technological and Environmental Science</i>, v. 4, n. 2 (ed. especial), p. 241–250, jul./dez. 2015. <span class="url">revistas.unievangelica.edu.br/index.php/fronteiras</span></li>
+        <li><b>SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra.</b> Vertentes da educação ambiental: da conservacionista à crítica. <i>Fronteiras: Journal of Social, Technological and Environmental Science</i>, v. 4, n. 2, p. 241–250, jul./dez. 2015. <span class="url">DOI: 10.21664/2238-8869.2015v4i2.p241-250</span></li>
 
-    <li><b>SOUZA, Tiago Zanquêta de.</b> A educação ambiental popular: contribuições em práticas sociais. <i>Motricidades: Rev. SPQMH</i>, v. 2, n. 1, p. 60–70, jan./abr. 2018. <span class="url">doi.org/10.29181/2594-6463.2018.v2.n1.p60-70</span></li>
+        <li><b>SOUZA, Tiago Zanquêta de.</b> A educação ambiental popular: contribuições em práticas sociais. <i>Motricidades: Rev. SPQMH</i>, v. 2, n. 1, p. 60–70, jan./abr. 2018. <span class="url">DOI: 10.29181/2594-6463.2018.v2.n1.p60-70</span></li>
+      </ul>
+    </div>
 
-  </ul>
+    <div>
+      <h3 class="refs-subtitulo">Documentos oficiais</h3>
+      <ul class="refs refs-docs">
+        <li><b>ONU.</b> Declaração de Estocolmo sobre Meio Ambiente Humano, 1972.</li>
+        <li><b>BRASIL.</b> Decreto nº 73.030, de 30 out. 1973 (cria a SEMA).</li>
+        <li><b>UNESCO.</b> Conferência de Tbilisi: relatório final. Paris, 1978.</li>
+        <li><b>BRASIL. MEC.</b> Cronologia oficial (MEC/CETESB 1979; Port. 2.421/91; PRONEA 1994).</li>
+        <li><b>BRASIL.</b> Lei nº 6.938, de 31 ago. 1981 (PNMA).</li>
+        <li><b>ONU.</b> Nosso Futuro Comum (Relatório Brundtland). Doc. A/42/427, 1987.</li>
+        <li><b>BRASIL.</b> Constituição Federal de 1988, art. 225, § 1º, VI.</li>
+        <li><b>BRASIL.</b> Lei nº 8.031, de 12 abr. 1990 (PND; rev. Lei 9.491/1997).</li>
+        <li><b>ONU.</b> Conferência Rio-92 e Agenda 21 (cap. 4 e 36). Rio de Janeiro, 1992.</li>
+        <li><b>TRATADO</b> de EA para Sociedades Sustentáveis. Fórum Global, Rio, 1992.</li>
+        <li><b>BRASIL.</b> Lei nº 9.795, de 27 abr. 1999 (PNEA).</li>
+        <li><b>ONU.</b> Resolução A/RES/57/254, 2002 (Década da EDS 2005-2014).</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="fonte">Autores clássicos citados no seminário figuram como <i>apud</i> nas obras da bibliografia.</p>
 
   <aside class="notes">
-    <p>Apresentamos as referências bibliográficas do seminário. O alicerce teórico estrutura-se nos trabalhos de Layrargues e Lima (2011, 2014), no capítulo de Pelicioni e Philippi Jr. (2014), na pesquisa de Santos e Toschi (2015) em Fronteiras e na contribuição de Souza (2018) sobre a Educação Ambiental Popular como corrente da macrotendência crítica.</p>
-    <p>Ressalvamos que o subtítulo de Santos e Toschi, “da conservacionista à crítica”, não deve ser lido como etapas nem como hierarquia moral: Layrargues e Lima (2014, p. 34) tratam as macrotendências como tipos ideais que convivem e disputam a hegemonia do campo.</p>
-    <p>Dados, documentos e fotos têm a fonte indicada no rodapé de cada slide. Encerramos aqui nossa apresentação.</p>
+    <p>Apresentamos o quadro referencial completo do seminário, organizado em duas colunas: a bibliografia teórica examinada diretamente e o conjunto de marcos documentais e dados oficiais.</p>
+    <p>A bibliografia apoia-se em cinco obras centrais: Layrargues e Lima (2011, 2014), Pelicioni e Philippi Jr. (2. ed. 2014), Santos e Toschi (2015, DOI registrado) e Souza (2018). Todos os autores clássicos mobilizados durante os slides — como Bourdieu, Lima, Brügger, Capra, Sorrentino, Sauvé, Tozoni-Reis, Martínez-Alier, Acselrad, Dias, Reigota, Guimarães, Tristão, Loureiro, Freire, Mello e Souza, Peralta e Ruiz, Ruiz, Barbosa e Carvalho — figuram rigorosamente na modalidade apud, conforme constam nas cinco obras analisadas, cujos volumes originais não foram consultados diretamente.</p>
+    <p>Na coluna de documentos oficiais, foram consolidados os diplomas legais, conferências internacionais que subsidiaram a contextualização histórica de cada vertente. Agradecemos a atenção de todos e abrimos para perguntas.</p>
   </aside>
 </section>
 
