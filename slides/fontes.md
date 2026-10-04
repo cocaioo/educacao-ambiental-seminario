@@ -1,6 +1,6 @@
 # Fontes, créditos e condições de uso
 
-Apresentação **Vertentes da Educação Ambiental — macrotendências político-pedagógicas** (`index.html`, 13 slides).
+Apresentação **Vertentes da Educação Ambiental — macrotendências político-pedagógicas** (`index.html`, 12 slides).
 Páginas consultadas em **11 de setembro de 2026**; bibliografia e documentos oficiais revisados em **3 de outubro de 2026**.
 
 ---
@@ -62,7 +62,7 @@ enquadramento CSS (`object-fit: cover`), o que constitui adaptação para efeito
 | 7 | `assets/pragmatica.jpg` | Usina de reciclagem, Hortolândia (SP) — 30 maio 2012 | Ana Perugini | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar autora e licença |
 | 9 | `assets/critica.jpg` | ETA Gramame-Mamuaba, Conde (PB) — 4 jul. 2022 | Marcos Elias de Oliveira Júnior | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) | Domínio público; crédito mantido por boa prática acadêmica, não por exigência |
 | Não usada | `assets/estrutural.jpg` | Lixão da Estrutural (SCIA/DF) — 22 jun. 2017, antes do encerramento | Leopoldo Silva / Agência Senado | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | Creditar fotógrafo e agência |
-| 11 | `assets/sintese.jpg` | Parque Vaca Brava, Setor Bueno, Goiânia (GO) — 27 ago. 2023 | Fronteira (Wikimedia Commons) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; compartilhamento pela mesma licença |
+| Não usada | `assets/sintese.jpg` | Parque Vaca Brava, Setor Bueno, Goiânia (GO) — 27 ago. 2023 | Fronteira (Wikimedia Commons) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | Creditar autor e licença; compartilhamento pela mesma licença |
 
 ### Páginas de origem no Commons
 
