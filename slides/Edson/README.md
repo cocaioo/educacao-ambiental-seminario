@@ -4,7 +4,7 @@
 
 O bloco de Edson encerra o seminário com os slides **11 e 12** (tempo estimado: ≈ 1 min):
 - **Slide 11 (`11-referencias.html`):** Referências em duas colunas: as 5 obras teóricas validadas na bibliografia e a relação consolidada de documentos oficiais e fontes de dados.
-- **Slide 12 (`12-final.html`):** Encerramento animado: slimes nas cores das vertentes, flores, vagalumes e os três integrantes acenando; animações em comum/tema.css, desligadas no PDF e com movimento reduzido.
+- **Slide 12 (`12-final.html`):** Encerramento animado: os três integrantes acenando no centro, ladeados por dois lobos e duas flores, com dois pássaros e vaga-lumes; animações em comum/tema.css, desligadas no PDF e com movimento reduzido.
 
 Edson recebe a fala de **Diogo** após o slide 10 ("Coexistência, não sucessão: as três no tempo") e conduz as referências e o encerramento.
 
