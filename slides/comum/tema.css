@@ -289,237 +289,84 @@
 .reveal .slide-number-pdf { color: #e5edbc; background: #243c2b; font-family: var(--r-heading-font); }
 
 /* Encerramento: cena em pixel art animada só enquanto o slide está visível.
-   O estado sem animação já é a cena completa, para o PDF e para quem pede menos movimento. */
-.reveal section.final { text-align: center; color: #fff5d7; }
+   O estado sem animação já é a cena completa, para o PDF e para quem pede menos movimento.
+   Composição: título no alto e o grupo no centro do chão, emoldurado por lobos e flores.
+   Todos os sprites usam a mesma escala (1 pixel do desenho = 4 px na tela) e contorno escuro.
+   A cena entra uma vez; depois só ficam o aceno, os vaga-lumes e uma revoada ocasional. */
+.reveal section.final { text-align: center; color: #fff5d7; --px: 5px; --contorno: #24301f; }
 .reveal section.final::before { inset: 0; border: 0; box-shadow: none; clip-path: none; background: radial-gradient(ellipse 62% 48% at 50% 30%, #102a20d9 0, #12302494 55%, transparent 100%); }
-.reveal section.final .fim-titulo { max-width: none; font-size: 78px; line-height: 1.05; margin: 170px var(--margem) 0; color: #fff2bd; text-shadow: 5px 5px 0 #183728; }
+.reveal section.final .fim-titulo { max-width: none; font-size: 78px; line-height: 1.05; margin: 140px var(--margem) 0; color: #fff2bd; text-shadow: 5px 5px 0 #183728; }
 .reveal section.final .fim-titulo span { display: inline-block; }
 .reveal section.final .fim-cena { position: absolute; inset: 0; margin: 0; pointer-events: none; }
-.reveal section.final .vagalume { position: absolute; left: var(--x); top: var(--y); width: 8px; height: 8px; background: #fbf5a6; box-shadow: 0 0 10px 4px #fbf5a6aa; }
-.reveal section.final .fim-turma { position: absolute; left: 36%; bottom: 40px; transform: translateX(-50%); display: flex; align-items: flex-end; gap: 30px; }
-.reveal section.final .slime { position: relative; width: 96px; transform-origin: 50% 100%; }
-.reveal section.final .slime svg { display: block; width: 96px; height: 84px; }
-.reveal section.final .slime.cons { color: #7fc06a; }
-.reveal section.final .slime.prag { color: #e8b44f; }
-.reveal section.final .slime.crit { color: #e0795e; }
-.reveal section.final .slime .coracao { position: absolute; left: 50%; top: -34px; width: 28px; height: 24px; transform: translateX(-50%); }
-.reveal section.final .broto { display: flex; flex-direction: column-reverse; align-items: center; transform-origin: 50% 100%; }
-.reveal section.final .caule { position: relative; width: 6px; height: 54px; background: #4d8a3a; transform-origin: 50% 100%; }
-.reveal section.final .caule::before, .reveal section.final .caule::after { content: ""; position: absolute; width: 12px; height: 6px; background: #6dbb4a; top: 22px; }
-.reveal section.final .caule::before { right: 6px; }
-.reveal section.final .caule::after { left: 6px; top: 32px; }
-.reveal section.final .broto-2 .caule { height: 40px; }
-.reveal section.final .flor { display: block; width: 42px; height: 42px; }
-.reveal section.final .fim-grupo { position: absolute; right: 56px; bottom: 40px; display: flex; align-items: flex-end; gap: 14px; }
-.reveal section.final .pessoa { position: relative; width: 110px; transform-origin: 50% 100%; }
-.reveal section.final .pessoa svg { display: block; width: 110px; filter: drop-shadow(3px 0 0 #fbf4de) drop-shadow(-3px 0 0 #fbf4de) drop-shadow(0 -3px 0 #fbf4de) drop-shadow(4px 4px 0 #183728); }
+
+/* Palco: uma única linha simétrica, centralizada sobre o chão. */
+.reveal section.final .fim-palco { position: absolute; left: 50%; bottom: 40px; transform: translateX(-50%); display: flex; align-items: flex-end; gap: 22px; }
+.reveal section.final .fim-grupo { display: flex; align-items: flex-end; gap: 18px; margin: 0 6px; }
+.reveal section.final .pessoa { position: relative; width: calc(22 * var(--px)); transform-origin: 50% 100%; }
+.reveal section.final .pessoa svg { display: block; width: 100%; filter: drop-shadow(var(--px) 0 0 var(--contorno)) drop-shadow(calc(-1 * var(--px)) 0 0 var(--contorno)) drop-shadow(0 calc(-1 * var(--px)) 0 var(--contorno)); }
 .reveal section.final .pessoa .braco { transform-box: view-box; transform-origin: 15px 13px; }
-.reveal section.final .pessoa .nome { margin: 0 0 6px; font-family: var(--r-heading-font); font-size: 18px; color: #fff2bd; text-shadow: 2px 2px 0 #183728; }
+.reveal section.final .pessoa .nome { margin: 0 0 6px; font-family: var(--r-heading-font); font-size: 22px; color: #fff2bd; text-shadow: 3px 3px 0 #183728; }
 
-.reveal section.final.present .fim-titulo span { animation: fim-cai .7s steps(7) calc(var(--i) * 90ms) both, fim-flutua 1.6s steps(4) calc(1s + var(--i) * 120ms) infinite; }
-.reveal section.final.present .slime { animation: fim-pulo 1.3s var(--d) infinite; }
-.reveal section.final.present .slime .coracao { animation: fim-coracao 2.6s steps(10) 1.5s infinite both; }
-.reveal section.final.present .caule { animation: fim-cresce .8s steps(8) .9s both; }
-.reveal section.final.present .flor { animation: fim-abre .6s steps(6) 1.7s both; }
-.reveal section.final.present .broto { animation: fim-balanca 2.2s steps(4) 2.4s infinite; }
-.reveal section.final.present .vagalume { animation: fim-pisca 3s steps(6) var(--d) infinite; }
-.reveal section.final.present .pessoa { animation: fim-surge .6s steps(6) calc(.4s + var(--d)) both, fim-flutua 1.8s steps(3) calc(1.2s + var(--d)) infinite; }
-.reveal section.final.present .pessoa .braco { animation: fim-aceno .9s steps(3) calc(.8s + var(--d)) infinite; }
+/* Flores: moldura nas cores das flores do próprio cenário. */
+.reveal section.final .broto { display: flex; flex-direction: column-reverse; align-items: center; transform-origin: 50% 100%; filter: drop-shadow(var(--px) 0 0 var(--contorno)) drop-shadow(calc(-1 * var(--px)) 0 0 var(--contorno)) drop-shadow(0 calc(-1 * var(--px)) 0 var(--contorno)); }
+.reveal section.final .caule { position: relative; width: var(--px); height: calc(14 * var(--px)); background: #4d8a3a; transform-origin: 50% 100%; }
+.reveal section.final .caule::before, .reveal section.final .caule::after { content: ""; position: absolute; width: calc(2 * var(--px)); height: var(--px); background: #6dbb4a; }
+.reveal section.final .caule::before { right: var(--px); top: calc(5 * var(--px)); }
+.reveal section.final .caule::after { left: var(--px); top: calc(8 * var(--px)); }
+.reveal section.final .flor { display: block; width: calc(7 * var(--px)); height: calc(7 * var(--px)); }
 
-@keyframes fim-cai { 0% { transform: translateY(-140px); opacity: 0; } 60% { transform: translateY(12px); opacity: 1; } 80% { transform: translateY(-6px); } 100% { transform: none; opacity: 1; } }
-@keyframes fim-flutua { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-@keyframes fim-surge { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-@keyframes fim-pulo { 0%, 100% { transform: translateY(0) scale(1.14, .86); } 15% { transform: translateY(0) scale(1, 1); } 45% { transform: translateY(-48px) scale(.9, 1.1); } 75% { transform: translateY(0) scale(1, 1); } 85% { transform: translateY(0) scale(1.14, .86); } }
-@keyframes fim-coracao { 0% { transform: translate(-50%, 0) scale(.4); opacity: 0; } 15% { transform: translate(-50%, -10px) scale(1); opacity: 1; } 100% { transform: translate(-50%, -96px) scale(1); opacity: 0; } }
-@keyframes fim-cresce { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-@keyframes fim-abre { 0% { transform: scale(0) rotate(-90deg); } 70% { transform: scale(1.3) rotate(10deg); } 100% { transform: none; } }
-@keyframes fim-balanca { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
-@keyframes fim-pisca { 0%, 100% { opacity: .15; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(12px, -16px); } }
-@keyframes fim-aceno { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(22deg); } }
+/* Vaga-lumes: poucos, junto à mata e ao chão. */
+.reveal section.final .vagalume { position: absolute; left: var(--x); top: var(--y); width: calc(1.5 * var(--px)); height: calc(1.5 * var(--px)); background: #fbf5a6; box-shadow: 0 0 12px 5px #fbf5a6aa; }
 
-/* Encerramento: passaros */
-/* Pássaros voando no céu do encerramento */
-.reveal section.final .passaro { position: absolute; width: 36px; height: 30px; pointer-events: none; }
-.reveal section.final .passaro-svg { display: block; width: 36px; height: 30px; }
-.reveal section.final .passaro-azul { color: #6aa9e0; }
-.reveal section.final .passaro-amarelo { color: #f2c84b; }
-.reveal section.final .passaro-rosa { color: #e98aa8; }
-.reveal section.final .passaro-verde { color: #7bc99a; }
-
-.reveal section.final .passaro-1 { top: 7%; left: 180px; }
-.reveal section.final .passaro-2 { top: 12%; left: 998px; }
-.reveal section.final .passaro-3 { top: 44%; left: 282px; }
-.reveal section.final .passaro-4 { top: 51%; left: 1050px; }
-
+/* Pássaros: dois, em tons do cenário, voando juntos no alto. */
+.reveal section.final .revoada { position: absolute; left: 700px; top: 34px; width: 120px; height: 70px; }
+.reveal section.final .passaro { position: absolute; width: calc(12 * var(--px)); height: calc(10 * var(--px)); }
+.reveal section.final .passaro-1 { left: 56px; top: 0; }
+.reveal section.final .passaro-2 { left: 0; top: 26px; }
+.reveal section.final .passaro-svg { display: block; width: 100%; height: 100%; }
+.reveal section.final .passaro-dourado { color: #e9b949; }
+.reveal section.final .passaro-creme { color: #f1dfae; }
 .reveal section.final .passaro-asa-cima { opacity: 1; }
 .reveal section.final .passaro-asa-baixo { opacity: 0; }
 
-.reveal section.final.present .passaro-1 { animation: passaro-voo-1 11s steps(110) -2s infinite; }
-.reveal section.final.present .passaro-2 { animation: passaro-voo-2 14s steps(140) -5.5s infinite; }
-.reveal section.final.present .passaro-3 { animation: passaro-voo-3 10s steps(100) -2.5s infinite; }
-.reveal section.final.present .passaro-4 { animation: passaro-voo-4 15s steps(150) -8s infinite; }
+/* Lobos: um de cada lado do grupo, sentados e espelhados. */
+.reveal section.final .lobo { position: relative; width: calc(18 * var(--px)); height: calc(18 * var(--px)); }
+.reveal section.final .lobo-sprite { display: block; width: 100%; height: 100%; overflow: visible; }
+.reveal section.final .lobo-espelho .lobo-sprite { transform: scaleX(-1); }
+.reveal section.final .lobo-cauda { transform-box: view-box; transform-origin: 3px 13px; }
 
-.reveal section.final.present .passaro-1 .passaro-anim { animation: passaro-flutua-1 1.8s steps(4) 0s infinite; }
-.reveal section.final.present .passaro-2 .passaro-anim { animation: passaro-flutua-2 2.1s steps(4) .4s infinite; }
-.reveal section.final.present .passaro-3 .passaro-anim { animation: passaro-flutua-1 1.6s steps(4) .2s infinite; }
-.reveal section.final.present .passaro-4 .passaro-anim { animation: passaro-flutua-2 2.3s steps(4) .6s infinite; }
+/* Entrada (uma vez): título cai, grupo surge, lobos aparecem e flores crescem. */
+.reveal section.final.present .fim-titulo span { animation: fim-cai .7s steps(7) calc(var(--i) * 70ms) both; }
+.reveal section.final.present .pessoa { animation: fim-surge .6s steps(6) calc(1.2s + var(--d)) both; }
+.reveal section.final.present .lobo { animation: fim-surge .6s steps(6) 2.1s both; }
+.reveal section.final.present .caule { animation: fim-cresce .8s steps(8) 2.2s both; }
+.reveal section.final.present .flor { animation: fim-abre .6s steps(6) 2.9s both; }
 
-.reveal section.final.present .passaro-1 .passaro-asa-cima { animation: passaro-bate-cima .36s steps(1) 0s infinite; }
-.reveal section.final.present .passaro-1 .passaro-asa-baixo { animation: passaro-bate-baixo .36s steps(1) 0s infinite; }
-.reveal section.final.present .passaro-2 .passaro-asa-cima { animation: passaro-bate-cima .36s steps(1) .12s infinite; }
-.reveal section.final.present .passaro-2 .passaro-asa-baixo { animation: passaro-bate-baixo .36s steps(1) .12s infinite; }
-.reveal section.final.present .passaro-3 .passaro-asa-cima { animation: passaro-bate-cima .36s steps(1) .24s infinite; }
-.reveal section.final.present .passaro-3 .passaro-asa-baixo { animation: passaro-bate-baixo .36s steps(1) .24s infinite; }
-.reveal section.final.present .passaro-4 .passaro-asa-cima { animation: passaro-bate-cima .36s steps(1) .08s infinite; }
-.reveal section.final.present .passaro-4 .passaro-asa-baixo { animation: passaro-bate-baixo .36s steps(1) .08s infinite; }
+/* Depois da entrada: aceno em rajadas, vaga-lumes, revoada ocasional e os lobos abanando o rabo. */
+.reveal section.final.present .pessoa .braco { animation: fim-aceno 5s steps(1) calc(1.8s + var(--d)) infinite; }
+.reveal section.final.present .vagalume { animation: fim-pisca 4s steps(8) var(--d) infinite; }
+.reveal section.final.present .revoada { animation: fim-revoada 20s linear 3s infinite both; }
+.reveal section.final.present .passaro-anim { animation: passaro-flutua 2s steps(4) infinite; }
+.reveal section.final.present .passaro-2 .passaro-anim { animation-delay: .5s; }
+.reveal section.final.present .passaro-asa-cima { animation: passaro-bate-cima .4s steps(1) infinite; }
+.reveal section.final.present .passaro-asa-baixo { animation: passaro-bate-baixo .4s steps(1) infinite; }
+.reveal section.final.present .passaro-2 .passaro-asa-cima, .reveal section.final.present .passaro-2 .passaro-asa-baixo { animation-delay: .2s; }
+.reveal section.final.present .lobo-1 .lobo-cauda { animation: lobo-abanar 6s steps(1) 3s infinite; }
+.reveal section.final.present .lobo-2 .lobo-cauda { animation: lobo-abanar 6s steps(1) 4.5s infinite; }
 
-@keyframes passaro-voo-1 {
-  0% { transform: translateX(-240px); }
-  100% { transform: translateX(1160px); }
-}
-@keyframes passaro-voo-2 {
-  0% { transform: translateX(-1058px); }
-  100% { transform: translateX(342px); }
-}
-@keyframes passaro-voo-3 {
-  0% { transform: translateX(-342px); }
-  100% { transform: translateX(1058px); }
-}
-@keyframes passaro-voo-4 {
-  0% { transform: translateX(-1110px); }
-  100% { transform: translateX(290px); }
-}
-
-@keyframes passaro-flutua-1 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
-}
-@keyframes passaro-flutua-2 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-@keyframes passaro-bate-cima {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-@keyframes passaro-bate-baixo {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
-}
-
-/* Encerramento: lagarto */
-.reveal section.final .lagarto { position: absolute; left: 755px; bottom: 40px; width: 84px; height: 42px; transform-origin: 50% 100%; }
-.reveal section.final .lagarto-svg { display: block; width: 84px; height: 42px; overflow: visible; }
-.reveal section.final .lagarto-cauda { transform-box: view-box; transform-origin: 7px 7px; }
-.reveal section.final .lagarto-cabeca { transform-box: view-box; transform-origin: 19px 7px; }
-
-.reveal section.final.present .lagarto { animation: lagarto-anda 7s steps(28) infinite; }
-.reveal section.final.present .lagarto-cauda { animation: lagarto-cauda 1.2s steps(3) infinite; }
-.reveal section.final.present .lagarto-cabeca { animation: lagarto-cabeca 1.6s steps(2) infinite; }
-
-@keyframes lagarto-anda {
-  0%, 15% { transform: translateX(0) scaleX(1); }
-  35%, 44.9% { transform: translateX(28px) scaleX(1); }
-  45% { transform: translateX(28px) scaleX(-1); }
-  65%, 74.9% { transform: translateX(-28px) scaleX(-1); }
-  75% { transform: translateX(-28px) scaleX(1); }
-  90%, 100% { transform: translateX(0) scaleX(1); }
-}
-@keyframes lagarto-cauda { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-10deg); } }
-@keyframes lagarto-cabeca { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-
-/* Encerramento: lobos */
-/* Lobo: dois lobinhos fofos no encerramento */
-.reveal section.final .lobo-alcateia {
-  position: absolute;
-  left: 34px;
-  bottom: 40px;
-  display: flex;
-  align-items: flex-end;
-  gap: 6px;
-}
-.reveal section.final .lobo {
-  position: relative;
-  width: 82px;
-  height: 82px;
-}
-.reveal section.final .lobo-sprite {
-  display: block;
-  width: 82px;
-  height: 82px;
-  overflow: visible;
-}
-.reveal section.final .lobo-cauda {
-  transform-box: view-box;
-  transform-origin: 3px 13px;
-}
-.reveal section.final .lobo-2 .lobo-cabeca {
-  transform-box: view-box;
-  transform-origin: 6px 11px;
-}
-.reveal section.final .lobo-nota {
-  position: absolute;
-  font-family: var(--r-heading-font);
-  color: #fff2bd;
-  text-shadow: 2px 2px 0 #183728;
-  pointer-events: none;
-  line-height: 1;
-}
-.reveal section.final .lobo-nota-1 {
-  left: 68px;
-  top: 14px;
-  font-size: 20px;
-  opacity: 1;
-}
-.reveal section.final .lobo-nota-2 {
-  left: 80px;
-  top: 4px;
-  font-size: 15px;
-  opacity: 1;
-}
-
-.reveal section.final.present .lobo-1 .lobo-cauda {
-  animation: lobo-abanar-1 0.8s steps(3) infinite;
-}
-.reveal section.final.present .lobo-2 .lobo-cauda {
-  animation: lobo-abanar-2 0.9s steps(3) 0.15s infinite;
-}
-.reveal section.final.present .lobo-2 .lobo-cabeca {
-  animation: lobo-uivo 4.5s steps(3) infinite;
-}
-.reveal section.final.present .lobo-nota-1 {
-  animation: lobo-nota-1 4.5s steps(6) infinite;
-}
-.reveal section.final.present .lobo-nota-2 {
-  animation: lobo-nota-2 4.5s steps(6) infinite;
-}
-
-@keyframes lobo-abanar-1 {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-16deg); }
-}
-@keyframes lobo-abanar-2 {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-14deg); }
-}
-@keyframes lobo-uivo {
-  0%, 20% { transform: rotate(14deg); }
-  32%, 68% { transform: rotate(0deg); }
-  80%, 100% { transform: rotate(14deg); }
-}
-@keyframes lobo-nota-1 {
-  0%, 24% { opacity: 0; transform: translate(-4px, 10px) scale(0.5); }
-  32% { opacity: 1; transform: translate(0, 0) scale(1); }
-  62% { opacity: 0; transform: translate(14px, -24px) scale(1.1); }
-  63%, 100% { opacity: 0; transform: translate(-4px, 10px) scale(0.5); }
-}
-@keyframes lobo-nota-2 {
-  0%, 38% { opacity: 0; transform: translate(-4px, 10px) scale(0.5); }
-  46% { opacity: 1; transform: translate(0, 0) scale(0.9); }
-  72% { opacity: 0; transform: translate(18px, -28px) scale(1); }
-  73%, 100% { opacity: 0; transform: translate(-4px, 10px) scale(0.5); }
-}
+@keyframes fim-cai { 0% { transform: translateY(-140px); opacity: 0; } 60% { transform: translateY(12px); opacity: 1; } 80% { transform: translateY(-6px); } 100% { transform: none; opacity: 1; } }
+@keyframes fim-surge { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes fim-cresce { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes fim-abre { 0% { transform: scale(0); } 70% { transform: scale(1.25); } 100% { transform: none; } }
+/* Três acenos no começo de cada ciclo; depois, braço parado. */
+@keyframes fim-aceno { 0%, 12%, 24% { transform: rotate(0deg); } 6%, 18%, 30% { transform: rotate(22deg); } 36%, 100% { transform: rotate(0deg); } }
+@keyframes fim-pisca { 0%, 100% { opacity: .6; transform: translate(0, 0); } 50% { opacity: 1; transform: translate(8px, -12px); } }
+/* A revoada cruza a tela no primeiro terço do ciclo e espera fora da tela até a próxima passagem. */
+@keyframes fim-revoada { 0% { transform: translateX(-980px); } 35%, 100% { transform: translateX(720px); } }
+@keyframes passaro-flutua { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes passaro-bate-cima { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes passaro-bate-baixo { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+@keyframes lobo-abanar { 0%, 8%, 16% { transform: rotate(0deg); } 4%, 12%, 20% { transform: rotate(-16deg); } 24%, 100% { transform: rotate(0deg); } }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal section.final *, .reveal section.final *::before, .reveal section.final *::after { animation: none !important; }
