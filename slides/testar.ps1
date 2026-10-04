@@ -76,7 +76,7 @@ function Assert-Offline([string]$Html, [string]$Folder, [string]$RevealScript) {
     Assert-True ($Html.Contains('src="' + $RevealScript + '"')) "A saida nao carrega o reveal.js de $RevealScript."
     Assert-True ($Html -match '(?is)<link\b[^>]*\bhref="[^"]*comum/tema\.css"') 'A saida nao carrega o tema.'
     $refs = [regex]::Matches($Html, '(?is)<(?:script|link|img)\b[^>]*?\b(?:src|href)\s*=\s*"(?<url>[^"]*)"')
-    Assert-True ($refs.Count -ge 8) 'A saida deveria referenciar o reveal.js, o tema e as imagens.'
+    Assert-True ($refs.Count -ge 7) 'A saida deveria referenciar o reveal.js, o tema e os recursos comuns.'
     foreach ($ref in $refs) {
         $url = $ref.Groups['url'].Value
         if ($url -match '^(?i)data:') { continue }

@@ -12,30 +12,7 @@
   font-size: 14px;
 }
 
-/* Slide 11: Síntese */
-.slide[data-autor="Edson"]#slide-11 figure img {
-  max-height: 250px;
-}
-
-.slide[data-autor="Edson"]#slide-11 ul {
-  font-size: 17.5px;
-  line-height: 1.25;
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-
-.slide[data-autor="Edson"]#slide-11 li {
-  margin-bottom: 6px;
-}
-
-.slide[data-autor="Edson"]#slide-11 blockquote {
-  font-size: 18px;
-  line-height: 1.25;
-  margin-top: 10px;
-  padding: 6px 12px;
-}
-
-/* Slide 12: Referências em duas colunas */
+/* Slide 11: Referências em duas colunas */
 .slide[data-autor="Edson"] .colunas-refs {
   --cols: 1fr 1fr;
   column-gap: 28px;
