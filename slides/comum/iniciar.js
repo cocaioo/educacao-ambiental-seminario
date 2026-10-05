@@ -28,8 +28,8 @@
     backgroundTransition: reduzirMovimento ? 'none' : 'fade',
     autoAnimate: false,
 
-    // ?estatico=1 abre com todas as revelações visíveis.
-    fragments: !estatico,
+    // Carrega o slide completo de uma só vez, sem pausas por fragmentos.
+    fragments: consulta.get('fragmentos') === '1',
 
     // PDF (?print-pdf): um slide por página, com todos os elementos visíveis.
     pdfSeparateFragments: false,

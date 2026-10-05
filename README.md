@@ -2,7 +2,7 @@
 
 - **Disciplina:** Educação Ambiental
 - **Docente:** Prof. Davi Lima Pantoja Leite
-- **Integrantes:** Caio Victor Ferreira do Nascimento, Edson da Silva Lima Junior e Diogo
+- **Integrantes:** Caio Victor, Diogo de Oliveira e Edson da Silva
 
 Apresentação colaborativa do seminário, feita com o [reveal.js](https://revealjs.com) e o tema autoral **Aventura ambiental**, inspirado na exploração de mundos 2D em pixel art. As partes editáveis seguem a sequência **Diogo → Edson → Caio**.
 
