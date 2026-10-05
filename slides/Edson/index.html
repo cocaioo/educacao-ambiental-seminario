@@ -11,53 +11,127 @@
 <link rel="stylesheet" href="../comum/tema.css">
 <style>
 /*
-  Ajustes exclusivos da parte de Edson. Cada seletor deve começar com:
-  .slide[data-autor="Edson"]
-  Exemplo: .slide[data-autor="Edson"] .minha-classe { font-weight: 700; }
-  Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
-  Caminhos de imagens são relativos à pasta Edson, como assets/minha-foto.jpg.
+  Ajustes visuais exclusivos da parte de Edson (pragmática).
+  Regra do compositor: cada seletor deve iniciar por .slide[data-autor="Edson"].
+  Sem regras @, sem nesting e sem combinadores de irmãos (+ ou ~).
 */
 
-/* Tipografia de rodapé e legendas */
-.slide[data-autor="Edson"] figcaption,
-.slide[data-autor="Edson"] > .fonte {
-  font-size: 14px;
+.slide[data-autor="Edson"] .faixa-rotulo {
+  display: inline-block;
+  font-family: var(--r-heading-font);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  background: rgba(106, 71, 43, 0.12);
+  border-left: 3px solid currentColor;
 }
 
-/* Slide 11: Referências em duas colunas */
-.slide[data-autor="Edson"] .colunas-refs {
-  --cols: 1fr 1fr;
-  column-gap: 28px;
-  align-items: start;
+.slide[data-autor="Edson"] ol.marcos {
+  margin-top: 4px;
+  margin-bottom: 14px;
 }
 
-.slide[data-autor="Edson"] .colunas-refs .refs-subtitulo {
+.slide[data-autor="Edson"] ol.marcos li {
+  padding-left: 10px;
+  border-left-width: 3px;
+}
+
+.slide[data-autor="Edson"] ol.marcos h3 {
+  font-size: 24px;
+  margin-bottom: 2px;
+  line-height: 1.15;
+}
+
+.slide[data-autor="Edson"] ol.marcos p {
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.slide[data-autor="Edson"] .card-contexto {
+  background: rgba(255, 255, 255, 0.50);
+  border: 2px solid #b8a682;
+  padding: 8px 10px;
+  clip-path: var(--canto);
+  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.2);
+}
+
+.slide[data-autor="Edson"] .card-contexto h4 {
   font-size: 18px;
-  margin: 0 0 6px 0;
-  color: var(--r-heading-color);
+  margin: 0 0 4px;
+  line-height: 1.2;
+  font-family: var(--r-heading-font);
 }
 
-.slide[data-autor="Edson"] .colunas-refs ul.refs {
-  columns: 1;
-  font-size: 12px;
-  line-height: 1.20;
+.slide[data-autor="Edson"] .card-contexto p {
+  font-size: 15px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.slide[data-autor="Edson"] .dl-proposta {
+  font-size: 0.88em;
+}
+
+.slide[data-autor="Edson"] .dl-proposta dt {
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 7px;
+  line-height: 1.2;
+}
+
+.slide[data-autor="Edson"] .dl-proposta dt:first-child {
   margin-top: 0;
-  margin-bottom: 0;
 }
 
-.slide[data-autor="Edson"] .colunas-refs ul.refs li {
-  margin-bottom: 5px;
-  padding-left: 0.9em;
-  text-indent: -0.9em;
+.slide[data-autor="Edson"] .dl-proposta dd {
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 0;
 }
 
-.slide[data-autor="Edson"] .colunas-refs ul.refs.refs-docs li {
-  margin-bottom: 4px;
-  font-size: 11.5px;
+.slide[data-autor="Edson"] .aspas-proposta {
+  font-size: 19px;
+  line-height: 1.3;
+  margin-top: 14px;
+  padding-left: 14px;
 }
 
-.slide[data-autor="Edson"] .colunas-refs .url {
-  font-size: 0.95em;
+.slide[data-autor="Edson"] .coexistencia-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 8px 0 12px;
+}
+
+.slide[data-autor="Edson"] .coexistencia-sintese {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 28px;
+  margin-top: 6px;
+}
+
+.slide[data-autor="Edson"] .coexistencia-box {
+  background: rgba(255, 255, 255, 0.52);
+  border: 2px solid #b3a27d;
+  padding: 10px 14px;
+  clip-path: var(--canto);
+  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.18);
+}
+
+.slide[data-autor="Edson"] .coexistencia-box h4 {
+  font-size: 19px;
+  margin: 0 0 4px;
+  font-family: var(--r-heading-font);
+}
+
+.slide[data-autor="Edson"] .coexistencia-box p {
+  font-size: 16px;
+  line-height: 1.28;
+  margin: 0;
 }
 
 </style>
@@ -65,214 +139,98 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section class="slide" id="slide-11" data-autor="Edson" aria-label="Slide 1 de 2">
-  <h2>Referências</h2>
+<section class="slide" id="slide-6" data-autor="Edson" aria-label="Slide 1 de 2">
+  <h2 class="prag">Pragmática: por que surgiu? (pós-guerra → 1990–2000)</h2>
 
-  <div class="colunas colunas-refs">
-    <div>
-      <h3 class="refs-subtitulo">Bibliografia validada</h3>
-      <ul class="refs">
-        <li><b>LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.</b> Mapeando as macro-tendências político-pedagógicas da educação ambiental contemporânea no Brasil. In: <i>VI Encontro Pesquisa em Educação Ambiental (VI EPEA)</i>, Ribeirão Preto, 2011. 15 p.</li>
+  <div class="fragment" data-fragment-index="1">
+    <div class="faixa-rotulo prag">Cenário (marcos oficiais e econômicos)</div>
+    <ol class="colunas quatro marcos" aria-label="Marcos históricos da vertente pragmática">
+      <li>
+        <h3>1987</h3>
+        <p><strong>Relatório Brundtland</strong><br>Desenvolvimento sustentável e consumo (ONU A/42/427).</p>
+      </li>
+      <li>
+        <h3>1991</h3>
+        <p><strong>GT de EA no MEC</strong><br>Portaria 2.421/91; desestatização (Lei 8.031/90).</p>
+      </li>
+      <li>
+        <h3>1992</h3>
+        <p><strong>Rio-92 / Agenda 21</strong><br>Padrões de consumo (cap. 4) e educação (cap. 36).</p>
+      </li>
+      <li>
+        <h3>2002</h3>
+        <p><strong>Res. ONU 57/254</strong><br>Década da EDS 2005–2014; UNESCO coordena.</p>
+      </li>
+    </ol>
+  </div>
 
-        <li><b>LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.</b> As macrotendências político-pedagógicas da educação ambiental brasileira. <i>Ambiente &amp; Sociedade</i>, São Paulo, v. 17, n. 1, p. 23–40, jan./mar. 2014. <span class="url">DOI: 10.1590/1809-44220003500</span></li>
-
-        <li><b>PELICIONI, Maria Cecília Focesi; PHILIPPI JR., Arlindo.</b> Bases políticas, conceituais, filosóficas e ideológicas da educação ambiental. In: PHILIPPI JR., A.; PELICIONI, M. C. F. (ed.). <i>Educação ambiental e sustentabilidade</i>. 2. ed. Barueri: Manole, 2014. cap. 1, p. 3–12.</li>
-
-        <li><b>SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra.</b> Vertentes da educação ambiental: da conservacionista à crítica. <i>Fronteiras: Journal of Social, Technological and Environmental Science</i>, v. 4, n. 2, p. 241–250, jul./dez. 2015. <span class="url">DOI: 10.21664/2238-8869.2015v4i2.p241-250</span></li>
-
-        <li><b>SOUZA, Tiago Zanquêta de.</b> A educação ambiental popular: contribuições em práticas sociais. <i>Motricidades: Rev. SPQMH</i>, v. 2, n. 1, p. 60–70, jan./abr. 2018. <span class="url">DOI: 10.29181/2594-6463.2018.v2.n1.p60-70</span></li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 class="refs-subtitulo">Documentos oficiais</h3>
-      <ul class="refs refs-docs">
-        <li><b>ONU.</b> Declaração de Estocolmo sobre Meio Ambiente Humano, 1972.</li>
-        <li><b>BRASIL.</b> Decreto nº 73.030, de 30 out. 1973 (cria a SEMA).</li>
-        <li><b>UNESCO.</b> Conferência de Tbilisi: relatório final. Paris, 1978.</li>
-        <li><b>BRASIL. MEC.</b> Cronologia oficial (MEC/CETESB 1979; Port. 2.421/91; PRONEA 1994).</li>
-        <li><b>BRASIL.</b> Lei nº 6.938, de 31 ago. 1981 (PNMA).</li>
-        <li><b>ONU.</b> Nosso Futuro Comum (Relatório Brundtland). Doc. A/42/427, 1987.</li>
-        <li><b>BRASIL.</b> Constituição Federal de 1988, art. 225, § 1º, VI.</li>
-        <li><b>BRASIL.</b> Lei nº 8.031, de 12 abr. 1990 (PND; rev. Lei 9.491/1997).</li>
-        <li><b>ONU.</b> Conferência Rio-92 e Agenda 21 (cap. 4 e 36). Rio de Janeiro, 1992.</li>
-        <li><b>TRATADO</b> de EA para Sociedades Sustentáveis. Fórum Global, Rio, 1992.</li>
-        <li><b>BRASIL.</b> Lei nº 9.795, de 27 abr. 1999 (PNEA).</li>
-        <li><b>ONU.</b> Resolução A/RES/57/254, 2002 (Década da EDS 2005-2014).</li>
-      </ul>
+  <div class="fragment" data-fragment-index="2">
+    <div class="faixa-rotulo prag">O que dizem os autores (condições de emergência)</div>
+    <div class="colunas quatro">
+      <div class="card-contexto">
+        <h4 class="prag">Pós-guerra e consumo</h4>
+        <p>Raízes no estilo de produção e consumo de massa (LAYRARGUES &amp; LIMA, 2014, p. 31).</p>
+      </div>
+      <div class="card-contexto">
+        <h4 class="prag">Hegemonia neoliberal</h4>
+        <p>Mercado global desde os anos 1980 e governo Collor no Brasil (LAYRARGUES &amp; LIMA, 2014, p. 30–31).</p>
+      </div>
+      <div class="card-contexto">
+        <h4 class="prag">"Fazer sua parte"</h4>
+        <p>Soluções locais e apelo individual diante do recuo estatal (LAYRARGUES &amp; LIMA, 2014, p. 29).</p>
+      </div>
+      <div class="card-contexto">
+        <h4 class="prag">Debate EA × EDS</h4>
+        <p>Controvérsia iniciada na Rio-92 e aprofundada pós-2002 (LAYRARGUES &amp; LIMA, 2014, p. 32; PELICIONI, p. 8).</p>
+      </div>
     </div>
   </div>
 
-  <p class="fonte">Autores clássicos citados no seminário figuram como <i>apud</i> nas obras da bibliografia.</p>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 27, 29–32, 34); LAYRARGUES &amp; LIMA (2011, p. 8–10, 12); PELICIONI &amp; PHILIPPI JR. (2014, p. 8). Cenário: ONU (Relatório Brundtland, 1987; Res. 57/254, 2002); BRASIL (Portaria MEC 2.421/1991; Lei 8.031/1990).</p>
 
   <aside class="notes">
-    <p>Apresentamos o quadro referencial completo do seminário, organizado em duas colunas: a bibliografia teórica examinada diretamente e o conjunto de marcos documentais e dados oficiais.</p>
-    <p>A bibliografia apoia-se em cinco obras centrais: Layrargues e Lima (2011, 2014), Pelicioni e Philippi Jr. (2. ed. 2014), Santos e Toschi (2015, DOI registrado) e Souza (2018). Todos os autores clássicos mobilizados durante os slides — como Bourdieu, Lima, Brügger, Capra, Sorrentino, Sauvé, Tozoni-Reis, Martínez-Alier, Acselrad, Dias, Reigota, Guimarães, Tristão, Loureiro, Freire, Mello e Souza, Peralta e Ruiz, Ruiz, Barbosa e Carvalho — figuram rigorosamente na modalidade apud, conforme constam nas cinco obras analisadas, cujos volumes originais não foram consultados diretamente.</p>
-    <p>Na coluna de documentos oficiais, foram consolidados os diplomas legais, conferências internacionais que subsidiaram a contextualização histórica de cada vertente. Agradecemos a atenção de todos e abrimos para perguntas.</p>
+    <p>A macrotendência pragmática ganha forte impulso ao longo da década de 1990 (Layrargues &amp; Lima, 2014, p. 29), sob as condições favoráveis da hegemonia neoliberal instituída mundialmente desde os anos 1980 e no Brasil a partir do governo Collor de Mello (Layrargues &amp; Lima, 2014, p. 30–31). Trata-se de uma derivação evolutiva e adaptada da vertente conservacionista (Layrargues &amp; Lima, 2014, p. 32), compartilhando sua linhagem comportamentalista e individualista sob o lema "cada um fazer a sua parte", sem que a conservacionista tenha deixado de existir (Layrargues &amp; Lima, 2014, p. 34).</p>
+    <p>No cenário oficial, destacam-se marcos que contextualizam o debate econômico e institucional: em 1987, a ONU publica o Relatório Brundtland (Our Common Future, Doc. A/42/427), consagrando o conceito hegemônico de desenvolvimento sustentável; em 1990, o governo Collor institui a Lei 8.031 (Programa Nacional de Desestatização, posteriormente revogada pela Lei 9.491/1997). Vale frisar que o Relatório Brundtland e a Lei 8.031 compõem o cenário oficial macroeconômico, não sendo citados diretamente pelos autores analisados como referências de suas tipologias. Em 1991, o MEC institui o Grupo de Trabalho permanente de Educação Ambiental pela Portaria nº 2.421/1991 (às vésperas da Rio-92), e não uma "Coordenação" (Layrargues &amp; Lima, 2014, p. 27). Na Rio-92, a Agenda 21 dedica o capítulo 4 aos padrões de consumo e o capítulo 36 à educação e capacitação pública; a Rio-92 também criou ambiente propício para a crítica. Em 1997 ocorre a Conferência de Tessalônica (Pelicioni &amp; Philippi Jr., 2014, p. 8) e, em 20 de dezembro de 2002, a Assembleia Geral da ONU adota a Resolução A/RES/57/254 proclamando a Década da Educação para o Desenvolvimento Sustentável (DEDS, 2005–2014), sob coordenação internacional da UNESCO.</p>
+    <p>Os autores apontam como condições de emergência: (1) raízes no estilo de produção e consumo do pós-guerra (Layrargues &amp; Lima, 2014, p. 31); (2) a hegemonia neoliberal que converteu a cidadania em consumo consciente e responsabilidade social empresarial (Layrargues &amp; Lima, 2014, p. 30–31); (3) o pragmatismo das soluções pontuais e o recuo do Estado (Layrargues &amp; Lima, 2014, p. 29); (4) a controvérsia entre EA e EDS (Layrargues &amp; Lima, 2014, p. 32; Pelicioni &amp; Philippi Jr., 2014, p. 8); (5) o cruzamento de vetores entre mercado, descartabilidade tecnológica e a emergência da crise climática (Layrargues &amp; Lima, 2014, p. 31); e (6) a conjuntura contemporânea de globalização, falência do socialismo real e revolução informacional (Layrargues &amp; Lima, 2011, p. 12; 2014, p. 34). Fale sempre em "condições que favoreceram" ou "ambiente de emergência", nunca em causalidade estrita.</p>
   </aside>
 </section>
 
 
-<section class="slide final" id="slide-12" aria-label="Slide 2 de 2: encerramento" data-autor="Edson">
-  <h2 class="fim-titulo" aria-hidden="true"><span aria-hidden="true" style="--i:0">O</span><span aria-hidden="true" style="--i:1">b</span><span aria-hidden="true" style="--i:2">r</span><span aria-hidden="true" style="--i:3">i</span><span aria-hidden="true" style="--i:4">g</span><span aria-hidden="true" style="--i:5">a</span><span aria-hidden="true" style="--i:6">d</span><span aria-hidden="true" style="--i:7">o</span><span aria-hidden="true" style="--i:8">&nbsp;</span><span aria-hidden="true" style="--i:9">p</span><span aria-hidden="true" style="--i:10">e</span><span aria-hidden="true" style="--i:11">l</span><span aria-hidden="true" style="--i:12">a</span><span aria-hidden="true" style="--i:13">&nbsp;</span><span aria-hidden="true" style="--i:14">a</span><span aria-hidden="true" style="--i:15">t</span><span aria-hidden="true" style="--i:16">e</span><span aria-hidden="true" style="--i:17">n</span><span aria-hidden="true" style="--i:18">ç</span><span aria-hidden="true" style="--i:19">ã</span><span aria-hidden="true" style="--i:20">o</span><span aria-hidden="true" style="--i:21">!</span></h2>
-  <p class="so-leitor">Obrigado pela atenção!</p>
+<section class="slide" id="slide-7" data-autor="Edson" aria-label="Slide 2 de 2">
+  <h2 class="prag">Pragmática: o que propõe?</h2>
 
-  <div class="fim-cena" aria-hidden="true">
-    <span class="vagalume" style="--x:7%;--y:70%;--d:0s"></span>
-    <span class="vagalume" style="--x:17%;--y:62%;--d:1.6s"></span>
-    <span class="vagalume" style="--x:84%;--y:66%;--d:.8s"></span>
-    <span class="vagalume" style="--x:93%;--y:74%;--d:2.4s"></span>
+  <div class="colunas foto-texto">
+    <figure class="fragment" data-fragment-index="1">
+      <img src="../assets/pragmatica.jpg" style="aspect-ratio: 4 / 3; object-position: 60% center"
+        alt="Pátio de uma usina de reciclagem de resíduos da construção: esteiras transportadoras verdes convergem para uma peneira metálica com plataforma amarela, entre pilhas cônicas de brita e areia sobre o solo.">
+      <figcaption>Usina de reciclagem, Hortolândia (SP). Foto: Ana Perugini — Wikimedia Commons (CC BY 2.0)</figcaption>
+    </figure>
 
-    <div class="revoada">
-      <div class="passaro passaro-1 passaro-dourado">
-          <div class="passaro-anim">
-            <svg class="passaro-svg" viewBox="0 0 12 10" shape-rendering="crispEdges">
-              <g class="passaro-corpo">
-                <path fill="#24301f" d="M7 1h4v1H7zM3 2h4v1H3zM11 2h1v1H11zM1 3h2v1H1zM11 3h1v1H11zM0 4h1v1H0zM10 4h2v1H10zM0 5h1v1H0zM9 5h1v1H9zM11 5h1v1H11zM1 6h1v1H1zM8 6h1v1H8zM11 6h1v1H11zM2 7h1v1H2zM9 7h3v1H9zM3 8h2v1H3zM9 8h1v1H9zM5 9h4v1H5zM9 4h1v1H9z"/>
-                <path fill="currentColor" d="M7 2h4v1H7zM3 3h8v1H3zM1 4h9v1H1zM1 5h8v1H1zM2 6h7v1H2zM3 7h6v1H3zM5 8h4v1H5z"/>
-                <path fill="#ffffff" fill-opacity=".55" d="M7 6h1v1H7zM5 7h4v1H5zM5 8h4v1H5z"/>
-                <path fill="#ffffff" d="M8 4h1v1H8z"/>
-                <path fill="#f29aa3" d="M8 5h1v1H8z"/>
-                <path fill="#f79327" d="M10 5h1v1H10zM9 6h2v1H9z"/>
-              </g>
-              <g class="passaro-asa-cima">
-                <path fill="#24301f" d="M3 0h2v1H3zM2 1h1v1H2zM5 1h1v1H5zM1 2h1v1H1zM5 2h1v1H5zM1 3h1v1H1zM5 3h1v1H5zM2 4h3v1H2z"/>
-                <path fill="currentColor" d="M3 1h2v1H3zM2 2h3v1H2zM2 3h3v1H2z"/>
-              </g>
-              <g class="passaro-asa-baixo">
-                <path fill="#24301f" d="M2 4h4v1H2zM1 5h1v1H1zM5 5h1v1H5zM2 6h1v1H2zM6 6h1v1H6zM3 7h4v1H3z"/>
-                <path fill="currentColor" d="M2 5h3v1H2zM3 6h3v1H3z"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-      <div class="passaro passaro-2 passaro-creme">
-          <div class="passaro-anim">
-            <svg class="passaro-svg" viewBox="0 0 12 10" shape-rendering="crispEdges">
-              <g class="passaro-corpo">
-                <path fill="#24301f" d="M7 1h4v1H7zM3 2h4v1H3zM11 2h1v1H11zM1 3h2v1H1zM11 3h1v1H11zM0 4h1v1H0zM10 4h2v1H10zM0 5h1v1H0zM9 5h1v1H9zM11 5h1v1H11zM1 6h1v1H1zM8 6h1v1H8zM11 6h1v1H11zM2 7h1v1H2zM9 7h3v1H9zM3 8h2v1H3zM9 8h1v1H9zM5 9h4v1H5zM9 4h1v1H9z"/>
-                <path fill="currentColor" d="M7 2h4v1H7zM3 3h8v1H3zM1 4h9v1H1zM1 5h8v1H1zM2 6h7v1H2zM3 7h6v1H3zM5 8h4v1H5z"/>
-                <path fill="#ffffff" fill-opacity=".55" d="M7 6h1v1H7zM5 7h4v1H5zM5 8h4v1H5z"/>
-                <path fill="#ffffff" d="M8 4h1v1H8z"/>
-                <path fill="#f29aa3" d="M8 5h1v1H8z"/>
-                <path fill="#f79327" d="M10 5h1v1H10zM9 6h2v1H9z"/>
-              </g>
-              <g class="passaro-asa-cima">
-                <path fill="#24301f" d="M3 0h2v1H3zM2 1h1v1H2zM5 1h1v1H5zM1 2h1v1H1zM5 2h1v1H5zM1 3h1v1H1zM5 3h1v1H5zM2 4h3v1H2z"/>
-                <path fill="currentColor" d="M3 1h2v1H3zM2 2h3v1H2zM2 3h3v1H2z"/>
-              </g>
-              <g class="passaro-asa-baixo">
-                <path fill="#24301f" d="M2 4h4v1H2zM1 5h1v1H1zM5 5h1v1H5zM2 6h1v1H2zM6 6h1v1H6zM3 7h4v1H3z"/>
-                <path fill="currentColor" d="M2 5h3v1H2zM3 6h3v1H3z"/>
-              </g>
-            </svg>
-          </div>
-        </div>
-    </div>
+    <div>
+      <dl class="dl-proposta fragment" data-fragment-index="2">
+        <dt class="prag">Diagnóstico</dt>
+        <dd>Resíduos, desperdício e consumo: a “pauta marrom” urbano-industrial.</dd>
+        <dt class="prag">Estratégia e traços</dt>
+        <dd>Reciclagem, ecoeficiência e crença na neutralidade da ciência.</dd>
+        <dt class="prag">Trajetória temática</dt>
+        <dd>Resíduos nos anos 1990 → consumo sustentável → economia verde e clima.</dd>
+        <dt class="prag">Limites nas fontes</dt>
+        <dd>“Armadilhas paradigmáticas”; apelo individual mascara causas estruturais.</dd>
+        <dt class="prag">Status no campo</dt>
+        <dd>Francamente hegemônica; opera como “conservadorismo dinâmico”.</dd>
+      </dl>
 
-    <div class="fim-palco">
-      <div class="broto flor-roxa">
-        <div class="caule"></div>
-        <svg class="flor" viewBox="0 0 7 7" shape-rendering="crispEdges">
-          <path fill="#9a6cc8" d="M2 0h3v1H2zM0 2h1v3H0zM6 2h1v3H6zM2 6h3v1H2zM1 1h1v1H1zM5 1h1v1H5zM1 5h1v1H1zM5 5h1v1H5z"/>
-          <path fill="#c7a3ea" d="M2 1h3v1H2zM1 2h1v3H1zM5 2h1v3H5zM2 5h3v1H2z"/>
-          <path fill="#f6d55c" d="M2 2h3v3H2z"/>
-        </svg>
-      </div>
-      <div class="lobo lobo-1">
-        <svg class="lobo-sprite" viewBox="0 0 18 18" shape-rendering="crispEdges">
-          <g class="lobo-cauda">
-            <path fill="#24301f" d="M1 7h2v1H1zM0 8h1v2h-1zM3 8h1v1h-1zM4 9h1v1h-1zM1 10h1v1h-1zM5 10h1v1h-1zM2 11h1v2h-1zM6 11h1v1h-1zM7 12h1v1h-1zM3 13h5v1H3z"/>
-            <path fill="#8f99a8" d="M4 10h1v1h-1zM3 11h3v1H3zM3 12h4v1H3z"/>
-            <path fill="#c9d1dc" d="M1 8h2v1H1zM1 9h3v1H1zM2 10h2v1H2z"/>
-          </g>
-          <g class="lobo-corpo">
-            <path fill="#24301f" d="M4 0h2v1H4zM14 0h2v1H14zM3 1h1v2h-1zM6 1h1v2h-1zM13 1h1v2h-1zM16 1h1v2h-1zM9 2h2v1H9zM2 3h1v8h-1zM7 3h2v1H7zM12 3h1v1h-1zM17 3h1v5h-1zM5 6h2v1H5zM12 6h2v1H12zM6 7h1v1h-1zM13 7h1v1h-1zM9 9h2v1H9zM17 9h1v2h-1zM3 11h1v2h-1zM16 11h1v2h-1zM2 13h1v1h-1zM17 13h1v3h-1zM1 14h1v2h-1zM5 14h2v2H5zM13 14h1v2h-1zM2 16h3v1H2zM7 16h1v1h-1zM12 16h1v1h-1zM14 16h3v1H14zM8 17h4v1H8z"/>
-            <path fill="#8f99a8" d="M4 2h1v1h-1zM15 2h1v1h-1zM3 3h4v1H3zM9 3h3v1H9zM13 3h4v1H13zM3 4h14v2H3zM3 6h2v2H3zM7 6h5v2H7zM14 6h3v2H14zM4 8h4v1H4zM12 8h2v1H12zM15 8h2v3H15zM3 9h2v2H3zM4 11h1v1h-1zM15 11h1v1h-1zM4 12h3v1H4zM13 12h3v1H13zM3 13h4v1H3zM13 13h4v1H13zM2 14h3v2H2zM7 14h1v2h-1zM12 14h1v2h-1zM14 14h3v2H14z"/>
-            <path fill="#c9d1dc" d="M8 8h4v1H8zM5 9h4v1H5zM11 9h4v1H11zM5 10h10v2H5zM7 12h6v2H7zM8 14h4v3H8z"/>
-            <path fill="#f29aa3" d="M4 1h2v1H4zM14 1h2v1H14zM5 2h1v1h-1zM14 2h1v1h-1zM3 8h1v1h-1zM14 8h1v1h-1z"/>
-            <path fill="#ffffff" d="M5 7h1v1H5zM12 7h1v1H12z"/>
-          </g>
-        </svg>
-      </div>
-      <div class="fim-grupo">
-        <div class="pessoa" style="--d:0s">
-          <p class="nome">Caio</p>
-          <svg viewBox="-1 -3 22 34" style="height:170px" shape-rendering="crispEdges">
-            <path fill="#f3cfae" d="M6 4h8v7H6zM5 7h1v2H5zM14 7h1v2h-1zM9 11h2v1H9zM4 20h2v2H4z"/>
-            <path fill="#5a3a26" d="M6 2h8v2H6zM5 3h1v5H5zM14 3h1v5h-1zM5 2h1v1H5zM7 1h2v1H7zM11 1h2v1h-2zM6 4h2v1H6zM9 4h2v1H9zM12 4h2v1h-2z"/>
-            <path fill="#24301f" d="M8 7h1v1H8zM11 7h1v1h-1zM8 9h1v1H8zM11 9h1v1h-1zM9 10h2v1H9z"/>
-            <path fill="#f29aa3" d="M7 8h1v1H7zM12 8h1v1h-1z"/>
-            <path fill="#5a3a26" d="M6 9h1v2H6zM13 9h1v2h-1zM7 10h2v2H7zM11 10h2v2h-2zM9 11h2v1H9z"/>
-            <path fill="#5f9a5a" d="M6 12h8v9H6zM4 12h2v8H4z"/>
-            <path fill="#f6edcf" d="M8 12h1v1H8zM11 12h1v1h-1z"/>
-            <path fill="#2b2a28" d="M6 21h8v1H6zM5 29h4v2H5zM11 29h4v2h-4z"/>
-            <path fill="#4a4d5e" d="M6 22h8v2H6zM6 24h3v5H6zM11 24h3v5h-3z"/>
-            <g class="braco"><path fill="#5f9a5a" d="M14 12h2v2h-2zM15 9h2v3h-2z"/><path fill="#f3cfae" d="M16 6h2v3h-2zM16 3h3v3h-3z"/></g>
-          </svg>
-        </div>
-        <div class="pessoa" style="--d:.3s">
-          <p class="nome">Diogo</p>
-          <svg viewBox="-1 -3 22 34" style="height:170px" shape-rendering="crispEdges">
-            <path fill="#b9805a" d="M6 4h8v7H6zM5 7h1v2H5zM14 7h1v2h-1zM9 11h2v1H9zM4 20h2v2H4z"/>
-            <path fill="#1f1a17" d="M6 2h8v2H6zM5 3h1v3H5zM14 3h1v3h-1zM6 4h8v1H6z"/>
-            <path fill="#24301f" d="M8 7h1v1H8zM11 7h1v1h-1zM8 9h1v1H8zM11 9h1v1h-1zM9 10h2v1H9z"/>
-            <path fill="#f29aa3" d="M7 8h1v1H7zM12 8h1v1h-1z"/>
-            <path fill="#1f1a17" d="M6 6h4v1H6zM6 8h4v1H6zM6 7h1v1H6zM9 7h1v1H9zM10 6h4v1h-4zM10 8h4v1h-4zM10 7h1v1h-1zM13 7h1v1h-1zM5 6h1v1H5zM14 6h1v1h-1z"/><path fill="#dff1f8" d="M7 7h1v1H7zM12 7h1v1h-1z"/>
-            <path fill="#d6a33c" d="M6 12h8v9H6zM4 12h2v8H4z"/>
-            <path fill="#f6edcf" d="M8 12h1v1H8zM11 12h1v1h-1z"/>
-            <path fill="#2b2a28" d="M6 21h8v1H6zM5 29h4v2H5zM11 29h4v2h-4z"/>
-            <path fill="#4a4d5e" d="M6 22h8v2H6zM6 24h3v5H6zM11 24h3v5h-3z"/>
-            <g class="braco"><path fill="#d6a33c" d="M14 12h2v2h-2zM15 9h2v3h-2z"/><path fill="#b9805a" d="M16 6h2v3h-2zM16 3h3v3h-3z"/></g>
-          </svg>
-        </div>
-        <div class="pessoa" style="--d:.6s">
-          <p class="nome">Edson</p>
-          <svg viewBox="-1 -3 22 40" style="height:200px" shape-rendering="crispEdges">
-            <path fill="#f3cfae" d="M6 4h8v7H6zM5 7h1v2H5zM14 7h1v2h-1zM9 11h2v1H9zM4 20h2v2H4z"/>
-            <path fill="#4a2f22" d="M7 1h2v1H7zM11 1h1v1H11zM6 2h1v1H6zM8 2h2v1H8zM11 2h1v1H11zM13 2h1v1H13zM5 3h1v3H5zM7 3h1v1H7zM9 3h2v1H9zM12 3h2v1H12zM7 4h2v1H7zM10 4h3v1H10zM14 4h1v2H14z"/><path fill="#7a5038" d="M7 2h1v1H7zM10 2h1v1H10zM12 2h1v1H12zM6 3h1v1H6zM8 3h1v1H8zM11 3h1v1H11zM14 3h1v1H14z"/>
-            <path fill="#24301f" d="M8 7h1v1H8zM11 7h1v1h-1zM8 9h1v1H8zM11 9h1v1h-1zM9 10h2v1H9z"/>
-            <path fill="#f29aa3" d="M7 8h1v1H7zM12 8h1v1h-1z"/>
-        
-            <path fill="#c86a4c" d="M6 12h8v9H6zM4 12h2v8H4z"/>
-            <path fill="#f6edcf" d="M8 12h1v1H8zM11 12h1v1h-1z"/>
-            <path fill="#2b2a28" d="M6 21h8v1H6zM5 35h4v2H5zM11 35h4v2h-4z"/>
-            <path fill="#4a4d5e" d="M6 22h8v2H6zM6 24h3v11H6zM11 24h3v11h-3z"/>
-            <g class="braco"><path fill="#c86a4c" d="M14 12h2v2h-2zM15 9h2v3h-2z"/><path fill="#f3cfae" d="M16 6h2v3h-2zM16 3h3v3h-3z"/></g>
-          </svg>
-        </div>
-      </div>
-      <div class="lobo lobo-2 lobo-espelho">
-        <svg class="lobo-sprite" viewBox="0 0 18 18" shape-rendering="crispEdges">
-          <g class="lobo-cauda">
-            <path fill="#24301f" d="M1 7h2v1H1zM0 8h1v2h-1zM3 8h1v1h-1zM4 9h1v1h-1zM1 10h1v1h-1zM5 10h1v1h-1zM2 11h1v2h-1zM6 11h1v1h-1zM7 12h1v1h-1zM3 13h5v1H3z"/>
-            <path fill="#8f99a8" d="M4 10h1v1h-1zM3 11h3v1H3zM3 12h4v1H3z"/>
-            <path fill="#c9d1dc" d="M1 8h2v1H1zM1 9h3v1H1zM2 10h2v1H2z"/>
-          </g>
-          <g class="lobo-corpo">
-            <path fill="#24301f" d="M4 0h2v1H4zM14 0h2v1H14zM3 1h1v2h-1zM6 1h1v2h-1zM13 1h1v2h-1zM16 1h1v2h-1zM9 2h2v1H9zM2 3h1v8h-1zM7 3h2v1H7zM12 3h1v1h-1zM17 3h1v5h-1zM5 6h2v1H5zM12 6h2v1H12zM6 7h1v1h-1zM13 7h1v1h-1zM9 9h2v1H9zM17 9h1v2h-1zM3 11h1v2h-1zM16 11h1v2h-1zM2 13h1v1h-1zM17 13h1v3h-1zM1 14h1v2h-1zM5 14h2v2H5zM13 14h1v2h-1zM2 16h3v1H2zM7 16h1v1h-1zM12 16h1v1h-1zM14 16h3v1H14zM8 17h4v1H8z"/>
-            <path fill="#8f99a8" d="M4 2h1v1h-1zM15 2h1v1h-1zM3 3h4v1H3zM9 3h3v1H9zM13 3h4v1H13zM3 4h14v2H3zM3 6h2v2H3zM7 6h5v2H7zM14 6h3v2H14zM4 8h4v1H4zM12 8h2v1H12zM15 8h2v3H15zM3 9h2v2H3zM4 11h1v1h-1zM15 11h1v1h-1zM4 12h3v1H4zM13 12h3v1H13zM3 13h4v1H3zM13 13h4v1H13zM2 14h3v2H2zM7 14h1v2h-1zM12 14h1v2h-1zM14 14h3v2H14z"/>
-            <path fill="#c9d1dc" d="M8 8h4v1H8zM5 9h4v1H5zM11 9h4v1H11zM5 10h10v2H5zM7 12h6v2H7zM8 14h4v3H8z"/>
-            <path fill="#f29aa3" d="M4 1h2v1H4zM14 1h2v1H14zM5 2h1v1h-1zM14 2h1v1h-1zM3 8h1v1h-1zM14 8h1v1h-1z"/>
-            <path fill="#ffffff" d="M5 7h1v1H5zM12 7h1v1H12z"/>
-          </g>
-        </svg>
-      </div>
-      <div class="broto flor-amarela">
-        <div class="caule"></div>
-        <svg class="flor" viewBox="0 0 7 7" shape-rendering="crispEdges">
-          <path fill="#d99a2b" d="M2 0h3v1H2zM0 2h1v3H0zM6 2h1v3H6zM2 6h3v1H2zM1 1h1v1H1zM5 1h1v1H5zM1 5h1v1H1zM5 5h1v1H5z"/>
-          <path fill="#f4d06a" d="M2 1h3v1H2zM1 2h1v3H1zM5 2h1v3H5zM2 5h3v1H2z"/>
-          <path fill="#c8642f" d="M2 2h3v3H2z"/>
-        </svg>
-      </div>
+      <blockquote class="aspas-proposta fragment" data-fragment-index="3">“Compensar o consumo por meio da reciclagem basta sem transformar o modelo de produção?”</blockquote>
     </div>
   </div>
 
-  <p class="so-leitor">Cena final em pixel art: no centro do chão, os três integrantes do grupo, Caio, Diogo e Edson, acenam dando tchau, ladeados por dois lobinhos e por duas flores, uma roxa e uma amarela. Dois pássaros cruzam o céu juntos e vaga-lumes piscam junto à mata. Ilustração decorativa.</p>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 30–32); LAYRARGUES &amp; LIMA (2011, p. 9–10); SANTOS &amp; TOSCHI (2015, p. 245–248); PELICIONI &amp; PHILIPPI JR. (2014, p. 8); GUIMARÃES (2004 apud SANTOS &amp; TOSCHI, 2015, p. 247–248).</p>
 
   <aside class="notes">
-    <p>Encerramento: agradecer a atenção da turma e do professor e abrir para perguntas.</p>
+    <p>A macrotendência pragmática é caracterizada por Layrargues e Lima (2014, p. 30–31) sob as expressões "ambientalismo de resultados", "pragmatismo contemporâneo" e "ecologismo de mercado". Ela desloca a atenção da "pauta verde" da conservação da natureza para a "pauta marrom" dos resíduos sólidos e dos efluentes industriais, propondo a reciclagem, a ecoeficiência e a mitigação tecnológica como mecanismos de compensação moral e técnica para o consumo predatório ("conservadorismo dinâmico", p. 31).</p>
+    <p>Sua trajetória temática reflete as fases do ambientalismo de mercado (Layrargues, 2012 apud Santos &amp; Toschi, 2015, p. 246): emergiu na década de 1990 centrada na gestão de resíduos e na reciclagem, ampliou-se nos anos 2000 como Educação para o Consumo Sustentável e convergiu recentemente para a neutralização de emissões de carbono, créditos ambientais e "economia verde".</p>
+    <p>Entre seus traços pedagógicos centrais sobressai a crença na neutralidade da ciência (Layrargues &amp; Lima, 2014, p. 32; a expressão estendida "da ciência e da tecnologia" constava na versão preliminar de Layrargues &amp; Lima, 2011, p. 10). Adota ações factíveis de adesão imediata ("cada um faz sua parte"), transformando ações pontuais em atividade-fim e esvaziando a dimensão política do conflito ecológico. Layrargues e Lima (2014, p. 32) documentam ainda a controvérsia gerada pela tentativa internacional de substituir a Educação Ambiental pela "Educação para o Desenvolvimento Sustentável" (EDS).</p>
+    <p>Como limites centrais: Guimarães (2004 apud Santos &amp; Toschi, 2015, p. 247–248; ideia introduzida na p. 245) define como "armadilhas paradigmáticas" a ilusão de resolver a degradação operando estritamente dentro da mesma racionalidade econômica e cartesiana que originou a crise. A distribuição desigual de custos e benefícios ecológicos permanece oculta (Layrargues &amp; Lima, 2014, p. 31). Pelicioni e Philippi Jr. (2014, p. 8) alertam enfaticamente que a ênfase na responsabilidade individual desloca e fragiliza a discussão das verdadeiras causas e das relações de poder. Trata-se da vertente francamente hegemônica na sociedade contemporânea (Layrargues &amp; Lima, 2014, p. 31).</p>
   </aside>
 </section>
 

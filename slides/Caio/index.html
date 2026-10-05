@@ -11,118 +11,11 @@
 <link rel="stylesheet" href="../comum/tema.css">
 <style>
 /*
-  Ajustes exclusivos da parte de Caio. Cada seletor deve começar com:
-  .slide[data-autor="Caio"]
-  Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
-  Caminhos de imagens são relativos à pasta Caio, como assets/minha-foto.jpg.
+  Ajustes visuais exclusivos da parte de Caio (crítica, coexistência e encerramento).
+  Regra do compositor: cada seletor deve iniciar por .slide[data-autor="Caio"].
+  Sem regras @, sem nesting e sem combinadores de irmãos (+ ou ~).
 */
 
-/* Protege o título, ficha e pergunta da capa, mantendo a paisagem visível. */
-.slide[data-autor="Caio"].capa::before {
-  background: linear-gradient(90deg,
-    rgba(20, 46, 41, .85) 0%,
-    rgba(20, 46, 41, .80) 68%,
-    rgba(20, 46, 41, .30) 84%,
-    transparent 100%);
-}
-
-.slide[data-autor="Caio"].capa dl.ficha {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  column-gap: 14px;
-  row-gap: 5px;
-  max-width: 760px;
-  margin-top: 14px;
-  margin-bottom: 0;
-  line-height: 1.32;
-  align-items: baseline;
-}
-
-.slide[data-autor="Caio"].capa dl.ficha dt {
-  margin: 0;
-  font-family: var(--r-heading-font);
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: #dbe7be;
-  text-shadow: 1px 1px 0 #183728;
-}
-
-.slide[data-autor="Caio"].capa dl.ficha dd {
-  margin: 0;
-  font-family: var(--r-main-font);
-  font-size: 18px;
-  color: #fff5d7;
-  text-shadow: 1px 1px 0 #183728;
-}
-
-.slide[data-autor="Caio"].capa .roteiro-linha {
-  max-width: 760px;
-  font-size: 19px;
-  color: #dbe7be;
-  margin-top: 14px;
-  margin-bottom: 0;
-  letter-spacing: .2px;
-}
-
-.slide[data-autor="Caio"].capa .pergunta {
-  margin-top: 20px;
-}
-
-/* Slide 2: Eixo de tensão entre conservação e transformação */
-.slide[data-autor="Caio"]#slide-2 .eixo-disputa {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
-  padding: 10px 20px;
-  background: rgba(230, 222, 195, 0.65);
-  border: 2px solid #a89f78;
-  border-radius: 4px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.slide[data-autor="Caio"]#slide-2 .eixo-disputa .seta {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--discreto);
-  letter-spacing: .5px;
-}
-
-/* Slide 3: Três macrotendências com ícones e correspondências */
-.slide[data-autor="Caio"]#slide-3 .lentes {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.slide[data-autor="Caio"]#slide-3 .lentes .icone-lente {
-  width: 48px;
-  height: 48px;
-  margin: 0 0 6px;
-}
-
-.slide[data-autor="Caio"]#slide-3 .lentes h3 {
-  font-size: 29px;
-  margin-bottom: 8px;
-}
-
-.slide[data-autor="Caio"]#slide-3 .lentes p {
-  font-size: 17px;
-  line-height: 1.25;
-  margin: 0 0 8px;
-}
-
-.slide[data-autor="Caio"]#slide-3 .lentes .corresp {
-  font-size: 15px;
-  color: var(--discreto);
-  margin-top: 6px;
-  padding-top: 6px;
-  border-top: 1px dashed #bfb791;
-}
-
-/* Slide 4: Faixas de cenário (linha do tempo) e condições de emergência */
 .slide[data-autor="Caio"] .faixa-rotulo {
   display: inline-block;
   font-family: var(--r-heading-font);
@@ -136,14 +29,9 @@
   border-left: 3px solid currentColor;
 }
 
-.slide[data-autor="Caio"] .colunas.cinco {
-  --cols: repeat(5, 1fr);
-  column-gap: 12px;
-}
-
 .slide[data-autor="Caio"] ol.marcos {
   margin-top: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .slide[data-autor="Caio"] ol.marcos li {
@@ -155,12 +43,11 @@
   font-size: 24px;
   margin-bottom: 2px;
   line-height: 1.15;
-  color: var(--cons);
 }
 
 .slide[data-autor="Caio"] ol.marcos p {
-  font-size: 15px;
-  line-height: 1.22;
+  font-size: 16px;
+  line-height: 1.25;
   margin: 0;
 }
 
@@ -180,25 +67,113 @@
 }
 
 .slide[data-autor="Caio"] .card-contexto p {
-  font-size: 14px;
-  line-height: 1.24;
+  font-size: 15px;
+  line-height: 1.25;
   margin: 0;
 }
 
-/* Slide 5: Ajustes de tipografia para o bloco de práticas e limites */
-.slide[data-autor="Caio"]#slide-5 dl dt {
-  margin-top: 8px;
-  font-size: 20px;
+.slide[data-autor="Caio"] .dl-proposta {
+  font-size: 0.88em;
 }
 
-.slide[data-autor="Caio"]#slide-5 dl dd {
-  font-size: 17px;
+.slide[data-autor="Caio"] .dl-proposta dt {
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 7px;
+  line-height: 1.2;
+}
+
+.slide[data-autor="Caio"] .dl-proposta dt:first-child {
+  margin-top: 0;
+}
+
+.slide[data-autor="Caio"] .dl-proposta dd {
+  font-size: 18px;
   line-height: 1.25;
+  margin: 0;
 }
 
-.slide[data-autor="Caio"]#slide-5 blockquote {
+.slide[data-autor="Caio"] .aspas-proposta {
+  font-size: 19px;
+  line-height: 1.3;
   margin-top: 14px;
-  font-size: 20px;
+  padding-left: 14px;
+}
+
+.slide[data-autor="Caio"] .coexistencia-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 8px 0 12px;
+}
+
+.slide[data-autor="Caio"] .coexistencia-sintese {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 28px;
+  margin-top: 6px;
+}
+
+.slide[data-autor="Caio"] .coexistencia-box {
+  background: rgba(255, 255, 255, 0.52);
+  border: 2px solid #b3a27d;
+  padding: 10px 14px;
+  clip-path: var(--canto);
+  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.18);
+}
+
+.slide[data-autor="Caio"] .coexistencia-box h4 {
+  font-size: 19px;
+  margin: 0 0 4px;
+  font-family: var(--r-heading-font);
+}
+
+.slide[data-autor="Caio"] .coexistencia-box p {
+  font-size: 16px;
+  line-height: 1.28;
+  margin: 0;
+}
+
+/* Tipografia de rodapé e legendas */
+.slide[data-autor="Caio"]#slide-11 figcaption,
+.slide[data-autor="Caio"]#slide-11 > .fonte {
+  font-size: 14px;
+}
+
+/* Slide 11: Referências em duas colunas */
+.slide[data-autor="Caio"]#slide-11 .colunas-refs {
+  --cols: 1fr 1fr;
+  column-gap: 28px;
+  align-items: start;
+}
+
+.slide[data-autor="Caio"]#slide-11 .colunas-refs .refs-subtitulo {
+  font-size: 18px;
+  margin: 0 0 6px 0;
+  color: var(--r-heading-color);
+}
+
+.slide[data-autor="Caio"]#slide-11 .colunas-refs ul.refs {
+  columns: 1;
+  font-size: 12px;
+  line-height: 1.20;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.slide[data-autor="Caio"]#slide-11 .colunas-refs ul.refs li {
+  margin-bottom: 5px;
+  padding-left: 0.9em;
+  text-indent: -0.9em;
+}
+
+.slide[data-autor="Caio"]#slide-11 .colunas-refs ul.refs.refs-docs li {
+  margin-bottom: 4px;
+  font-size: 11.5px;
+}
+
+.slide[data-autor="Caio"]#slide-11 .colunas-refs .url {
+  font-size: 0.95em;
 }
 
 </style>
@@ -206,214 +181,389 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section class="slide capa" id="slide-1" aria-label="Slide 1 de 5: capa" data-background-image="../assets/aventura-floresta.png" data-background-color="#173C36" data-autor="Caio">
-  <p class="sobrelinha">Seminário</p>
-  <h1>Vertentes da<br>Educação Ambiental</h1>
-  <p class="subtitulo">Macrotendências político-pedagógicas</p>
-  <dl class="ficha">
-    <dt>Integrantes</dt>
-    <dd>Caio Victor Ferreira do Nascimento · Edson da Silva Lima Junior · Diogo</dd>
-    <dt>Disciplina</dt>
-    <dd>Educação Ambiental</dd>
-    <dt>Professor</dt>
-    <dd>Prof. Davi Lima Pantoja Leite</dd>
-    <dt>Unidade</dt>
-    <dd>CCN/DC</dd>
-  </dl>
-  <p class="roteiro-linha">O que é EA &rarr; Por que surgiram três vertentes &rarr; O que fica</p>
-  <blockquote class="pergunta fragment" data-fragment-index="1">“Todo projeto de Educação Ambiental busca a mesma transformação?”</blockquote>
-  <p class="so-leitor">Cenário ilustrativo de aventura 2D em pixel art: céu azul-esverdeado, montanhas ao fundo, rio, árvores e plataformas de terra cobertas por grama. Paisagem fictícia.</p>
-
-  <aside class="notes">
-    <p>Apresentação do seminário "Vertentes da Educação Ambiental: macrotendências político-pedagógicas", conduzido por Caio Victor Ferreira do Nascimento, Edson da Silva Lima Junior e Diogo, para a disciplina de Educação Ambiental (CCN/DC), ministrada pelo Prof. Davi Lima Pantoja Leite.</p>
-    <p>Roteiro da apresentação organizado em três etapas: primeiro, delimitar o que é Educação Ambiental e sua constituição como campo em disputa; segundo, analisar por que emergiram historicamente três macrotendências no Brasil; e terceiro, sintetizar o que cada vertente propõe.</p>
-    <p>Partimos da questão provocadora: todo projeto de Educação Ambiental busca a mesma transformação? Como referencial teórico estruturante, adotamos a análise das macrotendências como tipos ideais weberianos com fins didáticos, analíticos e políticos, que convivem e disputam hegemonia sem formar um esquema maniqueísta (Layrargues &amp; Lima, 2014, p. 34).</p>
-  </aside>
-</section>
-
-
-<section class="slide" id="slide-2" data-autor="Caio" aria-label="Slide 2 de 5">
-  <h2>EA é educação, e é um campo em disputa</h2>
-
-  <div class="colunas">
-    <div class="fragment" data-fragment-index="1">
-      <h3>O que é Educação Ambiental</h3>
-      <ul>
-        <li><strong>Educação aplicada:</strong> volta-se às questões de meio ambiente e não se confunde com Ecologia (Pelicioni &amp; Philippi Jr., p. 3).</li>
-        <li><strong>Meio ambiente &ne; natureza:</strong> abrange as relações sociais, econômicas e culturais que produzem o espaço (Layrargues 1999 apud Souza, p. 61).</li>
-        <li><strong>Visão de senso comum:</strong> para o público leigo, a EA parece uma prática consensual e de vertente única (Santos &amp; Toschi, p. 242).</li>
-      </ul>
-    </div>
-
-    <div class="fragment" data-fragment-index="2">
-      <h3>EA como campo social</h3>
-      <ul>
-        <li><strong>Conceito de campo (Bourdieu):</strong> espaço social concorrencial onde agentes disputam legitimidade e sentidos (L&amp;L 2014, p. 23–24).</li>
-        <li><strong>Subcampo do ambientalismo:</strong> dominantes tendem à conservação da ordem; dominados, à sua subversão (L&amp;L 2014, p. 25).</li>
-        <li><strong>Rigor conceitual:</strong> delimitar é indispensável porque noções vagas "pulverizam e debilitam a ação corretiva" (Mello e Souza 2000 apud Pelicioni, p. 5).</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="eixo-disputa fragment" data-fragment-index="3" aria-label="Eixo de tensão no campo: conservação versus transformação">
-    <span class="polo cons">Conservação da ordem</span>
-    <span class="seta">&larr; Eixo de tensão no campo (L&amp;L 2014, p. 25) &rarr;</span>
-    <span class="polo crit">Transformação social</span>
-  </div>
-
-  <p class="fonte">Fontes: PELICIONI &amp; PHILIPPI JR. (2014, p. 3, 5); LAYRARGUES &amp; LIMA (2014, p. 23–25); SOUZA (2018, p. 61); SANTOS &amp; TOSCHI (2015, p. 242).</p>
-
-  <aside class="notes">
-    <p>Iniciamos delimitando o estatuto epistemológico da Educação Ambiental. Conforme Pelicioni e Philippi Jr. (2014, p. 3), a EA é fundamentalmente "a educação aplicada às questões de meio ambiente", devendo-se ressaltar taxativamente que "educação ambiental não é Ecologia". Reduzi-la às ciências biológicas obscurece seu caráter eminentemente educativo e formativo.</p>
-    <p>Ademais, conforme nota conceitual de Layrargues (1999, p. 140 apud Souza, 2018, p. 61, nota 2), "meio ambiente não é sinônimo de natureza". Meio ambiente envolve as mediações humanas, históricas e materiais com o mundo biofísico. Todavia, como apontam Santos e Toschi (2015, p. 242), para o senso comum e para o público não especializado, a Educação Ambiental costuma ser percebida como uma vertente única, de viés ingênuo e conservador, como se houvesse harmonia e consenso irrestrito em torno de suas práticas.</p>
-    <p>Contra essa ilusão consensual, Layrargues e Lima (2014, p. 23–25) mobilizam a sociologia de Pierre Bourdieu para caracterizar a EA como um campo social — especificamente um subcampo do ambientalismo contemporâneo. O campo é um microcosmo dotado de regras próprias e atravessado por correlações de força: os agentes que ocupam posições dominantes tendem à conservação do capital simbólico e das estruturas estabelecidas, enquanto os agentes dominados tendem à subversão e à transformação da ordem.</p>
-    <p>Essa delimitação teórica é crucial: como advertia Mello e Souza (2000 apud Pelicioni &amp; Philippi Jr., 2014, p. 5), a ausência de clareza conceitual "pulveriza e debilita a ação corretiva". Assim, as diferentes propostas pedagógicas distribuem-se ao longo de um eixo contínuo entre conservação e transformação, superando qualquer maniqueísmo simplista (Layrargues &amp; Lima, 2014, p. 25).</p>
-  </aside>
-</section>
-
-
-<section class="slide" id="slide-3" data-autor="Caio" aria-label="Slide 3 de 5">
-  <h2>Três macrotendências: tipos ideais, não etapas</h2>
-  <p>Tipos ideais analíticos que coexistem e disputam a hegemonia no campo (Layrargues &amp; Lima, 2014):</p>
-
-  <div class="colunas tres lentes">
-    <div class="fragment" data-fragment-index="1">
-      <img class="icone-lente" src="../comum/icones/folha.svg" alt="" aria-hidden="true">
-      <h3 class="cons">Conservacionista</h3>
-      <p><strong>Foco:</strong> afeto, sensibilização e proteção da natureza (pauta verde).</p>
-      <p><strong>Correntes:</strong> comportamentalista, conservacionista, alfabetização ecológica, autoconhecimento e senso-percepção.</p>
-      <p class="corresp"><strong>Tozoni-Reis:</strong> corrente natural<br><strong>Martínez-Alier:</strong> culto ao silvestre</p>
-    </div>
-
-    <div class="fragment" data-fragment-index="2">
-      <img class="icone-lente" src="../comum/icones/engrenagem.svg" alt="" aria-hidden="true">
-      <h3 class="prag">Pragmática</h3>
-      <p><strong>Foco:</strong> resíduos, consumo e ecoeficiência (pauta marrom).</p>
-      <p><strong>Correntes:</strong> Educação para o Desenvolvimento Sustentável (EDS) e consumo sustentável.</p>
-      <p class="corresp"><strong>Tozoni-Reis:</strong> corrente racional<br><strong>Martínez-Alier:</strong> evangelho da ecoeficiência</p>
-    </div>
-
-    <div class="fragment" data-fragment-index="3">
-      <img class="icone-lente" src="../comum/icones/coletivo.svg" alt="" aria-hidden="true">
-      <h3 class="crit">Crítica</h3>
-      <p><strong>Foco:</strong> relações sociais, conflito, cidadania e justiça ambiental.</p>
-      <p><strong>Correntes:</strong> popular, emancipatória, transformadora e no processo de gestão ambiental.</p>
-      <p class="corresp"><strong>Tozoni-Reis:</strong> corrente histórica<br><strong>Martínez-Alier:</strong> ecologismo dos pobres</p>
-    </div>
-  </div>
-
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 24–25, 28, 30–34); TOZONI-REIS (apud L&amp;L, 2014, p. 34); MARTÍNEZ-ALIER (apud L&amp;L, 2014, p. 34).</p>
-
-  <aside class="notes">
-    <p>Layrargues e Lima (2014, p. 34; 2011, p. 1) propõem as três macrotendências como tipos ideais weberianos com fins didáticos, analíticos e políticos. Trata-se de uma cartografia pedagógica que permite ao educador situar sua prática e conquistar autonomia de posicionamento ético e metodológico (Layrargues &amp; Lima, 2014, p. 24). As tendências coexistem no tempo e disputam a hegemonia no campo; as práticas reais distribuem-se ao longo de um eixo contínuo entre conservação e transformação, "nunca um esquema binário e maniqueísta" (p. 25).</p>
-    <p>A vertente conservacionista expressa a matriz fundacional: opera na pauta verde, promovendo o afeto e a reconexão com a natureza; abriga correntes como a conservacionista clássica, a comportamentalista, a alfabetização ecológica de Capra, o autoconhecimento e a senso-percepção (p. 30).</p>
-    <p>A macrotendência pragmática corresponde ao ambientalismo de resultados e ao ecologismo de mercado: atua na pauta marrom (resíduos, reciclagem, consumo sustentável e ecoeficiência), englobando correntes de Educação para o Desenvolvimento Sustentável (EDS) e consumo sustentável (p. 30–31). Ressaltamos que a gestão ambiental NÃO é corrente da pragmática: em Layrargues e Lima (2014, p. 33), a "EA no processo de gestão ambiental" integra formalmente a macrotendência crítica, ao politizar a regulação e o licenciamento.</p>
-    <p>A vertente crítica estrutura-se em torno da transformação das relações sociais e da superação das desigualdades socioambientais: congrega a EA popular, a emancipatória, a transformadora e a EA no processo de gestão ambiental (p. 33).</p>
-    <p>Os autores demonstram correlação direta com outras tipologias clássicas: a classificação de Tozoni-Reis (correntes natural, racional e histórica) e as três correntes do ambientalismo de Martínez-Alier (culto ao silvestre, evangelho da ecoeficiência e ecologismo dos pobres) (apud Layrargues &amp; Lima, 2014, p. 34). Há ainda o mapeamento de Sorrentino (1995: preservacionista, conservacionista, racional e ecologista radical) e as 15 correntes de Sauvé (2005) (Layrargues &amp; Lima, 2014, p. 28).</p>
-    <p>Nas notas, destacamos com os autores que classificar traz riscos de simplificação e sectarismo (Layrargues &amp; Lima, 2011, p. 6), mas os benefícios de desvelamento da pluralidade se sobrepõem (2011, p. 13). Ademais, Pelicioni e Philippi Jr. (2014, p. 7), citando Guimarães, sintetizam essas tensões em duas grandes linhas: práticas voltadas aos interesses populares e à emancipação versus práticas funcionais aos interesses do capital.</p>
-  </aside>
-</section>
-
-
-<section class="slide" id="slide-4" data-autor="Caio" aria-label="Slide 4 de 5">
-  <h2 class="cons">Conservacionista: por que surgiu? (1960–1980)</h2>
+<section class="slide" id="slide-8" data-autor="Caio" aria-label="Slide 1 de 5">
+  <h2 class="crit">Crítica: por que surgiu? (redemocratização, 1980–1990)</h2>
 
   <div class="fragment" data-fragment-index="1">
-    <div class="faixa-rotulo cons">Cenário (documentos oficiais)</div>
-    <ol class="colunas cinco marcos" aria-label="Linha do tempo oficial da vertente conservacionista">
+    <div class="faixa-rotulo crit">Cenário (marcos oficiais e da sociedade civil)</div>
+    <ol class="colunas quatro marcos" aria-label="Marcos históricos da vertente crítica">
       <li>
-        <h3>1972</h3>
-        <p><strong>Estocolmo (ONU)</strong><br>Conferência sobre o Meio Ambiente Humano.</p>
+        <h3>1985–88</h3>
+        <p><strong>Redemocratização / CF/88</strong><br>Fim da ditadura; art. 225 assegura EA para a sociedade.</p>
       </li>
       <li>
-        <h3>1973</h3>
-        <p><strong>SEMA (Dec. 73.030)</strong><br>EA voltada à conservação e recursos naturais.</p>
+        <h3>1987</h3>
+        <p><strong>Rede REPEC / CEAAL</strong><br>Encontro pioneiro entre EA e Educação Popular.</p>
       </li>
       <li>
-        <h3>1977</h3>
-        <p><strong>Tbilisi (UNESCO)</strong><br>Princípio da interdisciplinaridade.</p>
+        <h3>1992</h3>
+        <p><strong>Tratado do Fórum Global</strong><br>Sociedade civil na Rio-92: EA não é neutra, é ato político.</p>
       </li>
       <li>
-        <h3>1979</h3>
-        <p><strong>MEC / CETESB</strong><br>Documento de 1º e 2º graus com enfoque ecológico.</p>
-      </li>
-      <li>
-        <h3>1981</h3>
-        <p><strong>PNMA (Lei 6.938)</strong><br>EA em todos os níveis de ensino (art. 2º, X).</p>
+        <h3>1994</h3>
+        <p><strong>PRONEA (dez. 1994)</strong><br>Articulação interministerial (MEC, MMA, MinC e MCT).</p>
       </li>
     </ol>
   </div>
 
   <div class="fragment" data-fragment-index="2">
-    <div class="faixa-rotulo cons">Condições de emergência (o que dizem os autores)</div>
-    <div class="colunas cinco">
+    <div class="faixa-rotulo crit">O que dizem os autores (condições de emergência)</div>
+    <div class="colunas quatro">
       <div class="card-contexto">
-        <h4 class="cons">Crise biofísica</h4>
-        <p>Foco exclusivo na destruição de ambientes naturais e poluição visível (L&amp;L 2014, p. 27).</p>
+        <h4 class="crit">Contexto politizante</h4>
+        <p>Redemocratização e novos movimentos sociais após 20 anos de ditadura (LAYRARGUES &amp; LIMA, 2014, p. 33).</p>
       </div>
       <div class="card-contexto">
-        <h4 class="cons">Base ecológica</h4>
-        <p>Protagonismo de cientistas naturais; educação conservacionista anterior à EA (L&amp;L 2014, p. 27; Pelicioni, p. 4).</p>
+        <h4 class="crit">Matriz freireana</h4>
+        <p>Encontro da EA com a Educação Popular na 2ª metade dos anos 1980 (SOUZA, p. 65; SANTOS &amp; TOSCHI, p. 244).</p>
       </div>
       <div class="card-contexto">
-        <h4 class="cons">Desenvolvimentismo</h4>
-        <p>Poluição vista como efeito colateral inevitável do progresso (L&amp;L 2014, p. 27; Reigota apud S&amp;T, p. 243).</p>
+        <h4 class="crit">Reação ao conservadorismo</h4>
+        <p>Recusa da EA a-histórica, apolítica e normativa no início dos anos 1990 (LAYRARGUES &amp; LIMA, 2014, p. 28–29).</p>
       </div>
       <div class="card-contexto">
-        <h4 class="cons">Sistema ambiental</h4>
-        <p>EA criada pela SEMA, e não pelo sistema educacional (MEC só em 1991) (L&amp;L 2014, p. 27).</p>
-      </div>
-      <div class="card-contexto">
-        <h4 class="cons">Cerne autoritário</h4>
-        <p>Cerceamento da ditadura militar favoreceu abordagem técnica funcional (Lima 2011 apud L&amp;L 2014, p. 27).</p>
+        <h4 class="crit">Ecologia Política</h4>
+        <p>Articulação entre degradação ambiental, acumulação e lutas sociais (LAYRARGUES &amp; LIMA, 2014, p. 23, 33).</p>
       </div>
     </div>
   </div>
 
-  <p class="fonte">Fontes: BRASIL (Decreto 73.030/1973; Lei 6.938/1981); UNESCO (1977); LAYRARGUES &amp; LIMA (2014, p. 27);<br>PELICIONI &amp; PHILIPPI JR. (2014, p. 4–6); SANTOS &amp; TOSCHI (2015, p. 242–243); REIGOTA (2009 apud S&amp;T, 2015, p. 243).</p>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 23, 28–29, 33); SOUZA (2018, p. 61, 65–66); PELICIONI &amp; PHILIPPI JR. (2014, p. 5–6); SANTOS &amp; TOSCHI (2015, p. 243–244). Cenário: BRASIL (CF/1988; PRONEA/1994; Lei 9.795/1999); FÓRUM GLOBAL (Tratado de EA, 1992).</p>
 
   <aside class="notes">
-    <p>Analisamos as condições históricas de emergência da macrotendência conservacionista no Brasil entre as décadas de 1960 e 1980. Conforme a cautela metodológica dos autores, não falamos em "causas" lineares, mas em conjuntura histórica e condições que favoreceram essa abordagem — os próprios teóricos empregam termos como "provavelmente", "impulsionada", "coincide" e "parece moldar".</p>
-    <p>Na faixa superior, acompanhamos o cenário dos documentos oficiais: o regime militar iniciado em 1964; a Conferência de Estocolmo da ONU em 1972; a criação da SEMA em 1973 pelo Decreto nº 73.030, que conferiu à agência a atribuição de educar "para o uso adequado dos recursos naturais, tendo em vista a conservação"; a Conferência Intergovernamental de Tbilisi (UNESCO) em 1977, que consagrou a abordagem interdisciplinar (Pelicioni &amp; Philippi Jr., 2014, p. 5) e os aspectos políticos, sociais e econômicos (Dias 2003 apud Santos &amp; Toschi, 2015, p. 243); a publicação em 1979 pelo MEC e CETESB do documento "Ecologia: uma proposta para o ensino de 1º e 2º graus"; e a Lei nº 6.938/1981 (PNMA), cujo art. 2º, X, institui a EA no país antes da redemocratização em 1985.</p>
-    <p>Nota de correção das fontes: Santos e Toschi (2015, p. 243) registraram 1975 para Tbilisi por engano; o ano correto é 1977. Ademais, citando Dias (2003), as autoras datam a proposta MEC/CETESB em 1976, mas a cronologia oficial do MEC comprova que ela foi publicada em 1979 — portanto, veio *depois* de Tbilisi e caminhou em sentido oposto, com enfoque estritamente ecológico em vez de interdisciplinar (Santos &amp; Toschi, 2015, p. 243).</p>
-    <p>Na faixa inferior, destacamos as condições de emergência identificadas pelos autores: 1) a crise ambiental era lida como degradação de ambientes naturais físicos (Layrargues &amp; Lima, 2014, p. 27); 2) a ecologia era a base conceitual exclusiva, com "predominância absoluta de cientistas naturais" (p. 27) e herança da "educação conservacionista, ideia que antecedeu à educação ambiental" (Pelicioni &amp; Philippi Jr., p. 4); 3) os problemas eram naturalizados como "efeitos colaterais de um projeto inevitável de modernização" (p. 27), vigendo a premissa de que "a poluição é o preço que se paga pelo progresso" (Reigota 2009 apud Santos &amp; Toschi, p. 243); 4) a EA institucionalizou-se no Brasil "por meio do sistema ambiental, e não do educacional" — a SEMA liderou o processo, enquanto o MEC só criou GT permanente em 1991 e a ANPEd em 2005 (Layrargues &amp; Lima, p. 27); e 5) o período militar de 1964 a 1985 reprimia debates políticos, resultando numa perspectiva "natural e técnica, que não colocava em questão a ordem estabelecida" (Lima 2011 apud Layrargues &amp; Lima, p. 27).</p>
+    <p>A emergência da macrotendência crítica é sintetizada por Layrargues e Lima (2014, p. 33) como tendo sido "impulsionada por um contexto histórico politizante": o processo de redemocratização política "após duas décadas de ditadura militar", a ascensão de novos movimentos sociais urbanos e do campo e o "ambiente favorável da Conferência do Rio em 1992".</p>
+    <p>No cenário institucional e político do país: o regime militar encerrou-se em 15 de março de 1985; em 1988, a Constituição Cidadã consagrou em seu artigo 225, §1º, inciso VI, o dever estatal de promover a Educação Ambiental em todos os níveis de ensino e a conscientização pública para a preservação do meio ambiente. No âmbito da sociedade civil organizada, surge em 1987 a Rede de Educação Popular e Ecologia (REPEC), vinculada ao Conselho de Educação de Adultos da América Latina (CEAAL), marcando o estreitamento entre práticas comunitárias e consciência ecológica (Barbosa, 2002 apud Souza, 2018, p. 66 — citado via fonte secundária). Em junho de 1992, as ONGs e movimentos sociais reunidos no Fórum Global da sociedade civil paralela à Rio-92 promulgam o Tratado de Educação Ambiental para Sociedades Sustentáveis e Responsabilidade Global, cujo Princípio 4 afirma taxativamente que "a educação ambiental não é neutra, mas ideológica. É um ato político" (documento coletivo da sociedade civil e movimentos, não atribuível à ONU). Em dezembro de 1994 é instituído o Programa Nacional de Educação Ambiental (PRONEA), construído conjuntamente por quatro pastas ministeriais: MEC, MMA, Ministério da Cultura (MinC) e Ministério da Ciência e Tecnologia (MCT).</p>
+    <p>Na literatura acadêmica, os autores mostram que o sentido político da EA "começou a tomar vulto na década de 1980" (Pelicioni &amp; Philippi Jr., 2014, p. 5; Souza, 2018, p. 61), fortalecido pelo encontro histórico com a Educação Popular e a pedagogia libertadora de Paulo Freire na segunda metade dos anos 1980 (Peralta &amp; Ruiz, 2010 apud Souza, 2018, p. 65; Tristão, 2007 apud Santos &amp; Toschi, 2015, p. 244). Fundamentalmente, Layrargues e Lima (2014, p. 28–29) assinalam que a macrotendência crítica se consolida no início dos anos 1990 como uma reação explícita contra uma Educação Ambiental "a-histórica, apolítica, conteudística e normativa", própria das abordagens conservacionistas herdadas do período autoritário. Essa reação ancora-se nas premissas da Ecologia Política construídas desde o final dos anos 1970 (Layrargues &amp; Lima, 2014, p. 23, 33).</p>
+    <p>Ressalva importante para a fala: ao mencionar a Lei 9.795/1999 (PNEA), esclareça que a lei federal não oficializou a vertente crítica como hegemônica; seu artigo 4º, inciso III, estabelece o princípio do pluralismo de ideias e concepções pedagógicas. Fale sempre em "condições de emergência", nunca em "causa".</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-5" data-autor="Caio" aria-label="Slide 5 de 5">
-  <h2 class="cons">Macrotendência Conservacionista: o que propõe?</h2>
+<section class="slide" id="slide-9" data-autor="Caio" aria-label="Slide 2 de 5">
+  <h2 class="crit">Crítica: o que propõe?</h2>
 
   <div class="colunas foto-texto">
     <figure class="fragment" data-fragment-index="1">
-      <img src="../assets/conservacionista.jpg" style="aspect-ratio: 4 / 3; object-position: center 50%"
-        alt="Uma mulher caminha por uma trilha na floresta e encosta a mão no tronco de uma árvore alta coberta de musgo.">
-      <figcaption>Trilha da Vovó Sumaúma, Floresta Nacional do Tapajós (PA). Foto: Leonardo Milano / Amazônia Real — Wikimedia Commons (CC BY 2.0)</figcaption>
+      <img src="../assets/critica.jpg" style="aspect-ratio: 4 / 3; object-position: center 55%"
+        alt="Tanques retangulares de concreto de uma estação de tratamento de água, com guarda-corpos metálicos, prédio operacional e caixa d'água ao fundo.">
+      <figcaption>ETA Gramame-Mamuaba, Conde (PB). Foto: Marcos Elias de Oliveira Júnior — Wikimedia Commons (CC0 1.0)</figcaption>
     </figure>
 
     <div>
-      <dl class="fragment" data-fragment-index="2">
-        <dt class="cons">Lema e princípios</dt>
-        <dd>“Conhecer para amar, amar para preservar” (L&amp;L 2014, p. 27); Alfabetização Ecológica (Capra apud L&amp;L 2014, p. 30).</dd>
-        <dt class="cons">Práticas e público</dt>
-        <dd>Trilhas ecológicas, vivências de senso-percepção, visitas a UCs, ecoturismo e foco em crianças (Layrargues 2012 apud S&amp;T, p. 245).</dd>
-        <dt class="cons">Contribuição</dt>
-        <dd>Despertar da sensibilidade afetiva e relativização do antropocentrismo (L&amp;L 2014, p. 30).</dd>
-        <dt class="cons">Limites apontados pelos autores</dt>
-        <dd>Privilegia o indivíduo sobre o social e o tecnicismo sobre a política (Guimarães 2004 apud S&amp;T, p. 245); risco de “adestramento ambiental” (Brügger 1994 apud L&amp;L 2014, p. 29).</dd>
+      <dl class="dl-proposta fragment" data-fragment-index="2">
+        <dt class="crit">Diagnóstico</dt>
+        <dd>Crise não é da natureza, mas social manifestada na natureza (L&amp;L 2014, p. 29).</dd>
+        <dt class="crit">Estratégia e práxis</dt>
+        <dd>Ação coletiva, grupos de pressão, pedagogia do conflito e emancipação.</dd>
+        <dt class="crit">Matrizes e correntes</dt>
+        <dd>Freire, Teoria Crítica e Ecologia Política; EA Popular e Gestão política.</dd>
+        <dt class="crit">Limites e alertas</dt>
+        <dd>Rejeita “sociologismos e politicismos”; pouco presente com crianças.</dd>
+        <dt class="crit">Status no campo</dt>
+        <dd>Contra-hegemônica; forte na academia, mas sob constante erosão.</dd>
       </dl>
-      <blockquote class="fragment" data-fragment-index="3">“Como separar ecologia, cultura e política?”<br><small>LAYRARGUES &amp; LIMA (2014, p. 30)</small></blockquote>
+
+      <blockquote class="aspas-proposta fragment" data-fragment-index="3">“Como promover sustentabilidade sem enfrentar as desigualdades e as relações de poder?”</blockquote>
     </div>
   </div>
 
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 27, 29–30, 34); SANTOS &amp; TOSCHI (2015, p. 245);<br>BRÜGGER (1994 apud L&amp;L, 2014, p. 29); GUIMARÃES (2004 apud S&amp;T, 2015, p. 245).</p>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 29, 33–35); SOUZA (2018, p. 63–68); PELICIONI &amp; PHILIPPI JR. (2014, p. 7–8); SANTOS &amp; TOSCHI (2015, p. 247–248); QUINTAS &amp; GUALDA (1995 apud LAYRARGUES &amp; LIMA, 2014, p. 35).</p>
 
   <aside class="notes">
-    <p>A macrotendência conservacionista deteve a hegemonia no período fundacional da Educação Ambiental no Brasil (Layrargues &amp; Lima, 2014, p. 27, 34). Embora tenha perdido o monopólio discursivo nas décadas posteriores, segue como uma "tendência histórica, forte e bem consolidada" no imaginário social e no ambiente escolar (p. 30, 34).</p>
-    <p>Sua proposta político-pedagógica ancora-se no conhecido lema "conhecer para amar, amar para preservar" (Layrargues &amp; Lima, 2014, p. 27; 2011, p. 5). Parte da premissa de que a degradação resulta do distanciamento psicológico e moral entre seres humanos e natureza biofísica. Dialoga diretamente com o referencial da Alfabetização Ecológica formulada por Fritjof Capra (Layrargues &amp; Lima, 2014, p. 30) e com as correntes conservacionista e naturalista mapeadas por Lucie Sauvé (Santos &amp; Toschi, 2015, p. 245).</p>
-    <p>Em termos práticos, apoia-se em caminhadas por trilhas interpretativas, dinâmicas de senso-percepção, visitas pedagógicas a Unidades de Conservação e práticas de ecoturismo, apresentando forte presença com o público infantil (Layrargues, 2012 apud Santos &amp; Toschi, 2015, p. 245). Sua principal contribuição reside na criação de laços afetivos com os seres vivos e na relativização do antropocentrismo utilitarista da modernidade (Layrargues &amp; Lima, 2014, p. 30).</p>
-    <p>Contudo, a literatura especializada aponta limites estruturais severos: 1) o foco exclusivo na mudança individual e comportamental no âmbito privado assume que a transmissão de informações corretas modifica condutas automaticamente, privilegiando "o indivíduo sobre a sociedade e o tecnicismo sobre a política" (Guimarães 2004 apud Santos &amp; Toschi, 2015, p. 245); 2) corre o risco de converter a formação educativa em mero "adestramento ambiental" e condicionamento normativo (Brügger 1994 apud Layrargues &amp; Lima, 2014, p. 29); 3) como indagam Layrargues e Lima (2014, p. 30), "como separar ecologia, cultura e política?", pois a mudança cultural dificilmente se concretiza sem transformação dos modos de produção e das estruturas econômicas; e 4) como reforçam Pelicioni e Philippi Jr. (2014, p. 6), "consciência ecológica sem ação transformadora ajuda a manter a sociedade tal qual ela se encontra".</p>
-    <p>Com isso, encerro a primeira parte do seminário e passo a palavra ao Diogo, que apresentará a emergência e os contornos da macrotendência pragmática nos anos 1990.</p>
+    <p>A macrotendência crítica parte de um diagnóstico radicalmente distinto: "a crise ambiental não expressava problemas da natureza, mas problemas que se manifestavam na natureza" (Layrargues &amp; Lima, 2014, p. 29). Para essa vertente, a degradação biofísica é consequência direta das relações sociais de dominação, da injustiça distributiva e da lógica de acumulação do capital.</p>
+    <p>Suas matrizes teóricas fundamentam-se na pedagogia libertadora de Paulo Freire, na Educação Popular latino-americana, na Teoria Crítica frankfurtiana, na Ecologia Política e em vertentes do materialismo histórico (Layrargues &amp; Lima, 2014, p. 29, 33; Souza, 2018, p. 63). Opera com conceitos estruturantes como cidadania ativa, participação democrática direta, emancipação humana, pedagogia do conflito socioambiental e justiça ambiental (Layrargues &amp; Lima, 2014, p. 33; Souza, 2018, p. 63).</p>
+    <p>Correntes internas fundamentais: a Educação Ambiental Popular integra a macrotendência crítica como corrente viva e engajada, e não como uma "quarta vertente" separada (Ruiz, 1994 apud Souza, 2018, p. 66; Souza, 2018, p. 64, 68), promovendo uma síntese entre os princípios ecológicos e as lutas políticas das classes subalternas. Do mesmo modo, a "Educação Ambiental no processo de gestão ambiental", formulada por Quintas e Gualda (1995 apud Layrargues &amp; Lima, 2014, p. 35, nota iii), insere-se na vertente crítica ao enfatizar a gestão pública como arena de conflito político e participação social, rompendo com o viés puramente gerencialista ou tecnocrático.</p>
+    <p>Práxis e ação pedagógica: estrutura-se no método "ação – reflexão – ação", mobilizando comunidades e fortalecendo grupos de pressão perante os tomadores de decisão. Pelicioni e Philippi Jr. (2014, p. 7) sublinham que as camadas de menor renda sofrem de modo desproporcional os efeitos da poluição e a ausência de infraestrutura sanitária básica.</p>
+    <p>Limites e tensões internas: Layrargues e Lima (2014, p. 33) documentam que formuladores da própria vertente crítica advertem contra reducionismos como "sociologismos e politicismos", que correm o risco de desconsiderar as bases biológicas e biofísicas dos ecossistemas. Santos e Toschi (2015, p. 248), referenciando Layrargues (2012), apontam sua concentração predominante nos debates acadêmicos de pós-graduação e reduzida incidência formativa com crianças nas escolas. Além disso, sendo expressamente contra-hegemônica, encontra-se sob constante ameaça de erosão diante do apelo de mercado da vertente pragmática (Layrargues &amp; Lima, 2014, p. 34–35).</p>
+  </aside>
+</section>
+
+
+<section class="slide" id="slide-10" data-autor="Caio" aria-label="Slide 3 de 5">
+  <h2 class="slide-titulo">Coexistência, não sucessão: as três no tempo</h2>
+
+  <svg class="coexistencia-svg" viewBox="0 0 1200 185" role="img" aria-labelledby="s10-t s10-d">
+    <title id="s10-t">Coexistência e disputa das macrotendências no tempo (1960–2014)</title>
+    <desc id="s10-d">Linha do tempo qualitativa com três faixas: Conservacionista (hegemônica no início, segue forte e consolidada), Pragmática (impulsionada nos anos 1990, francamente hegemônica) e Crítica (diferencia-se nos anos 1990 e cresce na academia). Conservacionista e Pragmática são da mesma linhagem; a Crítica tem matriz distinta.</desc>
+
+    <!-- Linhas de grade e marcos temporais -->
+    <g stroke="#baa982" stroke-dasharray="2 3" stroke-width="1">
+      <line x1="220" y1="20" x2="220" y2="175"></line>
+      <line x1="410" y1="20" x2="410" y2="175"></line>
+      <line x1="610" y1="20" x2="610" y2="175"></line>
+      <line x1="810" y1="20" x2="810" y2="175"></line>
+      <line x1="1010" y1="20" x2="1010" y2="175"></line>
+    </g>
+
+    <!-- Rótulos dos marcos temporais -->
+    <text x="220" y="16" font-family="'Pixelify Sans', sans-serif" font-size="15" fill="#4a503d" text-anchor="middle" font-weight="700">1960–70</text>
+    <text x="410" y="16" font-family="'Pixelify Sans', sans-serif" font-size="15" fill="#4a503d" text-anchor="middle" font-weight="700">1980</text>
+    <text x="610" y="16" font-family="'Pixelify Sans', sans-serif" font-size="15" fill="#4a503d" text-anchor="middle" font-weight="700">1990</text>
+    <text x="810" y="16" font-family="'Pixelify Sans', sans-serif" font-size="15" fill="#4a503d" text-anchor="middle" font-weight="700">2000</text>
+    <text x="1010" y="16" font-family="'Pixelify Sans', sans-serif" font-size="15" fill="#4a503d" text-anchor="middle" font-weight="700">2014</text>
+
+    <!-- Faixa 1: Conservacionista -->
+    <text x="210" y="47" font-family="'Pixelify Sans', sans-serif" font-size="14" fill="var(--cons)" font-weight="700" text-anchor="end">Conservacionista</text>
+    <rect x="220" y="28" width="790" height="26" rx="4" fill="var(--cons-fill)" stroke="var(--cons)" stroke-width="2"></rect>
+    <text x="230" y="46" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="700" fill="#ffffff">Momento fundacional (hegemônica) → Segue forte e consolidada em escolas e UCs</text>
+
+    <!-- Faixa 2: Pragmática -->
+    <text x="210" y="93" font-family="'Pixelify Sans', sans-serif" font-size="14" fill="var(--prag)" font-weight="700" text-anchor="end">Pragmática</text>
+    <rect x="220" y="74" width="390" height="28" rx="4" fill="var(--prag-fill)" stroke="var(--prag)" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.8"></rect>
+    <rect x="610" y="72" width="400" height="32" rx="4" fill="var(--prag-fill)" stroke="var(--prag)" stroke-width="2.5"></rect>
+    <text x="230" y="92" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#241a05">Raízes no pós-guerra →</text>
+    <text x="625" y="93" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="700" fill="#ffffff">Impulso nos anos 1990 → Francamente hegemônica (mercado)</text>
+
+    <!-- Faixa 3: Crítica -->
+    <text x="210" y="146" font-family="'Pixelify Sans', sans-serif" font-size="14" fill="var(--crit)" font-weight="700" text-anchor="end">Crítica</text>
+    <rect x="410" y="132" width="200" height="22" rx="4" fill="var(--crit-fill)" stroke="var(--crit)" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.8"></rect>
+    <rect x="610" y="130" width="400" height="26" rx="4" fill="var(--crit-fill)" stroke="var(--crit)" stroke-width="2"></rect>
+    <text x="420" y="147" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="#ffffff">Redemocratização →</text>
+    <text x="625" y="148" font-family="'Trebuchet MS', sans-serif" font-size="13" font-weight="700" fill="#ffffff">Diferencia-se anos 1990 → Cresce na pós-graduação e fóruns</text>
+
+    <!-- Chave / Conexão linhagem Conservacionista e Pragmática -->
+    <path d="M 1018 41 L 1028 41 L 1028 64 L 1034 64 L 1028 64 L 1028 88 L 1018 88" fill="none" stroke="var(--prag)" stroke-width="2"></path>
+    <text x="1040" y="60" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="var(--prag)">Mesma linhagem</text>
+    <text x="1040" y="74" font-family="'Trebuchet MS', sans-serif" font-size="11" fill="#4a503d">comportamental</text>
+
+    <!-- Indicação Matriz Crítica -->
+    <text x="1040" y="138" font-family="'Trebuchet MS', sans-serif" font-size="12" font-weight="700" fill="var(--crit)">Matriz distinta</text>
+    <text x="1040" y="152" font-family="'Trebuchet MS', sans-serif" font-size="11" fill="#4a503d">emancipatória</text>
+  </svg>
+
+  <div class="coexistencia-sintese">
+    <div class="coexistencia-box fragment" data-fragment-index="1">
+      <h4 class="slide-subtitulo">Coexistência e disputa contínua</h4>
+      <p>Tipos ideais em convivência simultânea no presente, disputando a hegemonia do campo da EA; não representam etapas sucessivas ou superadas (LAYRARGUES &amp; LIMA, 2014, p. 34).</p>
+    </div>
+    <div class="coexistencia-box fragment" data-fragment-index="2">
+      <h4 class="slide-subtitulo">Percepção das correntes</h4>
+      <p>A percepção da pluralidade das correntes explicita-se e amadurece nos debates dos anos 1990, não sendo possível delimitar cronologicamente sua origem (LAYRARGUES &amp; LIMA, 2011, p. 4; 2014, p. 25).</p>
+    </div>
+  </div>
+
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 25–26, 28–34); LAYRARGUES &amp; LIMA (2011, p. 4, 12); SANTOS &amp; TOSCHI (2015, p. 247, 249); GUIMARÃES (2004 apud SANTOS &amp; TOSCHI, 2015, p. 247).</p>
+
+  <aside class="notes">
+    <p>Esta linha do tempo qualitativa sintetiza a trajetória temporal das três macrotendências entre as décadas de 1960 e 2014 (marco do artigo de Layrargues &amp; Lima). Não expressa medições quantitativas ou percentuais absolutos, mas a evolução de sua presença e influência no campo socioambiental.</p>
+    <p>A vertente conservacionista deteve a hegemonia no momento fundacional da EA brasileira nos anos 1970 e 1980 (Layrargues &amp; Lima, 2014, p. 26). Longe de desaparecer, permanece como tendência histórica "forte e bem consolidada" (p. 30, 34), sustentando práticas de sensibilização ecológica, ecoturismo e vivências na natureza em escolas e unidades de conservação.</p>
+    <p>A macrotendência pragmática, com raízes materiais no pós-guerra, é fortemente impulsionada ao longo dos anos 1990 com a onda neoliberal e o apelo ao ambientalismo de resultados (Layrargues &amp; Lima, 2014, p. 29, 31). Converte-se na abordagem "francamente hegemônica na atualidade" (p. 31–32), amplamente financiada por setores corporativos e disseminada na mídia sob a fórmula "cada um faz sua parte".</p>
+    <p>A vertente crítica emerge das lutas sociais da redemocratização na década de 1980 e diferencia-se expressamente no início dos anos 1990 como contestação à EA conservadora (Layrargues &amp; Lima, 2014, p. 28–29). Nos anos 2000, expande-se com vigor na produção acadêmica da pós-graduação e nas redes de educação popular (Layrargues &amp; Lima, 2011, p. 12; 2014, p. 33), operando como contraponto contra-hegemônico em permanente disputa pelo campo.</p>
+    <p>Articulação teórica: Conservacionismo e pragmatismo configuram "dois momentos de uma mesma linhagem" (Layrargues &amp; Lima, 2014, p. 32), compartilhando pressupostos comportamentalistas e foco nas ações individuais no âmbito privado. Em contrapartida, a crítica ancora-se em matriz emancipatória e sociopolítica substancialmente distinta (Guimarães, 2004 apud Santos &amp; Toschi, 2015, p. 247).</p>
+    <p>Ressalva epistemológica: Conforme Layrargues e Lima (2011, p. 4; 2014, p. 25), não é possível fixar uma data de nascimento precisa para as correntes ou delimitar cronologicamente com rigor quando surgiu a sua percepção; a consciência reflexiva da coexistência dessas diferentes vertentes explicita-se e amadurece nos debates da década de 1990.</p>
+    <p>Transição: Com essa compreensão sobre como as três vertentes coexistem e disputam sentidos na contemporaneidade, sigo para o fechamento: o que fica desse mapa das três vertentes.</p>
+  </aside>
+</section>
+
+
+<section class="slide" id="slide-11" data-autor="Caio" aria-label="Slide 4 de 5">
+  <h2>Referências</h2>
+
+  <div class="colunas colunas-refs">
+    <div>
+      <h3 class="refs-subtitulo">Bibliografia validada</h3>
+      <ul class="refs">
+        <li><b>LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.</b> Mapeando as macro-tendências político-pedagógicas da educação ambiental contemporânea no Brasil. In: <i>VI Encontro Pesquisa em Educação Ambiental (VI EPEA)</i>, Ribeirão Preto, 2011. 15 p.</li>
+
+        <li><b>LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.</b> As macrotendências político-pedagógicas da educação ambiental brasileira. <i>Ambiente &amp; Sociedade</i>, São Paulo, v. 17, n. 1, p. 23–40, jan./mar. 2014. <span class="url">DOI: 10.1590/1809-44220003500</span></li>
+
+        <li><b>PELICIONI, Maria Cecília Focesi; PHILIPPI JR., Arlindo.</b> Bases políticas, conceituais, filosóficas e ideológicas da educação ambiental. In: PHILIPPI JR., A.; PELICIONI, M. C. F. (ed.). <i>Educação ambiental e sustentabilidade</i>. 2. ed. Barueri: Manole, 2014. cap. 1, p. 3–12.</li>
+
+        <li><b>SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra.</b> Vertentes da educação ambiental: da conservacionista à crítica. <i>Fronteiras: Journal of Social, Technological and Environmental Science</i>, v. 4, n. 2, p. 241–250, jul./dez. 2015. <span class="url">DOI: 10.21664/2238-8869.2015v4i2.p241-250</span></li>
+
+        <li><b>SOUZA, Tiago Zanquêta de.</b> A educação ambiental popular: contribuições em práticas sociais. <i>Motricidades: Rev. SPQMH</i>, v. 2, n. 1, p. 60–70, jan./abr. 2018. <span class="url">DOI: 10.29181/2594-6463.2018.v2.n1.p60-70</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="refs-subtitulo">Documentos oficiais</h3>
+      <ul class="refs refs-docs">
+        <li><b>ONU.</b> Declaração de Estocolmo sobre Meio Ambiente Humano, 1972.</li>
+        <li><b>BRASIL.</b> Decreto nº 73.030, de 30 out. 1973 (cria a SEMA).</li>
+        <li><b>UNESCO.</b> Conferência de Tbilisi: relatório final. Paris, 1978.</li>
+        <li><b>BRASIL. MEC.</b> Cronologia oficial (MEC/CETESB 1979; Port. 2.421/91; PRONEA 1994).</li>
+        <li><b>BRASIL.</b> Lei nº 6.938, de 31 ago. 1981 (PNMA).</li>
+        <li><b>ONU.</b> Nosso Futuro Comum (Relatório Brundtland). Doc. A/42/427, 1987.</li>
+        <li><b>BRASIL.</b> Constituição Federal de 1988, art. 225, § 1º, VI.</li>
+        <li><b>BRASIL.</b> Lei nº 8.031, de 12 abr. 1990 (PND; rev. Lei 9.491/1997).</li>
+        <li><b>ONU.</b> Conferência Rio-92 e Agenda 21 (cap. 4 e 36). Rio de Janeiro, 1992.</li>
+        <li><b>TRATADO</b> de EA para Sociedades Sustentáveis. Fórum Global, Rio, 1992.</li>
+        <li><b>BRASIL.</b> Lei nº 9.795, de 27 abr. 1999 (PNEA).</li>
+        <li><b>ONU.</b> Resolução A/RES/57/254, 2002 (Década da EDS 2005-2014).</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="fonte">Autores clássicos citados no seminário figuram como <i>apud</i> nas obras da bibliografia.</p>
+
+  <aside class="notes">
+    <p>Apresentamos o quadro referencial completo do seminário, organizado em duas colunas: a bibliografia teórica examinada diretamente e o conjunto de marcos documentais e dados oficiais.</p>
+    <p>A bibliografia apoia-se em cinco obras centrais: Layrargues e Lima (2011, 2014), Pelicioni e Philippi Jr. (2. ed. 2014), Santos e Toschi (2015, DOI registrado) e Souza (2018). Todos os autores clássicos mobilizados durante os slides — como Bourdieu, Lima, Brügger, Capra, Sorrentino, Sauvé, Tozoni-Reis, Martínez-Alier, Acselrad, Dias, Reigota, Guimarães, Tristão, Loureiro, Freire, Mello e Souza, Peralta e Ruiz, Ruiz, Barbosa e Carvalho — figuram rigorosamente na modalidade apud, conforme constam nas cinco obras analisadas, cujos volumes originais não foram consultados diretamente.</p>
+    <p>Na coluna de documentos oficiais, foram consolidados os diplomas legais, conferências internacionais que subsidiaram a contextualização histórica de cada vertente. Agradecemos a atenção de todos e abrimos para perguntas.</p>
+  </aside>
+</section>
+
+
+<section class="slide final" id="slide-12" aria-label="Slide 5 de 5: encerramento" data-autor="Caio">
+  <h2 class="fim-titulo" aria-hidden="true"><span aria-hidden="true" style="--i:0">O</span><span aria-hidden="true" style="--i:1">b</span><span aria-hidden="true" style="--i:2">r</span><span aria-hidden="true" style="--i:3">i</span><span aria-hidden="true" style="--i:4">g</span><span aria-hidden="true" style="--i:5">a</span><span aria-hidden="true" style="--i:6">d</span><span aria-hidden="true" style="--i:7">o</span><span aria-hidden="true" style="--i:8">&nbsp;</span><span aria-hidden="true" style="--i:9">p</span><span aria-hidden="true" style="--i:10">e</span><span aria-hidden="true" style="--i:11">l</span><span aria-hidden="true" style="--i:12">a</span><span aria-hidden="true" style="--i:13">&nbsp;</span><span aria-hidden="true" style="--i:14">a</span><span aria-hidden="true" style="--i:15">t</span><span aria-hidden="true" style="--i:16">e</span><span aria-hidden="true" style="--i:17">n</span><span aria-hidden="true" style="--i:18">ç</span><span aria-hidden="true" style="--i:19">ã</span><span aria-hidden="true" style="--i:20">o</span><span aria-hidden="true" style="--i:21">!</span></h2>
+  <p class="so-leitor">Obrigado pela atenção!</p>
+
+  <div class="fim-cena" aria-hidden="true">
+    <span class="vagalume" style="--x:7%;--y:70%;--d:0s"></span>
+    <span class="vagalume" style="--x:17%;--y:62%;--d:1.6s"></span>
+    <span class="vagalume" style="--x:84%;--y:66%;--d:.8s"></span>
+    <span class="vagalume" style="--x:93%;--y:74%;--d:2.4s"></span>
+
+    <div class="revoada">
+      <div class="passaro passaro-1 passaro-dourado">
+          <div class="passaro-anim">
+            <svg class="passaro-svg" viewBox="0 0 12 10" shape-rendering="crispEdges">
+              <g class="passaro-corpo">
+                <path fill="#24301f" d="M7 1h4v1H7zM3 2h4v1H3zM11 2h1v1H11zM1 3h2v1H1zM11 3h1v1H11zM0 4h1v1H0zM10 4h2v1H10zM0 5h1v1H0zM9 5h1v1H9zM11 5h1v1H11zM1 6h1v1H1zM8 6h1v1H8zM11 6h1v1H11zM2 7h1v1H2zM9 7h3v1H9zM3 8h2v1H3zM9 8h1v1H9zM5 9h4v1H5zM9 4h1v1H9z"/>
+                <path fill="currentColor" d="M7 2h4v1H7zM3 3h8v1H3zM1 4h9v1H1zM1 5h8v1H1zM2 6h7v1H2zM3 7h6v1H3zM5 8h4v1H5z"/>
+                <path fill="#ffffff" fill-opacity=".55" d="M7 6h1v1H7zM5 7h4v1H5zM5 8h4v1H5z"/>
+                <path fill="#ffffff" d="M8 4h1v1H8z"/>
+                <path fill="#f29aa3" d="M8 5h1v1H8z"/>
+                <path fill="#f79327" d="M10 5h1v1H10zM9 6h2v1H9z"/>
+              </g>
+              <g class="passaro-asa-cima">
+                <path fill="#24301f" d="M3 0h2v1H3zM2 1h1v1H2zM5 1h1v1H5zM1 2h1v1H1zM5 2h1v1H5zM1 3h1v1H1zM5 3h1v1H5zM2 4h3v1H2z"/>
+                <path fill="currentColor" d="M3 1h2v1H3zM2 2h3v1H2zM2 3h3v1H2z"/>
+              </g>
+              <g class="passaro-asa-baixo">
+                <path fill="#24301f" d="M2 4h4v1H2zM1 5h1v1H1zM5 5h1v1H5zM2 6h1v1H2zM6 6h1v1H6zM3 7h4v1H3z"/>
+                <path fill="currentColor" d="M2 5h3v1H2zM3 6h3v1H3z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      <div class="passaro passaro-2 passaro-creme">
+          <div class="passaro-anim">
+            <svg class="passaro-svg" viewBox="0 0 12 10" shape-rendering="crispEdges">
+              <g class="passaro-corpo">
+                <path fill="#24301f" d="M7 1h4v1H7zM3 2h4v1H3zM11 2h1v1H11zM1 3h2v1H1zM11 3h1v1H11zM0 4h1v1H0zM10 4h2v1H10zM0 5h1v1H0zM9 5h1v1H9zM11 5h1v1H11zM1 6h1v1H1zM8 6h1v1H8zM11 6h1v1H11zM2 7h1v1H2zM9 7h3v1H9zM3 8h2v1H3zM9 8h1v1H9zM5 9h4v1H5zM9 4h1v1H9z"/>
+                <path fill="currentColor" d="M7 2h4v1H7zM3 3h8v1H3zM1 4h9v1H1zM1 5h8v1H1zM2 6h7v1H2zM3 7h6v1H3zM5 8h4v1H5z"/>
+                <path fill="#ffffff" fill-opacity=".55" d="M7 6h1v1H7zM5 7h4v1H5zM5 8h4v1H5z"/>
+                <path fill="#ffffff" d="M8 4h1v1H8z"/>
+                <path fill="#f29aa3" d="M8 5h1v1H8z"/>
+                <path fill="#f79327" d="M10 5h1v1H10zM9 6h2v1H9z"/>
+              </g>
+              <g class="passaro-asa-cima">
+                <path fill="#24301f" d="M3 0h2v1H3zM2 1h1v1H2zM5 1h1v1H5zM1 2h1v1H1zM5 2h1v1H5zM1 3h1v1H1zM5 3h1v1H5zM2 4h3v1H2z"/>
+                <path fill="currentColor" d="M3 1h2v1H3zM2 2h3v1H2zM2 3h3v1H2z"/>
+              </g>
+              <g class="passaro-asa-baixo">
+                <path fill="#24301f" d="M2 4h4v1H2zM1 5h1v1H1zM5 5h1v1H5zM2 6h1v1H2zM6 6h1v1H6zM3 7h4v1H3z"/>
+                <path fill="currentColor" d="M2 5h3v1H2zM3 6h3v1H3z"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+    </div>
+
+    <div class="fim-palco">
+      <div class="broto flor-roxa">
+        <div class="caule"></div>
+        <svg class="flor" viewBox="0 0 7 7" shape-rendering="crispEdges">
+          <path fill="#9a6cc8" d="M2 0h3v1H2zM0 2h1v3H0zM6 2h1v3H6zM2 6h3v1H2zM1 1h1v1H1zM5 1h1v1H5zM1 5h1v1H1zM5 5h1v1H5z"/>
+          <path fill="#c7a3ea" d="M2 1h3v1H2zM1 2h1v3H1zM5 2h1v3H5zM2 5h3v1H2z"/>
+          <path fill="#f6d55c" d="M2 2h3v3H2z"/>
+        </svg>
+      </div>
+      <div class="lobo lobo-1">
+        <svg class="lobo-sprite" viewBox="0 0 18 18" shape-rendering="crispEdges">
+          <g class="lobo-cauda">
+            <path fill="#24301f" d="M1 7h2v1H1zM0 8h1v2h-1zM3 8h1v1h-1zM4 9h1v1h-1zM1 10h1v1h-1zM5 10h1v1h-1zM2 11h1v2h-1zM6 11h1v1h-1zM7 12h1v1h-1zM3 13h5v1H3z"/>
+            <path fill="#8f99a8" d="M4 10h1v1h-1zM3 11h3v1H3zM3 12h4v1H3z"/>
+            <path fill="#c9d1dc" d="M1 8h2v1H1zM1 9h3v1H1zM2 10h2v1H2z"/>
+          </g>
+          <g class="lobo-corpo">
+            <path fill="#24301f" d="M4 0h2v1H4zM14 0h2v1H14zM3 1h1v2h-1zM6 1h1v2h-1zM13 1h1v2h-1zM16 1h1v2h-1zM9 2h2v1H9zM2 3h1v8h-1zM7 3h2v1H7zM12 3h1v1h-1zM17 3h1v5h-1zM5 6h2v1H5zM12 6h2v1H12zM6 7h1v1h-1zM13 7h1v1h-1zM9 9h2v1H9zM17 9h1v2h-1zM3 11h1v2h-1zM16 11h1v2h-1zM2 13h1v1h-1zM17 13h1v3h-1zM1 14h1v2h-1zM5 14h2v2H5zM13 14h1v2h-1zM2 16h3v1H2zM7 16h1v1h-1zM12 16h1v1h-1zM14 16h3v1H14zM8 17h4v1H8z"/>
+            <path fill="#8f99a8" d="M4 2h1v1h-1zM15 2h1v1h-1zM3 3h4v1H3zM9 3h3v1H9zM13 3h4v1H13zM3 4h14v2H3zM3 6h2v2H3zM7 6h5v2H7zM14 6h3v2H14zM4 8h4v1H4zM12 8h2v1H12zM15 8h2v3H15zM3 9h2v2H3zM4 11h1v1h-1zM15 11h1v1h-1zM4 12h3v1H4zM13 12h3v1H13zM3 13h4v1H3zM13 13h4v1H13zM2 14h3v2H2zM7 14h1v2h-1zM12 14h1v2h-1zM14 14h3v2H14z"/>
+            <path fill="#c9d1dc" d="M8 8h4v1H8zM5 9h4v1H5zM11 9h4v1H11zM5 10h10v2H5zM7 12h6v2H7zM8 14h4v3H8z"/>
+            <path fill="#f29aa3" d="M4 1h2v1H4zM14 1h2v1H14zM5 2h1v1h-1zM14 2h1v1h-1zM3 8h1v1h-1zM14 8h1v1h-1z"/>
+            <path fill="#ffffff" d="M5 7h1v1H5zM12 7h1v1H12z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="fim-grupo">
+        <div class="pessoa" style="--d:0s">
+          <p class="nome">Caio</p>
+          <svg viewBox="-1 -3 22 34" style="height:170px" shape-rendering="crispEdges">
+            <path fill="#f3cfae" d="M6 4h8v7H6zM5 7h1v2H5zM14 7h1v2h-1zM9 11h2v1H9zM4 20h2v2H4z"/>
+            <path fill="#5a3a26" d="M6 2h8v2H6zM5 3h1v5H5zM14 3h1v5h-1zM5 2h1v1H5zM7 1h2v1H7zM11 1h2v1h-2zM6 4h2v1H6zM9 4h2v1H9zM12 4h2v1h-2z"/>
+            <path fill="#24301f" d="M8 7h1v1H8zM11 7h1v1h-1zM8 9h1v1H8zM11 9h1v1h-1zM9 10h2v1H9z"/>
+            <path fill="#f29aa3" d="M7 8h1v1H7zM12 8h1v1h-1z"/>
+            <path fill="#5a3a26" d="M6 9h1v2H6zM13 9h1v2h-1zM7 10h2v2H7zM11 10h2v2h-2zM9 11h2v1H9z"/>
+            <path fill="#5f9a5a" d="M6 12h8v9H6zM4 12h2v8H4z"/>
+            <path fill="#f6edcf" d="M8 12h1v1H8zM11 12h1v1h-1z"/>
+            <path fill="#2b2a28" d="M6 21h8v1H6zM5 29h4v2H5zM11 29h4v2h-4z"/>
+            <path fill="#4a4d5e" d="M6 22h8v2H6zM6 24h3v5H6zM11 24h3v5h-3z"/>
+            <g class="braco"><path fill="#5f9a5a" d="M14 12h2v2h-2zM15 9h2v3h-2z"/><path fill="#f3cfae" d="M16 6h2v3h-2zM16 3h3v3h-3z"/></g>
+          </svg>
+        </div>
+        <div class="pessoa" style="--d:.3s">
+          <p class="nome">Diogo</p>
+          <svg viewBox="-1 -3 22 34" style="height:170px" shape-rendering="crispEdges">
+            <path fill="#b9805a" d="M6 4h8v7H6zM5 7h1v2H5zM14 7h1v2h-1zM9 11h2v1H9zM4 20h2v2H4z"/>
+            <path fill="#1f1a17" d="M6 2h8v2H6zM5 3h1v3H5zM14 3h1v3h-1zM6 4h8v1H6z"/>
+            <path fill="#24301f" d="M8 7h1v1H8zM11 7h1v1h-1zM8 9h1v1H8zM11 9h1v1h-1zM9 10h2v1H9z"/>
+            <path fill="#f29aa3" d="M7 8h1v1H7zM12 8h1v1h-1z"/>
+            <path fill="#1f1a17" d="M6 6h4v1H6zM6 8h4v1H6zM6 7h1v1H6zM9 7h1v1H9zM10 6h4v1h-4zM10 8h4v1h-4zM10 7h1v1h-1zM13 7h1v1h-1zM5 6h1v1H5zM14 6h1v1h-1z"/><path fill="#dff1f8" d="M7 7h1v1H7zM12 7h1v1h-1z"/>
+            <path fill="#d6a33c" d="M6 12h8v9H6zM4 12h2v8H4z"/>
+            <path fill="#f6edcf" d="M8 12h1v1H8zM11 12h1v1h-1z"/>
+            <path fill="#2b2a28" d="M6 21h8v1H6zM5 29h4v2H5zM11 29h4v2h-4z"/>
+            <path fill="#4a4d5e" d="M6 22h8v2H6zM6 24h3v5H6zM11 24h3v5h-3z"/>
+            <g class="braco"><path fill="#d6a33c" d="M14 12h2v2h-2zM15 9h2v3h-2z"/><path fill="#b9805a" d="M16 6h2v3h-2zM16 3h3v3h-3z"/></g>
+          </svg>
+        </div>
+        <div class="pessoa" style="--d:.6s">
+          <p class="nome">Edson</p>
+          <svg viewBox="-1 -3 22 40" style="height:200px" shape-rendering="crispEdges">
+            <path fill="#f3cfae" d="M6 4h8v7H6zM5 7h1v2H5zM14 7h1v2h-1zM9 11h2v1H9zM4 20h2v2H4z"/>
+            <path fill="#4a2f22" d="M7 1h2v1H7zM11 1h1v1H11zM6 2h1v1H6zM8 2h2v1H8zM11 2h1v1H11zM13 2h1v1H13zM5 3h1v3H5zM7 3h1v1H7zM9 3h2v1H9zM12 3h2v1H12zM7 4h2v1H7zM10 4h3v1H10zM14 4h1v2H14z"/><path fill="#7a5038" d="M7 2h1v1H7zM10 2h1v1H10zM12 2h1v1H12zM6 3h1v1H6zM8 3h1v1H8zM11 3h1v1H11zM14 3h1v1H14z"/>
+            <path fill="#24301f" d="M8 7h1v1H8zM11 7h1v1h-1zM8 9h1v1H8zM11 9h1v1h-1zM9 10h2v1H9z"/>
+            <path fill="#f29aa3" d="M7 8h1v1H7zM12 8h1v1h-1z"/>
+        
+            <path fill="#c86a4c" d="M6 12h8v9H6zM4 12h2v8H4z"/>
+            <path fill="#f6edcf" d="M8 12h1v1H8zM11 12h1v1h-1z"/>
+            <path fill="#2b2a28" d="M6 21h8v1H6zM5 35h4v2H5zM11 35h4v2h-4z"/>
+            <path fill="#4a4d5e" d="M6 22h8v2H6zM6 24h3v11H6zM11 24h3v11h-3z"/>
+            <g class="braco"><path fill="#c86a4c" d="M14 12h2v2h-2zM15 9h2v3h-2z"/><path fill="#f3cfae" d="M16 6h2v3h-2zM16 3h3v3h-3z"/></g>
+          </svg>
+        </div>
+      </div>
+      <div class="lobo lobo-2 lobo-espelho">
+        <svg class="lobo-sprite" viewBox="0 0 18 18" shape-rendering="crispEdges">
+          <g class="lobo-cauda">
+            <path fill="#24301f" d="M1 7h2v1H1zM0 8h1v2h-1zM3 8h1v1h-1zM4 9h1v1h-1zM1 10h1v1h-1zM5 10h1v1h-1zM2 11h1v2h-1zM6 11h1v1h-1zM7 12h1v1h-1zM3 13h5v1H3z"/>
+            <path fill="#8f99a8" d="M4 10h1v1h-1zM3 11h3v1H3zM3 12h4v1H3z"/>
+            <path fill="#c9d1dc" d="M1 8h2v1H1zM1 9h3v1H1zM2 10h2v1H2z"/>
+          </g>
+          <g class="lobo-corpo">
+            <path fill="#24301f" d="M4 0h2v1H4zM14 0h2v1H14zM3 1h1v2h-1zM6 1h1v2h-1zM13 1h1v2h-1zM16 1h1v2h-1zM9 2h2v1H9zM2 3h1v8h-1zM7 3h2v1H7zM12 3h1v1h-1zM17 3h1v5h-1zM5 6h2v1H5zM12 6h2v1H12zM6 7h1v1h-1zM13 7h1v1h-1zM9 9h2v1H9zM17 9h1v2h-1zM3 11h1v2h-1zM16 11h1v2h-1zM2 13h1v1h-1zM17 13h1v3h-1zM1 14h1v2h-1zM5 14h2v2H5zM13 14h1v2h-1zM2 16h3v1H2zM7 16h1v1h-1zM12 16h1v1h-1zM14 16h3v1H14zM8 17h4v1H8z"/>
+            <path fill="#8f99a8" d="M4 2h1v1h-1zM15 2h1v1h-1zM3 3h4v1H3zM9 3h3v1H9zM13 3h4v1H13zM3 4h14v2H3zM3 6h2v2H3zM7 6h5v2H7zM14 6h3v2H14zM4 8h4v1H4zM12 8h2v1H12zM15 8h2v3H15zM3 9h2v2H3zM4 11h1v1h-1zM15 11h1v1h-1zM4 12h3v1H4zM13 12h3v1H13zM3 13h4v1H3zM13 13h4v1H13zM2 14h3v2H2zM7 14h1v2h-1zM12 14h1v2h-1zM14 14h3v2H14z"/>
+            <path fill="#c9d1dc" d="M8 8h4v1H8zM5 9h4v1H5zM11 9h4v1H11zM5 10h10v2H5zM7 12h6v2H7zM8 14h4v3H8z"/>
+            <path fill="#f29aa3" d="M4 1h2v1H4zM14 1h2v1H14zM5 2h1v1h-1zM14 2h1v1h-1zM3 8h1v1h-1zM14 8h1v1h-1z"/>
+            <path fill="#ffffff" d="M5 7h1v1H5zM12 7h1v1H12z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="broto flor-amarela">
+        <div class="caule"></div>
+        <svg class="flor" viewBox="0 0 7 7" shape-rendering="crispEdges">
+          <path fill="#d99a2b" d="M2 0h3v1H2zM0 2h1v3H0zM6 2h1v3H6zM2 6h3v1H2zM1 1h1v1H1zM5 1h1v1H5zM1 5h1v1H1zM5 5h1v1H5z"/>
+          <path fill="#f4d06a" d="M2 1h3v1H2zM1 2h1v3H1zM5 2h1v3H5zM2 5h3v1H2z"/>
+          <path fill="#c8642f" d="M2 2h3v3H2z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <p class="so-leitor">Cena final em pixel art: no centro do chão, os três integrantes do grupo, Caio, Diogo e Edson, acenam dando tchau, ladeados por dois lobinhos e por duas flores, uma roxa e uma amarela. Dois pássaros cruzam o céu juntos e vaga-lumes piscam junto à mata. Ilustração decorativa.</p>
+
+  <aside class="notes">
+    <p>Encerramento: agradecer a atenção da turma e do professor e abrir para perguntas.</p>
   </aside>
 </section>
 

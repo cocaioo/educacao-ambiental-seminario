@@ -11,14 +11,14 @@
 <link rel="stylesheet" href="comum/tema.css">
 <style>
 /*
-  Ajustes exclusivos da parte de Caio. Cada seletor deve começar com:
-  .slide[data-autor="Caio"]
+  Ajustes exclusivos da parte de Diogo. Cada seletor deve começar com:
+  .slide[data-autor="Diogo"]
   Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
-  Caminhos de imagens são relativos à pasta Caio, como assets/minha-foto.jpg.
+  Caminhos de imagens são relativos à pasta Diogo, como assets/minha-foto.jpg.
 */
 
 /* Protege o título, ficha e pergunta da capa, mantendo a paisagem visível. */
-.slide[data-autor="Caio"].capa::before {
+.slide[data-autor="Diogo"].capa::before {
   background: linear-gradient(90deg,
     rgba(20, 46, 41, .85) 0%,
     rgba(20, 46, 41, .80) 68%,
@@ -26,7 +26,7 @@
     transparent 100%);
 }
 
-.slide[data-autor="Caio"].capa dl.ficha {
+.slide[data-autor="Diogo"].capa dl.ficha {
   display: grid;
   grid-template-columns: max-content 1fr;
   column-gap: 14px;
@@ -38,7 +38,7 @@
   align-items: baseline;
 }
 
-.slide[data-autor="Caio"].capa dl.ficha dt {
+.slide[data-autor="Diogo"].capa dl.ficha dt {
   margin: 0;
   font-family: var(--r-heading-font);
   font-size: 14px;
@@ -49,7 +49,7 @@
   text-shadow: 1px 1px 0 #183728;
 }
 
-.slide[data-autor="Caio"].capa dl.ficha dd {
+.slide[data-autor="Diogo"].capa dl.ficha dd {
   margin: 0;
   font-family: var(--r-main-font);
   font-size: 18px;
@@ -57,7 +57,7 @@
   text-shadow: 1px 1px 0 #183728;
 }
 
-.slide[data-autor="Caio"].capa .roteiro-linha {
+.slide[data-autor="Diogo"].capa .roteiro-linha {
   max-width: 760px;
   font-size: 19px;
   color: #dbe7be;
@@ -66,12 +66,12 @@
   letter-spacing: .2px;
 }
 
-.slide[data-autor="Caio"].capa .pergunta {
+.slide[data-autor="Diogo"].capa .pergunta {
   margin-top: 20px;
 }
 
 /* Slide 2: Eixo de tensão entre conservação e transformação */
-.slide[data-autor="Caio"]#slide-2 .eixo-disputa {
+.slide[data-autor="Diogo"]#slide-2 .eixo-disputa {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +84,7 @@
   font-weight: 700;
 }
 
-.slide[data-autor="Caio"]#slide-2 .eixo-disputa .seta {
+.slide[data-autor="Diogo"]#slide-2 .eixo-disputa .seta {
   font-size: 18px;
   font-weight: 600;
   color: var(--discreto);
@@ -92,29 +92,29 @@
 }
 
 /* Slide 3: Três macrotendências com ícones e correspondências */
-.slide[data-autor="Caio"]#slide-3 .lentes {
+.slide[data-autor="Diogo"]#slide-3 .lentes {
   margin-top: 12px;
   margin-bottom: 12px;
 }
 
-.slide[data-autor="Caio"]#slide-3 .lentes .icone-lente {
+.slide[data-autor="Diogo"]#slide-3 .lentes .icone-lente {
   width: 48px;
   height: 48px;
   margin: 0 0 6px;
 }
 
-.slide[data-autor="Caio"]#slide-3 .lentes h3 {
+.slide[data-autor="Diogo"]#slide-3 .lentes h3 {
   font-size: 29px;
   margin-bottom: 8px;
 }
 
-.slide[data-autor="Caio"]#slide-3 .lentes p {
+.slide[data-autor="Diogo"]#slide-3 .lentes p {
   font-size: 17px;
   line-height: 1.25;
   margin: 0 0 8px;
 }
 
-.slide[data-autor="Caio"]#slide-3 .lentes .corresp {
+.slide[data-autor="Diogo"]#slide-3 .lentes .corresp {
   font-size: 15px;
   color: var(--discreto);
   margin-top: 6px;
@@ -123,90 +123,6 @@
 }
 
 /* Slide 4: Faixas de cenário (linha do tempo) e condições de emergência */
-.slide[data-autor="Caio"] .faixa-rotulo {
-  display: inline-block;
-  font-family: var(--r-heading-font);
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 6px;
-  padding: 2px 8px;
-  background: rgba(106, 71, 43, 0.12);
-  border-left: 3px solid currentColor;
-}
-
-.slide[data-autor="Caio"] .colunas.cinco {
-  --cols: repeat(5, 1fr);
-  column-gap: 12px;
-}
-
-.slide[data-autor="Caio"] ol.marcos {
-  margin-top: 4px;
-  margin-bottom: 12px;
-}
-
-.slide[data-autor="Caio"] ol.marcos li {
-  padding-left: 10px;
-  border-left-width: 3px;
-}
-
-.slide[data-autor="Caio"] ol.marcos h3 {
-  font-size: 24px;
-  margin-bottom: 2px;
-  line-height: 1.15;
-  color: var(--cons);
-}
-
-.slide[data-autor="Caio"] ol.marcos p {
-  font-size: 15px;
-  line-height: 1.22;
-  margin: 0;
-}
-
-.slide[data-autor="Caio"] .card-contexto {
-  background: rgba(255, 255, 255, 0.50);
-  border: 2px solid #b8a682;
-  padding: 8px 10px;
-  clip-path: var(--canto);
-  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.2);
-}
-
-.slide[data-autor="Caio"] .card-contexto h4 {
-  font-size: 18px;
-  margin: 0 0 4px;
-  line-height: 1.2;
-  font-family: var(--r-heading-font);
-}
-
-.slide[data-autor="Caio"] .card-contexto p {
-  font-size: 14px;
-  line-height: 1.24;
-  margin: 0;
-}
-
-/* Slide 5: Ajustes de tipografia para o bloco de práticas e limites */
-.slide[data-autor="Caio"]#slide-5 dl dt {
-  margin-top: 8px;
-  font-size: 20px;
-}
-
-.slide[data-autor="Caio"]#slide-5 dl dd {
-  font-size: 17px;
-  line-height: 1.25;
-}
-
-.slide[data-autor="Caio"]#slide-5 blockquote {
-  margin-top: 14px;
-  font-size: 20px;
-}
-
-/*
-  Ajustes visuais exclusivos da parte de Diogo (slides 06 a 10).
-  Regra do compositor: cada seletor deve iniciar por .slide[data-autor="Diogo"].
-  Sem regras @, sem nesting e sem combinadores de irmãos (+ ou ~).
-*/
-
 .slide[data-autor="Diogo"] .faixa-rotulo {
   display: inline-block;
   font-family: var(--r-heading-font);
@@ -220,9 +136,14 @@
   border-left: 3px solid currentColor;
 }
 
+.slide[data-autor="Diogo"] .colunas.cinco {
+  --cols: repeat(5, 1fr);
+  column-gap: 12px;
+}
+
 .slide[data-autor="Diogo"] ol.marcos {
   margin-top: 4px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .slide[data-autor="Diogo"] ol.marcos li {
@@ -234,11 +155,12 @@
   font-size: 24px;
   margin-bottom: 2px;
   line-height: 1.15;
+  color: var(--cons);
 }
 
 .slide[data-autor="Diogo"] ol.marcos p {
-  font-size: 16px;
-  line-height: 1.25;
+  font-size: 15px;
+  line-height: 1.22;
   margin: 0;
 }
 
@@ -258,54 +180,132 @@
 }
 
 .slide[data-autor="Diogo"] .card-contexto p {
+  font-size: 14px;
+  line-height: 1.24;
+  margin: 0;
+}
+
+/* Slide 5: Ajustes de tipografia para o bloco de práticas e limites */
+.slide[data-autor="Diogo"]#slide-5 dl dt {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.slide[data-autor="Diogo"]#slide-5 dl dd {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.slide[data-autor="Diogo"]#slide-5 blockquote {
+  margin-top: 14px;
+  font-size: 20px;
+}
+
+/*
+  Ajustes visuais exclusivos da parte de Edson (pragmática).
+  Regra do compositor: cada seletor deve iniciar por .slide[data-autor="Edson"].
+  Sem regras @, sem nesting e sem combinadores de irmãos (+ ou ~).
+*/
+
+.slide[data-autor="Edson"] .faixa-rotulo {
+  display: inline-block;
+  font-family: var(--r-heading-font);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  background: rgba(106, 71, 43, 0.12);
+  border-left: 3px solid currentColor;
+}
+
+.slide[data-autor="Edson"] ol.marcos {
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+
+.slide[data-autor="Edson"] ol.marcos li {
+  padding-left: 10px;
+  border-left-width: 3px;
+}
+
+.slide[data-autor="Edson"] ol.marcos h3 {
+  font-size: 24px;
+  margin-bottom: 2px;
+  line-height: 1.15;
+}
+
+.slide[data-autor="Edson"] ol.marcos p {
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.slide[data-autor="Edson"] .card-contexto {
+  background: rgba(255, 255, 255, 0.50);
+  border: 2px solid #b8a682;
+  padding: 8px 10px;
+  clip-path: var(--canto);
+  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.2);
+}
+
+.slide[data-autor="Edson"] .card-contexto h4 {
+  font-size: 18px;
+  margin: 0 0 4px;
+  line-height: 1.2;
+  font-family: var(--r-heading-font);
+}
+
+.slide[data-autor="Edson"] .card-contexto p {
   font-size: 15px;
   line-height: 1.25;
   margin: 0;
 }
 
-.slide[data-autor="Diogo"] .dl-proposta {
+.slide[data-autor="Edson"] .dl-proposta {
   font-size: 0.88em;
 }
 
-.slide[data-autor="Diogo"] .dl-proposta dt {
+.slide[data-autor="Edson"] .dl-proposta dt {
   font-size: 19px;
   font-weight: 700;
   margin-top: 7px;
   line-height: 1.2;
 }
 
-.slide[data-autor="Diogo"] .dl-proposta dt:first-child {
+.slide[data-autor="Edson"] .dl-proposta dt:first-child {
   margin-top: 0;
 }
 
-.slide[data-autor="Diogo"] .dl-proposta dd {
+.slide[data-autor="Edson"] .dl-proposta dd {
   font-size: 18px;
   line-height: 1.25;
   margin: 0;
 }
 
-.slide[data-autor="Diogo"] .aspas-proposta {
+.slide[data-autor="Edson"] .aspas-proposta {
   font-size: 19px;
   line-height: 1.3;
   margin-top: 14px;
   padding-left: 14px;
 }
 
-.slide[data-autor="Diogo"] .coexistencia-svg {
+.slide[data-autor="Edson"] .coexistencia-svg {
   display: block;
   width: 100%;
   height: auto;
   margin: 8px 0 12px;
 }
 
-.slide[data-autor="Diogo"] .coexistencia-sintese {
+.slide[data-autor="Edson"] .coexistencia-sintese {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 28px;
   margin-top: 6px;
 }
 
-.slide[data-autor="Diogo"] .coexistencia-box {
+.slide[data-autor="Edson"] .coexistencia-box {
   background: rgba(255, 255, 255, 0.52);
   border: 2px solid #b3a27d;
   padding: 10px 14px;
@@ -313,46 +313,162 @@
   box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.18);
 }
 
-.slide[data-autor="Diogo"] .coexistencia-box h4 {
+.slide[data-autor="Edson"] .coexistencia-box h4 {
   font-size: 19px;
   margin: 0 0 4px;
   font-family: var(--r-heading-font);
 }
 
-.slide[data-autor="Diogo"] .coexistencia-box p {
+.slide[data-autor="Edson"] .coexistencia-box p {
   font-size: 16px;
   line-height: 1.28;
   margin: 0;
 }
 
 /*
-  Ajustes exclusivos da parte de Edson. Cada seletor deve começar com:
-  .slide[data-autor="Edson"]
-  Exemplo: .slide[data-autor="Edson"] .minha-classe { font-weight: 700; }
-  Sem regras globais ou @rules. Tema e impressão ficam em ../comum/.
-  Caminhos de imagens são relativos à pasta Edson, como assets/minha-foto.jpg.
+  Ajustes visuais exclusivos da parte de Caio (crítica, coexistência e encerramento).
+  Regra do compositor: cada seletor deve iniciar por .slide[data-autor="Caio"].
+  Sem regras @, sem nesting e sem combinadores de irmãos (+ ou ~).
 */
 
+.slide[data-autor="Caio"] .faixa-rotulo {
+  display: inline-block;
+  font-family: var(--r-heading-font);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  padding: 2px 8px;
+  background: rgba(106, 71, 43, 0.12);
+  border-left: 3px solid currentColor;
+}
+
+.slide[data-autor="Caio"] ol.marcos {
+  margin-top: 4px;
+  margin-bottom: 14px;
+}
+
+.slide[data-autor="Caio"] ol.marcos li {
+  padding-left: 10px;
+  border-left-width: 3px;
+}
+
+.slide[data-autor="Caio"] ol.marcos h3 {
+  font-size: 24px;
+  margin-bottom: 2px;
+  line-height: 1.15;
+}
+
+.slide[data-autor="Caio"] ol.marcos p {
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.slide[data-autor="Caio"] .card-contexto {
+  background: rgba(255, 255, 255, 0.50);
+  border: 2px solid #b8a682;
+  padding: 8px 10px;
+  clip-path: var(--canto);
+  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.2);
+}
+
+.slide[data-autor="Caio"] .card-contexto h4 {
+  font-size: 18px;
+  margin: 0 0 4px;
+  line-height: 1.2;
+  font-family: var(--r-heading-font);
+}
+
+.slide[data-autor="Caio"] .card-contexto p {
+  font-size: 15px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.slide[data-autor="Caio"] .dl-proposta {
+  font-size: 0.88em;
+}
+
+.slide[data-autor="Caio"] .dl-proposta dt {
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 7px;
+  line-height: 1.2;
+}
+
+.slide[data-autor="Caio"] .dl-proposta dt:first-child {
+  margin-top: 0;
+}
+
+.slide[data-autor="Caio"] .dl-proposta dd {
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.slide[data-autor="Caio"] .aspas-proposta {
+  font-size: 19px;
+  line-height: 1.3;
+  margin-top: 14px;
+  padding-left: 14px;
+}
+
+.slide[data-autor="Caio"] .coexistencia-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 8px 0 12px;
+}
+
+.slide[data-autor="Caio"] .coexistencia-sintese {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 28px;
+  margin-top: 6px;
+}
+
+.slide[data-autor="Caio"] .coexistencia-box {
+  background: rgba(255, 255, 255, 0.52);
+  border: 2px solid #b3a27d;
+  padding: 10px 14px;
+  clip-path: var(--canto);
+  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.18);
+}
+
+.slide[data-autor="Caio"] .coexistencia-box h4 {
+  font-size: 19px;
+  margin: 0 0 4px;
+  font-family: var(--r-heading-font);
+}
+
+.slide[data-autor="Caio"] .coexistencia-box p {
+  font-size: 16px;
+  line-height: 1.28;
+  margin: 0;
+}
+
 /* Tipografia de rodapé e legendas */
-.slide[data-autor="Edson"] figcaption,
-.slide[data-autor="Edson"] > .fonte {
+.slide[data-autor="Caio"]#slide-11 figcaption,
+.slide[data-autor="Caio"]#slide-11 > .fonte {
   font-size: 14px;
 }
 
 /* Slide 11: Referências em duas colunas */
-.slide[data-autor="Edson"] .colunas-refs {
+.slide[data-autor="Caio"]#slide-11 .colunas-refs {
   --cols: 1fr 1fr;
   column-gap: 28px;
   align-items: start;
 }
 
-.slide[data-autor="Edson"] .colunas-refs .refs-subtitulo {
+.slide[data-autor="Caio"]#slide-11 .colunas-refs .refs-subtitulo {
   font-size: 18px;
   margin: 0 0 6px 0;
   color: var(--r-heading-color);
 }
 
-.slide[data-autor="Edson"] .colunas-refs ul.refs {
+.slide[data-autor="Caio"]#slide-11 .colunas-refs ul.refs {
   columns: 1;
   font-size: 12px;
   line-height: 1.20;
@@ -360,18 +476,18 @@
   margin-bottom: 0;
 }
 
-.slide[data-autor="Edson"] .colunas-refs ul.refs li {
+.slide[data-autor="Caio"]#slide-11 .colunas-refs ul.refs li {
   margin-bottom: 5px;
   padding-left: 0.9em;
   text-indent: -0.9em;
 }
 
-.slide[data-autor="Edson"] .colunas-refs ul.refs.refs-docs li {
+.slide[data-autor="Caio"]#slide-11 .colunas-refs ul.refs.refs-docs li {
   margin-bottom: 4px;
   font-size: 11.5px;
 }
 
-.slide[data-autor="Edson"] .colunas-refs .url {
+.slide[data-autor="Caio"]#slide-11 .colunas-refs .url {
   font-size: 0.95em;
 }
 
@@ -381,7 +497,7 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section class="slide capa" id="slide-1" aria-label="Slide 1 de 12: capa" data-background-image="assets/aventura-floresta.png" data-background-color="#173C36" data-autor="Caio">
+<section class="slide capa" id="slide-1" aria-label="Slide 1 de 12: capa" data-background-image="assets/aventura-floresta.png" data-background-color="#173C36" data-autor="Diogo">
   <p class="sobrelinha">Seminário</p>
   <h1>Vertentes da<br>Educação Ambiental</h1>
   <p class="subtitulo">Macrotendências político-pedagógicas</p>
@@ -407,7 +523,7 @@
 </section>
 
 
-<section class="slide" id="slide-2" data-autor="Caio" aria-label="Slide 2 de 12">
+<section class="slide" id="slide-2" data-autor="Diogo" aria-label="Slide 2 de 12">
   <h2>EA é educação, e é um campo em disputa</h2>
 
   <div class="colunas">
@@ -447,7 +563,7 @@
 </section>
 
 
-<section class="slide" id="slide-3" data-autor="Caio" aria-label="Slide 3 de 12">
+<section class="slide" id="slide-3" data-autor="Diogo" aria-label="Slide 3 de 12">
   <h2>Três macrotendências: tipos ideais, não etapas</h2>
   <p>Tipos ideais analíticos que coexistem e disputam a hegemonia no campo (Layrargues &amp; Lima, 2014):</p>
 
@@ -490,7 +606,7 @@
 </section>
 
 
-<section class="slide" id="slide-4" data-autor="Caio" aria-label="Slide 4 de 12">
+<section class="slide" id="slide-4" data-autor="Diogo" aria-label="Slide 4 de 12">
   <h2 class="cons">Conservacionista: por que surgiu? (1960–1980)</h2>
 
   <div class="fragment" data-fragment-index="1">
@@ -556,7 +672,7 @@
 </section>
 
 
-<section class="slide" id="slide-5" data-autor="Caio" aria-label="Slide 5 de 12">
+<section class="slide" id="slide-5" data-autor="Diogo" aria-label="Slide 5 de 12">
   <h2 class="cons">Macrotendência Conservacionista: o que propõe?</h2>
 
   <div class="colunas foto-texto">
@@ -588,12 +704,12 @@
     <p>Sua proposta político-pedagógica ancora-se no conhecido lema "conhecer para amar, amar para preservar" (Layrargues &amp; Lima, 2014, p. 27; 2011, p. 5). Parte da premissa de que a degradação resulta do distanciamento psicológico e moral entre seres humanos e natureza biofísica. Dialoga diretamente com o referencial da Alfabetização Ecológica formulada por Fritjof Capra (Layrargues &amp; Lima, 2014, p. 30) e com as correntes conservacionista e naturalista mapeadas por Lucie Sauvé (Santos &amp; Toschi, 2015, p. 245).</p>
     <p>Em termos práticos, apoia-se em caminhadas por trilhas interpretativas, dinâmicas de senso-percepção, visitas pedagógicas a Unidades de Conservação e práticas de ecoturismo, apresentando forte presença com o público infantil (Layrargues, 2012 apud Santos &amp; Toschi, 2015, p. 245). Sua principal contribuição reside na criação de laços afetivos com os seres vivos e na relativização do antropocentrismo utilitarista da modernidade (Layrargues &amp; Lima, 2014, p. 30).</p>
     <p>Contudo, a literatura especializada aponta limites estruturais severos: 1) o foco exclusivo na mudança individual e comportamental no âmbito privado assume que a transmissão de informações corretas modifica condutas automaticamente, privilegiando "o indivíduo sobre a sociedade e o tecnicismo sobre a política" (Guimarães 2004 apud Santos &amp; Toschi, 2015, p. 245); 2) corre o risco de converter a formação educativa em mero "adestramento ambiental" e condicionamento normativo (Brügger 1994 apud Layrargues &amp; Lima, 2014, p. 29); 3) como indagam Layrargues e Lima (2014, p. 30), "como separar ecologia, cultura e política?", pois a mudança cultural dificilmente se concretiza sem transformação dos modos de produção e das estruturas econômicas; e 4) como reforçam Pelicioni e Philippi Jr. (2014, p. 6), "consciência ecológica sem ação transformadora ajuda a manter a sociedade tal qual ela se encontra".</p>
-    <p>Com isso, encerro a primeira parte do seminário e passo a palavra ao Diogo, que apresentará a emergência e os contornos da macrotendência pragmática nos anos 1990.</p>
+    <p>Com isso, encerro a primeira parte do seminário e passo a palavra ao Edson, que apresentará a emergência e os contornos da macrotendência pragmática nos anos 1990.</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-6" data-autor="Diogo" aria-label="Slide 6 de 12">
+<section class="slide" id="slide-6" data-autor="Edson" aria-label="Slide 6 de 12">
   <h2 class="prag">Pragmática: por que surgiu? (pós-guerra → 1990–2000)</h2>
 
   <div class="fragment" data-fragment-index="1">
@@ -650,7 +766,7 @@
 </section>
 
 
-<section class="slide" id="slide-7" data-autor="Diogo" aria-label="Slide 7 de 12">
+<section class="slide" id="slide-7" data-autor="Edson" aria-label="Slide 7 de 12">
   <h2 class="prag">Pragmática: o que propõe?</h2>
 
   <div class="colunas foto-texto">
@@ -689,7 +805,7 @@
 </section>
 
 
-<section class="slide" id="slide-8" data-autor="Diogo" aria-label="Slide 8 de 12">
+<section class="slide" id="slide-8" data-autor="Caio" aria-label="Slide 8 de 12">
   <h2 class="crit">Crítica: por que surgiu? (redemocratização, 1980–1990)</h2>
 
   <div class="fragment" data-fragment-index="1">
@@ -747,7 +863,7 @@
 </section>
 
 
-<section class="slide" id="slide-9" data-autor="Diogo" aria-label="Slide 9 de 12">
+<section class="slide" id="slide-9" data-autor="Caio" aria-label="Slide 9 de 12">
   <h2 class="crit">Crítica: o que propõe?</h2>
 
   <div class="colunas foto-texto">
@@ -787,7 +903,7 @@
 </section>
 
 
-<section class="slide" id="slide-10" data-autor="Diogo" aria-label="Slide 10 de 12">
+<section class="slide" id="slide-10" data-autor="Caio" aria-label="Slide 10 de 12">
   <h2 class="slide-titulo">Coexistência, não sucessão: as três no tempo</h2>
 
   <svg class="coexistencia-svg" viewBox="0 0 1200 185" role="img" aria-labelledby="s10-t s10-d">
@@ -859,12 +975,12 @@
     <p>A vertente crítica emerge das lutas sociais da redemocratização na década de 1980 e diferencia-se expressamente no início dos anos 1990 como contestação à EA conservadora (Layrargues &amp; Lima, 2014, p. 28–29). Nos anos 2000, expande-se com vigor na produção acadêmica da pós-graduação e nas redes de educação popular (Layrargues &amp; Lima, 2011, p. 12; 2014, p. 33), operando como contraponto contra-hegemônico em permanente disputa pelo campo.</p>
     <p>Articulação teórica: Conservacionismo e pragmatismo configuram "dois momentos de uma mesma linhagem" (Layrargues &amp; Lima, 2014, p. 32), compartilhando pressupostos comportamentalistas e foco nas ações individuais no âmbito privado. Em contrapartida, a crítica ancora-se em matriz emancipatória e sociopolítica substancialmente distinta (Guimarães, 2004 apud Santos &amp; Toschi, 2015, p. 247).</p>
     <p>Ressalva epistemológica: Conforme Layrargues e Lima (2011, p. 4; 2014, p. 25), não é possível fixar uma data de nascimento precisa para as correntes ou delimitar cronologicamente com rigor quando surgiu a sua percepção; a consciência reflexiva da coexistência dessas diferentes vertentes explicita-se e amadurece nos debates da década de 1990.</p>
-    <p>Transição: Com essa compreensão sobre como as três vertentes coexistem e disputam sentidos na contemporaneidade, passo a palavra ao Edson, que apresentará a síntese final.</p>
+    <p>Transição: Com essa compreensão sobre como as três vertentes coexistem e disputam sentidos na contemporaneidade, sigo para o fechamento: o que fica desse mapa das três vertentes.</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-11" data-autor="Edson" aria-label="Slide 11 de 12">
+<section class="slide" id="slide-11" data-autor="Caio" aria-label="Slide 11 de 12">
   <h2>Referências</h2>
 
   <div class="colunas colunas-refs">
@@ -912,7 +1028,7 @@
 </section>
 
 
-<section class="slide final" id="slide-12" aria-label="Slide 12 de 12: encerramento" data-autor="Edson">
+<section class="slide final" id="slide-12" aria-label="Slide 12 de 12: encerramento" data-autor="Caio">
   <h2 class="fim-titulo" aria-hidden="true"><span aria-hidden="true" style="--i:0">O</span><span aria-hidden="true" style="--i:1">b</span><span aria-hidden="true" style="--i:2">r</span><span aria-hidden="true" style="--i:3">i</span><span aria-hidden="true" style="--i:4">g</span><span aria-hidden="true" style="--i:5">a</span><span aria-hidden="true" style="--i:6">d</span><span aria-hidden="true" style="--i:7">o</span><span aria-hidden="true" style="--i:8">&nbsp;</span><span aria-hidden="true" style="--i:9">p</span><span aria-hidden="true" style="--i:10">e</span><span aria-hidden="true" style="--i:11">l</span><span aria-hidden="true" style="--i:12">a</span><span aria-hidden="true" style="--i:13">&nbsp;</span><span aria-hidden="true" style="--i:14">a</span><span aria-hidden="true" style="--i:15">t</span><span aria-hidden="true" style="--i:16">e</span><span aria-hidden="true" style="--i:17">n</span><span aria-hidden="true" style="--i:18">ç</span><span aria-hidden="true" style="--i:19">ã</span><span aria-hidden="true" style="--i:20">o</span><span aria-hidden="true" style="--i:21">!</span></h2>
   <p class="so-leitor">Obrigado pela atenção!</p>
 
