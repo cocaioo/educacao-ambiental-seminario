@@ -376,6 +376,14 @@ html.reveal-print .reveal section.final * { animation: none !important; }
   .reveal section.final *, .reveal section.final *::before, .reveal section.final *::after { animation: none !important; }
 }
 
+/* Carrega todos os elementos do slide diretamente, sem atrasos de fragmento */
+.reveal .slides .fragment {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  transition: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) { .reveal .fragment { transition: none; } }
 @media print {
   .reveal .slide-background, .reveal section.slide::before, .reveal section.slide::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }

@@ -2,7 +2,7 @@
 
 - **Disciplina:** Educação Ambiental
 - **Docente:** Prof. Davi Lima Pantoja Leite
-- **Integrantes:** Caio Victor Ferreira do Nascimento, Edson da Silva Lima Junior e Diogo
+- **Integrantes:** Caio Victor, Diogo de Oliveira e Edson da Silva
 
 A apresentação usa o [reveal.js](https://revealjs.com) com o tema autoral **Aventura ambiental**, inspirado na exploração de mundos 2D em pixel art. Os títulos usam **Pixelify Sans**, incluída localmente, e o corpo mantém uma fonte legível para textos, fotos e gráficos. A divisão **Diogo → Edson → Caio** permite que cada integrante edite sua parte, mantendo uma sequência única. Quantidade de slides, abordagem e distribuição definitiva podem mudar depois.
 
