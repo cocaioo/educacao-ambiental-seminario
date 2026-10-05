@@ -1,25 +1,15 @@
-# Parte de Edson (Slides 11 e 12)
+# Parte de Edson (macrotendência pragmática)
 
-## Objetivo e conexão
+Edson recebe a fala de Diogo depois da conservacionista. Tempo estimado: cerca de 11 min.
 
-O bloco de Edson encerra o seminário com os slides **11 e 12** (tempo estimado: ≈ 1 min):
-- **Slide 11 (`11-referencias.html`):** Referências em duas colunas: as 5 obras teóricas validadas na bibliografia e a relação consolidada de documentos oficiais e fontes de dados.
-- **Slide 12 (`12-final.html`):** Encerramento animado: os três integrantes acenando no centro, ladeados por dois lobos e duas flores, com dois pássaros e vaga-lumes; animações em comum/tema.css, desligadas no PDF e com movimento reduzido.
+1. **`06-pragmatica-contexto.html`**: por que surgiu (pós-guerra → 1990–2000): cenário oficial e condições de emergência segundo os autores.
+2. **`07-pragmatica.html`**: o que propõe: pauta marrom, ecoeficiência, trajetória do lixo à economia verde, limites e status hegemônico.
+3. **`pragmatica-linhagem.html`**: conservacionista e pragmática como "dois momentos de uma mesma linhagem".
+4. **`pragmatica-atividade-fim.html`**: resolver o problema local como atividade-fim ou como tema gerador.
+5. **`pragmatica-ea-eds.html`**: a controvérsia EA × Educação para o Desenvolvimento Sustentável.
 
-Edson recebe a fala de **Diogo** após o slide 10 ("Coexistência, não sucessão: as três no tempo") e conduz as referências e o encerramento.
+**Passagem:** ao fim da controvérsia EA × EDS, Edson passa a palavra a **Caio**, que apresenta a macrotendência crítica.
 
-## Estrutura da pasta
+## Como trabalhar
 
-- `conteudo/`: contém os 2 fragmentos HTML (`11-referencias.html` e `12-final.html`).
-- `ordem.json`: manifesto com os 2 slides em ordem.
-- `estilos.css`: regras específicas da parte de Edson (prefixadas por `.slide[data-autor="Edson"]`), calibrando fontes de tabelas e referências em duas colunas.
-- `fontes.md`: documentação analítica de todas as referências teóricas, dados oficiais e créditos fotográficos.
-- `index.html`: prévia local gerada automaticamente pelo compositor (`compor.ps1`).
-
-## Composição e verificação
-
-Após qualquer alteração nos arquivos de `conteudo/`, execute o compositor na raiz do projeto:
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File slides/compor.ps1
-```
+Edite os arquivos em `conteudo/`, mantenha a sequência em `ordem.json`, registre novas fontes em `fontes.md` e use em `estilos.css` apenas seletores iniciados por `.slide[data-autor="Edson"]`. Depois de editar, execute `slides/atualizar.cmd`.

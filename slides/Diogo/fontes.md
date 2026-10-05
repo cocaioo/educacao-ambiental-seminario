@@ -1,96 +1,95 @@
-# Novas fontes e créditos — Diogo
+# Novas fontes e créditos — Diogo (Slides 01 a 05)
 
-As referências e os créditos dos slides iniciais compartilhados estão em [../fontes.md](../fontes.md). Este arquivo documenta formalmente todas as fontes bibliográficas, documentos oficiais, dados empíricos e imagens mobilizados na parte de Diogo reestruturada para o roteiro de 15 slides (slides 06 a 10: `06-pragmatica-contexto.html`, `07-pragmatica.html`, `08-critica-contexto.html`, `09-critica.html` e `10-coexistencia.html`).
-
----
-
-## Referências teóricas mobilizadas
-
-### 1. Layrargues e Lima (2014)
-- **Referência:** LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa. As macrotendências político-pedagógicas da educação ambiental brasileira. *Ambiente & Sociedade*, São Paulo, v. 17, n. 1, p. 23–40, jan./mar. 2014. DOI: [10.1590/1809-44220003500](https://doi.org/10.1590/1809-44220003500).
-- **Uso nos slides:**
-  - **Slide 06 (Pragmática: contexto):** Impulso nos anos 1990 e lema "cada um fazer a sua parte" (p. 29); condições de hegemonia neoliberal mundial nos anos 1980 e no Brasil com o governo Collor (p. 30–31); raízes no estilo de produção e consumo do pós-guerra (p. 31); mercado, descartabilidade de eletrônicos e clima moldando conjuntura específica (p. 31); debate EA × EDS (p. 32); derivação adaptada da conservacionista (p. 32); institucionalização da EA pelo sistema educacional (MEC, Portaria 2.421/91, p. 27); coexistência no campo (p. 34).
-  - **Slide 07 (Pragmática: proposta):** Caracterização como "ambientalismo de resultados, pragmatismo contemporâneo, ecologismo de mercado" (p. 30–31); pauta marrom e reciclagem como mecanismo de compensação moral e técnica ("conservadorismo dinâmico", p. 31); crença na neutralidade da ciência (p. 32); controvérsia EA × EDS (p. 32); desconsideração da assimetria na distribuição de custos e benefícios (p. 31); status de francamente hegemônica (p. 31).
-  - **Slide 08 (Crítica: contexto):** Citação central da emergência: "impulsionada por um contexto histórico politizante" (redemocratização, movimentos sociais e Rio-92, p. 33); reação do início dos anos 1990 contra uma EA "a-histórica, apolítica, conteudística e normativa" (p. 28–29); Ecologia Política (p. 23, 33).
-  - **Slide 09 (Crítica: proposta):** Diagnóstico central: "a crise ambiental não expressava problemas da natureza, mas problemas que se manifestavam na natureza" (p. 29); matrizes teóricas (Freire, Educação Popular, Teoria Crítica, Ecologia Política, marxismos, p. 29); conceitos de cidadania, emancipação, conflito, justiça ambiental e transformação social (p. 33); Gestão Ambiental na dimensão política (Quintas & Gualda 1995 apud, p. 35, n. iii); rejeição interna a "sociologismos e politicismos" (p. 33); condição contra-hegemônica sob constante pressão de erosão (p. 34–35).
-  - **Slide 10 (Coexistência no tempo):** Conservacionista hegemônica no momento fundacional e forte e bem consolidada na atualidade (p. 26, 30, 34); pragmática francamente hegemônica (p. 29, 31–32); diferenciação da crítica no início dos anos 1990 (p. 28–29); conservacionismo e pragmatismo como dois momentos de uma mesma linhagem (p. 32); tipos ideais em convivência simultânea e disputa de sentidos (p. 34); explicitação da percepção reflexiva das correntes nos anos 1990 (p. 25).
-
-### 2. Layrargues e Lima (2011)
-- **Referência:** LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa. Mapeando as macro-tendências político-pedagógicas da educação ambiental contemporânea no Brasil. In: ENCONTRO PESQUISA EM EDUCAÇÃO AMBIENTAL, 6., 2011, Ribeirão Preto. *Anais [...].* Ribeirão Preto: USP/UFSCar/UNESP, 2011. 15 p.
-- **Uso nos slides:**
-  - **Slide 06:** Fatores de atualização da conjuntura: globalização, revolução tecnológica, falência do socialismo real e recuo do Estado (p. 12).
-  - **Slide 07:** Crença na neutralidade da ciência e da tecnologia (p. 10).
-  - **Slide 10:** Impossibilidade de delimitar cronologicamente com rigor estrito a gênese da percepção das vertentes (p. 4); expansão da crítica na pós-graduação nos anos 2000 (p. 12).
-
-### 3. Santos e Toschi (2015)
-- **Referência:** SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra. Vertentes da educação ambiental: da conservacionista à crítica. *Fronteiras: Journal of Social, Technological and Environmental Science*, v. 4, n. 2, p. 241–250, jul./dez. 2015. DOI: [10.21664/2238-8869.2015v4i2.p241-250](https://doi.org/10.21664/2238-8869.2015v4i2.p241-250).
-- **Uso nos slides:**
-  - **Slide 06:** Contexto de transição temática da pragmática (p. 245–246).
-  - **Slide 07:** Trajetória da pauta marrom: resíduos → consumo sustentável → economia verde e clima (Layrargues 2012 apud, p. 246); conceito de "armadilhas paradigmáticas" de Guimarães (2004 apud, p. 245, 247–248); comportamentalismo e individualismo (p. 249).
-  - **Slide 08:** Sentido político tomando vulto nos anos 1980 (p. 243–244); influência de Paulo Freire na vertente crítica (Tristão 2007 apud, p. 244).
-  - **Slide 09:** Confinamento da crítica na pós-graduação e pouca presença no universo infantil (Layrargues 2012 apud, p. 248); sujeito ecológico relacional (Carvalho 2004 apud, p. 247).
-  - **Slide 10:** Referencial teórico emancipatório distinto da crítica frente à matriz conservadora (Guimarães 2004 apud, p. 247); objetivos político-pedagógicos em disputa (p. 248–249).
-
-### 4. Pelicioni e Philippi Jr. (2014)
-- **Referência:** PELICIONI, Maria Cecília Focesi; PHILIPPI JR., Arlindo. Bases políticas, conceituais, filosóficas e ideológicas da educação ambiental. In: PHILIPPI JR., Arlindo; PELICIONI, Maria Cecília Focesi (ed.). *Educação ambiental e sustentabilidade*. 2. ed. Barueri: Manole, 2014. cap. 1, p. 3–12. (Conforme repositório USP, ISBN 9788520432006).
-- **Uso nos slides:**
-  - **Slide 06:** Menção à Conferência de Tessalônica em 1997 e debate sobre sustentabilidade (p. 8).
-  - **Slide 07:** Advertência de que a ênfase na responsabilidade individual desloca e fragiliza a discussão das verdadeiras causas, ocultando o modelo de consumo e as relações de poder (p. 8).
-  - **Slide 08:** Sentido político da EA ganhando corpo nos anos 1980 (p. 5); cidadania, grupos de pressão e limites ecológicos (p. 7).
-  - **Slide 09:** Populações de baixa renda sofrem desproporcionalmente as consequências da degradação ambiental e da falta de saneamento básico (p. 7); ação via grupos de pressão na práxis política (p. 7).
-
-### 5. Souza (2018)
-- **Referência:** SOUZA, Tiago Zanquêta de. A educação ambiental popular: contribuições em práticas sociais. *Motricidades: Rev. SPQMH*, v. 2, n. 1, p. 60–70, jan./abr. 2018. DOI: [10.29181/2594-6463.2018.v2.n1.p60-70](https://doi.org/10.29181/2594-6463.2018.v2.n1.p60-70).
-- **Uso nos slides:**
-  - **Slide 08:** Protagonismo de ONGs e movimentos sociais na década de 1980 (p. 61); encontro entre EA e Educação Popular na segunda metade dos anos 1980 (Peralta & Ruiz 2010 apud, p. 65); criação da REPEC em 1987 (Barbosa 2002 apud, p. 66).
-  - **Slide 09:** Crítica à desigualdade socioambiental e matriz político-crítica (p. 63); Educação Ambiental Popular como corrente interna da vertente crítica, e não como quarta vertente autônoma (Ruiz 1994 apud, p. 66; p. 64, 68); historicidade e luta das camadas populares (p. 68).
-  - **Ressalva explícita:** NÃO se utiliza a nota 7 de Souza (p. 63), que atribuiu por equívoco a designação "ecopedagogia" ao artigo de Layrargues e Lima (2014).
+As referências e os créditos gerais da apresentação estão preservados em [../fontes.md](../fontes.md). Este arquivo registra e formaliza as fontes teóricas, documentos oficiais e créditos de imagens mobilizados na parte de Caio (slides 01 a 05), em conformidade com o roteiro de 15 slides / 30 minutos (`pesquisa/investigacao/roteiro_15_slides_30min.md`).
 
 ---
 
-## Documentos oficiais e marcos históricos do cenário
+## 1. Referências bibliográficas mobilizadas
 
-1. **Relatório Brundtland (ONU, 1987):** ONU. Assembleia Geral. *Our Common Future* (Relatório da Comissão Mundial sobre Meio Ambiente e Desenvolvimento). Documento A/42/427, 4 ago. 1987. Mobilizado no cenário do Slide 06 (desenvolvimento sustentável); não citado pelos autores.
-2. **Lei Federal nº 8.031/1990:** BRASIL. Lei nº 8.031, de 12 de abril de 1990. Institui o Programa Nacional de Desestatização (PND) no governo Collor. Revogada posteriormente pela Lei nº 9.491/1997. Mobilizada no cenário do Slide 06 (reforma neoliberal); não citada pelos autores.
-3. **Portaria MEC nº 2.421/1991:** BRASIL. Ministério da Educação. Portaria nº 2.421, de 1991. Institui Grupo de Trabalho permanente de Educação Ambiental no MEC, às vésperas da Rio-92. Correção histórica: institui **GT**, e NÃO "Coordenação" (Slide 06).
-4. **Agenda 21 / Rio-92 (ONU, 1992):** ONU. Conferência das Nações Unidas sobre Meio Ambiente e Desenvolvimento, Rio de Janeiro, 3–14 jun. 1992. Capítulo 4 (mudança dos padrões de consumo) e Capítulo 36 (promoção do ensino, conscientização pública e treinamento) (Slide 06).
-5. **Conferência de Tessalônica (UNESCO, 1997):** UNESCO. Conferência Internacional Meio Ambiente e Sociedade: Educação e Consciência Pública para a Sustentabilidade. Tessalônica, dez. 1997 (Slide 06).
-6. **Resolução ONU 57/254 (2002):** ONU. Assembleia Geral. Resolução A/RES/57/254, de 20 de dezembro de 2002. Proclama a Década das Nações Unidas da Educação para o Desenvolvimento Sustentável (2005–2014); determina que a UNESCO atue como agência coordenadora (Slide 06).
-7. **Constituição Federal de 1988:** BRASIL. Constituição da República Federativa do Brasil de 1988. Artigo 225, §1º, VI: dever do poder público de promover a Educação Ambiental em todos os níveis de ensino (Slide 08).
-8. **REPEC / CEAAL (1987):** Rede de Educação Popular e Ecologia vinculada ao Conselho de Educação de Adultos da América Latina. Citado em fonte secundária: Barbosa (2002 apud Souza, 2018, p. 66) (Slide 08).
-9. **Tratado de EA para Sociedades Sustentáveis (1992):** FÓRUM GLOBAL. Tratado de Educação Ambiental para Sociedades Sustentáveis e Responsabilidade Global. Rio de Janeiro, jun. 1992. Princípio 4: "A educação ambiental não é neutra, mas ideológica. É um ato político." Elaborado pela sociedade civil internacional no Fórum Global da Rio-92, e NÃO conferência oficial da ONU (Slide 08).
-10. **PRONEA (1994):** BRASIL. Programa Nacional de Educação Ambiental. Instituído em dezembro de 1994 por iniciativa interministerial de MEC, MMA, MinC e MCT (Slide 08).
-11. **Lei Federal nº 9.795/1999 (PNEA):** BRASIL. Lei nº 9.795, de 27 de abril de 1999. Dispõe sobre a Educação Ambiental e institui a Política Nacional de Educação Ambiental. Artigo 4º, III: princípio do pluralismo de ideias e concepções pedagógicas (Slides 08 e 10).
+- **LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.** As macrotendências político-pedagógicas da educação ambiental brasileira. *Ambiente & Sociedade*, São Paulo, v. 17, n. 1, p. 23–40, jan./mar. 2014. DOI: 10.1590/1809-44220003500.
+
+  *Uso:*
+  - Slide 01: Tipos ideais weberianos sem esquema maniqueísta (p. 34).
+  - Slide 02: EA como campo social e subcampo do ambientalismo (p. 23–25); estratégias de dominantes e dominados (p. 25); eixo de tensão contínua entre conservação e transformação (p. 25).
+  - Slide 03: Tipos ideais analíticos e coexistência hegemônica (p. 34); autonomia pedagógica do educador (p. 24); correntes da vertente conservacionista (p. 30); correntes da vertente pragmática — sem incluir gestão ambiental (p. 30–31); correntes da vertente crítica, incluindo a EA no processo de gestão ambiental (p. 33); correspondências com Tozoni-Reis e Martínez-Alier (p. 34); menção a outras tipologias (Sorrentino e Sauvé, p. 28).
+  - Slide 04: Crise lida como degradação biofísica de áreas naturais (p. 27); predomínio de cientistas naturais e ecologia como base (p. 27); poluição como efeito colateral inevitável da modernização (p. 27); institucionalização via sistema ambiental (SEMA) e não educacional (p. 27); cerceamento político do período militar e abordagem funcional à ordem (p. 27).
+  - Slide 05: Vertente conservacionista originária e sua consolidação histórica (p. 27, 30, 34); lema "conhecer para amar, amar para preservar" (p. 27); Alfabetização Ecológica (p. 30); contribuição no despertar do afeto e superação do antropocentrismo (p. 30); questionamento estrutural "Como separar ecologia, cultura e política?" (p. 30).
+
+- **LAYRARGUES, Philippe Pomier; LIMA, Gustavo Ferreira da Costa.** Mapeando as macro-tendências político-pedagógicas da educação ambiental contemporânea no Brasil. In: VI ENCONTRO DE PESQUISA EM EDUCAÇÃO AMBIENTAL (EPEA), 2011, Ribeirão Preto. *Anais...* Ribeirão Preto: USP/UNESP/UFSCar, 2011. p. 1–15.
+
+  *Uso:*
+  - Slide 03: Riscos de simplificação reducionista e sectarismo na classificação (p. 6); benefícios analíticos e diagnósticos preponderantes (p. 13).
+  - Slide 05: Lema afetivo fundacional (p. 5) e limites da mudança individual despolitizada (p. 8–9).
+
+- **PELICIONI, Maria Cecília Focesi; PHILIPPI JR., Arlindo.** Bases Políticas, Conceituais, Filosóficas e Ideológicas da Educação Ambiental. In: PHILIPPI JR., Arlindo; PELICIONI, Maria Cecília Focesi (org.). *Educação Ambiental e Sustentabilidade*. 2. ed. Barueri: Manole, 2014. cap. 1, p. 3–12.
+
+  *Uso:*
+  - Slide 02: EA é "a educação aplicada às questões de meio ambiente" e "educação ambiental não é Ecologia" (p. 3); rigor conceitual necessário para evitar que noções vagas dispersem a ação (Mello e Souza 2000, p. 5).
+  - Slide 03: Duas linhas teóricas na EA: interesses populares e emancipação versus interesses do capital (Guimarães 2000, p. 7).
+  - Slide 04: Educação conservacionista como matriz que antecedeu a EA (p. 4); princípio da interdisciplinaridade em Tbilisi 1977 (p. 5); EA na Lei 6.938/1981 (p. 6).
+  - Slide 05: Consciência ecológica desprovida de ação política transformadora ajuda a manter a sociedade tal qual se encontra (p. 6).
+
+- **SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra.** Vertentes da Educação Ambiental: da conservacionista à crítica. *Fronteiras: Journal of Social, Technological and Environmental Science*, Anápolis, v. 4, n. 2 (Ed. Especial), p. 241–250, jul./dez. 2015. DOI: 10.21664/2238-8869.2015v4i2.p241-250.
+
+  *Uso:*
+  - Slide 02: Percepção de senso comum da EA como vertente única e conservadora (p. 242).
+  - Slide 04: Retificação da data de Tbilisi (o texto traz 1975 por equívoco na p. 243, retificado para 1977 conforme Pelicioni e relatório da Unesco); proposta MEC/CETESB como documento de enfoque estritamente ecológico posterior a Tbilisi (p. 243); poluição como "preço do progresso" (Reigota 2009, p. 243); aspectos políticos de Tbilisi (Dias 2003, p. 243).
+  - Slide 05: Práticas da vertente conservacionista — trilhas interpretativas, senso-percepção, visitas a parques e UCs, ecoturismo, voltadas fortemente a crianças (Layrargues 2012, p. 245); correntes conservacionista e naturalista de Sauvé (p. 245); crítica ao privilégio do indivíduo sobre a sociedade e do tecnicismo sobre a política (Guimarães 2004, p. 245).
+
+- **SOUZA, Tiago Zanquêta de.** A educação ambiental popular: contribuições em práticas sociais. *Motricidades: Rev. SPQMH*, v. 2, n. 1, p. 60–70, jan./abr. 2018. DOI: 10.29181/2594-6463.2018.v2.n1.p60-70.
+
+  *Uso:*
+  - Slide 02: "Meio ambiente não é sinônimo de natureza" (Layrargues 1999, p. 140 apud Souza 2018, p. 61, nota 2).
 
 ---
 
-## Decisões editoriais sobre dados empíricos e gráficos
+## 2. Autores e formulações clássicas em *apud*
 
-- **Extração global de materiais (PNUMA/UNEP GRO 2024, fig. 2.9, p. 26: 30,9 → 95,1 bi t):** Conforme instrução da tarefa e do roteiro aprovado, o gráfico foi **retirado da projeção visual** do Slide 07, pois o arquivo oficial não foi baixado na íntegra para conferência direta pelos revisores. A menção foi preservada nas notas do orador como tema de reflexão sobre os limites da ecoeficiência perante o crescimento absoluto da extração de recursos.
-- **Saneamento básico por macrorregiões (IBGE Censo 2000, Tabela 56):** Conforme instrução da tarefa e do roteiro aprovado, o gráfico foi **retirado da projeção visual** do Slide 09, pois a tabela censitária não passou por checagem completa e direta nesta etapa. O tema da desigualdade socioambiental de saneamento e a maior vulnerabilidade das populações de baixa renda foram mantidos com respaldo teórico direto em Pelicioni e Philippi Jr. (2014, p. 7).
+Os seguintes autores clássicos são citados indiretamente (*apud*), com registro exato da obra consultada:
 
----
-
-## Fotografias documentais e créditos (preservadas)
-
-1. **Slide 07:** `../assets/pragmatica.jpg`
-   - *Descrição:* Pátio de uma usina de reciclagem de resíduos da construção civil: esteiras transportadoras verdes convergem para uma peneira metálica com plataforma amarela, entre pilhas cônicas de brita e areia sobre o solo.
-   - *Autoria:* Ana Perugini.
-   - *Origem:* Wikimedia Commons.
-   - *Licença:* Creative Commons Attribution 2.0 Generic (CC BY 2.0).
-
-2. **Slide 09:** `../assets/critica.jpg`
-   - *Descrição:* Tanques retangulares de concreto de uma estação de tratamento de água, com guarda-corpos metálicos, prédio operacional e caixa d'água ao fundo.
-   - *Autoria:* Marcos Elias de Oliveira Júnior.
-   - *Origem:* Wikimedia Commons.
-   - *Licença:* Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0 1.0).
+- **BOURDIEU, Pierre** (apud LAYRARGUES & LIMA, 2014, p. 23–24): Teoria dos campos sociais aplicada à EA (concorrência simbólica, estratégias de conservação e subversão).
+- **BRÜGGER, Paula** (1994 apud LAYRARGUES & LIMA, 2014, p. 29): Crítica ao risco de redução da EA ao mero "adestramento ambiental".
+- **CAPRA, Fritjof** (1996 apud LAYRARGUES & LIMA, 2014, p. 30): Matriz da Alfabetização Ecológica na vertente conservacionista.
+- **DIAS, Genebaldo Freire** (2003 apud SANTOS & TOSCHI, 2015, p. 243): Dimensão política, social e econômica de Tbilisi; registro da proposta MEC/CETESB.
+- **GUIMARÃES, Mauro** (2000 apud PELICIONI & PHILIPPI JR., 2014, p. 7; 2004 apud SANTOS & TOSCHI, 2015, p. 245): Tensões de classe na EA; privilégio indevido do indivíduo sobre a sociedade na postura conservadora ingênua.
+- **LAYRARGUES, Philippe Pomier** (1999 apud SOUZA, 2018, p. 61, nota 2): Meio ambiente não é sinônimo de natureza; (2012 apud SANTOS & TOSCHI, 2015, p. 245): Práticas concretas e foco da conservacionista em crianças.
+- **LIMA, Gustavo Ferreira da Costa** (2011 apud LAYRARGUES & LIMA, 2014, p. 27): Abordagem natural e técnica que não questionava a ordem estabelecida durante o regime militar.
+- **MARTÍNEZ-ALIER, Joan** (2007 apud LAYRARGUES & LIMA, 2014, p. 34): Tipologia das três correntes do ambientalismo (culto ao silvestre, evangelho da ecoeficiência e ecologismo dos pobres).
+- **MELLO E SOUZA, Alberto de** (2000 apud PELICIONI & PHILIPPI JR., 2014, p. 5): Rigor e delimitação conceitual para evitar pulverização da ação ambiental.
+- **REIGOTA, Marcos** (2009 apud SANTOS & TOSCHI, 2015, p. 243): Crença no progresso desenvolvimentista e na poluição como preço inevitável.
+- **SAUVÉ, Lucie** (2005 apud LAYRARGUES & LIMA, 2014, p. 28; apud SANTOS & TOSCHI, 2015, p. 245): Tipologia das correntes de EA (conservacionista e naturalista).
+- **SORRENTINO, Marcos** (1995 apud LAYRARGUES & LIMA, 2014, p. 28): Tipologia das tendências da EA no Brasil.
+- **TOZONI-REIS, Marília Freitas de Campos** (2004 apud LAYRARGUES & LIMA, 2014, p. 34): Tipologia das correntes da EA (natural, racional e histórica).
 
 ---
 
-## Histórico de conformidade técnica e textual
+## 3. Documentos oficiais
 
-- **Slide 06 (`06-pragmatica-contexto.html`):** ID `slide-6`. Duas faixas visuais (.faixa-rotulo, ol.marcos e .card-contexto). Correção: Portaria MEC 2.421/1991 institui GT permanente e não coordenação. Registro da revogação da Lei 8.031/1990 pela Lei 9.491/1997. Res. ONU 57/254 de 20 dez. 2002 detalhada nas notas (ONU declara, UNESCO coordena). Distinção rigorosa entre cenário oficial e formulação dos autores.
-- **Slide 07 (`07-pragmatica.html`):** ID `slide-7`. Título sem o vocábulo "gestão" (`Pragmática: o que propõe?`). Crença na neutralidade da ciência referenciada em L&L 2014 (p. 32); "e da tecnologia" anotada como variante de L&L 2011 (p. 10). "Armadilhas paradigmáticas" referenciadas como Guimarães (2004 apud S&T, p. 247–248). Gráfico PNUMA mantido fora da tela. Foto e legenda preservadas.
-- **Slide 08 (`08-critica-contexto.html`):** ID `slide-8`. Duas faixas visuais. Citação central de L&L 2014 (p. 33). Reação do início dos anos 1990 referenciada em L&L 2014 (p. 28–29). PRONEA datado de dezembro de 1994 (MEC/MMA/MinC/MCT). REPEC citada via Barbosa (2002 apud Souza 2018, p. 66). Tratado de 1992 devidamente atribuído à sociedade civil do Fórum Global e não à conferência da ONU. Ressalva sobre o pluralismo do art. 4º da PNEA.
-- **Slide 09 (`09-critica.html`):** ID `slide-9`. Citação de "sociologismos e politicismos" referenciada a L&L 2014 (p. 33). Nota 7 de Souza desconsiderada. Gráfico IBGE mantido fora da tela. Foto e legenda preservadas.
-- **Slide 10 (`10-coexistencia.html`):** ID `slide-10`. Linha do tempo qualitativa (sem números) em SVG inline estilizado com as três faixas (.cons, .prag, .crit), marcadores temporais de 1960 a 2014, conexão de mesma linhagem entre conservacionista e pragmática e matriz emancipatória distinta da crítica. Ressalva epistemológica sobre a percepção das correntes (L&L 2011, p. 4; L&L 2014, p. 25). Fechamento passando a palavra formalmente ao Edson.
+- **ONU.** Declaração da Conferência das Nações Unidas sobre o Meio Ambiente Humano. Estocolmo, 5–16 jun. 1972.
+- **BRASIL.** Decreto nº 73.030, de 30 de outubro de 1973. Cria a Secretaria Especial do Meio Ambiente (SEMA) e define atribuições educativas voltadas à conservação dos recursos naturais.
+- **UNESCO.** Intergovernmental Conference on Environmental Education, Tbilisi, 14–26 Oct. 1977: final report. Paris: UNESCO, 1978 (ED/MD/49). *Retificação:* ano de realização retificado de 1975 para 1977.
+- **BRASIL. MEC / CETESB.** *Ecologia: uma proposta para o ensino de 1º e 2º graus*. Brasília: MEC/CETESB, 1979. *Retificação:* datação documental confirmada em 1979 (posterior a Tbilisi), conforme cronologia oficial do MEC.
+- **BRASIL.** Lei nº 6.938, de 31 de agosto de 1981. Dispõe sobre a Política Nacional do Meio Ambiente (PNMA).
+
+---
+
+## 4. Créditos de imagens e recursos visuais
+
+- **Slide 01 (`../assets/aventura-floresta.png`):**
+  Ilustração em pixel art 16:9 ("Aventura ambiental"), autoral do projeto, mantida como elemento de ambientação visual do seminário.
+
+- **Slide 03 (`../comum/icones/*.svg`):**
+  Ícones temáticos em pixel art: folha (`folha.svg` - conservacionista), engrenagem (`engrenagem.svg` - pragmática) e coletivo (`coletivo.svg` - crítica).
+
+- **Slide 05 (`../assets/conservacionista.jpg`):**
+  Trilha da Vovó Sumaúma, Floresta Nacional do Tapajós (PA).
+  *Autoria:* Leonardo Milano / Amazônia Real.
+  *Licença:* CC BY 2.0 (Wikimedia Commons).
+
+---
+
+## 5. Registros de exclusão e retificações editoriais
+
+- **Gráfico de consumo industrial (IBGE):** Excluído do novo roteiro (antigo slide 03); o novo slide 04 concentra-se exclusivamente na linha do tempo institucional e nas condições históricas de emergência apontadas pelos teóricos.
+- **Fotografias do antigo slide 02 (`faixa-natureza.jpg`, `faixa-residuos.jpg`, `faixa-comunidade.jpg`):** Suprimidas de Caio com a fusão e simplificação do slide 03 para priorizar a leitura conceitual, tipologias e ícones vetoriais locais.
+- **Vertente Conservacionista transferida para Caio:** O slide 05 (propostas e práticas da macrotendência conservacionista), anteriormente pertencente ao bloco de Diogo, foi incorporado ao bloco de Caio conforme a reestruturação aprovada no roteiro de 15 slides.
