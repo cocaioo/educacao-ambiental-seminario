@@ -90,36 +90,10 @@
 
 .slide[data-autor="Caio"] .coexistencia-svg {
   display: block;
-  width: 100%;
+  width: calc(100% - 2 * var(--margem));
   height: auto;
-  margin: 8px 0 12px;
-}
-
-.slide[data-autor="Caio"] .coexistencia-sintese {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 28px;
-  margin-top: 6px;
-}
-
-.slide[data-autor="Caio"] .coexistencia-box {
-  background: rgba(255, 255, 255, 0.52);
-  border: 2px solid #b3a27d;
-  padding: 10px 14px;
-  clip-path: var(--canto);
-  box-shadow: 2px 2px 0 rgba(106, 71, 43, 0.18);
-}
-
-.slide[data-autor="Caio"] .coexistencia-box h4 {
-  font-size: 19px;
-  margin: 0 0 4px;
-  font-family: var(--r-heading-font);
-}
-
-.slide[data-autor="Caio"] .coexistencia-box p {
-  font-size: 16px;
-  line-height: 1.28;
-  margin: 0;
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 
 /* Tipografia de rodapé e legendas */
@@ -174,4 +148,60 @@
 .slide[data-autor="Caio"].molde-pratica .card-contexto .pratica-fonte { font-size: 14px; opacity: 0.75; margin-bottom: 0; }
 .slide[data-autor="Caio"].molde-disputa .colunas.tres { row-gap: 10px; column-gap: 18px; }
 .slide[data-autor="Caio"].molde-disputa .card-contexto p { font-size: 17px; line-height: 1.25; }
-.slide[data-autor="Caio"] .pergunta-turma { font-size: 23px; font-weight: 700; line-height: 1.3; margin-top: 14px; margin-bottom: 0; padding-left: 14px; }
+.slide[data-autor="Caio"] .destaque-final { font-size: 23px; font-weight: 700; line-height: 1.3; margin-top: 14px; margin-bottom: 0; padding-left: 17px; border-left: 4px solid #afbd82; }
+
+/* Crítica: slides reorganizados (surgiu, propõe, educação, disputa) */
+.slide[data-autor="Caio"]#caio-crit-disputa .disputa-colunas { column-gap: 28px; align-items: stretch; margin-top: 6px; margin-bottom: 0; }
+.slide[data-autor="Caio"]#caio-crit-disputa .disputa-colunas .card-contexto { padding: 12px 16px; }
+.slide[data-autor="Caio"]#caio-crit-disputa .disputa-colunas .card-contexto p { font-size: 21px; line-height: 1.3; margin: 0 0 8px; }
+.slide[data-autor="Caio"]#caio-crit-disputa .disputa-colunas .card-contexto .disputa-nota { font-size: 18px; margin-bottom: 0; opacity: 0.85; }
+.slide[data-autor="Caio"]#caio-crit-disputa .disputa-limites { font-size: 20px; line-height: 1.3; margin-top: 14px; margin-bottom: 0; }
+.slide[data-autor="Caio"]#caio-crit-disputa .destaque-final { font-size: 22px; margin-top: 12px; }
+
+.slide[data-autor="Caio"]#caio-crit-educacao .educacao-intro { font-size: 22px; line-height: 1.3; margin-top: 0; margin-bottom: 12px; }
+.slide[data-autor="Caio"]#caio-crit-educacao .colunas.duas { column-gap: 22px; align-items: stretch; }
+.slide[data-autor="Caio"]#caio-crit-educacao .card-contexto { padding: 10px 14px; }
+.slide[data-autor="Caio"]#caio-crit-educacao .card-contexto ul { font-size: 19px; line-height: 1.28; margin-top: 4px; margin-bottom: 0; }
+.slide[data-autor="Caio"]#caio-crit-educacao .card-contexto li { margin-bottom: 6px; }
+.slide[data-autor="Caio"]#caio-crit-educacao .educacao-sintese { font-size: 20px; line-height: 1.3; margin-top: 12px; margin-bottom: 0; padding-left: 14px; border-left: 4px solid currentColor; }
+.slide[data-autor="Caio"]#caio-crit-educacao .destaque-final { font-size: 21px; margin-top: 10px; }
+
+.slide[data-autor="Caio"]#slide-8 .tradicoes { column-gap: 24px; align-items: stretch; }
+.slide[data-autor="Caio"]#slide-8 .tradicoes .card-contexto h4 { font-size: 22px; margin-bottom: 6px; }
+.slide[data-autor="Caio"]#slide-8 .tradicoes .card-contexto p { font-size: 20px; line-height: 1.3; }
+.slide[data-autor="Caio"]#slide-8 .encontro-linha { font-size: 19px; line-height: 1.3; text-align: center; margin-top: 8px; margin-bottom: 12px; }
+.slide[data-autor="Caio"]#slide-8 ol.marcos { margin-bottom: 8px; }
+.slide[data-autor="Caio"]#slide-8 ol.marcos p { font-size: 17px; line-height: 1.28; }
+.slide[data-autor="Caio"]#slide-8 .aspas-proposta { font-size: 21px; margin-top: 6px; margin-bottom: 4px; }
+.slide[data-autor="Caio"]#slide-8 .matriz-linha { font-size: 16px; line-height: 1.3; opacity: 0.8; margin-top: 4px; margin-bottom: 0; padding-left: 14px; }
+
+/* Slide 9: contraste reformas setoriais x renovação multidimensional */
+.slide[data-autor="Caio"]#slide-9 .contraste { --cols: 1fr 36px 1fr; column-gap: 12px; align-items: stretch; margin-top: 0; margin-bottom: 12px; }
+.slide[data-autor="Caio"]#slide-9 .contraste .card-contexto { padding: 10px 14px; }
+.slide[data-autor="Caio"]#slide-9 .contraste .card-contexto h4 { font-size: 21px; margin-bottom: 4px; }
+.slide[data-autor="Caio"]#slide-9 .contraste .card-contexto p { font-size: 19px; line-height: 1.28; margin-bottom: 4px; }
+.slide[data-autor="Caio"]#slide-9 .contraste .contraste-quem { font-size: 14px; opacity: 0.75; font-weight: 600; }
+.slide[data-autor="Caio"]#slide-9 .lado-reforma { border-style: dashed; }
+.slide[data-autor="Caio"]#slide-9 .lado-reforma h4, .slide[data-autor="Caio"]#slide-9 .lado-reforma p { opacity: 0.8; }
+.slide[data-autor="Caio"]#slide-9 .lado-renovacao { border-color: var(--crit); }
+.slide[data-autor="Caio"]#slide-9 .contraste .seta { align-self: center; text-align: center; font-family: var(--r-heading-font); font-size: 34px; color: var(--crit); }
+.slide[data-autor="Caio"]#slide-9 .diagnostico { column-gap: 16px; align-items: stretch; margin-top: 0; margin-bottom: 0; }
+.slide[data-autor="Caio"]#slide-9 .diagnostico .card-contexto h4 { font-size: 18px; }
+.slide[data-autor="Caio"]#slide-9 .diagnostico .card-contexto p { font-size: 18px; line-height: 1.26; }
+.slide[data-autor="Caio"]#slide-9 .conceitos-chave { font-size: 17px; line-height: 1.3; margin-top: 10px; margin-bottom: 0; }
+.slide[data-autor="Caio"]#slide-9 .destaque-final { font-size: 21px; margin-top: 10px; }
+
+.slide[data-autor="Caio"]#slide-11 .bibliografia-final {
+  list-style: none;
+  font-size: 20px;
+  line-height: 1.34;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.slide[data-autor="Caio"]#slide-11 .bibliografia-final li {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  border-left: 3px solid #b3be89;
+}

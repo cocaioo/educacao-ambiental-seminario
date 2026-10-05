@@ -1,14 +1,14 @@
-# Parte de Diogo (abertura e macrotendência conservacionista)
+# Parte de Diogo
 
-Cada vertente segue os mesmos quatro tempos, com o mesmo layout por tipo: **por que surgiu? → o que propõe? → na prática → em disputa**. O fio condutor é a EA como campo em disputa (slide de abertura).
+Abertura e quatro slides da macrotendência conservacionista. A sequência de fala é **Diogo → Edson → Caio**.
 
-1. **`01-capa.html`**: abertura, equipe e a pergunta provocadora.
-2. **`abertura.html`**: um campo em disputa, três macrotendências (eixo conservação ↔ transformação, tipos ideais).
-3. **`04-conservacionista-contexto.html`**: por que surgiu (1960–1980).
-4. **`05-conservacionista.html`**: o que propõe.
-5. **`conservacionista-pratica.html`**: na prática (trilhas e senso-percepção, os três "R", educação ao ar livre).
-6. **`conservacionista-disputa.html`**: em disputa (Alfabetização Ecológica como política pública, 2003) e passagem para Edson.
+1. `01-capa.html`: tema, integrantes, disciplina e professor.
+2. `abertura.html`: Educação Ambiental como campo em disputa e três tipos ideais que coexistem.
+3. `04-conservacionista-contexto.html`: condições de emergência e base ecológica, institucional e política.
+4. `05-conservacionista.html`: conhecimento, afetividade, comportamento e práticas da pauta verde.
+5. `conservacionista-pratica.html`: Alfabetização Ecológica e aplicação dos princípios ecológicos à sociedade.
+6. `conservacionista-disputa.html`: contribuições, limites e passagem para Edson.
 
-## Como trabalhar
+Os nomes dos arquivos e IDs permanecem estáveis, mesmo quando o título muda. A ordem está em `ordem.json`.
 
-Edite os arquivos em `conteudo/`, mantenha a sequência em `ordem.json`, registre novas fontes em `fontes.md` e use em `estilos.css` apenas seletores iniciados por `.slide[data-autor="Diogo"]`. Os moldes "Na prática" e "Em disputa" têm CSS idêntico nas três pastas: ao ajustar um, ajuste os três. Depois de editar, execute `slides/atualizar.cmd`.
+Edite `conteudo/`, registre as fontes em `fontes.md` e use em `estilos.css` apenas seletores iniciados por `.slide[data-autor="Diogo"]`. As fontes acadêmicas desta revisão são os textos locais em `pesquisa/investigacao/textos/`. Depois de editar, execute `slides/atualizar.cmd`.
