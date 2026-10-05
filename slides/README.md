@@ -4,7 +4,7 @@
 - **Docente:** Prof. Davi Lima Pantoja Leite
 - **Integrantes:** Caio Victor Ferreira do Nascimento, Edson da Silva Lima Junior e Diogo
 
-A apresentação usa o [reveal.js](https://revealjs.com) com o tema autoral **Aventura ambiental**, inspirado na exploração de mundos 2D em pixel art. Os títulos usam **Pixelify Sans**, incluída localmente, e o corpo mantém uma fonte legível para textos, fotos e gráficos. A divisão **Caio → Diogo → Edson** permite que cada integrante edite sua parte, mantendo uma sequência única. Quantidade de slides, abordagem e distribuição definitiva podem mudar depois.
+A apresentação usa o [reveal.js](https://revealjs.com) com o tema autoral **Aventura ambiental**, inspirado na exploração de mundos 2D em pixel art. Os títulos usam **Pixelify Sans**, incluída localmente, e o corpo mantém uma fonte legível para textos, fotos e gráficos. A divisão **Diogo → Edson → Caio** permite que cada integrante edite sua parte, mantendo uma sequência única. Quantidade de slides, abordagem e distribuição definitiva podem mudar depois.
 
 ## Editar e conferir
 
@@ -138,7 +138,7 @@ Para trabalhar em cópias separadas e reunir as alterações:
 
 Combinar mudanças no tema ou nos recursos compartilhados evita conflitos. Se o grupo decidir transferir um slide entre integrantes, transfira também os recursos locais necessários e atualize os dois manifestos.
 
-As conexões iniciais estão nos guias de [Caio](Caio/README.md), [Diogo](Diogo/README.md) e [Edson](Edson/README.md). Elas descrevem a passagem de ideias, sem fixar falas nem duração. A capa e outros campos ainda conservam os placeholders da versão inicial; preenchê-los faz parte da edição de conteúdo posterior.
+As conexões iniciais estão nos guias de [Diogo](Diogo/README.md), [Edson](Edson/README.md) e [Caio](Caio/README.md). Elas descrevem a passagem de ideias, sem fixar falas nem duração. A capa e outros campos ainda conservam os placeholders da versão inicial; preenchê-los faz parte da edição de conteúdo posterior.
 
 O registro compartilhado [fontes.md](fontes.md) documenta a versão inicial. Novas fontes ficam nos registros individuais. A inclusão delas no slide final de referências é uma atualização editorial manual, combinada com Edson; a composição não transforma Markdown em slides.
 

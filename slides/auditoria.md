@@ -1,6 +1,6 @@
-# Auditoria — matriz de evidências, relatórios e resolução de pendências
+﻿# Auditoria — matriz de evidências, relatórios e resolução de pendências
 
-Apresentação **Vertentes da Educação Ambiental** (`index.html`, 12 slides).
+Apresentação **Vertentes da Educação Ambiental**. A versão atual tem **17 slides**; a revisão vigente está nas seções 10 e 11. Os registros anteriores descrevem versões históricas.
 Processo executado em **11 de setembro de 2026**, conforme a dinâmica de equipe e a auditoria interna do seminário.
 
 As seções 1 a 7 registram a auditoria da versão inicial. A validação técnica da migração para reveal.js está na seção 8; a atualização para o tema de aventura 2D está na seção 9.
@@ -215,3 +215,82 @@ A pedido do grupo, o tema foi substituído por uma estética autoral de aventura
 - A origem da ilustração, dos ícones e da fonte está registrada em `fontes.md`; o `serif.css` original permanece disponível como alternativa manual.
 
 Após a comparação de fontes, o grupo escolheu manter a Pixelify Sans ajustada: títulos de 44 px, peso 500, entrelinha 1,14 e espaçamento de 0,2 px. A capa mantém 76 px, com entrelinha 1,10 e sombra simples. Os 12 slides e as três prévias foram conferidos offline no Chrome após o ajuste, sem cortes ou sobreposições. O PDF atualizado tem 12 páginas de 960×540 pt; todas foram renderizadas e inspecionadas.
+
+
+## 10. Revisão aprovada e iteração do conjunto — 5 de outubro de 2026
+
+A revisão de Diogo e Edson foi autorizada após o diagnóstico. O pedido posterior de continuar iterando ampliou a revisão à abertura, à crítica, à coexistência e às referências, com a capa restrita à identificação do grupo, disciplina, tema e professor. O tema visual de aventura 2D foi mantido.
+
+### Mudanças por slide
+
+| Nº | Responsável | Mudança e foco |
+| --- | --- | --- |
+| 1 | Diogo | Capa somente com identificação. Retirados roteiro, pergunta e demais informações de abertura. |
+| 2 | Diogo | Campo social e três tipos ideais; retirada a correspondência com outra taxonomia que não seria desenvolvida. |
+| 3 | Diogo | Condições de emergência: leitura ecológica, sistema ambiental, contexto autoritário e herança conservacionista. Retirada a cronologia institucional externa. |
+| 4 | Diogo | Proposta educativa: afeto, relativização do antropocentrismo, conhecimento e comportamento individual, práticas da pauta verde. |
+| 5 | Diogo | Alfabetização Ecológica: princípios de Capra como apud, transposição à vida social e dependência das bases econômicas e políticas. |
+| 6 | Diogo | Contribuição cultural, limites políticos, continuidade da pauta verde e passagem para a pragmática. |
+| 7 | Edson | Pós-guerra, consumismo e descarte, contexto neoliberal e adaptação da linhagem conservacionista. Hegemonia situada no diagnóstico de 2014. |
+| 8 | Edson | Pauta marrom, reciclagem, ecoeficiência, consumo sustentável e conservadorismo dinâmico. |
+| 9 | Edson | Reflexão contextual restrita, ciência tratada como neutra e ação como atividade-fim. Pergunta sobre aprendizagem na coleta seletiva escolar. |
+| 10 | Edson | Disputa EA–EDS: sustentabilidade, autonomia e participação. Marcos históricos apenas como contexto breve. Passagem para Caio. |
+| 11 | Caio | Condições de emergência da crítica: Educação Popular, redemocratização e encontro das lutas sociais e ecológicas. Retirada a citação direta do Tratado não encontrada nos textos permitidos. |
+| 12 | Caio | Proposta substantiva preservada; título encurtado e texto dos quadros ampliado para facilitar leitura. |
+| 13 | Caio | Relação indivíduo–sociedade e EA Popular; síntese visual e notas enxugadas, referências secundárias explicitadas como apud. |
+| 14 | Caio | Avanços e limites situados nas análises de 2014 e 2015; citações corrigidas e pergunta sobre cidadania. Retirada afirmação não sustentada sobre o art. 4º da PNEA. |
+| 15 | Caio | Coexistência: diagrama qualitativo até 2014 com rótulos maiores, síntese mais direta e fechamento coerente. |
+| 16 | Caio | Referências limitadas aos cinco textos efetivamente usados; retirada a lista de documentos externos. |
+| 17 | Caio | Agradecimento preservado. |
+
+### Fontes e notas
+
+- Fontes exclusivamente em `pesquisa/investigacao/textos/`. Matrizes de evidências atualizadas em `Diogo/fontes.md`, `Edson/fontes.md` e `Caio/fontes.md`.
+- As citações foram confrontadas diretamente com os textos e as páginas impressas. A checagem complementar encontrou **63 ocorrências literais**, incluindo notas, com correspondência nas fontes; o título do seminário entre aspas na capa não é uma citação bibliográfica.
+- Paginação aplicada: Layrargues e Lima (2014), 22 + N; Santos e Toschi, 240 + N; Souza, 59 + N; Pelicioni e Philippi Jr., 2 + N; Layrargues e Lima (2011), N.
+- Autores clássicos e documentos acessados indiretamente aparecem como `apud`. Não foram acrescentados dados numéricos de desigualdade.
+- Notas substantivas em primeira pessoa, desenvolvendo os argumentos visuais e a passagem Diogo → Edson → Caio. Capa, referências e agradecimento têm notas breves adequadas à função de cada slide.
+
+| Slide | Palavras nas notas |
+| --- | --- |
+| 1 | 41 |
+| 2 | 298 |
+| 3 | 270 |
+| 4 | 283 |
+| 5 | 285 |
+| 6 | 287 |
+| 7 | 282 |
+| 8 | 287 |
+| 9 | 290 |
+| 10 | 303 |
+| 11 | 287 |
+| 12 | 306 |
+| 13 | 287 |
+| 14 | 283 |
+| 15 | 285 |
+| 16 | 76 |
+| 17 | 13 |
+
+
+### Validação final
+
+- `slides/compor.ps1`: sucesso, **17 slides** (Diogo: 6; Edson: 4; Caio: 7), com apresentação completa e três prévias atualizadas.
+- `slides/testar.ps1`: **22 de 22 cenários passaram**; os testes preservaram os fontes reais.
+- Chrome sem internet, palco 1280×720: os 17 slides e as três prévias foram conferidos. Sem erros de JavaScript, imagens quebradas ou conteúdo cortado.
+- Fragmentos, alternância estática pela tecla A e notas pela tecla S testados; a janela do apresentador manteve o slide e exibiu as notas corretas.
+- CSS pessoal com escopo de autor, sem margens horizontais introduzidas em filhos diretos de section. Arquivos compartilhados em `comum/` preservados, confirmados por SHA-256.
+- PDF atualizado: **17 páginas de 960×540 pt**, com todos os tópicos visíveis, sem notas de fala. Todas as páginas renderizadas e inspecionadas visualmente.
+- `git diff --check`: sem erros de whitespace. HEAD preservado em `26aad0488edd46c0c00f47b9da56b951dcc0c076`; **nenhum commit realizado**.
+
+A numeração desta seção é a posição na apresentação completa. Os identificadores HTML e alguns nomes de arquivo mantêm números históricos.
+
+## 11. Revisão final de texto, citações e coexistência — 5 de outubro de 2026
+
+Revisão feita sem alterar a sequência de 17 slides nem o tema visual.
+
+- **Perguntas de debate viraram sínteses afirmativas.** Os seis destaques em forma de pergunta (slides 6, 9, 10, 12, 13 e 14) passaram a afirmações curtas, com o mesmo lugar e o mesmo peso visual (classes `revisao-destaque` e `destaque-final`). As notas foram ajustadas para não anunciar perguntas à turma. No slide 5, “Questão dos autores” passou a “Ressalva dos autores”.
+- **Páginas fora do texto visível.** Removidas as indicações de página no corpo do slide 12 (“p. 30–31”, “p. 29”) e em todos os rodapés. As páginas continuam nas notas do apresentador e nas matrizes de `fontes.md`; as referências (slide 16) mantêm os intervalos das obras, como pede a ABNT.
+- **Formato único dos rodapés.** `Fonte:` ou `Fontes:` seguido das obras lidas diretamente, em caixa alta e com o ano entre parênteses — `LAYRARGUES & LIMA (2014)` — e depois as citações indiretas no formato `AUTOR (ano) apud OBRA (ano)`, agrupando autores que compartilham a mesma obra de apoio. Sem quebras de linha forçadas, abreviações (“L&L”) ou citações no corpo do texto.
+- **Slide 15 (coexistência).** As duas caixas de texto saíram; ficou um único gráfico qualitativo: tempo de 1970 a 2014 no eixo horizontal, eixo conservação da ordem–transformação social no vertical (o mesmo da abertura), espessura como influência relativa. A pragmática se ramifica da conservacionista por volta de 1990 (mesma linhagem); a crítica nasce em meados dos anos 1980 de outra matriz (educação popular e redemocratização); a linha de 2014 registra que as três coexistem e disputam a hegemonia. Fontes: Layrargues & Lima (2014, p. 30–34), Souza (2018, p. 65) e Guimarães (2004 apud Santos & Toschi, 2015, p. 247).
+- **Validação.** `compor.ps1`: 17 slides. `testar.ps1`: 22 de 22 cenários. Os slides alterados foram conferidos em Chrome a 1280×720 com todas as revelações visíveis.
+

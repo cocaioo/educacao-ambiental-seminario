@@ -4,7 +4,7 @@ Set-StrictMode -Version 2.0
 
 $script:Utf8 = New-Object System.Text.UTF8Encoding($false, $true)
 $script:Raiz = [IO.Path]::GetFullPath($PSScriptRoot)
-$script:Autores = @('Caio', 'Diogo', 'Edson')
+$script:Autores = @('Diogo', 'Edson', 'Caio')
 $script:TagPattern = '<!--[\s\S]*?-->|<![^>]*>|<(?<closing>/)?(?<tag>[A-Za-z][\w:-]*)(?<attrs>(?:[^"''<>]|"[^"]*"|''[^'']*'')*?)\s*(?<self>/)?>'
 $script:AttrPattern = '(?<name>[^\s"''=<>`/]+)(?:\s*=\s*(?:"(?<dq>[^"]*)"|''(?<sq>[^'']*)''|(?<bare>[^\s"''=<>`]+)))?'
 
@@ -364,7 +364,7 @@ try {
     }
     # Nenhuma saída é alterada antes de todos os fragmentos, estilos e mídias passarem.
     Salvar-Saidas $saidas
-    Write-Host ('Apresentação atualizada: {0} slides (Caio: {1}; Diogo: {2}; Edson: {3}).' -f $todos.Count, $blocos[0].Fragmentos.Count, $blocos[1].Fragmentos.Count, $blocos[2].Fragmentos.Count)
+    Write-Host ('Apresentação atualizada: {0} slides ({1}).' -f $todos.Count, (($blocos | ForEach-Object { '{0}: {1}' -f $_.Autor, $_.Fragmentos.Count }) -join '; '))
     exit 0
 } catch {
     [Console]::Error.WriteLine('Erro ao compor os slides: ' + $_.Exception.Message)
