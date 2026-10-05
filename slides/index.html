@@ -71,56 +71,8 @@
 }
 
 /* Slide 2: Eixo de tensão entre conservação e transformação */
-.slide[data-autor="Diogo"]#slide-2 .eixo-disputa {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
-  padding: 10px 20px;
-  background: rgba(230, 222, 195, 0.65);
-  border: 2px solid #a89f78;
-  border-radius: 4px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.slide[data-autor="Diogo"]#slide-2 .eixo-disputa .seta {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--discreto);
-  letter-spacing: .5px;
-}
 
 /* Slide 3: Três macrotendências com ícones e correspondências */
-.slide[data-autor="Diogo"]#slide-3 .lentes {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.slide[data-autor="Diogo"]#slide-3 .lentes .icone-lente {
-  width: 48px;
-  height: 48px;
-  margin: 0 0 6px;
-}
-
-.slide[data-autor="Diogo"]#slide-3 .lentes h3 {
-  font-size: 29px;
-  margin-bottom: 8px;
-}
-
-.slide[data-autor="Diogo"]#slide-3 .lentes p {
-  font-size: 17px;
-  line-height: 1.25;
-  margin: 0 0 8px;
-}
-
-.slide[data-autor="Diogo"]#slide-3 .lentes .corresp {
-  font-size: 15px;
-  color: var(--discreto);
-  margin-top: 6px;
-  padding-top: 6px;
-  border-top: 1px dashed #bfb791;
-}
 
 /* Slide 4: Faixas de cenário (linha do tempo) e condições de emergência */
 .slide[data-autor="Diogo"] .faixa-rotulo {
@@ -199,6 +151,92 @@
 .slide[data-autor="Diogo"]#slide-5 blockquote {
   margin-top: 14px;
   font-size: 20px;
+}
+
+/* Moldes comuns "Na prática" e "Em disputa": regras idênticas nas três pastas */
+.slide[data-autor="Diogo"].molde-pratica .pratica-intro { font-size: 23px; line-height: 1.35; margin-top: 0; margin-bottom: 14px; }
+.slide[data-autor="Diogo"].molde-pratica .colunas.tres { row-gap: 12px; column-gap: 18px; align-items: stretch; }
+.slide[data-autor="Diogo"].molde-pratica .card-contexto { padding: 12px 14px; }
+.slide[data-autor="Diogo"].molde-pratica .card-contexto h4 { font-size: 23px; margin-bottom: 6px; }
+.slide[data-autor="Diogo"].molde-pratica .card-contexto p { font-size: 19px; line-height: 1.3; margin-bottom: 6px; }
+.slide[data-autor="Diogo"].molde-pratica .card-contexto .pratica-fonte { font-size: 14px; opacity: 0.75; margin-bottom: 0; }
+.slide[data-autor="Diogo"].molde-disputa .colunas.tres { row-gap: 10px; column-gap: 18px; }
+.slide[data-autor="Diogo"].molde-disputa .card-contexto p { font-size: 17px; line-height: 1.25; }
+.slide[data-autor="Diogo"] .pergunta-turma { font-size: 23px; font-weight: 700; line-height: 1.3; margin-top: 14px; margin-bottom: 0; padding-left: 14px; }
+
+/* Abertura: campo em disputa + três macrotendências (funde os antigos #slide-2 e #slide-3) */
+.slide[data-autor="Diogo"]#diogo-abertura .abertura-lead {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.slide[data-autor="Diogo"]#diogo-abertura .eixo-disputa {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 36px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-family: var(--r-heading-font);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: .4px;
+}
+
+.slide[data-autor="Diogo"]#diogo-abertura .eixo-disputa .polo {
+  padding: 5px 12px;
+  border-bottom: 5px solid currentColor;
+  background: rgba(230, 222, 195, 0.65);
+}
+
+.slide[data-autor="Diogo"]#diogo-abertura .eixo-disputa .polo.cons {
+  grid-column: 1 / span 2;
+  text-align: left;
+}
+
+.slide[data-autor="Diogo"]#diogo-abertura .eixo-disputa .polo.crit {
+  grid-column: 3;
+  text-align: right;
+}
+
+.slide[data-autor="Diogo"]#diogo-abertura .lentes {
+  margin-top: 26px;
+  margin-bottom: 0;
+}
+
+.slide[data-autor="Diogo"]#diogo-abertura .lentes .icone-lente {
+  width: 56px;
+  height: 56px;
+  margin: 0 0 4px;
+}
+
+.slide[data-autor="Diogo"]#diogo-abertura .lentes h3 {
+  font-size: 29px;
+  margin-bottom: 6px;
+}
+
+.slide[data-autor="Diogo"]#diogo-abertura .lentes p {
+  font-size: 21px;
+  line-height: 1.28;
+  margin: 0;
+}
+
+.slide[data-autor="Diogo"]#diogo-abertura .tipos-ideais {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-top: 28px;
+  margin-bottom: 6px;
+}
+
+.slide[data-autor="Diogo"]#diogo-abertura .corresp-linha {
+  font-size: 15px;
+  line-height: 1.3;
+  color: var(--discreto);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 6px;
+  border-top: 1px dashed #bfb791;
 }
 
 /*
@@ -325,26 +363,20 @@
   margin: 0;
 }
 
-/* Mesma linhagem (pragmatica-linhagem.html) */
-.slide[data-autor="Edson"]#edson-linhagem .aspas-proposta { margin-top: 4px; margin-bottom: 12px; }
-.slide[data-autor="Edson"]#edson-linhagem .edson-linhagem-card p { font-size: 17px; line-height: 1.28; margin: 0 0 4px; }
-.slide[data-autor="Edson"]#edson-linhagem .edson-linhagem-card h4 { font-size: 20px; }
-.slide[data-autor="Edson"]#edson-linhagem .edson-linhagem-comum { margin-top: 12px; }
-.slide[data-autor="Edson"]#edson-linhagem .edson-linhagem-comum p { font-size: 19px; line-height: 1.3; margin: 0; padding: 6px 12px; background: rgba(106, 71, 43, 0.08); border-left: 4px solid #6a472b; }
-.slide[data-autor="Edson"]#edson-linhagem .edson-linhagem-braco { font-size: 18px; line-height: 1.28; margin: 0; }
-
-/* Atividade-fim x tema gerador (pragmatica-atividade-fim.html) */
-.slide[data-autor="Edson"]#edson-atividade-fim .card-contexto { padding: 12px 16px; }
-.slide[data-autor="Edson"]#edson-atividade-fim .card-contexto h4 { font-size: 24px; margin-bottom: 6px; }
-.slide[data-autor="Edson"]#edson-atividade-fim .card-contexto p { font-size: 19px; line-height: 1.3; margin-bottom: 4px; }
-.slide[data-autor="Edson"]#edson-atividade-fim > p.fragment { font-size: 20px; line-height: 1.3; margin-top: 4px; margin-bottom: 12px; }
-.slide[data-autor="Edson"]#edson-atividade-fim .edson-atividade-fim-citacoes { margin-top: 12px; margin-bottom: 0; font-size: 0.85em; line-height: 1.35; }
-.slide[data-autor="Edson"]#edson-atividade-fim .edson-atividade-fim-citacoes li { margin-bottom: 6px; }
-.slide[data-autor="Edson"]#edson-atividade-fim .edson-atividade-fim-citacoes small { opacity: 0.75; }
-.slide[data-autor="Edson"]#edson-atividade-fim .aspas-proposta { font-size: 22px; font-weight: 700; margin-top: 10px; }
 
 /* EA x EDS (pragmatica-ea-eds.html) */
 .slide[data-autor="Edson"]#edson-ea-eds .colunas.tres { row-gap: 10px; }
+
+/* Moldes comuns "Na prática" e "Em disputa": regras idênticas nas três pastas */
+.slide[data-autor="Edson"].molde-pratica .pratica-intro { font-size: 23px; line-height: 1.35; margin-top: 0; margin-bottom: 14px; }
+.slide[data-autor="Edson"].molde-pratica .colunas.tres { row-gap: 12px; column-gap: 18px; align-items: stretch; }
+.slide[data-autor="Edson"].molde-pratica .card-contexto { padding: 12px 14px; }
+.slide[data-autor="Edson"].molde-pratica .card-contexto h4 { font-size: 23px; margin-bottom: 6px; }
+.slide[data-autor="Edson"].molde-pratica .card-contexto p { font-size: 19px; line-height: 1.3; margin-bottom: 6px; }
+.slide[data-autor="Edson"].molde-pratica .card-contexto .pratica-fonte { font-size: 14px; opacity: 0.75; margin-bottom: 0; }
+.slide[data-autor="Edson"].molde-disputa .colunas.tres { row-gap: 10px; column-gap: 18px; }
+.slide[data-autor="Edson"].molde-disputa .card-contexto p { font-size: 17px; line-height: 1.25; }
+.slide[data-autor="Edson"] .pergunta-turma { font-size: 23px; font-weight: 700; line-height: 1.3; margin-top: 14px; margin-bottom: 0; padding-left: 14px; }
 
 /*
   Ajustes visuais exclusivos da parte de Caio (crítica, coexistência e encerramento).
@@ -512,14 +544,17 @@
   font-size: 0.95em;
 }
 
-/* O que fica (o-que-fica.html) */
-.slide[data-autor="Caio"]#caio-o-que-fica .ofica-pergunta { margin-top: 0; margin-bottom: 14px; font-family: var(--r-heading-font); font-size: 26px; line-height: 1.2; }
-.slide[data-autor="Caio"]#caio-o-que-fica .ofica-blocos { column-gap: 20px; align-items: stretch; }
-.slide[data-autor="Caio"]#caio-o-que-fica .ofica-blocos .card-contexto p { font-size: 20px; line-height: 1.28; }
-.slide[data-autor="Caio"]#caio-o-que-fica .ofica-blocos .faixa-rotulo { font-size: 15px; }
-.slide[data-autor="Caio"]#caio-o-que-fica .ofica-linhas { column-gap: 20px; margin-top: 24px; padding: 6px 12px; background: rgba(106, 71, 43, 0.08); border-top: 2px dashed #b8a682; border-bottom: 2px dashed #b8a682; }
-.slide[data-autor="Caio"]#caio-o-que-fica .ofica-linhas p { margin: 0; font-size: 21px; line-height: 1.25; text-align: center; }
-.slide[data-autor="Caio"]#caio-o-que-fica .ofica-sintese { margin-top: 24px; font-size: 27px; }
+
+/* Moldes comuns "Na prática" e "Em disputa": regras idênticas nas três pastas */
+.slide[data-autor="Caio"].molde-pratica .pratica-intro { font-size: 23px; line-height: 1.35; margin-top: 0; margin-bottom: 14px; }
+.slide[data-autor="Caio"].molde-pratica .colunas.tres { row-gap: 12px; column-gap: 18px; align-items: stretch; }
+.slide[data-autor="Caio"].molde-pratica .card-contexto { padding: 12px 14px; }
+.slide[data-autor="Caio"].molde-pratica .card-contexto h4 { font-size: 23px; margin-bottom: 6px; }
+.slide[data-autor="Caio"].molde-pratica .card-contexto p { font-size: 19px; line-height: 1.3; margin-bottom: 6px; }
+.slide[data-autor="Caio"].molde-pratica .card-contexto .pratica-fonte { font-size: 14px; opacity: 0.75; margin-bottom: 0; }
+.slide[data-autor="Caio"].molde-disputa .colunas.tres { row-gap: 10px; column-gap: 18px; }
+.slide[data-autor="Caio"].molde-disputa .card-contexto p { font-size: 17px; line-height: 1.25; }
+.slide[data-autor="Caio"] .pergunta-turma { font-size: 23px; font-weight: 700; line-height: 1.3; margin-top: 14px; margin-bottom: 0; padding-left: 14px; }
 
 
 </style>
@@ -527,13 +562,13 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section class="slide capa" id="slide-1" aria-label="Slide 1 de 16: capa" data-background-image="assets/aventura-floresta.png" data-background-color="#173C36" data-autor="Diogo">
+<section class="slide capa" id="slide-1" aria-label="Slide 1 de 17: capa" data-background-image="assets/aventura-floresta.png" data-background-color="#173C36" data-autor="Diogo">
   <p class="sobrelinha">Seminário</p>
   <h1>Vertentes da<br>Educação Ambiental</h1>
   <p class="subtitulo">Macrotendências político-pedagógicas</p>
   <dl class="ficha">
     <dt>Integrantes</dt>
-    <dd>Caio Victor Ferreira do Nascimento · Edson da Silva Lima Junior · Diogo</dd>
+    <dd>Diogo · Edson da Silva Lima Junior · Caio Victor Ferreira do Nascimento</dd>
     <dt>Disciplina</dt>
     <dd>Educação Ambiental</dd>
     <dt>Professor</dt>
@@ -541,102 +576,65 @@
     <dt>Unidade</dt>
     <dd>CCN/DC</dd>
   </dl>
-  <p class="roteiro-linha">O que é EA &rarr; Por que surgiram três vertentes &rarr; O que fica</p>
+  <p class="roteiro-linha">O campo em disputa &rarr; Três vertentes em quatro tempos &rarr; Como coexistem</p>
   <blockquote class="pergunta fragment" data-fragment-index="1">“Todo projeto de Educação Ambiental busca a mesma transformação?”</blockquote>
   <p class="so-leitor">Cenário ilustrativo de aventura 2D em pixel art: céu azul-esverdeado, montanhas ao fundo, rio, árvores e plataformas de terra cobertas por grama. Paisagem fictícia.</p>
 
   <aside class="notes">
-    <p>Apresentação do seminário "Vertentes da Educação Ambiental: macrotendências político-pedagógicas", conduzido por Caio Victor Ferreira do Nascimento, Edson da Silva Lima Junior e Diogo, para a disciplina de Educação Ambiental (CCN/DC), ministrada pelo Prof. Davi Lima Pantoja Leite.</p>
-    <p>Roteiro da apresentação organizado em três etapas: primeiro, delimitar o que é Educação Ambiental e sua constituição como campo em disputa; segundo, analisar por que emergiram historicamente três macrotendências no Brasil; e terceiro, sintetizar o que cada vertente propõe.</p>
+    <p>Apresentação do seminário "Vertentes da Educação Ambiental: macrotendências político-pedagógicas", conduzido por Diogo, Edson da Silva Lima Junior e Caio Victor Ferreira do Nascimento, nessa ordem de fala, para a disciplina de Educação Ambiental (CCN/DC), ministrada pelo Prof. Davi Lima Pantoja Leite.</p>
+    <p>Roteiro da apresentação: primeiro, mostrar que a Educação Ambiental é um campo em disputa e apresentar as três macrotendências; depois, percorrer cada vertente nos mesmos quatro momentos (por que surgiu, o que propõe, como aparece na prática e o que está em disputa), com Diogo na conservacionista, Edson na pragmática e Caio na crítica; por fim, discutir como as três coexistem no campo, sem que uma simplesmente substitua a outra.</p>
     <p>Partimos da questão provocadora: todo projeto de Educação Ambiental busca a mesma transformação? Como referencial teórico estruturante, adotamos a análise das macrotendências como tipos ideais weberianos com fins didáticos, analíticos e políticos, que convivem e disputam hegemonia sem formar um esquema maniqueísta (Layrargues &amp; Lima, 2014, p. 34).</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-2" data-autor="Diogo" aria-label="Slide 2 de 16">
-  <h2>EA é educação, e é um campo em disputa</h2>
+<section class="slide" id="diogo-abertura" data-autor="Diogo" aria-label="Slide 2 de 17">
+  <h2>Um campo em disputa, três macrotendências</h2>
+  <p class="abertura-lead">A EA é um <strong>campo social</strong> (Bourdieu): agentes disputam a hegemonia e o direito de definir o que ela é.</p>
 
-  <div class="colunas">
-    <div class="fragment" data-fragment-index="1">
-      <h3>O que é Educação Ambiental</h3>
-      <ul>
-        <li><strong>Educação aplicada:</strong> volta-se às questões de meio ambiente e não se confunde com Ecologia (Pelicioni &amp; Philippi Jr., p. 3).</li>
-        <li><strong>Meio ambiente &ne; natureza:</strong> abrange as relações sociais, econômicas e culturais que produzem o espaço (Layrargues 1999 apud Souza, p. 61).</li>
-        <li><strong>Visão de senso comum:</strong> para o público leigo, a EA parece uma prática consensual e de vertente única (Santos &amp; Toschi, p. 242).</li>
-      </ul>
-    </div>
-
-    <div class="fragment" data-fragment-index="2">
-      <h3>EA como campo social</h3>
-      <ul>
-        <li><strong>Conceito de campo (Bourdieu):</strong> espaço social concorrencial onde agentes disputam legitimidade e sentidos (L&amp;L 2014, p. 23–24).</li>
-        <li><strong>Subcampo do ambientalismo:</strong> dominantes tendem à conservação da ordem; dominados, à sua subversão (L&amp;L 2014, p. 25).</li>
-        <li><strong>Rigor conceitual:</strong> delimitar é indispensável porque noções vagas "pulverizam e debilitam a ação corretiva" (Mello e Souza 2000 apud Pelicioni, p. 5).</li>
-      </ul>
-    </div>
+  <div class="eixo-disputa fragment" data-fragment-index="1" aria-label="Eixo de tensão no campo: conservação da ordem versus transformação social">
+    <span class="polo cons">&larr; Conservação da ordem</span>
+    <span class="polo crit">Transformação social &rarr;</span>
   </div>
-
-  <div class="eixo-disputa fragment" data-fragment-index="3" aria-label="Eixo de tensão no campo: conservação versus transformação">
-    <span class="polo cons">Conservação da ordem</span>
-    <span class="seta">&larr; Eixo de tensão no campo (L&amp;L 2014, p. 25) &rarr;</span>
-    <span class="polo crit">Transformação social</span>
-  </div>
-
-  <p class="fonte">Fontes: PELICIONI &amp; PHILIPPI JR. (2014, p. 3, 5); LAYRARGUES &amp; LIMA (2014, p. 23–25); SOUZA (2018, p. 61); SANTOS &amp; TOSCHI (2015, p. 242).</p>
-
-  <aside class="notes">
-    <p>Iniciamos delimitando o estatuto epistemológico da Educação Ambiental. Conforme Pelicioni e Philippi Jr. (2014, p. 3), a EA é fundamentalmente "a educação aplicada às questões de meio ambiente", devendo-se ressaltar taxativamente que "educação ambiental não é Ecologia". Reduzi-la às ciências biológicas obscurece seu caráter eminentemente educativo e formativo.</p>
-    <p>Ademais, conforme nota conceitual de Layrargues (1999, p. 140 apud Souza, 2018, p. 61, nota 2), "meio ambiente não é sinônimo de natureza". Meio ambiente envolve as mediações humanas, históricas e materiais com o mundo biofísico. Todavia, como apontam Santos e Toschi (2015, p. 242), para o senso comum e para o público não especializado, a Educação Ambiental costuma ser percebida como uma vertente única, de viés ingênuo e conservador, como se houvesse harmonia e consenso irrestrito em torno de suas práticas.</p>
-    <p>Contra essa ilusão consensual, Layrargues e Lima (2014, p. 23–25) mobilizam a sociologia de Pierre Bourdieu para caracterizar a EA como um campo social — especificamente um subcampo do ambientalismo contemporâneo. O campo é um microcosmo dotado de regras próprias e atravessado por correlações de força: os agentes que ocupam posições dominantes tendem à conservação do capital simbólico e das estruturas estabelecidas, enquanto os agentes dominados tendem à subversão e à transformação da ordem.</p>
-    <p>Essa delimitação teórica é crucial: como advertia Mello e Souza (2000 apud Pelicioni &amp; Philippi Jr., 2014, p. 5), a ausência de clareza conceitual "pulveriza e debilita a ação corretiva". Assim, as diferentes propostas pedagógicas distribuem-se ao longo de um eixo contínuo entre conservação e transformação, superando qualquer maniqueísmo simplista (Layrargues &amp; Lima, 2014, p. 25).</p>
-  </aside>
-</section>
-
-
-<section class="slide" id="slide-3" data-autor="Diogo" aria-label="Slide 3 de 16">
-  <h2>Três macrotendências: tipos ideais, não etapas</h2>
-  <p>Tipos ideais analíticos que coexistem e disputam a hegemonia no campo (Layrargues &amp; Lima, 2014):</p>
 
   <div class="colunas tres lentes">
-    <div class="fragment" data-fragment-index="1">
+    <div class="fragment" data-fragment-index="2">
       <img class="icone-lente" src="comum/icones/folha.svg" alt="" aria-hidden="true">
       <h3 class="cons">Conservacionista</h3>
-      <p><strong>Foco:</strong> afeto, sensibilização e proteção da natureza (pauta verde).</p>
-      <p><strong>Correntes:</strong> comportamentalista, conservacionista, alfabetização ecológica, autoconhecimento e senso-percepção.</p>
-      <p class="corresp"><strong>Tozoni-Reis:</strong> corrente natural<br><strong>Martínez-Alier:</strong> culto ao silvestre</p>
-    </div>
-
-    <div class="fragment" data-fragment-index="2">
-      <img class="icone-lente" src="comum/icones/engrenagem.svg" alt="" aria-hidden="true">
-      <h3 class="prag">Pragmática</h3>
-      <p><strong>Foco:</strong> resíduos, consumo e ecoeficiência (pauta marrom).</p>
-      <p><strong>Correntes:</strong> Educação para o Desenvolvimento Sustentável (EDS) e consumo sustentável.</p>
-      <p class="corresp"><strong>Tozoni-Reis:</strong> corrente racional<br><strong>Martínez-Alier:</strong> evangelho da ecoeficiência</p>
+      <p>Afeto e sensibilização para proteger a natureza: a “pauta verde”.</p>
     </div>
 
     <div class="fragment" data-fragment-index="3">
+      <img class="icone-lente" src="comum/icones/engrenagem.svg" alt="" aria-hidden="true">
+      <h3 class="prag">Pragmática</h3>
+      <p>Resíduos, consumo e ecoeficiência: a “pauta marrom”.</p>
+    </div>
+
+    <div class="fragment" data-fragment-index="4">
       <img class="icone-lente" src="comum/icones/coletivo.svg" alt="" aria-hidden="true">
       <h3 class="crit">Crítica</h3>
-      <p><strong>Foco:</strong> relações sociais, conflito, cidadania e justiça ambiental.</p>
-      <p><strong>Correntes:</strong> popular, emancipatória, transformadora e no processo de gestão ambiental.</p>
-      <p class="corresp"><strong>Tozoni-Reis:</strong> corrente histórica<br><strong>Martínez-Alier:</strong> ecologismo dos pobres</p>
+      <p>Relações sociais, conflito, cidadania e justiça ambiental.</p>
     </div>
   </div>
 
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 24–25, 28, 30–34); TOZONI-REIS (apud L&amp;L, 2014, p. 34); MARTÍNEZ-ALIER (apud L&amp;L, 2014, p. 34).</p>
+  <div class="fragment" data-fragment-index="5">
+    <p class="tipos-ideais">Tipos ideais que <strong>coexistem e disputam a hegemonia</strong>: posições ao longo de um eixo, “nunca um esquema binário e maniqueísta”.</p>
+    <p class="corresp-linha">Equivalências: Tozoni-Reis — natural, racional, histórica · Martínez-Alier — culto ao silvestre, evangelho da ecoeficiência, ecologismo dos pobres.</p>
+  </div>
+
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 23–25, 30–34); TOZONI-REIS e MARTÍNEZ-ALIER (apud L&amp;L, 2014, p. 34); PELICIONI &amp; PHILIPPI JR. (2014, p. 3); SANTOS &amp; TOSCHI (2015, p. 242); SOUZA (2018, p. 61).</p>
 
   <aside class="notes">
-    <p>Layrargues e Lima (2014, p. 34; 2011, p. 1) propõem as três macrotendências como tipos ideais weberianos com fins didáticos, analíticos e políticos. Trata-se de uma cartografia pedagógica que permite ao educador situar sua prática e conquistar autonomia de posicionamento ético e metodológico (Layrargues &amp; Lima, 2014, p. 24). As tendências coexistem no tempo e disputam a hegemonia no campo; as práticas reais distribuem-se ao longo de um eixo contínuo entre conservação e transformação, "nunca um esquema binário e maniqueísta" (p. 25).</p>
-    <p>A vertente conservacionista expressa a matriz fundacional: opera na pauta verde, promovendo o afeto e a reconexão com a natureza; abriga correntes como a conservacionista clássica, a comportamentalista, a alfabetização ecológica de Capra, o autoconhecimento e a senso-percepção (p. 30).</p>
-    <p>A macrotendência pragmática corresponde ao ambientalismo de resultados e ao ecologismo de mercado: atua na pauta marrom (resíduos, reciclagem, consumo sustentável e ecoeficiência), englobando correntes de Educação para o Desenvolvimento Sustentável (EDS) e consumo sustentável (p. 30–31). Ressaltamos que a gestão ambiental NÃO é corrente da pragmática: em Layrargues e Lima (2014, p. 33), a "EA no processo de gestão ambiental" integra formalmente a macrotendência crítica, ao politizar a regulação e o licenciamento.</p>
-    <p>A vertente crítica estrutura-se em torno da transformação das relações sociais e da superação das desigualdades socioambientais: congrega a EA popular, a emancipatória, a transformadora e a EA no processo de gestão ambiental (p. 33).</p>
-    <p>Os autores demonstram correlação direta com outras tipologias clássicas: a classificação de Tozoni-Reis (correntes natural, racional e histórica) e as três correntes do ambientalismo de Martínez-Alier (culto ao silvestre, evangelho da ecoeficiência e ecologismo dos pobres) (apud Layrargues &amp; Lima, 2014, p. 34). Há ainda o mapeamento de Sorrentino (1995: preservacionista, conservacionista, racional e ecologista radical) e as 15 correntes de Sauvé (2005) (Layrargues &amp; Lima, 2014, p. 28).</p>
-    <p>Nas notas, destacamos com os autores que classificar traz riscos de simplificação e sectarismo (Layrargues &amp; Lima, 2011, p. 6), mas os benefícios de desvelamento da pluralidade se sobrepõem (2011, p. 13). Ademais, Pelicioni e Philippi Jr. (2014, p. 7), citando Guimarães, sintetizam essas tensões em duas grandes linhas: práticas voltadas aos interesses populares e à emancipação versus práticas funcionais aos interesses do capital.</p>
+    <p>Antes de falar das vertentes, preciso dizer o que entendemos por Educação Ambiental. Pelicioni e Philippi Jr. (2014, p. 3) lembram que ela "nada mais é do que a educação aplicada às questões de meio ambiente" e que "educação ambiental não é Ecologia". E Layrargues (1999, p. 140, apud Souza, 2018, p. 61) acrescenta que "meio ambiente não é sinônimo de natureza", e a problemática socioambiental "não é sinônimo de desequilíbrio ecológico".</p>
+    <p>Para o público não especializado, a EA aparece como uma vertente única, a conservadora (Santos &amp; Toschi, 2015, p. 242), como se fosse um "objeto único" (Layrargues &amp; Lima, 2014, p. 25). Layrargues e Lima (2014, p. 23–25) mostram o contrário: usando Bourdieu, tratam a EA como um campo social, em que diferentes grupos "disputam a hegemonia do campo" e oscilam entre tendências à conservação ou à transformação das relações sociais. É o eixo que aparece agora no slide.</p>
+    <p>Sobre esse eixo, os autores identificam três macrotendências. A conservacionista, ligada à dimensão afetiva com a natureza e à "pauta verde" (p. 30). A pragmática, ligada à "pauta marrom": resíduos, consumo e ecoeficiência (p. 31). As duas ficam do lado da conservação da ordem: os autores as tratam como "dois momentos evolutivos de uma mesma linhagem" (p. 34). A crítica fica do lado da transformação, porque discute conflito, cidadania e justiça ambiental (p. 33).</p>
+    <p>Um cuidado importante: são tipos ideais weberianos, "com fins didáticos, analíticos e políticos" (p. 34). Não são etapas que se sucedem; elas convivem e disputam a hegemonia, e as práticas reais se espalham ao longo do eixo, "nunca um esquema binário e maniqueísta" (p. 25).</p>
+    <p>A tipologia também conversa com outras: a de Tozoni-Reis (natural, racional e histórica) e a de Martínez-Alier (culto ao silvestre, evangelho da ecoeficiência e ecologismo dos pobres) (apud Layrargues &amp; Lima, 2014, p. 34). A partir daqui, cada vertente passa pelos mesmos quatro momentos: por que surgiu, o que propõe, como aparece na prática e o que está em disputa.</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-4" data-autor="Diogo" aria-label="Slide 4 de 16">
+<section class="slide" id="slide-4" data-autor="Diogo" aria-label="Slide 3 de 17">
   <h2 class="cons">Conservacionista: por que surgiu? (1960–1980)</h2>
 
   <div class="fragment" data-fragment-index="1">
@@ -702,8 +700,8 @@
 </section>
 
 
-<section class="slide" id="slide-5" data-autor="Diogo" aria-label="Slide 5 de 16">
-  <h2 class="cons">Macrotendência Conservacionista: o que propõe?</h2>
+<section class="slide" id="slide-5" data-autor="Diogo" aria-label="Slide 4 de 17">
+  <h2 class="cons">Conservacionista: o que propõe?</h2>
 
   <div class="colunas foto-texto">
     <figure class="fragment" data-fragment-index="1">
@@ -716,30 +714,131 @@
       <dl class="fragment" data-fragment-index="2">
         <dt class="cons">Lema e princípios</dt>
         <dd>“Conhecer para amar, amar para preservar” (L&amp;L 2014, p. 27); Alfabetização Ecológica (Capra apud L&amp;L 2014, p. 30).</dd>
-        <dt class="cons">Práticas e público</dt>
-        <dd>Trilhas ecológicas, vivências de senso-percepção, visitas a UCs, ecoturismo e foco em crianças (Layrargues 2012 apud S&amp;T, p. 245).</dd>
         <dt class="cons">Contribuição</dt>
         <dd>Despertar da sensibilidade afetiva e relativização do antropocentrismo (L&amp;L 2014, p. 30).</dd>
-        <dt class="cons">Limites apontados pelos autores</dt>
-        <dd>Privilegia o indivíduo sobre o social e o tecnicismo sobre a política (Guimarães 2004 apud S&amp;T, p. 245); risco de “adestramento ambiental” (Brügger 1994 apud L&amp;L 2014, p. 29).</dd>
+        <dt class="cons">Correntes (Sauvé)</dt>
+        <dd>Conservacionista e naturalista (Sauvé 2005 apud S&amp;T, p. 245).</dd>
+        <dt class="cons">Status no campo</dt>
+        <dd>Hegemônica na fundação do campo; hoje, “tendência histórica, forte e bem consolidada” (L&amp;L 2014, p. 30, 34).</dd>
       </dl>
-      <blockquote class="fragment" data-fragment-index="3">“Como separar ecologia, cultura e política?”<br><small>LAYRARGUES &amp; LIMA (2014, p. 30)</small></blockquote>
+      <blockquote class="fragment" data-fragment-index="3">“Conhecer e amar a natureza basta para preservá-la?”</blockquote>
     </div>
   </div>
 
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 27, 29–30, 34); SANTOS &amp; TOSCHI (2015, p. 245);<br>BRÜGGER (1994 apud L&amp;L, 2014, p. 29); GUIMARÃES (2004 apud S&amp;T, 2015, p. 245).</p>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 27, 30, 34); LAYRARGUES &amp; LIMA (2011, p. 5);<br>SAUVÉ (2005 apud SANTOS &amp; TOSCHI, 2015, p. 245).</p>
 
   <aside class="notes">
-    <p>A macrotendência conservacionista deteve a hegemonia no período fundacional da Educação Ambiental no Brasil (Layrargues &amp; Lima, 2014, p. 27, 34). Embora tenha perdido o monopólio discursivo nas décadas posteriores, segue como uma "tendência histórica, forte e bem consolidada" no imaginário social e no ambiente escolar (p. 30, 34).</p>
-    <p>Sua proposta político-pedagógica ancora-se no conhecido lema "conhecer para amar, amar para preservar" (Layrargues &amp; Lima, 2014, p. 27; 2011, p. 5). Parte da premissa de que a degradação resulta do distanciamento psicológico e moral entre seres humanos e natureza biofísica. Dialoga diretamente com o referencial da Alfabetização Ecológica formulada por Fritjof Capra (Layrargues &amp; Lima, 2014, p. 30) e com as correntes conservacionista e naturalista mapeadas por Lucie Sauvé (Santos &amp; Toschi, 2015, p. 245).</p>
-    <p>Em termos práticos, apoia-se em caminhadas por trilhas interpretativas, dinâmicas de senso-percepção, visitas pedagógicas a Unidades de Conservação e práticas de ecoturismo, apresentando forte presença com o público infantil (Layrargues, 2012 apud Santos &amp; Toschi, 2015, p. 245). Sua principal contribuição reside na criação de laços afetivos com os seres vivos e na relativização do antropocentrismo utilitarista da modernidade (Layrargues &amp; Lima, 2014, p. 30).</p>
-    <p>Contudo, a literatura especializada aponta limites estruturais severos: 1) o foco exclusivo na mudança individual e comportamental no âmbito privado assume que a transmissão de informações corretas modifica condutas automaticamente, privilegiando "o indivíduo sobre a sociedade e o tecnicismo sobre a política" (Guimarães 2004 apud Santos &amp; Toschi, 2015, p. 245); 2) corre o risco de converter a formação educativa em mero "adestramento ambiental" e condicionamento normativo (Brügger 1994 apud Layrargues &amp; Lima, 2014, p. 29); 3) como indagam Layrargues e Lima (2014, p. 30), "como separar ecologia, cultura e política?", pois a mudança cultural dificilmente se concretiza sem transformação dos modos de produção e das estruturas econômicas; e 4) como reforçam Pelicioni e Philippi Jr. (2014, p. 6), "consciência ecológica sem ação transformadora ajuda a manter a sociedade tal qual ela se encontra".</p>
-    <p>Com isso, encerro a primeira parte do seminário e passo a palavra ao Edson, que apresentará a emergência e os contornos da macrotendência pragmática nos anos 1990.</p>
+    <p>A macrotendência conservacionista deteve a hegemonia no momento fundacional do campo da Educação Ambiental no Brasil (Layrargues &amp; Lima, 2014, p. 34). Embora tenha perdido terreno para as macrotendências pragmática e crítica, segue sendo uma "tendência histórica, forte e bem consolidada entre seus expoentes" (p. 30), hoje atualizada pela chamada "pauta verde", que veremos no próximo slide.</p>
+    <p>Sua proposta político-pedagógica ancora-se no conhecido lema "conhecer para amar, amar para preservar" (Layrargues &amp; Lima, 2014, p. 27; 2011, p. 5). A premissa é que a degradação decorre do distanciamento entre seres humanos e natureza; por isso a vertente se vincula aos princípios da ecologia, valoriza a dimensão afetiva em relação à natureza e aposta na mudança do comportamento individual (Layrargues &amp; Lima, 2014, p. 30). Dialoga diretamente com a Alfabetização Ecológica formulada por Fritjof Capra, sobre a qual voltaremos a falar daqui a pouco (p. 30).</p>
+    <p>Santos e Toschi (2015, p. 245) mostram que essa macrotendência corresponde a duas correntes do mapeamento de Lucie Sauvé (2005): a conservacionista, centrada na preservação dos recursos naturais, como água, fauna e flora; e a naturalista, ligada ao contato e à afetividade em relação à natureza.</p>
+    <p>Sua principal contribuição reside no pleito por uma mudança cultural que relativize o antropocentrismo, criando laços afetivos com os seres vivos (Layrargues &amp; Lima, 2014, p. 30). Segundo as autoras, essa macrotendência permaneceu dominante até a década de 1990, quando surgiu a vertente pragmática (Santos &amp; Toschi, 2015, p. 245).</p>
+    <p>Deixo a pergunta para a turma: conhecer e amar a natureza basta para preservá-la? Guardem essa resposta, porque nos próximos slides veremos como essa proposta aparece na prática e por que ela foi contestada no campo.</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-6" data-autor="Edson" aria-label="Slide 6 de 16">
+<section class="slide molde-pratica" id="diogo-cons-pratica" data-autor="Diogo" aria-label="Slide 5 de 17">
+  <h2 class="cons">Conservacionista: na prática</h2>
+  <p class="pratica-intro">A “pauta verde” vira atividade educativa: contato com a natureza e sensibilização afetiva, sobretudo de crianças.</p>
+
+  <div class="colunas tres">
+    <div class="card-contexto fragment" data-fragment-index="1">
+      <div class="faixa-rotulo cons">Unidade de conservação</div>
+      <h4>Trilhas e senso-percepção</h4>
+      <p>Trilhas interpretativas e dinâmicas de senso-percepção em UCs e no ecoturismo, com forte relação com crianças em idade escolar.</p>
+      <p class="pratica-fonte">LAYRARGUES (2012 apud S&amp;T, 2015, p. 245)</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="2">
+      <div class="faixa-rotulo cons">Corrente conservacionista</div>
+      <h4>Os três “R”</h4>
+      <p>Programas de redução, reutilização e reciclagem para preservar recursos como água, fauna e flora (corrente conservacionista).</p>
+      <p class="pratica-fonte">SAUVÉ (2005 apud S&amp;T, 2015, p. 245)</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="3">
+      <div class="faixa-rotulo cons">Corrente naturalista</div>
+      <h4>Educação ao ar livre</h4>
+      <p>Contato direto e afetividade em relação à natureza como forma de trabalhar a corrente naturalista.</p>
+      <p class="pratica-fonte">SAUVÉ (2005 apud S&amp;T, 2015, p. 245)</p>
+    </div>
+  </div>
+
+  <blockquote class="pergunta-turma fragment" data-fragment-index="4">Depois de uma trilha, a turma sabe por que aquela floresta está ameaçada?</blockquote>
+
+  <p class="fonte">Fontes: LAYRARGUES (2012 apud SANTOS &amp; TOSCHI, 2015, p. 245); SAUVÉ (2005 apud SANTOS &amp; TOSCHI, 2015, p. 245);<br>LAYRARGUES &amp; LIMA (2014, p. 30).</p>
+
+  <aside class="notes">
+    <p>Agora vejo como a macrotendência conservacionista aparece no cotidiano. Layrargues e Lima (2014, p. 30) dizem que ela se atualiza sob a "pauta verde": biodiversidade, unidades de conservação, determinados biomas, ecoturismo e experiências agroecológicas. Vale um cuidado: as fontes descrevem tipos de prática, e não projetos com nome e endereço, então apresento os exemplos nesse nível.</p>
+    <p>O primeiro cenário é a unidade de conservação. Segundo Layrargues (2012 apud Santos &amp; Toschi, 2015, p. 245), a EA conservacionista atua por meio de trilhas interpretativas, dinâmicas agroecológicas e de senso-percepção, e ocorre comumente em unidades de conservação e em atividades de ecoturismo. Essa vertente "tem forte relação com crianças em idade escolar" e tem como objetivo trabalhar o amor pela natureza. É exatamente a cena da foto do slide anterior.</p>
+    <p>O segundo vem da corrente conservacionista mapeada por Sauvé (2005 apud Santos &amp; Toschi, 2015, p. 245): centrada na preservação dos recursos naturais, como recursos hídricos, fauna e flora, ela é trabalhada por meio de programas centrados nos três "R" clássicos, redução, reutilização e reciclagem. Notem que a reciclagem já aparece aqui; ela vai ganhar outro peso quando o Edson falar da vertente pragmática.</p>
+    <p>O terceiro é a corrente naturalista, também de Sauvé (idem, p. 245), mais relacionada ao contato e à afetividade em relação à natureza, tendo a educação ao ar livre como forma de trabalho.</p>
+    <p>O que os três exemplos têm em comum é o foco na relação afetiva do indivíduo com a natureza. O próprio Layrargues (2012 apud Santos &amp; Toschi, 2015, p. 245) observa que, nessa vertente, o ser humano é tratado somente como o destruidor da natureza, sem qualquer conotação social. Por isso pergunto à turma: depois de uma trilha, vocês saberiam dizer por que aquela floresta está ameaçada, e por quem?</p>
+  </aside>
+</section>
+
+
+<section class="slide molde-disputa" id="diogo-cons-disputa" data-autor="Diogo" aria-label="Slide 6 de 17">
+  <h2 class="cons">Conservacionista: em disputa — qual EA?</h2>
+
+  <div class="fragment" data-fragment-index="1">
+    <div class="faixa-rotulo cons">O episódio</div>
+    <ol class="colunas tres marcos" aria-label="Episódio da disputa em torno da Alfabetização Ecológica">
+      <li>
+        <h3>Anos 90</h3>
+        <p><strong>Fim da EA genérica</strong><br>Já não dá para falar de EA sem qualificá-la.</p>
+      </li>
+      <li>
+        <h3>1996</h3>
+        <p><strong>Alfabetização Ecológica</strong><br>Capra formula a proposta com base em princípios ecológicos.</p>
+      </li>
+      <li>
+        <h3>2003</h3>
+        <p><strong>Debate nas redes de EA</strong><br>Proposta de adotá-la como política pública educativa do governo.</p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="faixa-rotulo crit fragment" data-fragment-index="2">O que se critica</div>
+  <div class="colunas tres">
+    <div class="card-contexto fragment" data-fragment-index="2">
+      <h4 class="cons">Adestramento</h4>
+      <p>Brügger distingue educação de “adestramento” ambiental (1994 apud L&amp;L 2014, p. 29).</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="2">
+      <h4 class="cons">Reformas setoriais</h4>
+      <p>Não questiona a estrutura social vigente (L&amp;L 2014, p. 30).</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="2">
+      <h4 class="cons">Ecologia sem política</h4>
+      <p>“Como separar ecologia, cultura e política?” (L&amp;L 2014, p. 30).</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="3">
+      <h4 class="cons">Indivíduo e técnica</h4>
+      <p>Privilegia “o indivíduo sobre a sociedade e o tecnicismo sobre a política” (Guimarães 2004 apud S&amp;T, p. 245).</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="3">
+      <h4 class="cons">Determinismo biológico</h4>
+      <p>Título do estudo de Layrargues sobre Capra (2002a, nas referências de L&amp;L 2014).</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="3">
+      <h4 class="cons">Consciência sem ação</h4>
+      <p>Consciência ecológica sem ação transformadora ajuda “a manter a sociedade tal qual ela se encontra” (Pelicioni &amp; Philippi Jr. 2014, p. 6).</p>
+    </div>
+  </div>
+
+  <blockquote class="pergunta-turma fragment" data-fragment-index="4">Quem decide qual Educação Ambiental vira política pública?</blockquote>
+
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 26, 29–30, 36); LAYRARGUES &amp; LIMA (2011, p. 4); CZAPSKI (2008 apud L&amp;L, 2014, p. 26);<br>BRÜGGER (1994 apud L&amp;L, 2014, p. 29); GUIMARÃES (2004 apud S&amp;T, 2015, p. 245); PELICIONI &amp; PHILIPPI JR. (2014, p. 6).</p>
+
+  <aside class="notes">
+    <p>Este é o episódio que mostra a Educação Ambiental como campo em disputa. Primeiro, o pano de fundo: Loureiro e Layrargues (2001 apud Layrargues &amp; Lima, 2014, p. 26) registram que, a partir dos anos 90, a Educação Ambiental brasileira abandonava o perfil inicial predominantemente conservacionista e reconhecia a dimensão social do ambiente. E Layrargues e Lima (2014, p. 26) concluem que, a partir desse momento, "já não era mais possível referir-se genericamente a Educação Ambiental sem qualificá-la". A Alfabetização Ecológica é uma proposta pedagógica formulada pelo físico Fritjof Capra (1996) com outros educadores e cientistas, baseada em princípios ecológicos básicos, a saber: interdependência, ciclagem, parceria, coevolução, flexibilidade e diversidade, transpostos a uma moralidade aplicável aos sistemas sociais (Layrargues &amp; Lima, 2014, p. 30).</p>
+    <p>Segundo Czapski (2008 apud Layrargues &amp; Lima, 2014, p. 26; 2011, p. 4), o debate sobre as conceituações da EA despontou nas redes de Educação Ambiental em 2003, no contexto "polêmico", como diz a versão de 2011, da proposta de que a Alfabetização Ecológica fosse adotada como política pública educativa pelo governo brasileiro. As fontes não relatam o desfecho da proposta; esse debate se insere no movimento mais amplo de qualificação da EA que vinha desde os anos 90.</p>
+    <p>E o que se critica? Brügger (1994 apud Layrargues &amp; Lima, 2014, p. 29) diferenciou educação e "adestramento" ambiental, apontando a prevalência do comportamentalismo. Layrargues e Lima (2014, p. 30) chamam essas correntes de conservadoras porque "não questionam a estrutura social vigente em sua totalidade, apenas pleiteiam reformas setoriais", e perguntam: "Como separar ecologia, cultura e política?". Guimarães (2004 apud Santos &amp; Toschi, 2015, p. 245) diz que essa EA privilegia "o indivíduo sobre a sociedade e o tecnicismo sobre a política". Layrargues escreveu sobre Capra um estudo cujo título já indica a crítica: "Determinismo biológico: el desafio de la alfabetización ecológica en la concepción de Fritjof Capra" (2002a, nas referências de Layrargues &amp; Lima, 2014); as nossas fontes trazem só o título, não o conteúdo do artigo. E Pelicioni e Philippi Jr. (2014, p. 6), falando da consciência ecológica em geral, e não especificamente desta vertente, lembram: "Consciência ecológica sem ação transformadora ajuda a manter a sociedade tal qual ela se encontra".</p>
+    <p>Pergunto à turma: quem decide qual Educação Ambiental vira política pública? Com essa pergunta, encerro a parte conservacionista e passo a palavra ao Edson, que apresentará a macrotendência pragmática.</p>
+  </aside>
+</section>
+
+
+<section class="slide" id="slide-6" data-autor="Edson" aria-label="Slide 7 de 17">
   <h2 class="prag">Pragmática: por que surgiu? (pós-guerra → 1990–2000)</h2>
 
   <div class="fragment" data-fragment-index="1">
@@ -796,7 +895,7 @@
 </section>
 
 
-<section class="slide" id="slide-7" data-autor="Edson" aria-label="Slide 7 de 16">
+<section class="slide" id="slide-7" data-autor="Edson" aria-label="Slide 8 de 17">
   <h2 class="prag">Pragmática: o que propõe?</h2>
 
   <div class="colunas foto-texto">
@@ -814,113 +913,65 @@
         <dd>Reciclagem, ecoeficiência e crença na neutralidade da ciência.</dd>
         <dt class="prag">Trajetória temática</dt>
         <dd>Resíduos nos anos 1990 → consumo sustentável → economia verde e clima.</dd>
-        <dt class="prag">Limites nas fontes</dt>
-        <dd>“Armadilhas paradigmáticas”; apelo individual mascara causas estruturais.</dd>
         <dt class="prag">Status no campo</dt>
         <dd>Francamente hegemônica; opera como “conservadorismo dinâmico”.</dd>
       </dl>
 
-      <blockquote class="aspas-proposta fragment" data-fragment-index="3">“Compensar o consumo por meio da reciclagem basta sem transformar o modelo de produção?”</blockquote>
+      <blockquote class="aspas-proposta fragment" data-fragment-index="3">Se cada um fizer a sua parte, o problema do lixo se resolve?</blockquote>
     </div>
   </div>
 
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 30–32); LAYRARGUES &amp; LIMA (2011, p. 9–10); SANTOS &amp; TOSCHI (2015, p. 245–248); PELICIONI &amp; PHILIPPI JR. (2014, p. 8); GUIMARÃES (2004 apud SANTOS &amp; TOSCHI, 2015, p. 247–248).</p>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 30–32); LAYRARGUES &amp; LIMA (2011, p. 9–10); SANTOS &amp; TOSCHI (2015, p. 246).</p>
 
   <aside class="notes">
     <p>A macrotendência pragmática é caracterizada por Layrargues e Lima (2014, p. 30–31) sob as expressões "ambientalismo de resultados", "pragmatismo contemporâneo" e "ecologismo de mercado". Ela desloca a atenção da "pauta verde" da conservação da natureza para a "pauta marrom" dos resíduos sólidos e dos efluentes industriais, propondo a reciclagem, a ecoeficiência e a mitigação tecnológica como mecanismos de compensação moral e técnica para o consumo predatório ("conservadorismo dinâmico", p. 31).</p>
     <p>Sua trajetória temática reflete as fases do ambientalismo de mercado (Layrargues, 2012 apud Santos &amp; Toschi, 2015, p. 246): emergiu na década de 1990 centrada na gestão de resíduos e na reciclagem, ampliou-se nos anos 2000 como Educação para o Consumo Sustentável e convergiu recentemente para a neutralização de emissões de carbono, créditos ambientais e "economia verde".</p>
     <p>Entre seus traços pedagógicos centrais sobressai a crença na neutralidade da ciência (Layrargues &amp; Lima, 2014, p. 32; a expressão estendida "da ciência e da tecnologia" constava na versão preliminar de Layrargues &amp; Lima, 2011, p. 10). Adota ações factíveis de adesão imediata ("cada um faz sua parte"), transformando ações pontuais em atividade-fim e esvaziando a dimensão política do conflito ecológico. Layrargues e Lima (2014, p. 32) documentam ainda a controvérsia gerada pela tentativa internacional de substituir a Educação Ambiental pela "Educação para o Desenvolvimento Sustentável" (EDS).</p>
-    <p>Como limites centrais: Guimarães (2004 apud Santos &amp; Toschi, 2015, p. 247–248; ideia introduzida na p. 245) define como "armadilhas paradigmáticas" a ilusão de resolver a degradação operando estritamente dentro da mesma racionalidade econômica e cartesiana que originou a crise. A distribuição desigual de custos e benefícios ecológicos permanece oculta (Layrargues &amp; Lima, 2014, p. 31). Pelicioni e Philippi Jr. (2014, p. 8) alertam enfaticamente que a ênfase na responsabilidade individual desloca e fragiliza a discussão das verdadeiras causas e das relações de poder. Trata-se da vertente francamente hegemônica na sociedade contemporânea (Layrargues &amp; Lima, 2014, p. 31).</p>
+    <p>No campo, ela ocupa hoje a posição dominante: Layrargues e Lima (2014, p. 31) a descrevem como "o projeto político-pedagógico francamente hegemônico na atualidade". Termino com uma pergunta que resume a proposta e que vamos retomar nos próximos slides: se cada um fizer a sua parte, o problema do lixo se resolve? Primeiro vou mostrar onde essa proposta aparece na prática e, depois, o que o campo critica nela.</p>
   </aside>
 </section>
 
 
-<section class="slide" id="edson-linhagem" data-autor="Edson" aria-label="Slide 8 de 16">
-  <h2>Mesma linhagem: da <span class="cons">conservacionista</span> à <span class="prag">pragmática</span></h2>
-
-  <blockquote class="aspas-proposta fragment" data-fragment-index="1">A conservacionista e a pragmática são “dois momentos de uma mesma linhagem de pensamento”; a pragmática é uma “derivação evolutiva” da conservacionista.<br><small>LAYRARGUES &amp; LIMA (2014, p. 32)</small></blockquote>
-
-  <div class="colunas duas fragment" data-fragment-index="2">
-    <div class="card-contexto edson-linhagem-card">
-      <h4 class="cons">Conservacionista</h4>
-      <p>“Versão mais ingênua e enviesada”, de grupos ligados às ciências naturais, sem reflexão sociológica ou que preferem não misturar ecologia e política.</p>
-      <p><strong>Com as crianças:</strong> o amor pela natureza.</p>
+<section class="slide molde-pratica" id="edson-prag-pratica" data-autor="Edson" aria-label="Slide 9 de 17">
+  <h2 class="prag">Pragmática: na prática</h2>
+  <p class="pratica-intro">Aparece onde o lixo e o consumo viram tarefa: na escola, na reciclagem, na mídia e nas empresas.</p>
+  <div class="colunas tres">
+    <div class="card-contexto fragment" data-fragment-index="1">
+      <div class="faixa-rotulo prag">Escola</div>
+      <h4>Coleta seletiva como atividade-fim</h4>
+      <p>Nos anos 1990, a resolução de problemas locais entra na escola. Separar e reciclar vira objetivo em si, sem discutir causas.</p>
+      <p class="pratica-fonte">LAYRARGUES &amp; LIMA (2014, p. 29, 32)</p>
     </div>
-    <div class="card-contexto edson-linhagem-card">
-      <h4 class="prag">Pragmática</h4>
-      <p>Adaptação ao novo contexto social, econômico e tecnológico e às pressões do mercado por mudanças “cosméticas”.</p>
-      <p><strong>Com as crianças:</strong> um planeta limpo para as próximas gerações.</p>
-    </div>
-  </div>
-
-  <div class="fragment edson-linhagem-comum" data-fragment-index="3">
-    <div class="faixa-rotulo">Em comum</div>
-    <p>Ambas “comportamentalistas e individualistas”, com a “omissão dos processos de desigualdade e injustiça social”.</p>
-  </div>
-
-  <div class="fragment" data-fragment-index="4">
-    <div class="faixa-rotulo cons">Dois braços do conservacionismo</div>
-    <div class="colunas duas">
-      <p class="edson-linhagem-braco">→ <span class="prag"><strong>um braço</strong></span> evoluiu no sentido do pragmatismo;</p>
-      <p class="edson-linhagem-braco">→ <span class="cons"><strong>outro</strong></span> se atualizou para biodiversidade, ecoturismo, unidades de conservação e biomas.</p>
-    </div>
-  </div>
-
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 32, 34); LAYRARGUES (2012 apud SANTOS &amp; TOSCHI, 2015, p. 245–246).</p>
-
-  <aside class="notes">
-    <p>Acabei de mostrar o que a pragmática propõe: reciclagem, ecoeficiência, consumo sustentável. Agora aprofundo uma ideia que adiantei no contexto: para Layrargues e Lima, essas duas vertentes não são estranhas uma à outra.</p>
-    <p>Os autores dizem que a conservacionista e a pragmática representam "duas tendências e dois momentos de uma mesma linhagem de pensamento". A pragmática é a adaptação dessa linhagem ao novo contexto social, econômico e tecnológico (Layrargues &amp; Lima, 2014, p. 32).</p>
-    <p>Onde está a diferença? A conservacionista é descrita como uma "versão mais ingênua e enviesada", própria de grupos mais ligados às ciências naturais, que ora não têm uma reflexão sociológica da questão ambiental, ora entendem que politicamente é melhor não misturar ecologia e política. Já a pragmática responde às pressões do mercado por mudanças "cosméticas" dentro da ordem (p. 32).</p>
-    <p>As duas também se dirigem ao mesmo público. Segundo Layrargues (2012, apud Santos &amp; Toschi, 2015, p. 245–246), a conservacionista tem forte relação com crianças em idade escolar e trabalha o amor pela natureza; a pragmática também está ligada à faixa etária infantil, mas trabalha a ideia de um planeta limpo para as próximas gerações.</p>
-    <p>E o que as une de verdade? Ambas são "comportamentalistas e individualistas" e têm em comum "a omissão dos processos de desigualdade e injustiça social" (Layrargues &amp; Lima, 2014, p. 32). Na minha leitura, elas mudam o foco, da floresta para o lixo, mas os autores lembram que a pragmática deixa à margem a distribuição desigual dos custos e benefícios do desenvolvimento (p. 31).</p>
-    <p>Por fim, nas considerações finais, os autores notam que, se um braço do conservacionismo evoluiu no sentido do pragmatismo, outro se atualizou na direção de uma Educação Ambiental voltada à biodiversidade, ao ecoturismo, às unidades de conservação e a determinados biomas. Ou seja, o conservacionismo não desapareceu, embora tenha perdido terreno para a pragmática e a crítica na disputa pela hegemonia do campo (p. 34).</p>
-  </aside>
-</section>
-
-
-<section class="slide" id="edson-atividade-fim" data-autor="Edson" aria-label="Slide 9 de 16">
-  <h2 class="prag">Resolver o problema local: fim ou ponto de partida?</h2>
-
-  <p class="fragment" data-fragment-index="1"><span class="faixa-rotulo prag">Anos 1990</span> “crescente estímulo internacional à metodologia da resolução de problemas ambientais locais”, acompanhado da lógica do “cada um fazer a sua parte”.</p>
-
-  <div class="colunas">
     <div class="card-contexto fragment" data-fragment-index="2">
-      <h4 class="prag">Atividade-fim</h4>
-      <p><b>Coleta seletiva na escola</b> como objetivo em si: separar, recolher, reciclar.</p>
-      <p>Ações factíveis, dentro do “realismo político” e do “economicamente viável”.</p>
+      <div class="faixa-rotulo prag">Reciclagem</div>
+      <h4>A lata de alumínio</h4>
+      <p>A reciclagem compensa um sistema de descartabilidade cujo lixo “necessariamente deve ser reciclado para manter sua viabilidade”.</p>
+      <p class="pratica-fonte">LAYRARGUES (2002b apud LAYRARGUES &amp; LIMA, 2014, p. 31)</p>
     </div>
     <div class="card-contexto fragment" data-fragment-index="3">
-      <h4 class="crit">Tema gerador</h4>
-      <p><b>A mesma coleta seletiva</b> como ponto de partida: por que tanto lixo?</p>
-      <p>Abre a discussão sobre causas, consumo e modelo de produção.</p>
+      <div class="faixa-rotulo prag">Mídia e empresas</div>
+      <h4>Consumo sustentável</h4>
+      <p>Economia de energia e água, mercado de carbono, “pegada ecológica”; na mídia, “cada um deve fazer a sua parte”.</p>
+      <p class="pratica-fonte">LAYRARGUES &amp; LIMA (2014, p. 31); LAYRARGUES (2012 apud SANTOS &amp; TOSCHI, 2015, p. 246)</p>
     </div>
   </div>
-
-  <ul class="edson-atividade-fim-citacoes fragment" data-fragment-index="4">
-    <li>A EA dominante, calcada nos temas clássicos (lixo, poluição, extinção de espécies), “tem falhado em sua missão de transformar valores”. <small>(Brügger, 2009 apud Santos &amp; Toschi, 2015, p. 246)</small></li>
-    <li>A ênfase na responsabilidade individual “desloca e fragiliza a discussão das verdadeiras causas dos problemas ambientais”. <small>(Pelicioni &amp; Philippi Jr., 2014, p. 8)</small></li>
-  </ul>
-
-  <blockquote class="aspas-proposta fragment" data-fragment-index="5">A coleta seletiva da escola de vocês é atividade-fim ou tema gerador?</blockquote>
-
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 29, 31–32); LAYRARGUES (1999 apud LAYRARGUES &amp; LIMA, 2014, p. 32); BRÜGGER (2009 apud SANTOS &amp; TOSCHI, 2015, p. 246); PELICIONI &amp; PHILIPPI JR. (2014, p. 8).</p>
-
+  <blockquote class="pergunta-turma fragment" data-fragment-index="4">A coleta seletiva da escola de vocês é atividade-fim ou tema gerador?</blockquote>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 29, 31–32, 36); LAYRARGUES (1999, 2002b apud LAYRARGUES &amp; LIMA, 2014, p. 31–32); LAYRARGUES (2012 apud SANTOS &amp; TOSCHI, 2015, p. 246).</p>
   <aside class="notes">
-    <p>Agora eu quero mostrar o núcleo pedagógico da pragmática. Só retomando rapidamente o contexto: Layrargues e Lima (2014, p. 29) lembram que os anos 1990 trouxeram um "crescente estímulo internacional à metodologia da resolução de problemas ambientais locais", junto com a lógica do "cada um fazer a sua parte".</p>
-    <p>O dilema aparece no próprio título de um texto de Layrargues de 1999, citado por Layrargues e Lima: "A resolução de problemas ambientais locais deve ser um tema-gerador ou a atividade-fim da educação ambiental?". Na pragmática, segundo Layrargues e Lima (2014, p. 32), predomina a busca por ações factíveis que não ultrapassam "as fronteiras do realismo político, do economicamente viável", o que se enquadra na perspectiva da "atividade-fim". A leitura de tema gerador que eu proponho aqui, a de partir da coleta seletiva para discutir o modelo de produção, é minha, mas dialoga com o que os autores dizem na p. 31: a pragmática poderia ter uma leitura crítica se aproveitasse a "reflexão sobre o padrão do lixo gerado no atual modelo de produção".</p>
-    <p>Só que não foi esse o caminho. Layrargues e Lima (2014, p. 31), apoiados em Layrargues (2002b), cujo título é "O cinismo da reciclagem: o significado ideológico da reciclagem da lata de alumínio", apontam que a macrotendência acabou agindo como mecanismo de compensação para um sistema baseado no consumismo e na descartabilidade, que gera lixo que "necessariamente deve ser reciclado para manter sua viabilidade".</p>
-    <p>Outros autores reforçam esse limite. Brügger (2009 apud Santos &amp; Toschi, 2015, p. 246) diz que a EA dominante, calcada em temas clássicos como lixo, poluição e extinção de espécies, "tem falhado em sua missão de transformar valores". E Pelicioni e Philippi Jr. (2014, p. 8) alertam que a ênfase na responsabilidade individual "desloca e fragiliza a discussão das verdadeiras causas dos problemas ambientais".</p>
-    <p>Então deixo a pergunta para vocês: a coleta seletiva da escola de vocês é atividade-fim ou tema gerador?</p>
+    <p>Agora quero mostrar onde a pragmática aparece no dia a dia. O primeiro lugar é a escola. Layrargues e Lima (2014, p. 29) lembram que, nos anos 1990, houve um "crescente estímulo internacional à metodologia da resolução de problemas ambientais locais", junto com a lógica do "cada um fazer a sua parte". A atenção ficou focada no lixo, na coleta seletiva e na reciclagem, e depois se ampliou para o Consumo Sustentável. Na p. 32, os autores dizem que a pragmática busca ações factíveis que não ultrapassam "as fronteiras do realismo político, do economicamente viável", o que se enquadra na perspectiva da "atividade-fim", com base em Layrargues (1999).</p>
+    <p>Aqui preciso de uma cautela: as fontes que lemos só trazem o par atividade-fim e tema gerador no título desse texto de 1999: "A resolução de problemas ambientais locais deve ser um tema-gerador ou a atividade-fim da educação ambiental?" (referências, p. 36). Então a leitura que faço é minha: atividade-fim é quando separar o lixo é o ponto de chegada; tema gerador é quando a coleta é o ponto de partida para perguntar por que produzimos tanto lixo.</p>
+    <p>O segundo exemplo é a reciclagem da lata de alumínio, estudada por Layrargues em "O cinismo da reciclagem" (2002b, citado por Layrargues e Lima, 2014, p. 31 e 36). A reciclagem age como compensação de um sistema baseado na descartabilidade, que gera lixo que "necessariamente deve ser reciclado para manter sua viabilidade".</p>
+    <p>O terceiro é o consumo sustentável: economia de energia e água, mercado de carbono, "pegada ecológica" (Layrargues e Lima, 2014, p. 31). Segundo Layrargues (2012 apud Santos e Toschi, 2015, p. 246), essa vertente está forte na mídia e nas empresas, com a ideia de que "cada um deve fazer a sua parte".</p>
+    <p>Então pergunto: a coleta seletiva da escola de vocês é atividade-fim ou tema gerador?</p>
   </aside>
 </section>
 
 
-<section class="slide" id="edson-ea-eds" data-autor="Edson" aria-label="Slide 10 de 16">
-  <h2 class="prag">EA ou Educação para o Desenvolvimento Sustentável?</h2>
+<section class="slide molde-disputa" id="edson-ea-eds" data-autor="Edson" aria-label="Slide 10 de 17">
+  <h2 class="prag">Pragmática: em disputa — EA ou EDS?</h2>
 
   <div class="fragment" data-fragment-index="1">
-    <div class="faixa-rotulo prag">Trajetória do debate EA × EDS</div>
+    <div class="faixa-rotulo prag">O episódio</div>
     <ol class="colunas quatro marcos" aria-label="Trajetória do debate sobre EA e EDS">
       <li>
         <h3>1992</h3>
@@ -928,7 +979,7 @@
       </li>
       <li>
         <h3>1997</h3>
-        <p><strong>Tessalônica</strong><br>Contexto: reorientar a educação para a sustentabilidade (pobreza, saúde, democracia, paz).</p>
+        <p><strong>Tessalônica</strong><br>Reorientar a educação para a sustentabilidade.</p>
       </li>
       <li>
         <h3>2002</h3>
@@ -936,52 +987,53 @@
       </li>
       <li>
         <h3>2005–2014</h3>
-        <p><strong>Década da EDS</strong><br>Período proposto pela Unesco; o campo reage com críticas.</p>
+        <p><strong>Década da EDS</strong><br>Período proposto pela Unesco; o campo reage.</p>
       </li>
     </ol>
   </div>
 
-  <div class="faixa-rotulo crit fragment" data-fragment-index="2">O que o campo critica</div>
+  <div class="faixa-rotulo crit fragment" data-fragment-index="2">O que se critica</div>
   <div class="colunas tres">
     <div class="card-contexto fragment" data-fragment-index="2">
       <h4 class="prag">Conceito ambíguo</h4>
-      <p>Ambiguidade e contradições do próprio desenvolvimento sustentável.</p>
+      <p>Contradições do desenvolvimento sustentável; suspeita de interesses neoliberais.</p>
     </div>
     <div class="card-contexto fragment" data-fragment-index="2">
       <h4 class="prag">Proposta imposta</h4>
-      <p>Impositividade e baixa participação na construção da proposta da Unesco.</p>
+      <p>Baixa participação; ignora as diferenças entre Norte e Sul.</p>
     </div>
     <div class="card-contexto fragment" data-fragment-index="2">
       <h4 class="prag">Educar para quê?</h4>
-      <p>Educação deve promover liberdade e autonomia, não “definir um fim particular”.</p>
+      <p>Educação para a autonomia, não para “definir um fim particular”.</p>
     </div>
     <div class="card-contexto fragment" data-fragment-index="3">
       <h4 class="crit">Resistir ao esvaziamento</h4>
-      <p>Resistência a apagar o vínculo da EA com as lutas democráticas e a emancipação.</p>
+      <p>Manter o vínculo da EA com as lutas democráticas e a emancipação.</p>
     </div>
     <div class="card-contexto fragment" data-fragment-index="3">
-      <h4 class="prag">Norte × Sul</h4>
-      <p>Contextos socioeducativos diferentes entre os hemisférios.</p>
+      <h4 class="prag">Armadilhas paradigmáticas</h4>
+      <p>Busca a solução nos mesmos referenciais que causaram a crise.</p>
     </div>
     <div class="card-contexto fragment" data-fragment-index="3">
-      <h4 class="prag">Interesses em jogo</h4>
-      <p>Suspeita de motivação desenvolvimentista ligada à hegemonia neoliberal.</p>
+      <h4 class="prag">Apelo individual</h4>
+      <p>“Desloca e fragiliza a discussão das verdadeiras causas.”</p>
     </div>
   </div>
 
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 32, 35–36); PELICIONI &amp; PHILIPPI JR. (2014, p. 8); LIMA (2003), CARVALHO (2002) e JICKLING (1992) apud LAYRARGUES &amp; LIMA (2014, p. 32).</p>
+  <blockquote class="pergunta-turma fragment" data-fragment-index="4">Trocar “ambiental” por “desenvolvimento sustentável” muda o que se ensina?</blockquote>
+
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 32, 35–36); LIMA (2003), CARVALHO (2002) e JICKLING (1992) apud LAYRARGUES &amp; LIMA (2014, p. 32); GUIMARÃES (2004 apud SANTOS &amp; TOSCHI, 2015, p. 245, 247–248); PELICIONI &amp; PHILIPPI JR. (2014, p. 8).</p>
 
   <aside class="notes">
-    <p>Para fechar a pragmática, quero mostrar uma disputa reveladora: a tentativa de trocar a Educação Ambiental pela Educação para o Desenvolvimento Sustentável. Layrargues e Lima (2014, p. 32) contam que foram governos do hemisfério Norte, organismos multilaterais e a própria Unesco que abriram esse debate. Ele começa no contexto da Rio-92 e se aprofunda depois da Conferência de Joanesburgo, em 2002, quando a Unesco propõe a Década da EDS para 2005–2014.</p>
-    <p>Como contexto, vale lembrar Tessalônica, em 1997. Pelicioni e Philippi Jr. (2014, p. 8) registram que ali se propôs reorientar a educação para a sustentabilidade, um conceito que deveria abarcar não só o meio ambiente, mas a pobreza, a saúde, a democracia, os direitos humanos e a paz. As fontes não a tratam como etapa da substituição; na minha leitura, essa amplitude ajuda a entender por que a noção de desenvolvimento sustentável é tão discutida.</p>
-    <p>Layrargues e Lima (2014, p. 32), apoiados em Lima (2003), Carvalho (2002) e Jickling (1992), resumem as críticas. Primeiro, a ambiguidade e as contradições da noção de desenvolvimento sustentável. Segundo, a impositividade e a baixa participação com que a proposta da Unesco foi construída. Terceiro, a ideia de que a educação deve promover a liberdade e a autonomia, e não "definir um fim particular, qualquer que seja ele". Depois, a resistência ao esvaziamento dos traços que vinculam a EA às lutas democráticas e à emancipação humana; as diferenças entre os contextos do Norte e do Sul; e a suspeita de interesses desenvolvimentistas ligados à hegemonia neoliberal.</p>
-    <p>O emblema da controvérsia é o artigo de Jickling (1992): "Why I don’t want my children to be educated for sustainable development". Ele aparece na nota ii (p. 35) e nas referências (p. 36) de Layrargues e Lima (2014).</p>
-    <p>Repare no card destacado em outra cor: o vínculo da EA com as lutas democráticas e a emancipação. Esse é o gancho. Quem defende esse vínculo é a macrotendência crítica, e para apresentá-la eu passo a palavra ao Caio.</p>
+    <p>Para fechar a pragmática, quero mostrar a disputa mais reveladora dela no campo: a tentativa de trocar a Educação Ambiental pela Educação para o Desenvolvimento Sustentável. Layrargues e Lima (2014, p. 32) contam que governos do hemisfério Norte, organismos multilaterais e a própria Unesco abriram esse debate no contexto da Rio-92. Ele se aprofundou depois de Joanesburgo, em 2002, quando a Unesco propôs a Década da EDS para 2005–2014. Tessalônica, em 1997, entra como contexto: segundo Pelicioni e Philippi Jr. (2014, p. 8), ali se propôs reorientar a educação para a sustentabilidade.</p>
+    <p>Layrargues e Lima (2014, p. 32), apoiados em Lima, Carvalho e Jickling, resumem as críticas: a ambiguidade e as contradições do desenvolvimento sustentável; a impositividade e a baixa participação na construção da proposta; a ideia de que a educação deve promover liberdade e autonomia, e não "definir um fim particular, qualquer que seja ele"; a resistência ao esvaziamento dos traços que vinculam a EA às lutas democráticas e à emancipação humana; as diferenças entre Norte e Sul; e a suspeita de interesses desenvolvimentistas ligados à hegemonia neoliberal. O emblema é o artigo de Jickling (1992), na nota ii (p. 35).</p>
+    <p>Somo duas críticas à própria pragmática. Guimarães (2004 apud Santos e Toschi, 2015, p. 245) diz que a EA hegemônica busca a solução nos próprios referenciais que causaram a crise; a crítica, segundo ele, tenta superar essas "armadilhas paradigmáticas" (p. 247–248). E Pelicioni e Philippi Jr. (2014, p. 8) alertam que a ênfase na responsabilidade individual "desloca e fragiliza a discussão das verdadeiras causas dos problemas ambientais".</p>
+    <p>Deixo a pergunta: trocar "ambiental" por "desenvolvimento sustentável" muda o que se ensina? Repare no card em outra cor, o vínculo com as lutas democráticas e a emancipação. Quem defende esse vínculo é a macrotendência crítica, e para apresentá-la passo a palavra ao Caio.</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-8" data-autor="Caio" aria-label="Slide 11 de 16">
+<section class="slide" id="slide-8" data-autor="Caio" aria-label="Slide 11 de 17">
   <h2 class="crit">Crítica: por que surgiu? (redemocratização, 1980–1990)</h2>
 
   <div class="fragment" data-fragment-index="1">
@@ -1039,7 +1091,7 @@
 </section>
 
 
-<section class="slide" id="slide-9" data-autor="Caio" aria-label="Slide 12 de 16">
+<section class="slide" id="slide-9" data-autor="Caio" aria-label="Slide 12 de 17">
   <h2 class="crit">Crítica: o que propõe?</h2>
 
   <div class="colunas foto-texto">
@@ -1057,29 +1109,110 @@
         <dd>Ação coletiva, grupos de pressão, pedagogia do conflito e emancipação.</dd>
         <dt class="crit">Matrizes e correntes</dt>
         <dd>Freire, Teoria Crítica e Ecologia Política; EA Popular e Gestão política.</dd>
-        <dt class="crit">Limites e alertas</dt>
-        <dd>Rejeita “sociologismos e politicismos”; pouco presente com crianças.</dd>
         <dt class="crit">Status no campo</dt>
-        <dd>Contra-hegemônica; forte na academia, mas sob constante erosão.</dd>
+        <dd>Contra-hegemônica; cresce na academia e disputa o centro do campo (L&amp;L 2014, p. 34).</dd>
       </dl>
 
       <blockquote class="aspas-proposta fragment" data-fragment-index="3">“Como promover sustentabilidade sem enfrentar as desigualdades e as relações de poder?”</blockquote>
     </div>
   </div>
 
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 29, 33–35); SOUZA (2018, p. 63–68); PELICIONI &amp; PHILIPPI JR. (2014, p. 7–8); SANTOS &amp; TOSCHI (2015, p. 247–248); QUINTAS &amp; GUALDA (1995 apud LAYRARGUES &amp; LIMA, 2014, p. 35).</p>
+  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014, p. 29, 33–34); SOUZA (2018, p. 63–68); PELICIONI &amp; PHILIPPI JR. (2014, p. 7–8); SANTOS &amp; TOSCHI (2015, p. 247–248); QUINTAS &amp; GUALDA (1995 apud LAYRARGUES &amp; LIMA, 2014, p. 35).</p>
 
   <aside class="notes">
     <p>A macrotendência crítica parte de um diagnóstico radicalmente distinto: "a crise ambiental não expressava problemas da natureza, mas problemas que se manifestavam na natureza" (Layrargues &amp; Lima, 2014, p. 29). Para essa vertente, a degradação biofísica é consequência direta das relações sociais de dominação, da injustiça distributiva e da lógica de acumulação do capital.</p>
     <p>Suas matrizes teóricas fundamentam-se na pedagogia libertadora de Paulo Freire, na Educação Popular latino-americana, na Teoria Crítica frankfurtiana, na Ecologia Política e em vertentes do materialismo histórico (Layrargues &amp; Lima, 2014, p. 29, 33; Souza, 2018, p. 63). Opera com conceitos estruturantes como cidadania ativa, participação democrática direta, emancipação humana, pedagogia do conflito socioambiental e justiça ambiental (Layrargues &amp; Lima, 2014, p. 33; Souza, 2018, p. 63).</p>
     <p>Correntes internas fundamentais: a Educação Ambiental Popular integra a macrotendência crítica como corrente viva e engajada, e não como uma "quarta vertente" separada (Ruiz, 1994 apud Souza, 2018, p. 66; Souza, 2018, p. 64, 68), promovendo uma síntese entre os princípios ecológicos e as lutas políticas das classes subalternas. Do mesmo modo, a "Educação Ambiental no processo de gestão ambiental", formulada por Quintas e Gualda (1995 apud Layrargues &amp; Lima, 2014, p. 35, nota iii), insere-se na vertente crítica ao enfatizar a gestão pública como arena de conflito político e participação social, rompendo com o viés puramente gerencialista ou tecnocrático.</p>
     <p>Práxis e ação pedagógica: estrutura-se no método "ação – reflexão – ação", mobilizando comunidades e fortalecendo grupos de pressão perante os tomadores de decisão. Pelicioni e Philippi Jr. (2014, p. 7) sublinham que as camadas de menor renda sofrem de modo desproporcional os efeitos da poluição e a ausência de infraestrutura sanitária básica.</p>
-    <p>Limites e tensões internas: Layrargues e Lima (2014, p. 33) documentam que formuladores da própria vertente crítica advertem contra reducionismos como "sociologismos e politicismos", que correm o risco de desconsiderar as bases biológicas e biofísicas dos ecossistemas. Santos e Toschi (2015, p. 248), referenciando Layrargues (2012), apontam sua concentração predominante nos debates acadêmicos de pós-graduação e reduzida incidência formativa com crianças nas escolas. Além disso, sendo expressamente contra-hegemônica, encontra-se sob constante ameaça de erosão diante do apelo de mercado da vertente pragmática (Layrargues &amp; Lima, 2014, p. 34–35).</p>
+    <p>Status no campo: é a única das três vertentes considerada anti-hegemônica (Layrargues, 2012 apud Santos &amp; Toschi, 2015, p. 248). Layrargues e Lima (2014, p. 34) constatam que ela "cresceu significativamente na última década, notadamente no âmbito acadêmico", e mostra vitalidade para sair da contra-hegemonia e ocupar o lugar central hoje ocupado pela pragmática. Fecho com a pergunta do slide, e os limites e críticas que ela recebe ficam para os próximos dois slides: como ela aparece na prática e onde está em disputa.</p>
   </aside>
 </section>
 
 
-<section class="slide" id="slide-10" data-autor="Caio" aria-label="Slide 13 de 16">
+<section class="slide molde-pratica" id="caio-crit-pratica" data-autor="Caio" aria-label="Slide 13 de 17">
+  <h2 class="crit">Crítica: na prática</h2>
+  <p class="pratica-intro">Aparece onde há organização coletiva: redes de educação popular, gestão pública do ambiente e, como orientação da vertente, espaços de decisão política.</p>
+  <div class="colunas tres">
+    <div class="card-contexto fragment" data-fragment-index="1">
+      <div class="faixa-rotulo crit">Movimento social</div>
+      <h4>Rede REPEC (1987)</h4>
+      <p>Criada por países do CEAAL para a troca entre educadores populares de projetos rurais e urbanos; extinta no fim dos anos 1990.</p>
+      <p class="pratica-fonte">BARBOSA (2002 apud SOUZA, 2018, p. 66)</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="2">
+      <div class="faixa-rotulo crit">Gestão pública</div>
+      <h4>EA no processo de gestão ambiental</h4>
+      <p>Formação de educadores para a gestão ambiental, entendida pela dimensão política, e não só administrativa.</p>
+      <p class="pratica-fonte">QUINTAS &amp; GUALDA (1995 apud LAYRARGUES &amp; LIMA, 2014, p. 35)</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="3">
+      <div class="faixa-rotulo crit">Orientação da vertente</div>
+      <h4>Conselhos, fóruns e comitês</h4>
+      <p>Para uma EA crítica, educadores ambientais devem atuar em conselhos, fóruns, comitês e agendas, para interferir nas políticas públicas.</p>
+      <p class="pratica-fonte">LOUREIRO (2007 apud SANTOS &amp; TOSCHI, 2015, p. 249)</p>
+    </div>
+  </div>
+  <blockquote class="pergunta-turma fragment" data-fragment-index="4">Em que espaço da nossa cidade uma decisão ambiental poderia ser discutida com a comunidade?</blockquote>
+  <p class="fonte">Fontes: SOUZA (2018, p. 66); LAYRARGUES &amp; LIMA (2014, p. 33, 35); SANTOS &amp; TOSCHI (2015, p. 249).</p>
+  <aside class="notes">
+    <p>Depois de ver o que a vertente crítica propõe, vale perguntar onde ela aparece de fato. Diferente da conservacionista, que costuma estar em trilhas e atividades com crianças, a crítica aparece onde há organização coletiva. Trago três exemplos das nossas fontes: dois são experiências documentadas, e o terceiro é uma orientação da própria vertente sobre onde o educador deve atuar.</p>
+    <p>O primeiro é a Educação Ambiental Popular. A REPEC já apareceu no slide "por que surgiu?" como marco de origem; aqui o foco é o que ela fez e como terminou. Segundo Souza (2018, p. 66), com base em Barbosa (2002), países latino-americanos que integravam o Conselho de Educação de Adultos da América Latina, o CEAAL, criaram em 1987 a REPEC, a Rede de Educação Popular e Ecologia, um "espaço dinâmico de permuta de educadoras/es populares" inseridos em projetos em áreas rurais e urbanas. A rede promoveu encontros, publicações e oficinas, mas se desarticulou e foi extinta ainda no fim dos anos 1990. A expressão reaparece no Manual latino-americano de educação ambiental, organizado por Viezzer e Ovalles e publicado pelo CEAAL em 1994 (tradução da Gaia, 1995).</p>
+    <p>O segundo é a corrente da Educação Ambiental no processo de gestão ambiental, que Layrargues e Lima (2014, p. 33) colocam dentro da macrotendência crítica. Na nota iii (p. 35), os autores esclarecem que se referem ao entendimento de Quintas e Gualda (1995), na obra "A formação do educador para atuar no processo de Gestão Ambiental", publicada pelas Edições IBAMA, que dá prevalência à dimensão política da gestão ambiental, e não ao peso administrativo que muitos cursos de graduação atribuem a ela.</p>
+    <p>O terceiro não é um caso relatado, e sim uma recomendação. Santos e Toschi (2015, p. 249), citando Loureiro (2007), afirmam que, para aplicar uma EA crítica, educadores ambientais devem atuar em espaços públicos como conselhos, fóruns, comitês e agendas, para interferir nas políticas públicas e de educação.</p>
+    <p>Repare que os três exemplos têm em comum o coletivo e a política, e não o comportamento individual. Deixo a pergunta para a turma antes de passar às disputas.</p>
+  </aside>
+</section>
+
+
+<section class="slide molde-disputa" id="caio-crit-disputa" data-autor="Caio" aria-label="Slide 14 de 17">
+  <h2 class="crit">Crítica: em disputa — do papel à prática?</h2>
+  <div class="fragment" data-fragment-index="1">
+    <div class="faixa-rotulo crit">O episódio</div>
+    <ol class="colunas quatro marcos" aria-label="Chegada da perspectiva crítica às políticas públicas">
+      <li>
+        <h3>2005</h3>
+        <p><strong>Novo PRONEA</strong><br>Lançado após discussão com educadores e gestores.</p>
+      </li>
+      <li>
+        <h3>2009</h3>
+        <p><strong>Res. CNRH 98</strong><br>EA na gestão de recursos hídricos.</p>
+      </li>
+      <li>
+        <h3>2012</h3>
+        <p><strong>IN IBAMA 02</strong><br>EA no licenciamento, priorizando grupos vulneráveis.</p>
+      </li>
+      <li>
+        <h3>2014</h3>
+        <p><strong>Orientação federal</strong><br>Políticas ancoradas na macrotendência crítica.</p>
+      </li>
+    </ol>
+  </div>
+  <div class="faixa-rotulo crit fragment" data-fragment-index="2">O que se critica</div>
+  <div class="colunas tres">
+    <div class="card-contexto fragment" data-fragment-index="2">
+      <h4 class="crit">Erosão</h4>
+      <p>Suas forças “são constantemente erodidas pelo pragmatismo dominante”.</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="2">
+      <h4 class="crit">Reducionismo</h4>
+      <p>A própria vertente alerta contra “sociologismos e politicismos”.</p>
+    </div>
+    <div class="card-contexto fragment" data-fragment-index="3">
+      <h4 class="crit">Longe da escola</h4>
+      <p>Concentrada na pós-graduação, pouco presente com crianças, “trabalhada superficialmente”.</p>
+    </div>
+  </div>
+  <blockquote class="pergunta-turma fragment" data-fragment-index="4">Estar na lei basta para uma vertente chegar à sala de aula?</blockquote>
+  <p class="fonte">Fontes: LOUREIRO (2014 apud SOUZA, 2018, p. 61–62); LAYRARGUES &amp; LIMA (2014, p. 33, 35); LAYRARGUES (2012 apud SANTOS &amp; TOSCHI, 2015, p. 248).</p>
+  <aside class="notes">
+    <p>Aqui está a disputa da vertente crítica no campo. O episódio é a sua chegada às políticas públicas, contada por Souza (2018, p. 61–62) a partir de Loureiro (2014). Depois da PNEA, regulamentada em 2002, e da instalação do órgão gestor em 2003, lançou-se em 2005 um novo Programa Nacional de Educação Ambiental, após extenso processo de discussão com educadores ambientais e gestores municipais. Vieram então a Resolução nº 98/2009 do Conselho Nacional de Recursos Hídricos, sobre a EA no sistema de gestão de recursos hídricos, e a Instrução Normativa nº 02/2012 do IBAMA, sobre a EA no licenciamento federal, com mobilização e organização social e priorização dos grupos em situação de vulnerabilidade socioambiental. Em 2014, segundo Loureiro, foi possível orientar as políticas federais pelas premissas de participação e controle social, relativas à macrotendência crítica.</p>
+    <p>Mas estar nos documentos não encerra a disputa. Layrargues e Lima (2014, p. 35) reconhecem que as forças críticas conquistaram espaço, mas "são constantemente erodidas pelo pragmatismo dominante", que desloca a educação para o sentido do mercado. Dentro da própria vertente, setores críticos perceberam que os reducionismos empobrecem, "inclusive os sociologismos e politicismos" (p. 33). Santos e Toschi (2015, p. 248), citando Layrargues (2012), lembram que ela está quase só na pós-graduação, pouco presente no universo infantil, e, embora bem aceita em órgãos públicos e ONGs, é "trabalhada superficialmente". E a própria PNEA, no artigo 4º, inciso III, garante o pluralismo de ideias e concepções pedagógicas: a lei não oficializa uma vertente.</p>
+    <p>Deixo a pergunta para a turma. E é justamente esse pluralismo que nos leva ao próximo slide: as três vertentes não se sucederam, elas coexistem e disputam o campo até hoje.</p>
+  </aside>
+</section>
+
+
+<section class="slide" id="slide-10" data-autor="Caio" aria-label="Slide 15 de 17">
   <h2 class="slide-titulo">Coexistência, não sucessão: as três no tempo</h2>
 
   <svg class="coexistencia-svg" viewBox="0 0 1200 185" role="img" aria-labelledby="s10-t s10-d">
@@ -1133,12 +1266,12 @@
 
   <div class="coexistencia-sintese">
     <div class="coexistencia-box fragment" data-fragment-index="1">
-      <h4 class="slide-subtitulo">Coexistência e disputa contínua</h4>
-      <p>Tipos ideais em convivência simultânea no presente, disputando a hegemonia do campo da EA; não representam etapas sucessivas ou superadas (LAYRARGUES &amp; LIMA, 2014, p. 34).</p>
+      <h4 class="slide-subtitulo">Mesma linhagem, dois braços</h4>
+      <p>Conservacionista e pragmática são “dois momentos de uma mesma linhagem de pensamento”: a pragmática é a adaptação ao mercado; a conservacionista, a “versão mais ingênua e enviesada” (p. 32). Um braço evoluiu para o pragmatismo; outro se atualizou para biodiversidade, ecoturismo, UCs e biomas (LAYRARGUES &amp; LIMA, 2014, p. 34).</p>
     </div>
     <div class="coexistencia-box fragment" data-fragment-index="2">
-      <h4 class="slide-subtitulo">Percepção das correntes</h4>
-      <p>A percepção da pluralidade das correntes explicita-se e amadurece nos debates dos anos 1990, não sendo possível delimitar cronologicamente sua origem (LAYRARGUES &amp; LIMA, 2011, p. 4; 2014, p. 25).</p>
+      <h4 class="slide-subtitulo">Coexistência e disputa contínua</h4>
+      <p>Tipos ideais em convivência simultânea no presente, disputando a hegemonia do campo da EA; não representam etapas sucessivas ou superadas (LAYRARGUES &amp; LIMA, 2014, p. 34).</p>
     </div>
   </div>
 
@@ -1149,57 +1282,15 @@
     <p>A vertente conservacionista deteve a hegemonia no momento fundacional da EA brasileira nos anos 1970 e 1980 (Layrargues &amp; Lima, 2014, p. 26). Longe de desaparecer, permanece como tendência histórica "forte e bem consolidada" (p. 30, 34), sustentando práticas de sensibilização ecológica, ecoturismo e vivências na natureza em escolas e unidades de conservação.</p>
     <p>A macrotendência pragmática, com raízes materiais no pós-guerra, é fortemente impulsionada ao longo dos anos 1990 com a onda neoliberal e o apelo ao ambientalismo de resultados (Layrargues &amp; Lima, 2014, p. 29, 31). Converte-se na abordagem "francamente hegemônica na atualidade" (p. 31–32), amplamente financiada por setores corporativos e disseminada na mídia sob a fórmula "cada um faz sua parte".</p>
     <p>A vertente crítica emerge das lutas sociais da redemocratização na década de 1980 e diferencia-se expressamente no início dos anos 1990 como contestação à EA conservadora (Layrargues &amp; Lima, 2014, p. 28–29). Nos anos 2000, expande-se com vigor na produção acadêmica da pós-graduação e nas redes de educação popular (Layrargues &amp; Lima, 2011, p. 12; 2014, p. 33), operando como contraponto contra-hegemônico em permanente disputa pelo campo.</p>
-    <p>Articulação teórica: Conservacionismo e pragmatismo configuram "dois momentos de uma mesma linhagem" (Layrargues &amp; Lima, 2014, p. 32), compartilhando pressupostos comportamentalistas e foco nas ações individuais no âmbito privado. Em contrapartida, a crítica ancora-se em matriz emancipatória e sociopolítica substancialmente distinta (Guimarães, 2004 apud Santos &amp; Toschi, 2015, p. 247).</p>
-    <p>Ressalva epistemológica: Conforme Layrargues e Lima (2011, p. 4; 2014, p. 25), não é possível fixar uma data de nascimento precisa para as correntes ou delimitar cronologicamente com rigor quando surgiu a sua percepção; a consciência reflexiva da coexistência dessas diferentes vertentes explicita-se e amadurece nos debates da década de 1990.</p>
-    <p>Transição: Com essa compreensão sobre como as três vertentes coexistem e disputam sentidos na contemporaneidade, sigo para o fechamento: o que fica desse mapa das três vertentes.</p>
+    <p>Articulação teórica: conservacionismo e pragmatismo configuram "dois momentos de uma mesma linhagem de pensamento" (Layrargues &amp; Lima, 2014, p. 32). A pragmática é uma "derivação evolutiva" da conservacionista, sua adaptação ao novo contexto social, econômico e tecnológico e às pressões do mercado por mudanças "cosméticas" dentro da ordem; a conservacionista é a "versão mais ingênua e enviesada", de grupos ligados às ciências naturais. Ambas são "comportamentalistas e individualistas" (p. 32). Em contrapartida, a crítica ancora-se em matriz emancipatória e sociopolítica distinta (Guimarães, 2004 apud Santos &amp; Toschi, 2015, p. 247).</p>
+    <p>Por isso o conservacionismo não sumiu: nas considerações finais, os autores observam que, se um braço do conservacionismo evoluiu no sentido do pragmatismo, outro se atualizou na direção da biodiversidade, do ecoturismo, das unidades de conservação e de determinados biomas (Layrargues &amp; Lima, 2014, p. 34). As três convivem e disputam a hegemonia do campo; não são etapas superadas.</p>
+    <p>Ressalva: conforme Layrargues e Lima (2011, p. 4; 2014, p. 25), não é possível delimitar cronologicamente com rigor quando surgiu a percepção das correntes; a consciência da pluralidade se explicita e amadurece nos debates dos anos 1990.</p>
+    <p>Fechamento: voltamos então à pergunta da capa — todo projeto de Educação Ambiental busca a mesma transformação? Vimos que não: conservar a natureza, ajustar comportamentos ao mercado ou transformar as relações sociais são projetos diferentes, que seguem em disputa no mesmo campo. Com isso encerramos o conteúdo e abrimos para perguntas e comentários da turma; em seguida mostro as referências.</p>
   </aside>
 </section>
 
 
-<section class="slide" id="caio-o-que-fica" data-autor="Caio" aria-label="Slide 14 de 16">
-  <h2>O que fica</h2>
-
-  <blockquote class="ofica-pergunta">“Todo projeto de Educação Ambiental busca a mesma transformação?”</blockquote>
-
-  <div class="colunas tres ofica-blocos">
-    <div class="card-contexto fragment" data-fragment-index="1">
-      <span class="faixa-rotulo">Por que classificar</span>
-      <h4>Ganhos superam as perdas</h4>
-      <p>Tipologias simplificam e podem gerar antagonismos, mas a diferenciação “faculta aos agentes [...] se posicionar com maior autonomia” (L&amp;L 2014, p. 24; 2011, p. 13).</p>
-    </div>
-    <div class="card-contexto fragment" data-fragment-index="2">
-      <span class="faixa-rotulo">Limites</span>
-      <h4>Um mapa, não o território</h4>
-      <p>“Pela escassez de pesquisas, é sempre difícil diagnosticar as hegemonias discursivas” (L&amp;L 2014, p. 35); tipos ideais, não retrato objetivista.</p>
-    </div>
-    <div class="card-contexto fragment" data-fragment-index="3">
-      <span class="faixa-rotulo">Corroboração</span>
-      <h4>Outros mapas, mesmo desenho</h4>
-      <p>Tozoni-Reis: natural, racional, histórica. Martínez-Alier: culto ao silvestre, ecoeficiência, ecologismo dos pobres (apud L&amp;L 2014, p. 34).</p>
-    </div>
-  </div>
-
-  <div class="colunas ofica-linhas fragment" data-fragment-index="4">
-    <p><strong>Interesses populares</strong> de emancipação e igualdade social</p>
-    <p><strong>Interesses do capital</strong> e da lógica do mercado</p>
-  </div>
-
-  <blockquote class="aspas-proposta ofica-sintese fragment" data-fragment-index="5"><strong>Não.</strong> E reconhecer isso é o que permite ao educador escolher seu caminho.</blockquote>
-
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2011, p. 13; 2014, resumo, p. 24, 34–35); GUIMARÃES (2000 apud PELICIONI &amp; PHILIPPI JR., 2014, p. 7).</p>
-
-  <aside class="notes">
-    <p>Volto à pergunta com que o Diogo abriu o seminário: todo projeto de Educação Ambiental busca a mesma transformação? Antes de responder: por que classificar?</p>
-    <p>Layrargues e Lima (2011, p. 13) reconhecem que os esforços classificatórios reduzem a complexidade, separam "processos que na vida real são tecidos juntos" e podem incitar "antagonismos politicamente contraproducentes". Em 2014 (p. 24), eles descrevem duas posições: uma julga que os riscos da análise são maiores que os ganhos; a outra, que os benefícios superam esse risco. Os autores ficam com a segunda: "os benefícios analíticos e políticos resultantes dos processos de diferenciação se sobrepõem com clareza às possíveis perdas" (2011, p. 13). E o ganho político é concreto: a diferenciação "faculta aos agentes envolvidos a possibilidade de refinar o olhar e, por consequência, de se posicionar com maior autonomia nesse espaço social" (2014, p. 24).</p>
-    <p>Há também um limite honesto, admitido pelos próprios autores: "Pela escassez de pesquisas, é sempre difícil diagnosticar as hegemonias discursivas na Educação Ambiental" (2014, p. 35). E as macrotendências funcionam como tipos ideais com fins didáticos, analíticos e políticos, "embora não tenham a pretensão de esboçar uma representação objetivista da realidade" (resumo de 2014). É um mapa, não o território.</p>
-    <p>Ainda assim, o mapa não está sozinho. A tipologia guarda "forte similaridade" com a de Tozoni-Reis (natural, racional e histórica) e com a de Alier (culto ao silvestre, evangelho da ecoeficiência e ecologismo dos pobres), "o que aponta para uma perspectiva analítica comum se configurando" (Layrargues &amp; Lima, 2014, p. 34).</p>
-    <p>No fundo, Guimarães (2000 apud Pelicioni &amp; Philippi Jr., 2014, p. 7) resume em "duas grandes linhas": uma "vinculada aos interesses populares de emancipação" e outra que "assume prioritariamente os interesses do capital, da lógica do mercado".</p>
-    <p>Então, a resposta é não: os projetos não buscam a mesma transformação. E reconhecer isso é justamente o que permite a cada educador escolher o seu caminho. Com isso, abro para perguntas e discussão; as referências vêm no próximo slide.</p>
-  </aside>
-</section>
-
-
-<section class="slide" id="slide-11" data-autor="Caio" aria-label="Slide 15 de 16">
+<section class="slide" id="slide-11" data-autor="Caio" aria-label="Slide 16 de 17">
   <h2>Referências</h2>
 
   <div class="colunas colunas-refs">
@@ -1247,7 +1338,7 @@
 </section>
 
 
-<section class="slide final" id="slide-12" aria-label="Slide 16 de 16: encerramento" data-autor="Caio">
+<section class="slide final" id="slide-12" aria-label="Slide 17 de 17: encerramento" data-autor="Caio">
   <h2 class="fim-titulo" aria-hidden="true"><span aria-hidden="true" style="--i:0">O</span><span aria-hidden="true" style="--i:1">b</span><span aria-hidden="true" style="--i:2">r</span><span aria-hidden="true" style="--i:3">i</span><span aria-hidden="true" style="--i:4">g</span><span aria-hidden="true" style="--i:5">a</span><span aria-hidden="true" style="--i:6">d</span><span aria-hidden="true" style="--i:7">o</span><span aria-hidden="true" style="--i:8">&nbsp;</span><span aria-hidden="true" style="--i:9">p</span><span aria-hidden="true" style="--i:10">e</span><span aria-hidden="true" style="--i:11">l</span><span aria-hidden="true" style="--i:12">a</span><span aria-hidden="true" style="--i:13">&nbsp;</span><span aria-hidden="true" style="--i:14">a</span><span aria-hidden="true" style="--i:15">t</span><span aria-hidden="true" style="--i:16">e</span><span aria-hidden="true" style="--i:17">n</span><span aria-hidden="true" style="--i:18">ç</span><span aria-hidden="true" style="--i:19">ã</span><span aria-hidden="true" style="--i:20">o</span><span aria-hidden="true" style="--i:21">!</span></h2>
   <p class="so-leitor">Obrigado pela atenção!</p>
 

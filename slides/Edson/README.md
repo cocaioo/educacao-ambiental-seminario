@@ -1,15 +1,12 @@
 # Parte de Edson (macrotendência pragmática)
 
-Edson recebe a fala de Diogo depois da conservacionista. Tempo estimado: cerca de 11 min.
+Cada vertente segue os mesmos quatro tempos, com o mesmo layout por tipo: **por que surgiu? → o que propõe? → na prática → em disputa**. O fio condutor é a EA como campo em disputa (slide de abertura).
 
-1. **`06-pragmatica-contexto.html`**: por que surgiu (pós-guerra → 1990–2000): cenário oficial e condições de emergência segundo os autores.
-2. **`07-pragmatica.html`**: o que propõe: pauta marrom, ecoeficiência, trajetória do lixo à economia verde, limites e status hegemônico.
-3. **`pragmatica-linhagem.html`**: conservacionista e pragmática como "dois momentos de uma mesma linhagem".
-4. **`pragmatica-atividade-fim.html`**: resolver o problema local como atividade-fim ou como tema gerador.
-5. **`pragmatica-ea-eds.html`**: a controvérsia EA × Educação para o Desenvolvimento Sustentável.
-
-**Passagem:** ao fim da controvérsia EA × EDS, Edson passa a palavra a **Caio**, que apresenta a macrotendência crítica.
+1. **`06-pragmatica-contexto.html`**: por que surgiu (pós-guerra → 1990–2000).
+2. **`07-pragmatica.html`**: o que propõe.
+3. **`pragmatica-pratica.html`**: na prática (coleta seletiva como atividade-fim, a lata de alumínio, consumo sustentável).
+4. **`pragmatica-ea-eds.html`**: em disputa (EA × EDS) e passagem para Caio.
 
 ## Como trabalhar
 
-Edite os arquivos em `conteudo/`, mantenha a sequência em `ordem.json`, registre novas fontes em `fontes.md` e use em `estilos.css` apenas seletores iniciados por `.slide[data-autor="Edson"]`. Depois de editar, execute `slides/atualizar.cmd`.
+Edite os arquivos em `conteudo/`, mantenha a sequência em `ordem.json`, registre novas fontes em `fontes.md` e use em `estilos.css` apenas seletores iniciados por `.slide[data-autor="Edson"]`. Os moldes "Na prática" e "Em disputa" têm CSS idêntico nas três pastas: ao ajustar um, ajuste os três. Depois de editar, execute `slides/atualizar.cmd`.

@@ -149,10 +149,3 @@ As referências e os créditos dos slides compartilhados estão preservados em [
 - `assets/sintese.jpg` (não usada; o slide de síntese foi retirado): Parque Vaca Brava, Goiânia (GO) — Fronteira / Wikimedia Commons (CC BY-SA 4.0).
 - Slide 12: Ilustrações decorativas em pixel art (SVG inline) criadas para o projeto, sem fonte externa; personagens representam os integrantes de forma estilizada.
 
----
-
-## Slide novo "O que fica" (o-que-fica.html)
-
-- LAYRARGUES & LIMA (2011, p. 13): os benefícios da diferenciação superam as perdas.
-- LAYRARGUES & LIMA (2014, resumo; p. 24, 34, 35): autonomia de posicionamento, convergência com Tozoni-Reis e Martínez-Alier, escassez de pesquisas para diagnosticar hegemonias.
-- GUIMARÃES (2000 apud PELICIONI & PHILIPPI JR., 2014, p. 7): interesses populares e emancipação × interesses do capital.
