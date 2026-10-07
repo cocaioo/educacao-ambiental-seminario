@@ -7,10 +7,10 @@ O bloco desenvolve a formação histórica da crítica, sua proposta de transfor
 | `08-critica-contexto.html` | Redemocratização, encontro com a Educação Popular, REPEC e articulação das lutas sociais e ecológicas. |
 | `09-critica.html` | Transformação social, conflitos públicos e privados e responsabilidades diferentes na crise. |
 | `critica-educacao.html` | Indivíduo integrado à sociedade, formação crítica e Educação Ambiental Popular. |
-| `critica-disputa.html` | Avanços, erosão pelo pragmatismo e limites descritos pelas obras de 2014 e 2015. |
-| `10-coexistencia.html` | Gráfico único e autoexplicativo: as três faixas no tempo (1970–2014) sobre o eixo conservação–transformação, com a pragmática ramificando-se da conservacionista, a crítica vinda de outra matriz e a coexistência em 2014. |
+| `critica-disputa.html` | Diagnóstico dos autores até 2014 (avanço, freio e alcance) e panorama atual: BNCC (2017) e Lei 14.926/2024. |
+| `10-coexistencia.html` | Gráfico único: as três faixas no tempo sobre o eixo conservação–transformação. Até 2014, a análise de Layrargues & Lima; de 2014 até hoje, área hachurada com leitura do grupo (BNCC 2017, Lei 14.926/2024). |
 | `11-referencias.html` | Os cinco textos que sustentam o seminário. |
-| `12-final.html` | Agradecimento e encerramento. |
+| `12-final.html` | Debate com duas perguntas: responsabilidade de quem consome e de quem produz, e o que a escola ensina ao ensinar a reciclar. |
 
 Edite `conteudo/`, mantenha a sequência em `ordem.json` e consulte `fontes.md`. Os seletores de `estilos.css` devem começar por `.slide[data-autor="Caio"]`. Em filhos diretos de `section`, use somente `margin-top` e `margin-bottom` para margens.
 
