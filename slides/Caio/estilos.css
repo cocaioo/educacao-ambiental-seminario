@@ -192,17 +192,22 @@
 
 .slide[data-autor="Caio"]#slide-11 .bibliografia-final {
   list-style: none;
-  font-size: 20px;
-  line-height: 1.34;
-  margin-top: 10px;
+  font-size: 17px;
+  line-height: 1.3;
+  margin-top: 6px;
   margin-bottom: 0;
   padding-left: 0;
 }
 .slide[data-autor="Caio"]#slide-11 .bibliografia-final li {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-left: 16px;
   border-left: 3px solid #b3be89;
+}
+.slide[data-autor="Caio"]#slide-11 .refs-complementares {
+  font-size: 18px;
+  margin-top: 14px;
+  margin-bottom: 0;
 }
 
 /* Debate final: perguntas abertas com espaço para leitura em projeção. */
