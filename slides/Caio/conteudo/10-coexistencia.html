@@ -1,15 +1,31 @@
 <section class="slide" id="slide-10">
   <h2 class="slide-titulo">Coexistência, não sucessão: as três no tempo</h2>
 
-  <svg class="coexistencia-svg" viewBox="0 0 1152 456" role="img" aria-labelledby="s10-t s10-d">
-    <title id="s10-t">As três macrotendências no tempo, de 1970 a 2014</title>
-    <desc id="s10-d">Gráfico qualitativo. O eixo horizontal é o tempo; o vertical vai da conservação da ordem, no alto, à transformação social, embaixo. A espessura de cada faixa indica a influência relativa no campo. A conservacionista ocupa o alto desde 1970 e é hegemônica no início; por volta de 1990 a pragmática se ramifica dela, como parte da mesma linhagem, e se torna hegemônica; a conservacionista continua, mais estreita, na pauta verde. A crítica surge em meados dos anos 1980 de outra matriz, a educação popular e a redemocratização, situa-se do lado da transformação social e cresce. Em 2014, as três coexistem e disputam a hegemonia.</desc>
+  <svg class="coexistencia-svg" viewBox="0 0 1152 480" role="img" aria-labelledby="s10-t s10-d">
+    <title id="s10-t">As três macrotendências no tempo, de 1970 a 2026</title>
+    <desc id="s10-d">Gráfico qualitativo em duas partes. Até 2014, segundo Layrargues e Lima: a conservacionista ocupa o alto desde 1970 e é hegemônica no início; por volta de 1990 a pragmática se ramifica dela e se torna hegemônica; a crítica surge em meados dos anos 1980 de outra matriz, do lado da transformação social, e cresce; em 2014 as três coexistem e disputam a hegemonia. De 2014 a 2026, em área destacada como leitura do apresentador a partir de fontes posteriores: a conservacionista segue preponderante em projetos, a pragmática segue hegemônica e ecoa na BNCC de 2017, e a crítica cresce, mas ainda é pouco representativa. Marcos: BNCC em 2017 e Lei 14.926 em 2024.</desc>
+
+    <defs>
+      <pattern id="s10-hachura" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+        <line x1="0" y1="0" x2="0" y2="8" stroke="#baa982" stroke-width="2" stroke-opacity="0.45"></line>
+      </pattern>
+    </defs>
+
+    <!-- Cabeçalho das duas partes -->
+    <g font-family="'Trebuchet MS', sans-serif" font-weight="700">
+      <text x="170" y="22" font-size="15" fill="#4a503d">Segundo os autores (até 2014): as três coexistem e disputam a hegemonia</text>
+      <text x="708" y="22" font-size="15" fill="var(--crit)">Leitura nossa (até hoje)</text>
+      <text x="708" y="40" font-size="13" font-weight="400" fill="#4a503d">fontes posteriores</text>
+    </g>
+
+    <!-- Área da leitura nossa (2014–2026) -->
+    <rect x="700" y="48" width="180" height="364" fill="url(#s10-hachura)"></rect>
 
     <!-- Grade temporal -->
     <g stroke="#baa982" stroke-dasharray="2 4" stroke-width="1">
-      <line x1="320" y1="40" x2="320" y2="412"></line>
-      <line x1="470" y1="40" x2="470" y2="412"></line>
-      <line x1="620" y1="40" x2="620" y2="412"></line>
+      <line x1="291" y1="48" x2="291" y2="412"></line>
+      <line x1="411" y1="48" x2="411" y2="412"></line>
+      <line x1="531" y1="48" x2="531" y2="412"></line>
     </g>
 
     <!-- Eixo político: conservação da ordem (alto) x transformação social (baixo) -->
@@ -22,21 +38,34 @@
     <path d="M 52 98 L 52 340 M 44 108 L 52 98 L 60 108 M 44 330 L 52 340 L 60 330" fill="none" stroke="#4a503d" stroke-width="2.5"></path>
 
     <!-- Pragmática: ramifica-se da conservacionista por volta de 1990 -->
-    <path d="M 425 146 C 490 150 540 176 620 180 L 830 176 L 830 258 L 620 252 C 548 248 478 170 425 146 Z" fill="var(--prag-fill)" stroke="var(--prag)" stroke-width="2"></path>
+    <path d="M 375 146 C 427 150 467 176 531 180 L 700 176 L 700 258 L 531 252 C 473 248 417 170 375 146 Z" fill="var(--prag-fill)" stroke="var(--prag)" stroke-width="2"></path>
 
     <!-- Conservacionista: hegemônica no início, depois mais estreita na pauta verde -->
-    <path d="M 170 76 L 470 76 C 530 76 560 90 620 90 L 830 90 L 830 132 L 620 132 C 560 132 530 146 470 146 L 170 146 Z" fill="var(--cons-fill)" stroke="var(--cons)" stroke-width="2"></path>
+    <path d="M 170 76 L 411 76 C 459 76 483 90 531 90 L 700 90 L 700 132 L 531 132 C 483 132 459 146 411 146 L 170 146 Z" fill="var(--cons-fill)" stroke="var(--cons)" stroke-width="2"></path>
 
     <!-- Crítica: outra matriz, a partir de meados dos anos 1980 -->
-    <path d="M 170 398 C 260 396 340 352 395 342" fill="none" stroke="var(--crit)" stroke-width="2.5" stroke-dasharray="5 4"></path>
-    <path d="M 395 342 C 460 338 530 322 620 318 L 830 312 L 830 372 L 620 364 C 530 360 460 346 395 342 Z" fill="var(--crit-fill)" stroke="var(--crit)" stroke-width="2"></path>
+    <path d="M 170 398 C 242 396 307 352 351 342" fill="none" stroke="var(--crit)" stroke-width="2.5" stroke-dasharray="5 4"></path>
+    <path d="M 351 342 C 403 338 459 322 531 318 L 700 312 L 700 372 L 531 364 C 459 360 403 346 351 342 Z" fill="var(--crit-fill)" stroke="var(--crit)" stroke-width="2"></path>
+
+    <!-- Continuação 2014–2026 (leitura nossa): traço tracejado e preenchimento mais claro -->
+    <g fill-opacity="0.55" stroke-width="2" stroke-dasharray="6 4">
+      <path d="M 700 90 L 880 90 L 880 132 L 700 132 Z" fill="var(--cons-fill)" stroke="var(--cons)"></path>
+      <path d="M 700 176 L 880 172 L 880 262 L 700 258 Z" fill="var(--prag-fill)" stroke="var(--prag)"></path>
+      <path d="M 700 312 L 880 304 L 880 378 L 700 372 Z" fill="var(--crit-fill)" stroke="var(--crit)"></path>
+    </g>
+
+    <!-- Marcos posteriores a 2014 -->
+    <g stroke="#4a503d" stroke-width="1.5" stroke-dasharray="1 3">
+      <line x1="745" y1="48" x2="745" y2="412"></line>
+      <line x1="850" y1="48" x2="850" y2="412"></line>
+    </g>
 
     <!-- Rótulos dentro das faixas -->
     <g font-family="'Trebuchet MS', sans-serif" font-size="18" font-weight="700" fill="#ffffff">
       <text x="186" y="117">Hegemonia inicial</text>
-      <text x="636" y="117">Pauta verde</text>
-      <text x="636" y="222">Mercado e tecnologia</text>
-      <text x="636" y="347">Cresce na academia</text>
+      <text x="548" y="117">Pauta verde</text>
+      <text x="522" y="222" font-size="16">Mercado e tecnologia</text>
+      <text x="530" y="347" font-size="16">Cresce na academia</text>
     </g>
 
     <!-- Anotação: mesma linhagem -->
@@ -45,63 +74,77 @@
       <text x="186" y="218" font-size="16" fill="#4a503d">a pragmática deriva</text>
       <text x="186" y="237" font-size="16" fill="#4a503d">da conservacionista</text>
     </g>
-    <path d="M 352 200 C 384 196 404 174 418 156" fill="none" stroke="var(--prag)" stroke-width="2"></path>
-    <path d="M 410 160 L 420 152 L 420 165" fill="none" stroke="var(--prag)" stroke-width="2"></path>
+    <path d="M 330 200 C 350 196 362 172 370 156" fill="none" stroke="var(--prag)" stroke-width="2"></path>
+    <path d="M 362 160 L 372 152 L 372 165" fill="none" stroke="var(--prag)" stroke-width="2"></path>
 
     <!-- Anotação: matriz distinta -->
     <g font-family="'Trebuchet MS', sans-serif">
-      <text x="186" y="316" font-size="18" font-weight="700" fill="var(--crit)">Matriz distinta</text>
-      <text x="186" y="338" font-size="16" fill="#4a503d">educação popular e</text>
-      <text x="186" y="357" font-size="16" fill="#4a503d">redemocratização</text>
+      <text x="186" y="300" font-size="18" font-weight="700" fill="var(--crit)">Matriz distinta</text>
+      <text x="186" y="322" font-size="16" fill="#4a503d">educação popular e</text>
+      <text x="186" y="341" font-size="16" fill="#4a503d">redemocratização</text>
     </g>
 
-    <!-- 2014: coexistência e disputa -->
-    <line x1="830" y1="40" x2="830" y2="412" stroke="#4a503d" stroke-width="2" stroke-dasharray="6 4"></line>
-    <g font-family="'Trebuchet MS', sans-serif" font-size="17" font-weight="700" fill="#4a503d">
-      <text x="846" y="34">Em 2014, as três coexistem</text>
-      <text x="846" y="55">e disputam a hegemonia</text>
-    </g>
+    <!-- 2014: fim da análise dos autores -->
+    <line x1="700" y1="8" x2="700" y2="412" stroke="#4a503d" stroke-width="2" stroke-dasharray="6 4"></line>
 
-    <!-- Rótulos finais das faixas -->
+    <!-- Rótulos finais das faixas: situação atual -->
     <g font-family="'Pixelify Sans', sans-serif" font-size="22" font-weight="700">
-      <text x="846" y="110" fill="var(--cons)">Conservacionista</text>
-      <text x="846" y="214" fill="var(--prag)">Pragmática</text>
-      <text x="846" y="341" fill="var(--crit)">Crítica</text>
+      <text x="896" y="110" fill="var(--cons)">Conservacionista</text>
+      <text x="896" y="214" fill="var(--prag)">Pragmática</text>
+      <text x="896" y="341" fill="var(--crit)">Crítica</text>
     </g>
     <g font-family="'Trebuchet MS', sans-serif" font-size="16" fill="#4a503d">
-      <text x="846" y="132">consolidada, perde a hegemonia</text>
-      <text x="846" y="236">hegemônica no campo</text>
-      <text x="846" y="363">contra-hegemônica, em expansão</text>
+      <text x="896" y="132">ainda preponderante</text>
+      <text x="896" y="151">em projetos</text>
+      <text x="896" y="236">segue hegemônica;</text>
+      <text x="896" y="255">ecoa na BNCC</text>
+      <text x="896" y="363">cresce, mas ainda</text>
+      <text x="896" y="382">pouco representativa</text>
     </g>
 
     <!-- Eixo do tempo -->
-    <line x1="170" y1="412" x2="830" y2="412" stroke="#4a503d" stroke-width="2"></line>
+    <line x1="170" y1="412" x2="880" y2="412" stroke="#4a503d" stroke-width="2"></line>
     <g stroke="#4a503d" stroke-width="2">
       <line x1="170" y1="412" x2="170" y2="420"></line>
-      <line x1="320" y1="412" x2="320" y2="420"></line>
-      <line x1="470" y1="412" x2="470" y2="420"></line>
-      <line x1="620" y1="412" x2="620" y2="420"></line>
-      <line x1="830" y1="412" x2="830" y2="420"></line>
+      <line x1="291" y1="412" x2="291" y2="420"></line>
+      <line x1="411" y1="412" x2="411" y2="420"></line>
+      <line x1="531" y1="412" x2="531" y2="420"></line>
+      <line x1="700" y1="412" x2="700" y2="420"></line>
+      <line x1="745" y1="412" x2="745" y2="420"></line>
+      <line x1="850" y1="412" x2="850" y2="420"></line>
+      <line x1="880" y1="412" x2="880" y2="420"></line>
     </g>
     <g font-family="'Pixelify Sans', sans-serif" font-size="18" font-weight="700" fill="#4a503d" text-anchor="middle">
       <text x="170" y="442">1970</text>
-      <text x="320" y="442">1980</text>
-      <text x="470" y="442">1990</text>
-      <text x="620" y="442">2000</text>
-      <text x="830" y="442">2014</text>
+      <text x="291" y="442">1980</text>
+      <text x="411" y="442">1990</text>
+      <text x="531" y="442">2000</text>
+      <text x="694" y="442">2014</text>
+      <text x="745" y="441" font-size="15">2017</text>
+      <text x="850" y="441" font-size="15">2024</text>
+    </g>
+    <g font-family="'Trebuchet MS', sans-serif" font-size="13" fill="#4a503d" text-anchor="middle">
+      <text x="745" y="464">BNCC</text>
+      <text x="850" y="464">Lei 14.926</text>
     </g>
     <g font-family="'Trebuchet MS', sans-serif" font-size="14" fill="#4a503d">
-      <text x="862" y="424">Espessura: influência relativa</text>
-      <text x="862" y="442">no campo (leitura qualitativa)</text>
+      <text x="960" y="424">Espessura: influência relativa</text>
+      <text x="960" y="442">no campo (leitura qualitativa)</text>
     </g>
   </svg>
 
-  <p class="fonte">Fontes: LAYRARGUES &amp; LIMA (2014); SOUZA (2018); GUIMARÃES (2004) apud SANTOS &amp; TOSCHI (2015).</p>
+  <p class="fonte">Fontes: até 2014, LAYRARGUES &amp; LIMA (2014); SOUZA (2018); GUIMARÃES (2004) apud SANTOS &amp; TOSCHI (2015). Após 2014 (leitura nossa): SILVA &amp; LOUREIRO (2020); CAMPOS &amp; CAVALARI (2022); BRASIL, Lei nº 14.926/2024.</p>
 
   <aside class="notes">
-    <p>Para concluir, reúno as três macrotendências num único gráfico. O eixo horizontal é o tempo, até a análise de Layrargues e Lima, de 2014. O eixo vertical é o mesmo da abertura: no alto, a conservação da ordem; embaixo, a transformação social. A espessura das faixas indica influência relativa no campo. É uma leitura qualitativa das fontes, sem medir percentuais nem marcar o nascimento exato de cada vertente.</p>
+    <p>Para concluir, reúno as três macrotendências num único gráfico. O eixo horizontal é o tempo: até 2014, segue a análise de Layrargues e Lima; depois disso, a área hachurada é uma leitura minha, com fontes posteriores. O eixo vertical é o mesmo da abertura: no alto, a conservação da ordem; embaixo, a transformação social. A espessura das faixas indica influência relativa no campo. É uma leitura qualitativa das fontes, sem medir percentuais nem marcar o nascimento exato de cada vertente.</p>
     <p>A conservacionista ocupa o alto desde o início e foi hegemônica no momento fundacional (Layrargues e Lima, 2014, p. 30). Por volta dos anos 1990, parte dela se adapta ao mercado e à tecnologia: é a pragmática, que se ramifica da mesma faixa porque os autores a tratam como “dois momentos de uma mesma linhagem de pensamento” (p. 32). A pragmática ganha impulso e aparece como hegemônica em 2014 (p. 31). A conservacionista não desaparece: fica mais estreita, mas consolidada na pauta verde (p. 34).</p>
     <p>A crítica não sai dessa linhagem. Ela vem de outra matriz: o encontro com a educação popular na segunda metade dos anos 1980 e a redemocratização (Souza, 2018, p. 65; Layrargues e Lima, 2014, p. 33). Guimarães (2004 apud Santos e Toschi, 2015, p. 247) destaca essa matriz teórica distinta. Por isso ela fica do lado da transformação social e cresce sobretudo no âmbito acadêmico (p. 34).</p>
-    <p>A linha tracejada de 2014 resume a tese: as três coexistem e disputam a hegemonia; não são etapas que se sucedem (p. 34). Por isso comparo objetivos e responsabilidades, em vez de classificar uma prática só pelo tema. Uma atividade com lixo ou uma visita à natureza deve ser analisada pelas relações que ensina a perceber e pelas formas de ação que propõe. Encerro com essa síntese e abro espaço para perguntas e comentários da turma. Em seguida, apresento as referências.</p>
+    <p>A linha tracejada de 2014 marca o fim da análise dos autores e resume a tese: as três coexistem e disputam a hegemonia; não são etapas que se sucedem (p. 34).</p>
+    <p>À direita dessa linha, na área hachurada, a leitura é nossa, a partir de fontes posteriores que não estão nos textos-base. Explico por que as faixas continuam assim.</p>
+    <p>Pragmática, BNCC de 2017. Em 2014, os autores diziam que o pragmatismo tende a “instrumentalizar a educação como um meio de ascensão social e de reprodução da lógica econômica”, deixando de lado a cidadania e a educação política (Layrargues e Lima, 2014, p. 35). Em 2020, Silva e Loureiro ouviram pesquisadores da área sobre a BNCC e encontraram exatamente isso: redução de conteúdos críticos, formação voltada para o mercado e, na EA, “a instrumentalização do tema e a ausência de abordagens críticas”, reforçando ideais neoliberais e meritocráticos (Ciência &amp; Educação, v. 26, e20004, p. 1). Ou seja, o freio que os autores apontavam em 2014 reaparece no currículo oficial. Os autores não usam a palavra “pragmática”: a ligação é nossa, feita pela definição de Layrargues e Lima. Vale lembrar que Loureiro é um dos principais nomes da própria vertente crítica.</p>
+    <p>Conservacionista e crítica, teses e dissertações. Campos e Cavalari (2022, REMEA, v. 39, n. 3, p. 120) analisaram teses e dissertações sobre projetos de EA fora da escola, de 1981 a 2016. A conservacionista foi a preponderante, seguida da pragmática. A crítica ganha espaço na década de 2010, mas ainda é “pouco representativa”. Por isso a conservacionista não some e a crítica cresce só um pouco.</p>
+    <p>Lei nº 14.926/2024. A lei inclui na Política Nacional de Educação Ambiental as mudanças climáticas, a proteção da biodiversidade e os riscos de desastres, e exige esses temas nos projetos pedagógicos. Por que chamo isso de novo terreno de disputa? Porque o texto fala em prevenção, mitigação e adaptação, e isso pode ser ensinado de dois jeitos. De forma pragmática, como gestão de risco e mudança de hábitos. Ou de forma crítica, perguntando quem é mais atingido pelos desastres e por quê, como vimos no slide de transformação social: quem lucra não é quem sofre. A lei abre a porta, mas não define qual vertente vai passar por ela.</p>
+    <p>Fica a síntese: depois de 2014, nada indica que uma vertente substituiu a outra. As três continuam convivendo e disputando espaço.</p>
+    <p>Por isso comparo objetivos e responsabilidades, em vez de classificar uma prática só pelo tema. Uma atividade com lixo ou uma visita à natureza deve ser analisada pelas relações que ensina a perceber e pelas formas de ação que propõe. Encerro com essa síntese e abro espaço para perguntas e comentários da turma. Em seguida, apresento as referências.</p>
   </aside>
 </section>

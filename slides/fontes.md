@@ -16,6 +16,8 @@ Referências validadas na revisão de 3 out. 2026 (autoria, veículo, volume, p�
 | 3 | **PELICIONI, Maria Cecília Focesi; PHILIPPI JR., Arlindo.** Bases políticas, conceituais, filosóficas e ideológicas da educação ambiental. In: PHILIPPI JR., A.; PELICIONI, M. C. F. (ed.). *Educação ambiental e sustentabilidade*. 2. ed. Barueri: Manole, 2014. cap. 1, p. 3–12. A cópia local não tem folha de rosto; edição conforme o repositório USP (ISBN 9788520432006). | Slides 2, 4–9, 11 |
 | 4 | **SANTOS, Jéssica de Andrade; TOSCHI, Mirza Seabra.** Vertentes da educação ambiental: da conservacionista à crítica. *Fronteiras: Journal of Social, Technological and Environmental Science*, v. 4, n. 2, p. 241–250, jul./dez. 2015. DOI [10.21664/2238-8869.2015v4i2.p241-250](https://doi.org/10.21664/2238-8869.2015v4i2.p241-250) | Slides 2, 4, 5, 7–11 |
 | 5 | **SOUZA, Tiago Zanquêta de.** A educação ambiental popular: contribuições em práticas sociais. *Motricidades: Rev. SPQMH*, v. 2, n. 1, p. 60–70, jan./abr. 2018. DOI [10.29181/2594-6463.2018.v2.n1.p60-70](https://doi.org/10.29181/2594-6463.2018.v2.n1.p60-70) | Slides 2, 8, 9 |
+| 6 | **SILVA, Silvana do Nascimento; LOUREIRO, Carlos Frederico Bernardo.** As vozes de professores-pesquisadores do campo da educação ambiental sobre a Base Nacional Comum Curricular (BNCC): educação infantil ao ensino fundamental. *Ciência & Educação*, Bauru, v. 26, e20004, 2020. DOI [10.1590/1516-731320200004](https://doi.org/10.1590/1516-731320200004). Fonte complementar, fora dos textos-base: usada só para o panorama posterior a 2014. | Slides 14 e 15 |
+| 7 | **CAMPOS, Daniela Bertolucci de; CAVALARI, Rosa Maria Feiteiro.** Macrotendências político-pedagógicas identificadas em projetos de educação ambiental em contextos educacionais não escolares estudados em teses e dissertações brasileiras. *REMEA*, v. 39, n. 3, p. 120–139, set./dez. 2022. Fonte complementar, fora dos textos-base: usada só para o panorama posterior a 2014. | Slide 15 |
 
 Correções registradas na revisão: Santos & Toschi datam Tbilisi em 1975 (p. 243) e grafam "Kelle" (p. 242); o correto é 1977 e Keele. Loureiro é citado só como "2014 apud Souza, 2018, p. 66", porque a p. 49 indicada por Souza não cabe no intervalo da referência que ele mesmo dá. A nota 7 de Souza (p. 63), que atribui "ecopedagogia" a Layrargues & Lima 2014, não é usada.
 
@@ -38,6 +40,7 @@ Marcos históricos conferidos em fonte oficial em 3 out. 2026. Eles formam a fai
 | Tratado de EA, 1992 | *Tratado de Educação Ambiental para Sociedades Sustentáveis e Responsabilidade Global*. Fórum Global (sociedade civil, não ONU), Rio de Janeiro, jun. 1992, princípio 4 | 8 |
 | REPEC/CEAAL, 1987 | Só fonte secundária: Barbosa 2002 apud Souza 2018, p. 66 | 8 |
 | PNEA, 1999 | BRASIL. Lei nº 9.795, de 27 abr. 1999, arts. 4º e 5º. [planalto.gov.br](https://www.planalto.gov.br/ccivil_03/leis/l9795.htm) | 8 |
+| Lei 14.926/2024 (altera a PNEA: clima, biodiversidade e riscos de desastres) | BRASIL. Lei nº 14.926, de 17 jul. 2024. [legis.senado.leg.br](https://legis.senado.leg.br/norma/38741948) | 14, 15 |
 | Década da EDS 2005–2014 | ONU. Resolução A/RES/57/254, 20 dez. 2002 (UNESCO como agência líder) | 6 |
 
 ### Conteúdo retirado da tela
