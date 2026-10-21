@@ -2,23 +2,15 @@
    O painel e a faixa de terreno são CSS: os dados continuam em HTML e SVG.
    Seletores descendentes também atendem ao modo ?print-pdf do reveal.js. */
 
-@font-face {
-  font-family: "Pixelify Sans";
-  src: url("fontes/pixelify-sans.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-}
-
 :root {
   --r-background-color: #243c2b;
   --r-main-font: "Trebuchet MS", "Segoe UI", sans-serif;
   --r-main-font-size: 27px;
   --r-main-color: #263323;
   --r-block-margin: 14px;
-  --r-heading-font: "Pixelify Sans", "Trebuchet MS", sans-serif;
+  --r-heading-font: "Trebuchet MS", "Segoe UI", sans-serif;
   --r-heading-color: #1e331c;
-  --r-heading-font-weight: 600;
+  --r-heading-font-weight: 700;
   --r-heading-line-height: 1.14;
   --r-heading-letter-spacing: .2px;
   --r-heading-text-transform: none;
