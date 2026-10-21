@@ -6,7 +6,7 @@
 
 Apresentação colaborativa do seminário, feita com o [reveal.js](https://revealjs.com) e o tema autoral **Aventura ambiental**, inspirado na exploração de mundos 2D em pixel art. As partes editáveis seguem a sequência **Diogo → Edson → Caio**.
 
-O tema fica em `slides/comum/tema.css`: títulos usam a fonte **Pixelify Sans**, incluída em `slides/comum/fontes/`, e o corpo mantém uma fonte legível para textos, fotos e gráficos. A paisagem ilustrada em pixel art da capa serve como cenário visual da apresentação.
+O tema fica em `slides/comum/tema.css`: títulos e corpo usam a fonte **Trebuchet MS**, escolhida pela legibilidade. A paisagem ilustrada em pixel art da capa serve como cenário visual da apresentação.
 
 ## Como editar sua parte
 
